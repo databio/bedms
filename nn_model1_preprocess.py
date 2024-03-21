@@ -6,7 +6,7 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 
-input_file_path = "/home/saanika/curation/dummy_input/dummy_1.tsv"  #TODO Change this path to the /data/summy_1.tsv of the repo 
+input_file_path = "../data/dummy_1.tsv"  #TODO Change this path to the /data/summy_1.tsv of the repo 
 df = pd.read_csv(input_file_path, sep="\t")
 
 df.replace('NA', np.nan, inplace=True)
