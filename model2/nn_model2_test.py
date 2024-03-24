@@ -4,9 +4,9 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 from collections import Counter
-from bedmess.model2.nn_model2_train import *
-from bedmess.model2.nn_model2_train import trainer 
-from bedmess.model2.nn_model2_preprocess import *
+from nn_model2_train import *
+from nn_model2_train import trainer 
+from nn_model2_preprocess import *
 
 model=headers_NN(input_size_values=X_test_tensor.shape[1],input_size_headers=X_test_headers_tensor.shape[1], hidden_size=64, output_size=len(label_encoder.classes_))
 model.load_state_dict(torch.load(model_path))
@@ -42,7 +42,7 @@ consensus=[]
 labels=[]
 top_three_preds=[]
 output_file_path="predictions_model2.txt"
-print(decoded_preds)
+
 with open(output_file_path,"w") as output_file:
 
     for i, category_preds in enumerate(grouped_preds):

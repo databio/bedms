@@ -1,0 +1,1 @@
+{'file': {'file': 1.0}, 'Assay': {'Assay': 1.0}, 'URL': {'URL': 1.0}, 'Organism': {'Organism': 1.0}, 'Sample ID': {'Sample ID': 1.0}}

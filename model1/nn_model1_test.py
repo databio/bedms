@@ -38,7 +38,6 @@ consensus=[]
 labels=[]
 top_three_preds=[]
 output_file_path="predictions_model1.txt"
-print(decoded_preds)
 with open(output_file_path,"w") as output_file:
 
     for i, category_preds in enumerate(grouped_preds):
