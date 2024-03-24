@@ -2,7 +2,7 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
-from bedmess.model2.nn_model2_preprocess import *
+from nn_model2_preprocess import *
 
 model_path="nn_model2.pth"
 encoder_path="encoder_model2.pth"
