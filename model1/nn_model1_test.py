@@ -7,11 +7,20 @@ from collections import Counter
 from nn_model1_train import *
 from nn_model1_train import trainer 
 from nn_model1_preprocess import *
+import pickle
 
-    
-model=NN1(input_size=X_test_tensor.shape[1], hidden_size=64, output_size=len(label_encoder.classes_))
-model.load_state_dict(torch.load(model_path))
-model.eval()
+def load_optimized_results():
+    with open('hyperparam_optim_results.pkl' , 'rb') as f:
+        optimized_results=pickle.load(f)
+    return optimized_results
+
+optimized_results=load_optimized_results()
+
+best_model_path="nn_model1_best.pth"  
+
+best_model=NN1(input_size=X_test_tensor.shape[1], hidden_size=32, output_size=len(label_encoder.classes_))
+best_model.load_state_dict(torch.load(best_model_path))
+best_model.eval()
 
 batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_tensor, y_test_tensor), batch_size=batch_size)
@@ -20,7 +29,7 @@ all_preds = []
 all_labels=[]
 with torch.no_grad():
     for inputs, labels in test_loader:
-        outputs = model(inputs)
+        outputs = best_model(inputs)
         _, preds = torch.max(outputs, 1)
         all_preds.extend(preds.cpu().numpy())
         all_labels.extend(labels.cpu().numpy())
@@ -74,8 +83,8 @@ plt.ylabel('True Label')
 plt.show()
 
 #learning curve - accuracy
-plt.plot(range(1, num_epochs + 1), trainer.train_accuracies, label='Training Accuracy')
-plt.plot(range(1, num_epochs + 1), trainer.val_accuracies, label='Validation Accuracy')
+plt.plot(range(1, num_epochs + 1), optimized_results['best_train_accuracies'], label='Training Accuracy')
+plt.plot(range(1, num_epochs + 1), optimized_results['best_val_accuracies'], label='Validation Accuracy')
 plt.xlabel('Epoch')
 plt.ylabel('Accuracy')
 plt.title('Learning Curve')
@@ -85,8 +94,8 @@ plt.grid(True)
 plt.show()
 
 #learning curve plotting - loss
-plt.plot(range(1, num_epochs + 1), trainer.train_losses, label='Training Loss')
-plt.plot(range(1, num_epochs + 1), trainer.val_losses , label='Validation Loss')
+plt.plot(range(1, num_epochs + 1), optimized_results['best_train_losses'], label='Training Loss')
+plt.plot(range(1, num_epochs + 1), optimized_results['best_val_losses'] , label='Validation Loss')
 plt.xlabel('Epoch')
 plt.ylabel('Loss')
 plt.title('Learning Curve')
