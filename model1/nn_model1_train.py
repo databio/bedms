@@ -22,7 +22,7 @@ class NN1(nn.Module):
         return x
 
 class ModelTraining:
-    def __init__(self, input_size, hidden_size, output_size, learning_rate=0.005):
+    def __init__(self, input_size, hidden_size, output_size, learning_rate):
         self.model = NN1(input_size, hidden_size, output_size)
         self.label_encoder = label_encoder
         self.loss_fn = nn.CrossEntropyLoss()
@@ -33,7 +33,7 @@ class ModelTraining:
         self.val_losses = []
         self.num_epochs=10
 
-    def train(self, X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu'):
+    def train(self, X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs, batch_size, device='cpu'):
 
         self.model=self.model.to(device)
 
@@ -94,7 +94,7 @@ input_size = X_train_tensor.shape[1]
 hidden_size = 64
 output_size = len(np.unique(combined_labels))
 
-trainer = ModelTraining(input_size, hidden_size, output_size)
+trainer = ModelTraining(input_size, hidden_size, output_size, learning_rate=0.05)
 trainer.train(X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu')
 trainer.save_model(model_path,encoder_path)
 print("Model Training Done.")
