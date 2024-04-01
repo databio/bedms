@@ -23,11 +23,11 @@ class headers_NN(nn.Module):
         return x_combined 
     
 class ModelTraining:
-    def __init__(self,input_size_values, input_size_headers, hidden_size, output_size, learning_rate=0.005 ):
+    def __init__(self,input_size_values, input_size_headers, hidden_size, output_size, learning_rate):
         self.model=headers_NN(input_size_values, input_size_headers, hidden_size, output_size)
         self.label_encoder=label_encoder
         self.loss_fn=nn.CrossEntropyLoss()
-        self.optimizer=optim.Adam(self.model.parameters(), lr=0.005)
+        self.optimizer=optim.Adam(self.model.parameters(), lr=learning_rate)
         self.train_accuracies=[]
         self.val_accuracies=[]
         self.train_losses=[]
@@ -106,7 +106,7 @@ input_size_headers=X_train_headers_tensor.shape[1]
 hidden_size=64
 output_size = len(np.unique(y_train_expanded))
 
-trainer=ModelTraining(input_size_values, input_size_headers, hidden_size, output_size)
+trainer=ModelTraining(input_size_values, input_size_headers, hidden_size, output_size, learning_rate=0.05)
 trainer.train(X_train_tensor, X_train_headers_tensor, y_train_tensor, X_val_tensor, X_val_headers_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu')
 trainer.save_model(model_path,encoder_path)
 print("Model Training Done.")
