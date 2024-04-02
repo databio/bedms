@@ -18,13 +18,14 @@ This model trains on the column values only and suggests a column header based o
    5. [nn_model1_test.py](https://github.com/databio/bedmess/blob/master/model1/nn_model1_test.py) : This tests the model and generates a confusion matrix, learning curves.
 
 ### Model 2 - Column Header and Column Value Based Model
-This model trains on both the column values and column headers and suggests a column header based on a consensus taken from the prediction of attributes for each column. There are 4 associated scripts:
+This model trains on both the column values and column headers and suggests a column header based on a consensus taken from the prediction of attributes for each column. There are 5 associated scripts:
    1. [nn_model2_main.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_main.py) : This is the main script. Usage: Considering you are in the model2 directory:
       ```bash
       python3 nn_model2_main.py
    2. [nn_model2_preprocess.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_preprocess.py)
    3. [nn_model2_train.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_train.py)
-   4. [nn_model2_test.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_test.py)
+   4. [nn_model2_optim.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_optim.py)
+   5. [nn_model2_test.py](https://github.com/databio/bedmess/blob/master/model2/nn_model2_test.py)
 
 ### Model 3 - Bag of Words Encoding Model
 This model trains on both column values and column headers. It performs bag of words encoding on both. The output for each column header is top 3 predictions made by the model. There are 4 associated scripts:
