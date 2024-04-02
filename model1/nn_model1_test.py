@@ -18,7 +18,7 @@ optimized_results=load_optimized_results()
 
 best_model_path="nn_model1_best.pth"  
 
-best_model=NN1(input_size=X_test_tensor.shape[1], hidden_size=32, output_size=len(label_encoder.classes_))
+best_model=NN1(input_size=X_test_tensor.shape[1], hidden_size=hidden_size, output_size=len(label_encoder.classes_))
 best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 
