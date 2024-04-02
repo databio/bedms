@@ -20,7 +20,7 @@ optimized_results=load_optimized_results()
 best_model_path="nn_model3_best.pth"  
 output_file_path = "predictions.json"
 best_model=BoWSTModel(input_size_values=X_test_bow_tensor.shape[1], input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(y_train)))
-best_model.load_state_dict(torch.load(model_path))
+best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_bow_tensor, X_test_headers_tensor, y_test_tensor), batch_size=batch_size)
