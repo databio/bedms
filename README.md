@@ -35,6 +35,15 @@ This model trains on both column values and column headers. It performs bag of w
    3. [nn_model3_train.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_train.py)
    4. [nn_model3_test.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_test.py)
 
+### Model 4 - Bag of Words Encoding + Sentence Transformer Model
+This model trains on both column headers and column values. It uses a sentence transformer for creating embeddings for headers and uses bag of words encoding for column values. For each column, it provides the top 3 predictions. There are 4 associated scripts:
+   1. [nn_model4_main.py](https://github.com/databio/bedmess/blob/master/model4/nn_model4_main.py) : This is the main script. Usage: Considering you are in the model3 directory:
+      ```bash
+      python3 nn_model4_main.py
+   2. [nn_model4_preprocess.py](https://github.com/databio/bedmess/blob/master/model4/nn_model4_preprocess.py)
+   3. [nn_model4_train.py](https://github.com/databio/bedmess/blob/master/model4/nn_model4_train.py)
+   4. [nn_model4_test.py](https://github.com/databio/bedmess/blob/master/model4/nn_model4_test.py)
+
 ### Model 5 - Sentence Transformer for values and Headers
 This model trains on both column headers and values and uses a sentence transformer for creating embeddings for values and headers. For each value in the columns, the model predicts a header and then a consensus is taken for the top 3 predictions for each column. There are 4 associated scripts:
    1. [nn_model5_main.py](https://github.com/databio/bedmess/blob/master/model5/nn_model5_main.py) : This is the main script. Usage: Considering you are in the model5 directory:
