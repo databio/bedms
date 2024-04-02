@@ -34,7 +34,8 @@ This model trains on both column values and column headers. It performs bag of w
       python3 nn_model3_main.py
    2. [nn_model3_preprocess.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_preprocess.py)
    3. [nn_model3_train.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_train.py)
-   4. [nn_model3_test.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_test.py)
+   4. [nn_model3_optim.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_optim.py)
+   5. [nn_model3_test.py](https://github.com/databio/bedmess/blob/master/model3/nn_model3_test.py)
 
 ### Model 4 - Bag of Words Encoding + Sentence Transformer Model
 This model trains on both column headers and column values. It uses a sentence transformer for creating embeddings for headers and uses bag of words encoding for column values. For each column, it provides the top 3 predictions. There are 4 associated scripts:
