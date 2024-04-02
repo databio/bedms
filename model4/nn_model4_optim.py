@@ -37,7 +37,7 @@ for params in param_combinations:
 print("Best Hyperparameters:", best_params)
 print("Best Validation Accuracy:", best_accuracy)
 
-best_model_path="nn_model3_best.pth"
+best_model_path="nn_model4_best.pth"
 torch.save(best_model.state_dict(), best_model_path)
 
 results={'best_train_accuracies': best_train_accuracies, 'best_val_accuracies':best_val_accuracies,
