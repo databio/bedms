@@ -17,7 +17,7 @@ def load_optimized_results():
 
 optimized_results=load_optimized_results()
 
-best_model_path="nn_model3_best.pth"  
+best_model_path="nn_model4_best.pth"  
 output_file_path = "predictions.json"
 best_model=BoWSTModel(input_size_values=X_test_bow_tensor.shape[1], input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(y_train)))
 best_model.load_state_dict(torch.load(best_model_path))
