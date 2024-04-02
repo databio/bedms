@@ -7,10 +7,20 @@ from collections import Counter
 from nn_model2_train import *
 from nn_model2_train import trainer 
 from nn_model2_preprocess import *
+import pickle
 
-model=headers_NN(input_size_values=X_test_tensor.shape[1],input_size_headers=X_test_headers_tensor.shape[1], hidden_size=64, output_size=len(label_encoder.classes_))
-model.load_state_dict(torch.load(model_path))
-model.eval()
+def load_optimized_results():
+    with open('hyperparam_optim_results.pkl' , 'rb') as f:
+        optimized_results=pickle.load(f)
+    return optimized_results
+
+optimized_results=load_optimized_results()
+
+best_model_path="nn_model2_best.pth"  
+
+best_model=headers_NN(input_size_values=X_test_tensor.shape[1],input_size_headers=X_test_headers_tensor.shape[1], hidden_size=64, output_size=len(label_encoder.classes_))
+best_model.load_state_dict(torch.load(model_path))
+best_model.eval()
 
 batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_tensor, X_test_headers_tensor, y_test_tensor), batch_size=batch_size)
@@ -24,7 +34,7 @@ with torch.no_grad():
         input_headers=X_test_headers_tensor[i:i+batch_size].to(device)
         labels = y_test_tensor[i:i + batch_size].to(device)
 
-        outputs = model(input_values, input_headers)
+        outputs = best_model(input_values, input_headers)
         _, preds = torch.max(outputs, 1)
 
         all_preds.extend(preds.cpu().numpy())
