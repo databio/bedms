@@ -19,7 +19,7 @@ optimized_results=load_optimized_results()
 best_model_path="nn_model2_best.pth"  
 
 best_model=headers_NN(input_size_values=X_test_tensor.shape[1],input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(label_encoder.classes_))
-best_model.load_state_dict(torch.load(model_path))
+best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 
 batch_size=32
