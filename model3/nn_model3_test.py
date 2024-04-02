@@ -23,7 +23,7 @@ output_file_path = "predictions.json"
 
 best_model=BoWModel(input_size_values=X_test_bow_tensor.shape[1], input_size_headers=X_test_header_bow_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(np.concatenate((y_train, y_val)))))
 
-best_model.load_state_dict(torch.load(model_path))
+best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 
 batch_size=32
