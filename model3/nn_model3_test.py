@@ -18,7 +18,7 @@ def load_optimized_results():
 optimized_results=load_optimized_results()
 best_hyperparameters = optimized_results['best_hyperparameters']
 hidden_size = best_hyperparameters['hidden_size']
-
+batch_size=best_hyperparameters['batch_size']
 best_model_path="nn_model3_best.pth"  
 
 output_file_path = "predictions.json"
@@ -28,7 +28,6 @@ best_model=BoWModel(input_size_values=X_test_bow_tensor.shape[1], input_size_hea
 best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 
-batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_bow_tensor, X_test_header_bow_tensor, y_test_tensor), batch_size=batch_size)
 
 device=torch.device("cpu")
