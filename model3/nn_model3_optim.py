@@ -40,7 +40,7 @@ print("Best Validation Accuracy:", best_accuracy)
 best_model_path="nn_model3_best.pth"
 torch.save(best_model.state_dict(), best_model_path)
 
-results={'best_train_accuracies': best_train_accuracies, 'best_val_accuracies':best_val_accuracies,
+results={'best_hyperparameters':best_params, 'best_train_accuracies': best_train_accuracies, 'best_val_accuracies':best_val_accuracies,
          'best_train_losses':best_train_losses, 'best_val_losses':best_val_losses}
 with open('hyperparam_optim_results.pkl', 'wb') as f:
     pickle.dump(results, f)
