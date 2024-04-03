@@ -57,7 +57,10 @@ This model trains on both column headers and values and uses a sentence transfor
    4. [nn_model5_test.py](https://github.com/databio/bedmess/blob/master/model5/nn_model5_test.py)
 
 ## Data 
-The training data is from tw sources : ENCODE and Blueprints (Fairtracks). Presently, the repo has only 1 dummy dataset. The training data sets will be uploaded soon.
+The training and testing data is from the following sources:
+   1. dummy_1.tsv : Dummy dataset to test if the model is running
+   2. encode_all.tsv : ENCODE metadata 
+   3. blueprints_unwrapped_metadata.tsv : Fairtracks blueprints metadata
 
 ## Usage 
 Once you have trained the models by running the commands mentioned above, you can use it for suggesting attributes for your data. The Usage will be updated soon. 
