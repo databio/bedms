@@ -8,11 +8,24 @@ from nn_model5_train import *
 from nn_model5_train import trainer 
 from nn_model5_preprocess import *
 import json
+import pickle 
+
+def load_optimized_results():
+    with open('hyperparam_optim_results.pkl' , 'rb') as f:
+        optimized_results=pickle.load(f)
+    return optimized_results
+
+optimized_results=load_optimized_results()
+best_hyperparameters = optimized_results['best_hyperparameters']
+hidden_size = best_hyperparameters['hidden_size']
+
+best_model_path="nn_model5_best.pth"  
+output_file_path = "predictions.json"
 
 output_file_path = "predictions.json"
-model=sentence_transformer_NN(input_size_values=X_test_tensor.shape[1], input_size_headers=X_test_headers_tensor.shape[1], hidden_size=64, output_size=len(np.unique(y_train_expanded)))
-model.load_state_dict(torch.load(model_path))
-model.eval()
+best_model=sentence_transformer_NN(input_size_values=X_test_tensor.shape[1], input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(y_train_expanded)))
+best_model.load_state_dict(torch.load(best_model_path))
+best_model.eval()
 batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_tensor, X_test_headers_tensor, y_test_tensor), batch_size=batch_size)
 device=torch.device("cpu")
@@ -30,7 +43,7 @@ with torch.no_grad():
         input_headers = X_test_headers_tensor[batch_start_index_test:batch_start_index_test + current_batch_size_test].to(device)
         labels = y_test_tensor[batch_start_index_test:batch_start_index_test + current_batch_size_test].to(device)
 
-        outputs = model(input_values, input_headers)
+        outputs = best_model(input_values, input_headers)
         _, preds = torch.max(outputs, 1)
 
         all_preds.extend(preds.cpu().numpy())
