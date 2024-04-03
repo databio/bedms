@@ -6,10 +6,10 @@ from nn_model5_train import ModelTraining
 import pickle
 
 param_grid={
+    'batch_size':[32,64,128],
     'hidden_size':[32,64,128],
     'learning_rate':[0.001,0.005,0.01]
 }
-
 param_combinations=ParameterGrid(param_grid)
 
 best_accuracy=0.0
@@ -22,7 +22,7 @@ best_val_losses=None
 for params in param_combinations:
     print("Running on hyperparameters:", params)
     trainer=ModelTraining(input_size_values, input_size_headers, params['hidden_size'], output_size, learning_rate=params['learning_rate'])
-    train_accuracies, val_accuracies, train_losses, val_losses=trainer.train(X_train_tensor, X_train_headers_tensor, y_train_tensor,X_val_tensor, X_val_headers_tensor, y_val_tensor, num_epochs=10, batch_size=32, device="cpu")
+    train_accuracies, val_accuracies, train_losses, val_losses=trainer.train(X_train_tensor, X_train_headers_tensor, y_train_tensor,X_val_tensor, X_val_headers_tensor, y_val_tensor, num_epochs=10, batch_size=params['batch_size'], device="cpu")
     current_val_accuracy=val_accuracies[-1]
     print("Validation Accuracy:", current_val_accuracy)
     if current_val_accuracy > best_accuracy:
