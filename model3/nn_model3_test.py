@@ -16,6 +16,8 @@ def load_optimized_results():
     return optimized_results
 
 optimized_results=load_optimized_results()
+best_hyperparameters = optimized_results['best_hyperparameters']
+hidden_size = best_hyperparameters['hidden_size']
 
 best_model_path="nn_model3_best.pth"  
 
