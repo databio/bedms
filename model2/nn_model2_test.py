@@ -17,14 +17,13 @@ def load_optimized_results():
 optimized_results=load_optimized_results()
 best_hyperparameters = optimized_results['best_hyperparameters']
 hidden_size = best_hyperparameters['hidden_size']
-
+batch_size=best_hyperparameters['batch_size']
 best_model_path="nn_model2_best.pth"  
 
 best_model=headers_NN(input_size_values=X_test_tensor.shape[1],input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(label_encoder.classes_))
 best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
 
-batch_size=32
 test_loader=DataLoader(TensorDataset(X_test_tensor, X_test_headers_tensor, y_test_tensor), batch_size=batch_size)
 
 device=torch.device("cpu")
