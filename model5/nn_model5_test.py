@@ -20,9 +20,8 @@ best_hyperparameters = optimized_results['best_hyperparameters']
 hidden_size = best_hyperparameters['hidden_size']
 batch_size=best_hyperparameters['batch_size']
 best_model_path="nn_model5_best.pth"  
-output_file_path = "predictions.json"
+output_file_path = "predictions_model5.json"
 
-output_file_path = "predictions.json"
 best_model=sentence_transformer_NN(input_size_values=X_test_tensor.shape[1], input_size_headers=X_test_headers_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(y_train_expanded)))
 best_model.load_state_dict(torch.load(best_model_path))
 best_model.eval()
@@ -55,6 +54,10 @@ with torch.no_grad():
 #inverse labels
 deencoded_labels = label_encoder.inverse_transform(all_labels)
 deencoded_preds = label_encoder.inverse_transform(all_preds)
+
+#test accuracy
+accuracy = accuracy_score(all_labels, all_preds)
+print(f"Test Accuracy Score{accuracy}")
 
 #printing to output dictionary as json
 num_categories=len(df_test)
@@ -99,7 +102,7 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=np.uniqu
 plt.title('Confusion Matrix')
 plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
-#plt.savefig("onfusion_matrix_model5.jpg")
+#plt.savefig("confusion_matrix_model5.jpg")
 plt.show()
 
 #plotting learning curve - accuracy

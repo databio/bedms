@@ -3,6 +3,7 @@ import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
 from nn_model5_preprocess import *
+import time 
 
 model_path="nn_model5.pth"
 encoder_path="encoder_model5.pth"
@@ -108,8 +109,12 @@ input_size_headers = X_train_headers_tensor.shape[1]
 hidden_size = 64
 output_size = len(np.unique(y_train_expanded))
 
+start_time_train=time.time()
 trainer=ModelTraining(input_size_values, input_size_headers, hidden_size, output_size, learning_rate=0.05)
 trainer.train(X_train_tensor, X_train_headers_tensor, y_train_tensor, X_val_tensor, X_val_headers_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu')
+end_time_train=time.time()
 trainer.save_model(model_path,encoder_path)
 print("Model Training Done.")
+time_taken=end_time_train-start_time_train
+print(f"Total time taken for training:{time_taken:.2f} seconds")
     
