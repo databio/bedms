@@ -8,6 +8,7 @@ from nn_model2_train import *
 from nn_model2_train import trainer 
 from nn_model2_preprocess import *
 import pickle
+import json 
 
 def load_optimized_results():
     with open('hyperparam_optim_results.pkl' , 'rb') as f:
@@ -45,6 +46,10 @@ with torch.no_grad():
 decoded_preds = label_encoder.inverse_transform(all_preds)
 decoded_labels=label_encoder.inverse_transform(all_labels)
 
+#test accuracy
+accuracy = accuracy_score(all_labels, all_preds)
+print(f"Test Accuracy Score{accuracy}")
+
 num_categories=len(df_test)
 
 grouped_preds = [decoded_preds[i:i+num_categories] for i in range(0, len(all_preds), num_categories)]
@@ -52,31 +57,31 @@ grouped_labels= [decoded_labels[i:i+num_categories] for i in range(0, len(all_la
 consensus=[]
 labels=[]
 top_three_preds=[]
-output_file_path="predictions_model2.txt"
+output_file_path="predictions_model2.json"
 
-with open(output_file_path,"w") as output_file:
+for i, category_preds in enumerate(grouped_preds):
+    counts=Counter(category_preds)
+    total_predictions=len(category_preds)
+    consensus_value=max(counts, key=counts.get)
+    consensus_percentage=counts[consensus_value]/total_predictions
+    top_three_preds.append({pred: count / total_predictions for pred, count in counts.most_common(3)})
+    consensus.append((consensus_value, consensus_percentage))
+for i, category_labels in enumerate(grouped_labels):
+    counts=Counter(category_labels)
+    most_popular_label=max(counts, key=counts.get)
+    labels.append(most_popular_label)
 
-    for i, category_preds in enumerate(grouped_preds):
-        counts=Counter(category_preds)
-        total_predictions=len(category_preds)
-        consensus_value=max(counts, key=counts.get)
-        consensus_percentage=counts[consensus_value]/total_predictions
-        top_three_preds.append({pred: count / total_predictions for pred, count in counts.most_common(3)})
-        consensus.append((consensus_value, consensus_percentage))
-    for i, category_labels in enumerate(grouped_labels):
-        counts=Counter(category_labels)
-        most_popular_label=max(counts, key=counts.get)
-        labels.append(most_popular_label)
+output_dict = {}
+for label, consensus_values, top_three in zip(labels, consensus, top_three_preds):
+    label_dict = {}
+    for pred, percentage in top_three.items():
+        label_dict[pred] = percentage
+    output_dict[label] = label_dict
 
-    output_dict = {}
-    for label, consensus_values, top_three in zip(labels, consensus, top_three_preds):
-        label_dict = {}
-        for pred, percentage in top_three.items():
-            label_dict[pred] = percentage
-        output_dict[label] = label_dict
-    output_file.write(str(output_dict))
 print(output_dict)
 
+with open(output_file_path, "w") as f:
+    json.dump(output_dict, f)
 
 num_epochs=10
 #generating confusion matrix
@@ -86,7 +91,7 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=np.uniqu
 plt.title('Confusion Matrix')
 plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
-#plt.savefig("onfusion_matrix_model2.jpg")
+#plt.savefig("confusion_matrix_model2.jpg")
 plt.show()
 
 #plotting learning curve - accuracy
