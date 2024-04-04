@@ -7,8 +7,11 @@ import torch
 import torch.nn as nn
 from sentence_transformers import SentenceTransformer
 import pickle
+import time 
 
 input_file="../data/dummy_1.tsv"
+start_time_preprocess=time.time()
+
 df=pd.read_csv(input_file, sep="\t")
 df.replace('NA', np.nan, inplace=True)
 for column in df.columns:
@@ -51,7 +54,7 @@ X_train_bow = vectorizer.transform(X_train_strings)
 X_test_bow = vectorizer.transform(X_test_strings)
 X_val_bow = vectorizer.transform(X_val_strings)
 #saving the vectorizer
-with open("vectorizer_v3.pkl", "wb") as f:
+with open("vectorizer_v4.pkl", "wb") as f:
     pickle.dump(vectorizer, f)
 
 #label encoding for y
@@ -79,7 +82,10 @@ y_train_tensor = torch.tensor(y_train_encoded, dtype=torch.long)
 y_test_tensor = torch.tensor(y_test_encoded, dtype=torch.long)
 y_val_tensor = torch.tensor(y_val_encoded, dtype=torch.long)
 
+end_time_preprocess=time.time()
+time_taken=end_time_preprocess-start_time_preprocess
 print("Preprocessing Done.")
+print(f"Total time taken for preprocessing:{time_taken:.2f} seconds")
 
 
 
