@@ -8,7 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.preprocessing import LabelEncoder
 import time
 
-input_file_path="../data/blueprints_unwrapped_metadata.tsv"
+input_file_path="../data/dummy_1.tsv"
 start_time_preprocess=time.time()
 
 df = pd.read_csv(input_file_path, sep="\t")
@@ -21,17 +21,12 @@ for column in df.columns:
 df_train, df_temp = train_test_split(df, test_size=0.2, random_state=42)
 df_test, df_val = train_test_split(df_temp, test_size=0.5, random_state=42)
 
-# DELETE LATER 
-df_test_temp=pd.read_csv("../data/temp_headers.tsv", sep="\t")
-# DELETE LATER 
-
 #features and labels
 X_train = [df_train[column].astype(str).tolist() for column in df_train.columns]
 X_train_headers=df_train.columns.tolist()
 y_train = df_train.columns
 X_test = [df_test[column].astype(str).tolist() for column in df_test.columns]
-X_test_headers=df_test_temp.columns.tolist()
-print(X_test_headers)
+X_test_headers=df_test.columns.tolist()
 y_test = df_test.columns
 X_val = [df_val[column].astype(str).tolist() for column in df_val.columns]
 X_val_headers=df_val.columns.tolist()
@@ -58,7 +53,7 @@ X_test_header_bow = vectorizer.transform(X_test_header_strings)
 X_val_bow = vectorizer.transform(X_val_strings)
 X_val_header_bow = vectorizer.transform(X_val_header_strings)
 #saving the vectorizer
-with open("bp_vectorizer_v3.pkl", "wb") as f:
+with open("vectorizer_v3.pkl", "wb") as f:
     pickle.dump(vectorizer, f)
 
 #label encoding for y
