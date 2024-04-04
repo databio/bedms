@@ -6,8 +6,11 @@ import os
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+import time
 
 input_file_path = "../data/dummy_1.tsv"  
+
+start_time_preprocess=time.time()
 
 df = pd.read_csv(input_file_path, sep="\t")
 
@@ -69,4 +72,7 @@ y_train_tensor = torch.tensor(y_train_encoded, dtype=torch.long)
 y_test_tensor = torch.tensor(y_test_encoded, dtype=torch.long)
 y_val_tensor = torch.tensor(y_val_encoded, dtype=torch.long)
 
+end_time_preprocess=time.time()
+time_taken=end_time_preprocess-start_time_preprocess
 print("Preprocessing Done.")
+print(f"Total time taken for preprocessing:{time_taken:.2f} seconds")
