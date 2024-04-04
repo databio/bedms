@@ -1,5 +1,5 @@
 #This model only gets trained on column values
-
+import time
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
@@ -34,7 +34,7 @@ class ModelTraining:
         self.num_epochs=10
 
     def train(self, X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs, batch_size, device='cpu'):
-
+        
         self.model=self.model.to(device)
 
         #Training starts
@@ -93,10 +93,13 @@ class ModelTraining:
 input_size = X_train_tensor.shape[1]
 hidden_size = 64
 output_size = len(np.unique(combined_labels))
-
+start_time_train=time.time()
 trainer = ModelTraining(input_size, hidden_size, output_size, learning_rate=0.05)
 trainer.train(X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu')
+end_time_train=time.time()
 trainer.save_model(model_path,encoder_path)
 print("Model Training Done.")
+time_taken=end_time_train-start_time_train
+print(f"Total time taken for training:{time_taken:.2f} seconds")
 
 
