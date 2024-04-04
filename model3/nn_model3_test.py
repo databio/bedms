@@ -21,7 +21,7 @@ hidden_size = best_hyperparameters['hidden_size']
 batch_size=best_hyperparameters['batch_size']
 best_model_path="nn_model3_best.pth"  
 
-output_file_path = "predictions.json"
+output_file_path = "predictions_model3.json"
 
 best_model=BoWModel(input_size_values=X_test_bow_tensor.shape[1], input_size_headers=X_test_header_bow_tensor.shape[1], hidden_size=hidden_size, output_size=len(np.unique(np.concatenate((y_train, y_val)))))
 
@@ -50,6 +50,10 @@ with torch.no_grad():
 #Inverse transform labels
 deencoded_labels = label_encoder.inverse_transform(all_labels)
 deencoded_preds = label_encoder.inverse_transform(all_preds)
+
+#test accuracy
+accuracy = accuracy_score(all_labels, all_preds)
+print(f"Test Accuracy Score{accuracy}")
 
 #printing to output dictionary as json
 softmax_output = torch.softmax(outputs, dim=1).cpu().numpy()
