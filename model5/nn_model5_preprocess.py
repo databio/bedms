@@ -6,8 +6,11 @@ import pickle
 from sklearn.model_selection import train_test_split
 from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import LabelEncoder
+import time 
 
 input_file="../data/dummy_1.tsv"
+start_time_preprocess=time.time()
+
 df=pd.read_csv(input_file, sep="\t")
 df.replace('NA', np.nan, inplace=True)
 for column in df.columns:
@@ -57,7 +60,7 @@ X_train_header_embeddings=sentence_encoder.encode(X_train_header_expanded)
 X_test_header_embeddings=sentence_encoder.encode(X_test_header_expanded)
 X_val_header_embeddings=sentence_encoder.encode(X_val_header_expanded)
 
-with open('nn_sentence_transoformer_v4.pkl', 'wb') as f:
+with open('nn_sentence_transoformer_v5.pkl', 'wb') as f:
     pickle.dump(sentence_encoder, f)
 
 #label encoding
@@ -85,4 +88,8 @@ y_train_tensor = torch.tensor(y_train_encoded, dtype=torch.long)
 y_test_tensor = torch.tensor(y_test_encoded, dtype=torch.long)
 y_val_tensor = torch.tensor(y_val_encoded, dtype=torch.long)
 
+end_time_preprocess=time.time()
+time_taken=end_time_preprocess-start_time_preprocess
+
 print("Preprocessing Done.")
+print(f"Total time taken for preprocessing:{time_taken:.2f} seconds")
