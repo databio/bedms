@@ -9,7 +9,7 @@ from nn_model1_train import trainer
 from nn_model1_preprocess import *
 import pickle
 import json 
-
+'''
 def load_optimized_results():
     with open('hyperparam_optim_results.pkl' , 'rb') as f:
         optimized_results=pickle.load(f)
@@ -85,7 +85,7 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=np.uniqu
 plt.title('Confusion Matrix')
 plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
-#plt.savefig("confusion_matrix_model1.jpg")
+plt.savefig("confusion_matrix_model1.jpg")
 plt.show()
 
 #learning curve - accuracy
@@ -96,7 +96,7 @@ plt.ylabel('Accuracy')
 plt.title('Learning Curve')
 plt.legend()
 plt.grid(True)
-#plt.savefig("accuracy_model1.jpg")
+plt.savefig("accuracy_model1.jpg")
 plt.show()
 
 #learning curve plotting - loss
@@ -107,7 +107,8 @@ plt.ylabel('Loss')
 plt.title('Learning Curve')
 plt.legend()
 plt.grid(True)
-#plt.savefig("loss_model1.jpg")
+plt.savefig("loss_model1.jpg")
 plt.show()
 
+'''
 

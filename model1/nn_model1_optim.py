@@ -1,9 +1,12 @@
+# TODO call optim separately and not within the main script. Only keep training and testing for the main script. 
+
 import pandas as pd
 from sklearn.model_selection import ParameterGrid
 import numpy as np
 from nn_model1_train import *
 from nn_model1_train import ModelTraining
 import pickle
+from nn_model1_preprocess import *
 
 param_grid={
     'batch_size':[32, 64, 128],

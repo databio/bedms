@@ -4,37 +4,19 @@ import torch
 import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
-from nn_model1_preprocess import *
-
-model_path="nn1_model.pth"
-encoder_path="encoder_model1.pth"
-
-class NN1(nn.Module):
-    def __init__(self, input_size, hidden_size, output_size):
-        super(NN1, self).__init__()
-        self.fc1=nn.Linear(input_size, hidden_size)
-        self.relu = nn.ReLU()
-        self.fc2 = nn.Linear(hidden_size, output_size)
-    def forward(self, x):
-        x = self.fc1(x)
-        x = self.relu(x)
-        x = self.fc2(x)
-        return x
+from nn_model1_model import NN1
 
 class ModelTraining:
-    def __init__(self, input_size, hidden_size, output_size, learning_rate):
-        self.model = NN1(input_size, hidden_size, output_size)
-        self.label_encoder = label_encoder
-        self.loss_fn = nn.CrossEntropyLoss()
-        self.optimizer = optim.Adam(self.model.parameters(), lr=learning_rate)
+    def __init__(self, model,loss_fn,optimizer):
+        self.model = model
+        self.loss_fn = loss_fn
+        self.optimizer = optimizer
         self.train_accuracies=[]
         self.val_accuracies = []
         self.train_losses = []
         self.val_losses = []
-        self.num_epochs=10
 
-    def train(self, X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs, batch_size, device='cpu'):
-        
+    def train(self, X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu'):
         self.model=self.model.to(device)
 
         #Training starts
@@ -85,21 +67,6 @@ class ModelTraining:
             print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item()}, Validation Accuracy: {val_accuracy}')
 
         return self.train_accuracies, self.val_accuracies, self.train_losses, self.val_losses
-
-    def save_model(self, model_path,encoder_path):
-        torch.save(self.model.state_dict(), model_path)
-        torch.save(self.label_encoder.classes_, encoder_path)
-
-input_size = X_train_tensor.shape[1]
-hidden_size = 64
-output_size = len(np.unique(combined_labels))
-start_time_train=time.time()
-trainer = ModelTraining(input_size, hidden_size, output_size, learning_rate=0.05)
-trainer.train(X_train_tensor, y_train_tensor, X_val_tensor, y_val_tensor, num_epochs=10, batch_size=32, device='cpu')
-end_time_train=time.time()
-trainer.save_model(model_path,encoder_path)
-print("Model Training Done.")
-time_taken=end_time_train-start_time_train
-print(f"Total time taken for training:{time_taken:.2f} seconds")
-
-
+    
+    def save_model(self, model_path):
+        torch.save(self.model.state_dict(),model_path)

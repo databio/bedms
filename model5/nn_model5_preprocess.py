@@ -8,9 +8,10 @@ from sentence_transformers import SentenceTransformer
 from sklearn.preprocessing import LabelEncoder
 import time 
 
-input_file="../data/dummy_1.tsv"
+input_file="../data/blueprints_unwrapped_metadata.tsv"
 start_time_preprocess=time.time()
-
+headers_input="../data/temp_headers.tsv"
+headers_df=pd.read_csv(headers_input,sep="\t")
 df=pd.read_csv(input_file, sep="\t")
 df.replace('NA', np.nan, inplace=True)
 for column in df.columns:

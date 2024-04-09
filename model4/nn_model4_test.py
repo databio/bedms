@@ -83,7 +83,7 @@ sns.heatmap(conf_matrix, annot=True, fmt='d', cmap='Blues', xticklabels=np.uniqu
 plt.title('Confusion Matrix')
 plt.xlabel('Predicted Label')
 plt.ylabel('True Label')
-#plt.savefig("confusion _matrix_model4.jpg")
+plt.savefig("confusion _matrix_model4.jpg")
 plt.show()
 
 #plotting learning curve - accuracy
@@ -94,7 +94,7 @@ plt.ylabel('Accuracy')
 plt.title('Learning Curve')
 plt.legend()
 plt.grid(True)
-#plt.savefig("accuracy_model4.jpg")
+plt.savefig("accuracy_model4.jpg")
 plt.show()
 
 #learning curve - loss
@@ -105,7 +105,7 @@ plt.ylabel('Loss')
 plt.title('Learning Curve')
 plt.legend()
 plt.grid(True)
-#plt.savefig("loss_model4.jpg")
+plt.savefig("loss_model4.jpg")
 plt.show()
 
 

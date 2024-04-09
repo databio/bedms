@@ -7,9 +7,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
 import time 
 
-input_file_path = "../data/dummy_1.tsv"  
+input_file_path = "../data/blueprints_unwrapped_metadata.tsv"  
 start_time_preprocess=time.time()
 
+headers_input="../data/temp_headers.tsv"
+headers_df=pd.read_csv(headers_input,sep="\t")
 df = pd.read_csv(input_file_path, sep="\t")
 
 df.replace('NA', np.nan, inplace=True)
@@ -27,7 +29,7 @@ X_train = [df_train[column].astype(str).tolist() for column in df_train.columns]
 X_train_headers=df_train.columns.tolist()
 y_train = df_train.columns
 X_test = [df_test[column].astype(str).tolist() for column in df_test.columns]
-X_test_headers=df_test.columns.tolist()
+X_test_headers=headers_df.columns.tolist()
 y_test = df_test.columns
 X_val = [df_val[column].astype(str).tolist() for column in df_val.columns]
 X_val_headers=df_val.columns.tolist()
