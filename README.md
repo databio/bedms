@@ -5,7 +5,7 @@ bedmess is a tool that can be used to standardize metadata according to the bedb
 ## Implementation
 You can provide your metadata as a tsv file. Additionally, you have to choose between FAIRTRACS and ENCODE schemas.
 Usage: Assuming you are in the bedmess directory:
-      ```bash
+   ```bash
       python3 attr_standardizer.py <your_metadata.tsv> --schema FAIRTRACKS/ENCODE
 Presently, we are only providing standardization according to the FAIRTRACKS schema. 
 
