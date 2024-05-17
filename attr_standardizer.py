@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from sentence_transformers import SentenceTransformer
-from transformers import AutoTokenizer, AutoModel
+#from transformers import AutoTokenizer, AutoModel
 import torch 
 import torch.nn as nn
 import torch.nn.functional as F
@@ -17,6 +17,8 @@ import seaborn as sns
 import logging 
 import argparse 
 from collections import Counter 
+import os
+import subprocess
 
 #logging set up
 logging.basicConfig(level=logging.INFO)
@@ -128,14 +130,29 @@ class AttrStandardizer():
                      predictions.extend(predicted.tolist())
            return predictions
 
+def standardize_attr_names_from_path(csv_file):
+     """
+     Fetches metadata from PEPhub registry.
+     csv_file (str): Path to the PEPhub registry containing the metadata csv file
+     Returns:
+          csv_file_path (str): path to the CSV file on the local system.
+     """
+     cmd=f"phc pull {csv_file}"
+     subprocess.run(cmd, shell=True, check=True)
+     directory_name = "bedbase_" + os.path.basename(csv_file).replace(':', '_')
+     csv_file_path = os.path.join(os.getcwd(), directory_name, "sample_table.csv")
+     if os.path.isfile(csv_file_path):
+        return csv_file_path
+     else:
+        raise FileNotFoundError(f"sample_table.csv not found in the pulled directory: {csv_file_path}")
   
-def standardize_attr_names(tsv_file:str, schema:str, values_file_path, headers_file_path):
+def standardize_attr_names(csv_file:str, schema:str, values_file_path, headers_file_path):
       """
 
       Standardize attribute names.
 
       Args:
-          tsv_file (str): Path to the TSV file containing metadata to be standardized.
+          csv_file (str): Path to the CSV file containing metadata to be standardized.
           schema (str): Schema type.
           values_file_path (str): Path to the values file.
           headers_file_path (str): Path to the headers file.
@@ -145,7 +162,7 @@ def standardize_attr_names(tsv_file:str, schema:str, values_file_path, headers_f
       """
      
       X_values_train_tensor, X_headers_train_tensor, y_train_tensor, label_encoder ,X_values_eval_tensor, X_headers_eval_tensor, X_headers_eval, X_values_eval= \
-          data_preprocessing(values_file_path, headers_file_path, tsv_file)
+          data_preprocessing(values_file_path, headers_file_path, csv_file)
       logger.info("Data Preprocessing completed.")
       input_size_values=X_values_train_tensor.shape[1]
       input_size_headers=X_headers_train_tensor.shape[1]
@@ -193,7 +210,7 @@ def load_data(file_path):
      Returns:
           pandas.DataFrame: Loaded data.
      """
-     df=pd.read_csv(file_path, sep="\t", dtype=str)
+     df=pd.read_csv(file_path, sep=",", dtype=str)
      df.replace('NA', np.nan, inplace=True)
      for column in df.columns:
           if df[column].notna().any(): #skipping those columns that are all empty 
@@ -202,14 +219,14 @@ def load_data(file_path):
                df[column] = df[column].fillna(most_common_val)
      return df 
 
-def data_preprocessing(values_file_path, headers_file_path, tsv_file):
+def data_preprocessing(values_file_path, headers_file_path, csv_file):
      """
      Preprocess the data for training and evaluation.
 
      Args:
         values_file_path (str): Path to the values file.
         headers_file_path (str): Path to the headers file.
-        tsv_file (str): Path to the TSV file containing user provided metadata.
+        csv_file (str): Path to the TSV file containing user provided metadata.
 
      Returns:
         tuple: Processed data tensors
@@ -217,9 +234,7 @@ def data_preprocessing(values_file_path, headers_file_path, tsv_file):
      """
      df_values=load_data(values_file_path)
      df_headers=load_data(headers_file_path)
-     #For now, only accepting user provided CSV 
-     # TODO change to pep 
-     df_user =load_data(tsv_file)
+     df_user =load_data(csv_file)
 
      X_values_train=[df_values[column].astype(str).tolist() for column in df_values.columns]
      X_headers_train=[df_headers[column].astype(str).tolist() for column in df_headers.columns]
@@ -257,19 +272,27 @@ def data_preprocessing(values_file_path, headers_file_path, tsv_file):
      return X_values_train_tensor, X_headers_train_tensor, y_train_tensor, label_encoder, X_values_eval_tensor, X_headers_eval_tensor, X_headers_eval, X_values_eval
 
 
+
+
 if __name__=="__main__":
      parser=argparse.ArgumentParser(description="Attribute Standardization tool")
-     parser.add_argument("tsv_file", help="Path to the tsv file that contains metadata to be standardized")
+     parser.add_argument("csv_file", help="Path to the csv file that contains metadata to be standardized")
+     parser.add_argument("--path", choices=["PEPhub_registry", "LOCAL"], default="LOCAL", help="Choose if the CSV file path is a PEPhub registry path or a local path")
      parser.add_argument("--schema", choices=["ENCODE", "FAIRTRACKS"], default="ENCODE", help="Choose the schema to standardize into")
      args=parser.parse_args()
+     if args.path == "PEPhub_registry":
+          csv_file=standardize_attr_names_from_path(args.csv_file)
+     elif args.path == "LOCAL":
+          csv_file=args.csv_file
      if args.schema == "ENCODE":
-          values_file_path = None # TODO : Add the encode file path 
-          headers_file_path = None # TODO : Add encode headers file path 
+          values_file_path = "data/encode_metadata_05022024.csv"
+          headers_file_path = "data/encode_headers_matched.csv" 
      elif args.schema == "FAIRTRACKS":
-          values_file_path = "data/blueprint_metadata_05012024.tsv" 
-          headers_file_path = "data/blueprint_metadata_headers_05012024.tsv" 
+          values_file_path = "data/blueprint_metadata_05012024.csv" 
+          headers_file_path = "data/blueprint_metadata_headers_05012024.csv" 
+     
 
-     suggestions=standardize_attr_names(args.tsv_file, args.schema, values_file_path, headers_file_path)
+     suggestions=standardize_attr_names(csv_file, args.schema, values_file_path, headers_file_path)
      print(suggestions)
    
 

@@ -1,0 +1,1063 @@
+global_id,local_id,species_id,species_name,donor_age,donor_ethnicity,donor_health_status,donor_id,donor_sex,biospecimen_class_term_id,biospecimen_class_term_label,sample_type_term_id,sample_type_term_label,phenotype_term_id,phenotype_term_label
+biosample:SAMEA1965356,bmPCs-V156,taxonomy:9606,Anolis carolinensis,0 - 18,-,-,182CLL,F ,http://purl.obolibrary.org/obo/NCIT_C103199,Abnormal Cell,http://purl.obolibrary.org/obo/CL_0000037,24 hours post-fertilisation embryo,http://purl.obolibrary.org/obo/NCIT_C14165,Acute Lymphoblastic Leukemia
+biosample:SAMEA1965477,C000R7B4,taxonomy:1036758,Arabidopsis thaliana,0 - 5,Admixed American,Activated B-Cell-Like Diffuse Large B-Cell Lymphoma,110CLL,Female,http://purl.obolibrary.org/obo/NCIT_C12508,Cell,http://purl.obolibrary.org/obo/CL_0000038,A549 cell line,http://purl.obolibrary.org/obo/NCIT_C27756,Acute Myeloid Leukemia
+biosample:SAMEA1965710,C000S5A1bs,taxonomy:3702,Bos taurus,10 - 15,African,Active Juvenile Idiopathic Arthritis on Treatment,C0062X,M,http://purl.obolibrary.org/obo/NCIT_C12913,Organism Part,http://purl.obolibrary.org/obo/CL_0000041,Acetabulum,http://purl.obolibrary.org/obo/NCIT_C2912,Burkitt Lymphoma
+biosample:SAMEA1967091,C000S5A2bs,taxonomy:63221,Caenorhabditis elegans,1 - 5,ARAB,Acute Lymphocytic Leukemia,S0022I,Male,,,http://purl.obolibrary.org/obo/CL_0000049,adenosquamous cancer of the pancreas (ASCP) tumor,http://purl.obolibrary.org/obo/NCIT_C2986,Chronic Lymphocytic Leukemia
+biosample:SAMEA1967371,C000S5B1,taxonomy:9779,Callithrix jacchus,15 - 20,Asian,acute myeloid leukemia,S002R5,Mixed,,Abnorml Cell,http://purl.obolibrary.org/obo/CL_0000050,adjacent noncancerous liver tissue,http://purl.obolibrary.org/obo/NCIT_C3163,Diffuse Large B-Cell Lymphoma Activated B-Cell Type
+biosample:SAMEA1968149,C000S5B4,taxonomy:24234,Canis lupus familiaris,1 - 7,Caucasian,Acute Myeloid Leukemia,S006VI,Unknown,,Cll,http://purl.obolibrary.org/obo/CL_0000051,adult  Brain,http://purl.obolibrary.org/obo/NCIT_C3167,Diffuse Large B-Cell Lymphoma Germinal Center B-Cell Type
+biosample:SAMEA1968983,C000S5H1,taxonomy:1386,Cereibacter sphaeroides,20 - 25,Dutch,acute myeloid leukemia (AML),C004SQ,,http://purl.obolibrary.org/obo/NCIT_C103200,Orgnism Part,http://purl.obolibrary.org/obo/CL_0000092,adult endothelial progenitor cell,http://purl.obolibrary.org/obo/NCIT_C3171,Follicular Lymphoma
+biosample:SAMEA1969435,C000S5H2,taxonomy:55087,Chlorocebus aethiops,20 - 30,East Asian,Acute Promyelocytic Leukemia,C005DF,Fem,http://purl.obolibrary.org/obo/NCIT_C103201,Abnrmal Cell,http://purl.obolibrary.org/obo/CL_0000096,Adult HSPCs (A0),http://purl.obolibrary.org/obo/NCIT_C3183,Mantle Cell Lymphoma
+biosample:SAMEA1970293,C000WYB3,taxonomy:8459,Cyprinus carpio,20 - 40,European,acute promyelocytic leukemia (APL),NC14_24,Femal,http://purl.obolibrary.org/obo/NCIT_C103202,Cel,http://purl.obolibrary.org/obo/CL_0000235,Adult peripheral blood,http://purl.obolibrary.org/obo/NCIT_C3209,Normal
+biosample:SAMEA1971004,C0010K46,taxonomy:8504,Danio rerio,25 - 30,Non-hispanic,AD,pz 289,Masc,http://purl.obolibrary.org/obo/NCIT_C103203,Orgnism Partt,http://purl.obolibrary.org/obo/CL_0000451,Adult ProEs (A5),http://purl.obolibrary.org/obo/NCIT_C3242,Plasma Cell Myeloma
+biosample:SAMEA1971429,C0010KA1bs,taxonomy:1294634,Drosophila melanogaster,30 - 35,Northern European,adjacent normal lung tissues,pz 289,Mn,http://purl.obolibrary.org/obo/NCIT_C103204,Abnrmal Cl,http://purl.obolibrary.org/obo/CL_0000550,alternatively activated macrophage,http://purl.obolibrary.org/obo/NCIT_C36080,T Acute Lymphoblastic Leukemia
+biosample:SAMEA1972124,C0010KA2bs,taxonomy:60852,"Drosophila melanogaster, Sindbis virus",3 - 10,Not applicable,Alcoholic Hepatitis patient,S005YG,Mix,http://purl.obolibrary.org/obo/NCIT_C103205,Ceel,http://purl.obolibrary.org/obo/CL_0000557,Ameloblastoma tissue,http://purl.obolibrary.org/obo/NCIT_C36081,T-Cell Prolymphocytic Leukemia
+biosample:SAMEA1972882,C0010KB1,taxonomy:144212,Escherichia coli,35 - 40,South Asian,ALL,S00C2F,Unkn,http://purl.obolibrary.org/obo/NCIT_C103206,Orgnsm Part,http://purl.obolibrary.org/obo/CL_0000560,AML - plasma,http://purl.obolibrary.org/obo/NCIT_C4337,Type 1 Diabetes Mellitus
+biosample:SAMEA1973166,C0010KB4,taxonomy:10090,Felis catus,35 - 60,YORUBA,ALL diagnosis,BM030613,Femle,http://purl.obolibrary.org/obo/NCIT_C103207,Abnormal Cll,http://purl.obolibrary.org/obo/CL_0000576,Angiomatoid fibrous histiocytoma,http://purl.obolibrary.org/obo/NCIT_C4752,Typical Acute Promyelocytic Leukemia
+biosample:SAMEA2007564,C0010KH1,,Gallus gallus,40 - 45,American Indian,Alzheimer's Disease,BM190913,Mal,http://purl.obolibrary.org/obo/NCIT_C103208,Cel,http://purl.obolibrary.org/obo/CL_0000580,anterior cingulate cortex (ACC),,
+biosample:SAMEA2007565,C0010KH2,Taxonomy:9606,Gasterosteus aculeatus,45 - 50,Alaska Native,Alzheimer's disease (AD),BM190913,Mal,http://purl.obolibrary.org/obo/NCIT_C103209,Orgnism Part,http://purl.obolibrary.org/obo/CL_0000582,AOM/DSS tumour organoids,,
+biosample:SAMEA2007566,C0011I43,taxonomy:1036758,Homo sapiens,50 - 55,African American,Anaplastic Astrocytoma  IDH-mutant,C00360,Mixd,http://purl.obolibrary.org/obo/NCIT_C103210,Abnomal Cell,http://purl.obolibrary.org/obo/CL_0000624,AR-negative CRPC organoid,,
+biosample:SAMEA2009060,C0011IA3bs,Taxonomy:3702,"Homo sapiens, Human betaherpesvirus 6A",50 - 70,Native Hawaiian,"AR negative, Neuro Endocrine",S001S7,Unknwn,http://purl.obolibrary.org/obo/NCIT_C103211,Ceell,http://purl.obolibrary.org/obo/CL_0000625,ARP1 myeloma cell line,,
+biosample:SAMEA2009061,C0011IB1,taxonomy:63221,"Homo sapiens, Human gammaherpesvirus 8",5 - 10,Pacific Islander,"AR positive, Neuro Endocrine like",12CLL,Femaale,http://purl.obolibrary.org/obo/NCIT_C103212,Organism Prt,http://purl.obolibrary.org/obo/CL_0000763,athersclerotic human artery,,
+biosample:SAMEA2009062,C0011IB5,,"Homo sapiens, Human immunodeficiency virus 1",55 - 60,Caribbean,AS patients,T14_10,Mael,http://purl.obolibrary.org/obo/NCIT_C103213,Abnrmal Cel,http://purl.obolibrary.org/obo/CL_0000765,B16 tumor transplanted in C56BL/6 mice,,
+biosample:SAMEA2009068,C0011IH1,,"Homo sapiens, Human poliovirus 1 strain Sabin",55 - 65,Indian,Astrocytoma  Anaplastic (WHO gr. 3),UMCG00007,Mixd,http://purl.obolibrary.org/obo/NCIT_C103214,Celll,http://purl.obolibrary.org/obo/CL_0000786,B acute lymphoblastic leukemia cells with t(1-19)(q23-p13.3) E2A-PBX1 (TCF3-PBX1),,
+biosample:SAMEA2009069,C0011IH2,taxonomy:38904,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N1))",55 - 70,Melanesian,Astrocytoma (WHO gr. 2),C00408,Unknwn,http://purl.obolibrary.org/obo/NCIT_C103215,Orgnism Pat,http://purl.obolibrary.org/obo/CL_0000787,band form neutrophil,,
+,C00184A3bs,taxonomy:3702,"Homo sapiens, Mus musculus",60 - 65,Australasian,ATR-X syndrome,C12012,Fml,http://purl.obolibrary.org/obo/NCIT_C103216,Abnormal Ccell,http://purl.obolibrary.org/obo/CL_0000788,Bladder tumor,,
+,C00184B5,taxonomy:9913,"Homo sapiens, Rattus norvegicus",65 - 70,Aboriginal,bladder cancer,N00031319896021,Ml,http://purl.obolibrary.org/obo/NCIT_C103217,Cll,http://purl.obolibrary.org/obo/CL_0000810,blood,,
+,C00184H2,taxonomy:6239,"Homo sapiens, Sindbis virus",70 - 75,Chinese,BPDCN (blastic plasmacytoid dendritic cell neoplasm),BM030613,Mxd,http://purl.obolibrary.org/obo/NCIT_C103218,Orgnism Pqrt,http://purl.obolibrary.org/obo/CL_0000811,Blood,,
+biosample:SAMEA2010329,C00192B6,taxonomy:9483,Human gammaherpesvirus 4,75 - 80,Guamanian,Burkitt Lymphoma,BM190913,Unk,http://purl.obolibrary.org/obo/NCIT_C103219,Abnormal Cl,http://purl.obolibrary.org/obo/CL_0000815,B-lymphocytes,,
+biosample:SAMEA2010330,C001FRB1,taxonomy:9615,Human gammaherpesvirus 8,80 - 85,Japanese,cancer,S00SQE,,http://purl.obolibrary.org/obo/NCIT_C103220,Ccell,http://purl.obolibrary.org/obo/CL_0000817,BNST,,
+biosample:SAMEA2010331,C001FRB2,taxonomy:11,Human immunodeficiency virus,85 - 90,Korean,Cancer,C00280,,http://purl.obolibrary.org/obo/NCIT_C103221,Orgnism Part,http://purl.obolibrary.org/obo/CL_0000837,BNSTp,,
+biosample:SAMEA2014399,C001FRB3,taxonomy:60711,Leishmania major,90,Polynesian,Castration resistant,1525CLL,F ,http://purl.obolibrary.org/obo/NCIT_C103222,Abnrmal Celll,http://purl.obolibrary.org/obo/CL_0000840,bone,,
+biosample:SAMEA2017285,C001FRB4,taxonomy:7962,Macaca mulatta,,European,chronic lymphocytic leukemia,S007G7,Female,http://purl.obolibrary.org/obo/NCIT_C103223,Cel,http://purl.obolibrary.org/obo/CL_0000841,Bone,,
+biosample:SAMEA2017286,C001HNB2,taxonomy:7955,"Macaca mulatta, Macacine gammaherpesvirus 4",,Anglo Saxon,Chronic Lymphocytic Leukemia,pz 283,M,http://purl.obolibrary.org/obo/NCIT_C103224,Orgnism Part,http://purl.obolibrary.org/obo/CL_0000842,bone marrow,,
+biosample:SAMEA2017287,C001HNB3,taxonomy:7227,Mus musculus,0 - 18,Latin American,cirrhosis,pz 283,Male,http://purl.obolibrary.org/obo/NCIT_C103225,Abnomal Cl,http://purl.obolibrary.org/obo/CL_0000844,Bone marrow,,Alzheimer's Disease
+biosample:SAMEA2017289,C001KHSR,taxonomy:7227,"Mus musculus, Murid herpesvirus 68",0 - 5,Arabic,colorectal cancer,S000RD,Mixed,http://purl.obolibrary.org/obo/NCIT_C103226,Ceell,http://purl.obolibrary.org/obo/CL_0000863,Bone Marrow,,Parkinson's Disease
+biosample:SAMEA2020341,C001MDB1,taxonomy:562,Ornithorhynchus anatinus,10 - 15,Vietnamese,control,S00622,Unknown,http://purl.obolibrary.org/obo/NCIT_C103227,Orgnism Prt,http://purl.obolibrary.org/obo/CL_0000890,bone marrow aspirates,,Multiple Sclerosis
+biosample:SAMEA2020342,C001NBB1,taxonomy:9685,Oryctolagus cuniculus,1 - 5,Micronesian,Control,S002S3,,http://purl.obolibrary.org/obo/NCIT_C103228,Abnormal Cll,http://purl.obolibrary.org/obo/CL_0000893,bone marrow cell,,Crohn's Disease
+biosample:SAMEA2020343,C001NBB3,taxonomy:9031,Ovis aries,15 - 20,US Indian,CRPC,S00198,Fem,http://purl.obolibrary.org/obo/NCIT_C103229,Cell,http://purl.obolibrary.org/obo/CL_0000904,"Bone Marrow, Iliac Crest",,Ulcerative Colitis
+biosample:SAMEA2020344,C001NBB4,taxonomy:8030,Pan troglodytes,1 - 7,Canadian Indian,cutaneous T cell leukemia (CTCL),S0016E,Femal,http://purl.obolibrary.org/obo/NCIT_C103230,Orgnism Partt,http://purl.obolibrary.org/obo/CL_0000905,bone marrow mononuclear cells,,Rheumatoid Arthritis
+biosample:SAMEA2020347,C001R3B2,taxonomy:9606,Plasmodium falciparum,20 - 25,Puerto Rican,Diabetic,TH91,Masc,http://purl.obolibrary.org/obo/NCIT_C103231,Abnorml Cel,http://purl.obolibrary.org/obo/CL_0000907,brain,,Systemic Lupus Erythematosus
+biosample:SAMEA2020348,C001UY46,taxonomy:9606,Rattus norvegicus,20 - 30,Filipino,Diffuse Astrocytoma  IDH-mutant,UMCG00017,Mn,http://purl.obolibrary.org/obo/NCIT_C103232,Clll,http://purl.obolibrary.org/obo/CL_0000913,Brain,,Psoriasis
+biosample:SAMEA2020349,C001UYA1bs,taxonomy:9606,Saccharomyces cerevisiae,20 - 40,Mexican,diffuse large B cell lymphoma,pz 289,Mix,http://purl.obolibrary.org/obo/NCIT_C103233,Orgnsm Part,http://purl.obolibrary.org/obo/CL_0000939,brain cortex,,Celiac Disease
+biosample:SAMEA2020350,C001UYA3bs,taxonomy:9606,"Saccharomyces cerevisiae, Homo sapiens",25 - 30,Alaskan Native ,diffuse large B cell lymphoma (DLBCL),pz 286,Unkn,http://purl.obolibrary.org/obo/NCIT_C103234,Abnrmal Ccel,http://purl.obolibrary.org/obo/CL_0000945,Brain prefrontal cortex,,Asthma
+biosample:SAMEA2020351,C001UYB1,taxonomy:9606,Sarcophilus harrisii,30 - 35,Cuban,dilated cardiomyopathy (DCM),C000S5,Femle,http://purl.obolibrary.org/obo/NCIT_C103235,Cll,http://purl.obolibrary.org/obo/CL_0000970,brain prefrontal cortex region tissues,,Hypertension
+biosample:SAMEA2020353,C001UYB4,taxonomy:9606,Sus scrofa,3 - 10,African Ancestry in SW USA,,S00FTN,Mal,http://purl.obolibrary.org/obo/NCIT_C103236,Orgnism Prat,http://purl.obolibrary.org/obo/CL_0000972,Brain Tumor,,Coronary Artery Disease
+biosample:SAMEA2020354,C001UYH1,taxonomy:10090,synthetic construct,35 - 40,African Caribbean in Barbados,Duchenne,S00DCS,Mal,http://purl.obolibrary.org/obo/NCIT_C103237,Abnrmal Cl,http://purl.obolibrary.org/obo/CL_0001062,breast,,Obesity
+biosample:SAMEA2020496,C001UYH2,taxonomy:9606,Trypanosoma brucei,35 - 60,Bengali in Bangladesh,dysplastic chronic myelomonocytic leukemia,C001UY,Mixd,http://purl.obolibrary.org/obo/NCIT_C103238,Cll,http://purl.obolibrary.org/obo/CL_0002026,Breast,,Type 2 Diabetes Mellitus
+biosample:SAMEA2020497,C00256A1bs,taxonomy:9606,Xenopus tropicalis,40 - 45,British from England and Scotland,endometrial adenocarcinoma,S004VQ,Unknwn,http://purl.obolibrary.org/obo/NCIT_C103239,Orgnism Pqrt,http://purl.obolibrary.org/obo/CL_0002057,breast cancer cell line,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA2030860,,taxonomy:9606,Acinonyx jubatus,45 - 50,Chinese Dai in Xishuangbanna,erythroleukaemia,PB130513,Femaale,http://purl.obolibrary.org/obo/NCIT_C103240,Abnormal Cl,http://purl.obolibrary.org/obo/CL_0002092,Breast cancer ductal carcinoma,,Atrial Fibrillation
+biosample:SAMEA2031446,,taxonomy:9606,Aedes aegypti,50 - 55,Colombian in Medellin,ES patients,PB130513,Mael,http://purl.obolibrary.org/obo/NCIT_C103241,Cel,http://purl.obolibrary.org/obo/CL_0002102,Breast Cancer patient-derived xenograft (PDX),,Depression
+biosample:SAMEA2043151,,taxonomy:9606,Agalychnis callidryas,50 - 70,Esan in Nigeria,facial tumor,BM220513,Mixd,http://purl.obolibrary.org/obo/NCIT_C103242,Orgnism Part,http://purl.obolibrary.org/obo/CL_0002430,Breast cancer PDX model Gar15-13,,Schizophrenia
+biosample:SAMEA2043164,,taxonomy:9606,Alligator mississippiensis,5 - 10,Finnish in Finland,follicular lymphoma,C002Q1,Unknwn,http://purl.obolibrary.org/obo/NCIT_C103243,Abnrmal Celll,http://purl.obolibrary.org/obo/CL_0002540,Breast cancer PDX model HCI005,,Bipolar Disorder
+biosample:SAMEA2043336,C002AXH1,taxonomy:9606,Ambystoma mexicanum,55 - 60,Gambian in Western Division,Germinal Center B-Cell-Like Diffuse Large B-Cell Lymphoma,S00BHQ,Fml,http://purl.obolibrary.org/obo/NCIT_C103244,Ceell,http://purl.obolibrary.org/obo/CL_0002618,Breast cancer PDX model HCI006,,Anxiety Disorders
+biosample:SAMEA2043337,C002CTA1bs,taxonomy:9615,Amphiprion ocellaris,55 - 65,"Gujarati Indians in Houston, Texas",GS_delta_44,S001MJ,Ml,http://purl.obolibrary.org/obo/NCIT_C103245,Orgnism Pat,http://purl.obolibrary.org/obo/CL_0002619,Breast epithelium,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA2043509,C002Q1H1,taxonomy:9544,Anas platyrhynchos,55 - 70,Han Chinese in Beijing,HCC,S000RD,Mxd,http://purl.obolibrary.org/obo/NCIT_C103246,Abnormal Clll,http://purl.obolibrary.org/obo/CL_0011114,breast organoids,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA2043513,C002TWH1,taxonomy:9544,Antirrhinum majus,60 - 65,Iberian Populations in Spain,healthy,UMCG00018,Unk,http://purl.obolibrary.org/obo/NCIT_C103247,Cell,http://purl.obolibrary.org/obo/UBERON_0000029,"breast tissues, fresh normal, surgical sample",,Cerebral Palsy
+biosample:SAMEA2043840,C002TWH2,taxonomy:10088,Apteryx mantelli,65 - 70,Indian Telugu in the U.K.,Healthy,S0022I,,http://purl.obolibrary.org/obo/NCIT_C103248,,http://purl.obolibrary.org/obo/UBERON_0001982,Bronchus,,Down Syndrome
+biosample:SAMEA2043997,C002UUB1,taxonomy:10088,Aplysia californica,70 - 75,"Japanese in Tokyo, Japan",healthy control,S00BJM,,http://purl.obolibrary.org/obo/NCIT_C103249,,http://purl.obolibrary.org/obo/UBERON_0002371,Cancer Asso. Fibroblasts,,Sickle Cell Disease
+biosample:SAMEA2043998,C002UUB2,taxonomy:9544,Aquila chrysaetos,75 - 80,Kinh in Ho Chi Minh City,Healthy control,T14_10,F ,http://purl.obolibrary.org/obo/NCIT_C103250,,http://purl.obolibrary.org/obo/UBERON_0013756,capillary,,Thalassemia
+biosample:SAMEA2043999,C002UUB3,taxonomy:10036,Arabidopsis lyrata,80 - 85,"Luhya in Webuye, Kenya",Healthy/ Control,UMCG00002,Female,,,,Caudate nucleus,,Hemophilia
+biosample:SAMEA2044538,C002UUB4,taxonomy:9986,Atta cephalotes,85 - 90,Mende in Sierra Leone,Healthy controls,pz 298,M,,,,CD138_bone_marrow,,Duchenne Muscular Dystrophy
+biosample:SAMEA2044705,C002YMH1,taxonomy:10090,Bombus terrestris,90,Mexican Ancestry in Los Angeles CA USA,Healthy Controls,15548,Male,,,http://purl.obolibrary.org/obo/CL_0003000,"CD14-positive, CD16-negative classical monocyte",,Cystic Fibrosis
+biosample:SAMEA2044900,C00360H1,taxonomy:10116,Brachypelma smithi,,Peruvian in Lima Peru,Healthy T cells,pz 284,Mixed,,Abnormal Cell,http://purl.obolibrary.org/obo/CL_0003001,"CD16-positive, CD56-dim natural killer cell",,Huntington's Disease
+biosample:SAMEA2044904,C003JB51,taxonomy:9878,Bufo bufo,,Puerto Rican in Puerto Rico,Idiopathic Pulmonary Fibrosis (IPF),C00280,Unknown,,Cell,http://purl.obolibrary.org/obo/CL_0003002,CD34+ cells derived from cord blood,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA2045027,C003K951,taxonomy:4577,Buteo jamaicensis,,"Punjabi in Lahore, Pakistan",Juvenile Idiopathic Arthritis,S0040E,,,Organism Part,http://purl.obolibrary.org/obo/CL_0003003,CD34+ cord blood,,Epilepsy
+biosample:SAMEA2045077,C003N351,taxonomy:7955,Caiman crocodilus,,Sri Lankan Tamil in the UK,leukemic,S002T1,Fem,,,http://purl.obolibrary.org/obo/CL_0003004,CD34+ HSPC-derived proerythroblasts,,Tourette Syndrome
+biosample:SAMEA2045170,C003TSH1,taxonomy:8364,Callinectes sapidus,,Toscani in Italia,lung cancer,BM030613,Femal,,Abnorml Cell,http://purl.obolibrary.org/obo/CL_0003005,"CD34-negative, CD41-positive, CD42-positive megakaryocyte cell",,Non-Hodgkin Lymphoma
+biosample:SAMEA2045305,C003UQH1,taxonomy:9823,Camponotus floridanus,,"Yoruba in Ibadan, Nigeria",Lymphoma_Follicular,S00VYN,Masc,,Cll,http://purl.obolibrary.org/obo/CL_0003006,CD38-negative naive B cell,,Hodgkin Lymphoma
+biosample:SAMEA2045309,C003VO55,taxonomy:12916,Canis latrans,,,Mantle Cell Lymphoma,C002AX,Mn,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003007,"CD4-intermediate, CD8-positive double-positive thymocyte",,Chronic Myeloid Leukemia
+biosample:SAMEA2045311,C003VO56,taxonomy:12066,Carassius auratus,,Admiced Amrican,metastatic castration resistant prostate cancer,C0011I,Mix,,Abnrmal Cell,http://purl.obolibrary.org/obo/CL_0003008,CD4+ memory t cell,,Polycythemia Vera
+biosample:SAMEA2045312,C004084E,taxonomy:8469,Castor canadensis,,Afrikan,microcephalic dwarfism,S00H6O,Unkn,,Cel,http://purl.obolibrary.org/obo/CL_0003009,CD4+ naïve t cell,,Essential Thrombocythemia
+biosample:SAMEA2048828,C00408H2,taxonomy:8128,Cavia porcellus,,ARAB,Multiple myeloma,pz 286,Femle,,Orgnism Partt,http://purl.obolibrary.org/obo/CL_0003010,"CD4-positive, alpha-beta T cell",,Myelofibrosis
+biosample:SAMEA2048995,C004GD12,taxonomy:9646,Ceratophrys cranwelli,,Asiab,Multiple Myeloma,S0018A,Mal,,Abnrmal Cl,http://purl.obolibrary.org/obo/CL_0003011,"CD4-positive, alpha-beta thymocyte",,Hairy Cell Leukemia
+biosample:SAMEA2049002,C004GD51,taxonomy:12384,Chaetodon auriga,,Caucaisan,Natural control,C001UY,Mal,,Ceel,http://purl.obolibrary.org/obo/CL_0003012,CD4+ T cells,,Waldenström Macroglobulinemia
+biosample:SAMEA2049081,C004GDH1,taxonomy:8364,Chelonia mydas,,Duch,Newly diagnosed Rheumatoid Arthritis,S00390,Mixd,,Orgnsm Part,http://purl.obolibrary.org/obo/CL_0003013,"CD8-positive, alpha-beta T cell",,Myelodysplastic Syndromes
+biosample:SAMEA2049082,C004SQ12,taxonomy:9739,Chrysaora fuscescens,,East Asan,no known lung disease,S00390,Unknwn,,Abnormal Cll,http://purl.obolibrary.org/obo/CL_0003014,"CD8-positive, alpha-beta thymocyte",,Systemic Mastocytosis
+biosample:SAMEA2049083,C004SQ51,taxonomy:8459,Ciconia ciconia,,Eurppean,non-metastatic colorectal cancer (CRC),TH91,Femaale,,Cel,http://purl.obolibrary.org/obo/CL_0003015,Cell line,,Eosinophilic Leukemia
+biosample:SAMEA2049084,C004SQH1,taxonomy:9779,Colias eurytheme,,Non-huspanic,normal,pz 298,Mael,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003016,Cell-line,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA2049085,C00504H1,taxonomy:8030,Corvus corax,,Northern Europeen,Normal,UMCG00005,Mixd,,Abnomal Cell,http://purl.obolibrary.org/obo/CL_0003017,Cell line-engineered GM12878 cell,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA2049086,C0054XH3,taxonomy:8030,Coturnix japonica,,Not applicable,normal CD19+ cells,T14_5,Unknwn,,Ceell,http://purl.obolibrary.org/obo/CL_0003018,cell line established from a metastatic GIST,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2049087,C005DFH1,taxonomy:8478,Crocodylus niloticus,,South Asan,normal CD3+ cells,pz 289,Fml,,Organism Prt,http://purl.obolibrary.org/obo/CL_0003019,Cell line-GM12878,,Myeloproliferative Neoplasms
+biosample:SAMEA2049088,C005MY12,taxonomy:3203,Cryptotermes secundus,,YORUBA,Normal human,UMCG00003,Ml,,Abnrmal Cel,http://purl.obolibrary.org/obo/CL_0003020,Cell line-Normal 6,,Acute Promyelocytic Leukemia
+biosample:SAMEA2049182,C005PS12,taxonomy:7743,Dendrobates tinctorius,,Americsn Indiab,Old,NC14_47,Mxd,,Celll,http://purl.obolibrary.org/obo/CL_0003021,"central memory CD4-positive, alpha-beta T cell",,Chronic Eosinophilic Leukemia
+biosample:SAMEA2049244,C005PS4E,taxonomy:3195,Diapheromera femorata,,Alskan Native,Oligodendroglioma  Anaplastic (WHO gr. 3),pz 289,Unk,,Orgnism Pat,http://purl.obolibrary.org/obo/CL_0003022,"central memory CD8-positive, alpha-beta T cell",,Myeloid Sarcoma
+biosample:SAMEA2049245,C005PS51,taxonomy:9031,Didelphis virginiana,,Africn Amrican,Oligodendroglioma  IDH-mutant  1p19q codeleted,S008H1,,,Abnormal Ccell,http://purl.obolibrary.org/obo/CL_0003023,cerebellum,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2049246,C005PSH1,taxonomy:9669,Dinoponera australis,,Nativ Hawaiian,Oligodendroglioma (WHO gr. 2),"C003JB,C003RW,C003N3,C003QY",,,Cll,http://purl.obolibrary.org/obo/CL_0003024,Cerebellum,,Mast Cell Leukemia
+biosample:SAMEA2049304,C005PSH2,taxonomy:9625,Dipodomys spectabilis,,Pcific Islandr,Osteoarthritis,C00184,,,Orgnism Pqrt,http://purl.obolibrary.org/obo/CL_0003025,"cerebral cortex, BA9",,Plasma Cell Leukemia
+biosample:SAMEA2049357,C005QQH1,taxonomy:9669,Dolichovespula maculata,,Carribean,pancreatic cancer,C004GD,,,Abnormal Cl,http://purl.obolibrary.org/obo/CL_0003026,Cervix,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA2049358,C005UI52,taxonomy:9669,Drosophila simulans,,Indin,Primary T-ALL,C0010K,F ,,Ccell,http://purl.obolibrary.org/obo/CL_0003027,cervix adenocarcinoma,,Heavy Chain Disease
+biosample:SAMEA2049364,C005VG11,taxonomy:9713,Dryococelus australis,,Melaneian,prostate cancer,C000S5,Female,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003028,Childhood B acute lymphoblastic leukemia with t(v-11q23) KMT2A rearranged,,Smoldering Multiple Myeloma
+biosample:SAMEA2049365,C005VG45,taxonomy:9688,Dugesia japonica,,Australasian,psychosis,C0054X,M,,Abnrmal Celll,http://purl.obolibrary.org/obo/CL_0003029,Chimpanzee Prefrontal Cortex,,Primary Myelofibrosis
+biosample:SAMEA2049483,C005VG51,taxonomy:30538,Echinocactus grusonii,,Aborignal,Rheumatoid Arthritis,S00BKK,Male,,Cel,http://purl.obolibrary.org/obo/CL_0003030,Chimpanzee White Matter,,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA2049484,C005VGH1,taxonomy:9825,Elaphe guttata,,Chinse,severe Alzheimer’s disease,S00C1H,Mixed,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003031,Chronic Lymphocytic Leukemia (CLL) cell line,,Secondary Myelofibrosis
+biosample:SAMEA2049485,C0062XH1,taxonomy:30608,Elephas maximus,,Gumanian,shASCL1,S00BS4,Unknown,,Abnomal Cl,http://purl.obolibrary.org/obo/CL_0003032,Circle of Willis,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA2049487,C0066P12,taxonomy:30529,Emys orbicularis,,Japnese,SLE patients,BM030613,,,Ceell,http://purl.obolibrary.org/obo/CL_0003033,class switched memory B cell,,Secondary Thrombocytosis
+biosample:SAMEA2049489,C0066P44,taxonomy:40674,Enhydra lutris,,Korian,small cell lung cancer,PB100713,Fem,,Orgnism Prt,http://purl.obolibrary.org/obo/CL_0003034,Clear Cell Ovarian Cancer,,Reactive Thrombocytosis
+biosample:SAMEA2049494,C0066P51,taxonomy:30522,Entamoeba histolytica,,Polynesin,superimposed preeclampsia,3CLL,Femal,,Abnormal Cll,http://purl.obolibrary.org/obo/CL_0003035,colon,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA2049743,C0066PH1,taxonomy:8893,Equus caballus,,Euopean,Systemic Lupus Erythematosus (SLE) patient,S004KB,Masc,,Cell,http://purl.obolibrary.org/obo/CL_0003036,Colon,,Acute Eosinophilic Leukemia
+biosample:SAMEA2049747,C0067N12,taxonomy:9612,Eretmochelys imbricata,,Anglo Saxn,T1D,S0018A,Mn,,Orgnism Partt,http://purl.obolibrary.org/obo/CL_0003037,Colon adenoma,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA2049843,C0067N51,taxonomy:8560,Eumeces fasciatus,,Latn American,T-ALL,pz 286,Mix,,Abnorml Cel,http://purl.obolibrary.org/obo/CL_0003038,colon-derived,,Mast Cell Disease
+biosample:SAMEA2049923,C0068L51,taxonomy:9398,Felis margarita,,Arbic,T-cell Acute Lymphocytic Leukemia,C0066P,Unkn,,Clll,http://purl.obolibrary.org/obo/CL_0003039,Colon tumor (adenocarcinoma),,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA2049928,C006G551,taxonomy:30608,Ficedula albicollis,,Vietnamsse,T-cell Prolymphocytic Leukemia,S004BT,Femle,,Orgnsm Part,http://purl.obolibrary.org/obo/CL_0003040,colorectal cancer,,Primary Cutaneous Mastocytosis
+biosample:SAMEA2051105,C006MUB1,taxonomy:9347,Fucus vesiculosus,,Micronesian,TNBC,C00264,Mal,,Abnrmal Ccel,http://purl.obolibrary.org/obo/CL_0003041,colorectal cancer cell line,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2051106,C006NS46,taxonomy:30529,Galeocerdo cuvier,,US Indin,Treated Rheumatoid Arthritis,TH91,Mal,,Cll,http://purl.obolibrary.org/obo/CL_0003042,colorectal cancer cell line (HCT116),,Neutrophilic Leukemia
+biosample:SAMEA2051219,C006NS47,taxonomy:8555,Gastrophryne carolinensis,,Canadian Indan,Triple-negative breast cancer (TNBC),pz 294,Mixd,,Orgnism Prat,http://purl.obolibrary.org/obo/CL_0003043,Colorectal tumor,,Chronic Basophilic Leukemia
+biosample:SAMEA2051337,C006NSB1,taxonomy:30521,Geochelone elegans,,Purto Rican,tumor tissues,UMCG00008,Unknwn,,Abnrmal Cl,http://purl.obolibrary.org/obo/CL_0003044,common lymphoid progenitor,,Basophilic Leukemia
+biosample:SAMEA2051463,C006NSB2,taxonomy:30538,Giraffa camelopardalis,,Filipino,Type 1 diabetes mellitus,1532CLL,Femaale,,Cll,http://purl.obolibrary.org/obo/CL_0003045,common myeloid progenitor,,Hairy Cell Leukemia Variant
+biosample:SAMEA2051464,C006POB1,taxonomy:9478,Ginglymostoma cirratum,,Mexicn,Unknown,NC 14_27,Mael,,Orgnism Pqrt,http://purl.obolibrary.org/obo/CL_0003046,connective tissue,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2052006,C006UE47,taxonomy:34830,Glycera dibranchiata,,Alaskan Ntive,Uremia patients,pz 284,Mixd,,Abnormal Cl,http://purl.obolibrary.org/obo/CL_0003047,cord blood,,Sezary Syndrome
+biosample:SAMEA2052008,C006X8B2,taxonomy:30608,Graptemys geographica,,Cuban,uterine leiomyoma,UMCG00021,Unknwn,,Cel,http://purl.obolibrary.org/obo/CL_0003048,cord blood CD34+,,Adult T-Cell Leukemia
+biosample:SAMEA2052009,C0070XB2,taxonomy:9606,Gymnophiona caecilian,,Afriican Ancestry in SW USA,Uveal melanoma,pz 289,Fml,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003049,Coronary artery (LAD),,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA2052010,C07002T1,taxonomy:9615,Haliaeetus leucocephalus,,Afrcan Caribean in Barbdos,Young,S004JD,Ml,,Abnrmal Celll,http://purl.obolibrary.org/obo/CL_0003050,Coronary artery (LCX),,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA2052116,C07002T2,taxonomy:59463,Halichoerus grypus,,Bengli in Bangladeh,Atopic Dermatitis,S009W4,Mxd,,Ceell,http://purl.obolibrary.org/obo/CL_0003051,Coronary artery (RCA),,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA2052120,C07002T3,taxonomy:8496,Heloderma suspectum,,Brtish from England and Scothand,Behçet's Disease,S006XE,Unk,,Orgnism Pat,http://purl.obolibrary.org/obo/CL_0003052,Cortex,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA2052121,C07002T4,taxonomy:9728,Hemitripterus americanus,,Chinse Dai in Xishuangbanna,Celiac Disease,BM060814,,,Abnormal Clll,http://purl.obolibrary.org/obo/CL_0003053,Cultured human umbilical cord derived CD34+ human hematopoietic stem and progenitor cells (HSPCs),,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA2052467,C07015T1,taxonomy:30522,Herpestes javanicus,,Colobian in Medelin,Crohn's Disease,BM190913,,,Cell,http://purl.obolibrary.org/obo/CL_0003054,Cultured Leukemic Blasts,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA2052468,C07015T2,taxonomy:9823,Hydra vulgaris,,Esan in Nigria,Diabetic Nephropathy,S00T2L,F ,,,http://purl.obolibrary.org/obo/CL_0003055,dendritic cell,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA2052474,C07015T3,taxonomy:9825,Ictalurus punctatus,,Finnsh in Finlan,Ehlers-Danlos Syndrome,S00VHK,Female,,,http://purl.obolibrary.org/obo/CL_0003056,Dermal fibroblasts,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA2052568,C07015T4,taxonomy:9823,Iguana iguana,,Gmbian in Western Divisin,Fibromyalgia,BM060814,M,,Abnormal Cell,http://purl.obolibrary.org/obo/CL_0003057,developing human neocortex,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA2052575,C12001RP1,,Jaculus jaculus,,"Gujarti Indians in Houston, Texs",Gaucher Disease,S007SK,Male,,Cell,http://purl.obolibrary.org/obo/CL_0003058,diffuse intrinsic pontine glioma,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA2052579,C12001RP2,taxonomy:9615,Kinosternon subrubrum,,Han Chineese in Beijin,Hashimoto's Thyroiditis,C00504,Mixed,,Organism Part,http://purl.obolibrary.org/obo/CL_0003059,Distal femoral growth plates,,Follicular Lymphoma
+biosample:SAMEA2052705,C12001RP3,taxonomy:30538,Lama glama,,Iberan Populations in Spai,Huntington's Disease,S004AV,Unknown,,,http://purl.obolibrary.org/obo/CL_0003060,Distal humeral growth plates,,In Situ Follicular Neoplasia
+biosample:SAMEA2052706,C12001RP4,taxonomy:3702,Lasiurus borealis,,Indin Telugu in the U.K.,Inflammatory Bowel Disease,S001S7,,,Abnorml Cell,http://purl.obolibrary.org/obo/CL_0003061,Distal radial growth plates,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA2052743,C12012H1,taxonomy:7897,Lepus europaeus,,"Japanee in Toko, Japan",Juvenile Rheumatoid Arthritis,C002TW,Fem,,Cll,http://purl.obolibrary.org/obo/CL_0003062,Distal tibial growth plates,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA2052852,C12012RP,taxonomy:9612,Leucoraja erinacea,,Knh in Ho Chi Minh City,Kawasaki Disease,TH91,Femal,,Orgnism Part,http://purl.obolibrary.org/obo/CL_0003063,DLBCL cell line,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2052853,csMBC NC11/41,taxonomy:8083,Limulus polyphemus,,"Luhya in Webuye, Kneya",Langerhans Cell Histiocytosis,NC14_42,Masc,,Abnrmal Cell,http://purl.obolibrary.org/obo/CL_0003064,Dorsal Forebrain Equivalent,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA2057621,EC-TH91,taxonomy:7955,Linum usitatissimum,,Mnde in Sierre Leone,Marfan Syndrome,T14_10,Mn,,Cel,http://purl.obolibrary.org/obo/CL_0003065,Dorsal root ganglion neuron,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA2057624,G199,taxonomy:9371,Litoria caerulea,,Mexican Ancestry in Los Angeles CA USA,Neurofibromatosis Type 1,22965,Mix,,Orgnism Partt,http://purl.obolibrary.org/obo/CL_0003066,Dorsolateral Frontal Cortex,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA2057625,G200,taxonomy:9785,Loxodonta africana,,Peruviab in Lima Peru,Osteogenesis Imperfecta,NC14_5,Unkn,,Abnrmal Cl,http://purl.obolibrary.org/obo/CL_0003067,"effector memory CD4-positive, alpha-beta T cell",,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA2057626,G201,taxonomy:9685,Lucilia sericata,,Puerro Rican in Puerto Rco,Parkinson's Disease,UMCG00012,Femle,,Ceel,,"effector memory CD8-positive, alpha-beta T cell",,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA2057792,G202,taxonomy:9973,Lumbricus terrestris,,"Punjabi in Lahre, Pakistn",Prader-Willi Syndrome,C005PS,Mal,,Orgnsm Part,,"effector memory CD8-positive, alpha-beta T cell, terminally differentiated",,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA2058553,G203,taxonomy:8083,Lynx rufus,,Sri Lankan Tmil in the UK,Restless Legs Syndrome,S00DVR,Mal,,Abnormal Cll,,Embryonic Cortex,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA2058555,G204,taxonomy:30529,Macrobrachium rosenbergii,,Toscani in Italia,Sickle Cell Disease,C003UQ,Mixd,,Cel,,Embryonic fibroblasts,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA2058559,GC T14/10,taxonomy:7955,Malacosoma americanum,0 - 18,"Yoruba in Ibadn, Nigera",Tourette Syndrome,C005QQ,Unknwn,,Orgnism Part,,Embryonic Frontal Cortex,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA2058949,GC_T14_11,taxonomy:32523,Melopsittacus undulatus,0 - 5,,Ulcerative Colitis,C0011I,Femaale,,Abnomal Cell,,embryonic lung,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA2058952,HPC-V151,taxonomy:8128,Meriones unguiculatus,10 - 15,Admicxed American,Von Hippel-Lindau Syndrome,PB270313,Mael,,Ceell,,Embryonic Mouse Liver,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2058954,LC-TH91,taxonomy:37548,Microcebus murinus,1 - 5,Africn,Williams Syndrome,BM220513,Mixd,,Organism Prt,,Embryonic Mouse Lung,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2058957,MM_100,taxonomy:9925,Mimus polyglottos,15 - 20,ARRAB,Xeroderma Pigmentosum,BM060814,Unknwn,,Abnrmal Cel,,Embryonic Mouse Telencephalon,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA2058958,MM_101,taxonomy:9598,Monodon monoceros,1 - 7,Assiann,Zollinger-Ellison Syndrome,BM060814,Fml,,Celll,,Embryonic Occipital Cortex,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2058959,MM_30,taxonomy:7897,Morone saxatilis,20 - 25,Caucasiab,Acromegaly,S00DCS,Ml,,Orgnism Pat,,Embryonic stem cells,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2058961,MM_38,taxonomy:9544,Muntiacus reevesi,20 - 30,Dutchh,Behçet's Syndrome,C005VG,Mxd,,Abnormal Ccell,,embyronic brain (e17),,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA2059160,MM_39,taxonomy:7955,Mustela putorius,20 - 40,East Asianb,Charcot-Marie-Tooth Disease,S007DD,Unk,,Cll,,Endometrial stromal cells,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA2059321,MM_4,taxonomy:9601,Mytilus edulis,25 - 30,Euoropean,Dysautonomia,TH89,,,Orgnism Pqrt,,Endometriosis,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA2059324,MM_40,taxonomy:6239,Naja naja,30 - 35,Non-hispanicc,Fibrous Dysplasia,T14_5,,,Abnormal Cl,,endometriosis epithelial cells,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2059330,MM_7,taxonomy:9606,Nandinia binotata,3 - 10,Northern Europexan,Glanzmann Thrombasthenia,pz 284,F ,,Ccell,,endothelial cell of umbilical vein,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA2059479,MM_83,taxonomy:9823,Nasua narica,35 - 40,Not aapplicable,Hemochromatosis,pz 284,Female,,Orgnism Part,,Enthorinal Cortex,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2059640,MM_94,taxonomy:7918,Neoceratodus forsteri,35 - 60,Soutb Asian,Inclusion Body Myositis,"C004VK,S005M3,C003TS,S002ND",M,,Abnrmal Celll,,EPCAM+ endometrial epithelium,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA2059642,MM_95,taxonomy:8030,Noturus gyrinus,40 - 45,YORUBVA,Juvenile Dermatomyositis,C002TW,Male,,Cel,,epidermis,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA2059648,NBC NC11/41,taxonomy:59729,,45 - 50,American Indianz,Klinefelter Syndrome,S00BJM,Mixed,,Orgnism Part,,Epithelial cells (HEp2),,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA2059801,NBC_NC11_83,taxonomy:10036,Carolina Anole,50 - 55,Alasksan Nativee,Myasthenia Gravis,C005PS,Unknown,,Abnomal Cl,,epithelioid sarcoma,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2059805,NECH0001_1,taxonomy:11006,Thale Cress,50 - 70,African Amerifcan,Neurofibromatosis Type 2,S001HT,,,Ceell,,epithelium,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2060379,NECH0001_2,taxonomy:8364,Cattle,5 - 10,Native Hawaiibn,Osteopetrosis,PB270313,Fem,,Orgnism Prt,,erythroblast,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA2060380,NECH0001_3,taxonomy:9311,Nematode Worm,55 - 60,Pacific Islannder,Pernicious Anemia,PB100713,Femal,,Abnormal Cll,,erythroid,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2060386,NECH0002_1,taxonomy:9365,Common Marmoset,55 - 65,Caribeean,Rett Syndrome,BM220513,Masc,,Cell,,erythroid progenitor cell,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2060397,P579,taxonomy:8390,Domestic Dog,55 - 70,Inndian,Sjögren's Syndrome,BM220513,Mn,,Orgnism Partt,,Esophageal squamous carcinoma,,
+biosample:SAMEA2060398,P580,taxonomy:9753,Bacterium,60 - 65,Melaenesian,Tuberous Sclerosis,C002YM,Mix,,Abnorml Cel,,esophagus,,
+biosample:SAMEA2060407,P581,taxonomy:7897,African Green Monkey,65 - 70,Australasbian,Von Willebrand Disease,C0010K,Unkn,,Clll,,Fallopian Tube,,Alzheimer's Disease
+biosample:SAMEA2060408,P582,taxonomy:32523,Common Carp,70 - 75,Aboriiginal,Alagille Syndrome,S001S7,Femle,,Orgnsm Part,,fallopian tube secretory epithelial cells,,Parkinson's Disease
+biosample:SAMEA2060719,P583,taxonomy:9823,Zebrafish,75 - 80,Chinse,Bloom Syndrome,C00408,Mal,,Abnrmal Ccel,,Female Brain: amygdala,,Multiple Sclerosis
+biosample:SAMEA2060721,P584,taxonomy:9646,Fruit Fly,80 - 85,Guamanin,Chromosome 22q11.2 Deletion Syndrome,C0011I,Mal,,Cll,,Female Brain: angular gyrus,,Crohn's Disease
+biosample:SAMEA2076258,P585,taxonomy:7955,"Fruit Fly, Sindbis Virus",85 - 90,Japaneese,Dubowitz Syndrome,S0022I,Mixd,,Orgnism Prat,,Female Brain: angular gyrus superior (secondary visual cortex V3/V7a),,Ulcerative Colitis
+biosample:SAMEA2076261,P586,taxonomy:9927,Bacterium,90,Koreean,Friedreich's Ataxia,S00EFI,Unknwn,,Abnrmal Cl,,Female Brain: anterior caudate nucleus (head),,Rheumatoid Arthritis
+biosample:SAMEA2076359,PC_T12_20,taxonomy:9823,Domestic Cat,,Polynesianr,Hemolytic Anemia,S001MJ,Femaale,,Cll,,Female Brain: anterior cingulate gyrus,,Systemic Lupus Erythematosus
+biosample:SAMEA2076360,PC_T13_1,taxonomy:9935,Chicken,,Europbean,Intestinal Malrotation,C0010K,Mael,,Orgnism Pqrt,,Female Brain: anterior insular claustrum,,Psoriasis
+biosample:SAMEA2076361,PC_T14_10,taxonomy:32523,Three-spined Stickleback,,Anglo Saxon,Joubert Syndrome,S0022I,Mixd,,Abnormal Cl,,Female Brain: anterior medial frontal gyrus,,Celiac Disease
+biosample:SAMEA2076521,PreB2C-V152,taxonomy:7699,Humans,,Latn Americanx,Kabuki Syndrome,C006UE,Unknwn,,Cel,,"Female Brain: bed nucleus of the stria terminalis medial part, central part, lateral part, prereticular zone",,Asthma
+biosample:SAMEA2076527,S000RD13,taxonomy:32443,Human Betaherpesvirus 6A,,Araibic,Leigh Syndrome,C006NS,Fml,,Orgnism Part,,"Female Brain: central medial thalamic nuclei (contains nucleus medialis dorsalis fasciculosis, commissural nucleus, paraventricular thalamic nucleus, reuniens thalamic nucleus, cucullaris nucleus, paratenial thalamic nucleus)",,Hypertension
+biosample:SAMEA2076530,S000RD15,taxonomy:8105,Human Gammaherpesvirus 8,,Vietnamesee,Neurofibromatosis Type 3,C001UY,Ml,,Abnrmal Celll,,Female Brain: cerebellum,,Coronary Artery Disease
+biosample:SAMEA2077081,S000RD54,taxonomy:7955,Human Immunodeficiency Virus 1,,Micronnnesian,Osler-Weber-Rendu Syndrome,C005VG,Mxd,,Ceell,,Female Brain: cuneus,,Obesity
+biosample:SAMEA2078138,S000RDH1,taxonomy:31670,Human Poliovirus 1 (Sabin Strain),,US Indinan,Prune Belly Syndrome,S001MJ,Unk,,Orgnism Pat,,Female Brain: external globus pallidus,,Type 2 Diabetes Mellitus
+biosample:SAMEA2078141,S000RDH2,taxonomy:8555,Influenza A Virus (H1N1),,Canaadian Indian,Smith-Lemli-Opitz Syndrome,C005PS,,,Abnormal Clll,,Female Brain: frontal pole,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA2078719,S000SBB3,taxonomy:36996,"Humans, Mouse",,Puewto Rican,Stickler Syndrome,UMCG00017,,,Cell,,Female Brain: fusiform gyrus (occipito temporal gyrus),,Atrial Fibrillation
+biosample:SAMEA2079094,S0016EH1,taxonomy:10354,"Humans, Rat",,Filipinno,Waardenburg Syndrome,N00031401639721,F ,,,,Female Brain: geniculate nucleus,,Depression
+biosample:SAMEA2079095,S0018A12,taxonomy:30521,Sindbis Virus,,Mexicanz,X-linked Agammaglobulinemia,N00031319896021,Female,,,,Female Brain: gyrus rectus,,Schizophrenia
+biosample:SAMEA2079096,S0018A13,taxonomy:8030,Human Gammaherpesvirus 4,,Alaskann Nnative,Alpha-1 Antitrypsin Deficiency,N00031319896021,M,,,,"Female Brain: Heschl's gyrus, transverse temporal gyrus/superior temporal gyrus  (primary auditory cortex)",,Bipolar Disorder
+biosample:SAMEA2079308,S0018A52,taxonomy:60711,Human Gammaherpesvirus 8,,Cubanb,Bartter Syndrome,N00031401639721,Male,,Abnormal Cell,,Female Brain: hippocampal gyrus,,Anxiety Disorders
+biosample:SAMEA2079309,S0018AB4,taxonomy:608659,Human Immunodeficiency Virus,,African Ancestry in SW USAe,Churg-Strauss Syndrome,N00031401639721,Mixed,,Cell,,Female Brain: hippocampus,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA2079310,S0018AH1,taxonomy:36693,Parasitic Protozoan,,African Caribean in Barbadosn,Diamond-Blackfan Anemia,N00031401639721,Unknown,,Organism Part,,Female Brain: hypothalamus,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA2079311,S0018AH2,taxonomy:9878,Rhesus Macaque,,Bengalii in Bangladeshh,Ectodermal Dysplasia,N00031319896021,,,,,"Female Brain: inferior frontal gyrus, pars triangularis (Broca's area)",,Cerebral Palsy
+biosample:SAMEA2079312,S00198B6,taxonomy:8507,"Rhesus Macaque, Macacine Gammaherpesvirus 4",,British from England and Scotlandv,Gaucher Disease Type 2,N00031406635321,Fem,,Abnorml Cell,,Female Brain: inferior temporal gyrus,,Down Syndrome
+biosample:SAMEA2079313,S00198H2,taxonomy:8030,Mouse,,Chinese Dai in Xishuangbannaq,Hermansky-Pudlak Syndrome,N00031406635321,Femal,,Cll,,Female Brain: internal globus pallidus,,Sickle Cell Disease
+biosample:SAMEA2079314,S001FXB1,taxonomy:10228,"Mouse, Murid Herpesvirus 68",,Colombiaan in Medelline,Iron Deficiency Anemia,N00031406635321,Masc,,Orgnism Part,,"Female Brain: lateral hypothalamic area, bed nucleus of the stria terminalis ventral part",,Thalassemia
+biosample:SAMEA2079320,S001FXB2,taxonomy:9994,Platypus,,Esan in Nigerias,Jansen,N00031324825721,Mn,,Abnrmal Cell,,"Female Brain: lateral occipital gyrus (secondary visual cortex V2, V3)",,Hemophilia
+biosample:SAMEA2079322,S001FXB3,taxonomy:8621,European Rabbit,,Finnishh in Finlandd,Kabuki Syndrome,N00031406634921,Mix,,Cel,,"Female Brain: lateral septal nucleus, triangular septal nucleus, septofimbial nucleus, medial septal nucleus",,Duchenne Muscular Dystrophy
+biosample:SAMEA2079324,S001HTH1,taxonomy:9606,Sheep,,Gambiabn in Western Division,Lowe Syndrome,N00031406634921,Unkn,,Orgnism Partt,,Female Brain: lingual gyrus,,Cystic Fibrosis
+biosample:SAMEA2079533,S001JP51,taxonomy:9685,Chimpanzee,,"Gujaarti Indians in Houston, Texass",MELAS Syndrome,N00031319896021,Femle,,Abnrmal Cl,,Female Brain: locus coeruleus,,Huntington's Disease
+biosample:SAMEA2079535,S001MJ12,taxonomy:9913,Malaria Parasite,,Han Chinese in Beijings,Neurofibromatosis Type 4,N00031406634921,Mal,,Ceel,,Female Brain: long insular gyri,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA2079538,S001MJ48,taxonomy:9669,Rat,,Iberian Populatiojns in Spain,Oculocutaneous Albinism,N00031318490130,Mal,,Orgnsm Part,,Female Brain: medial dorsal thalamic nucleus (dorsal superficial nucleus),,Epilepsy
+biosample:SAMEA2079619,S001MJ4A,taxonomy:8469,Yeast,,Indian Telugu in the U.K.w,Pelizaeus-Merzbacher Disease,N00031319896021,Mixd,,Abnormal Cll,,"Female Brain: medial geniculate nucleus, nucleus limitans, peripeduncular nucleus",,Tourette Syndrome
+biosample:SAMEA2080084,S001MJ51,taxonomy:32523,"Yeast, Humans",,"Japanse in Tokyo, Japanm",Rubinstein-Taybi Syndrome,N00031318490130,Unknwn,,Cel,,Female Brain: medial posterior cingulate gyrus,,Non-Hodgkin Lymphoma
+biosample:SAMEA2147038,S001MJH1,taxonomy:8364,Tasmanian Devil,,Kinh in Ho Chi Minh Cityx,Smith-Magenis Syndrome,N00031319896021,Femaale,,Orgnism Part,,Female Brain: medial precentral gyrus (secondary motor cortex),,Hodgkin Lymphoma
+biosample:SAMEA2158853,S001QBB1,taxonomy:9555,Pig,,"Luhya in Webuye, Kenyar",Treacher Collins Syndrome,N00031406634921,Mael,,Abnomal Cell,,Female Brain: medial superior temporal gyrus (secondary auditory cortex),,Chronic Myeloid Leukemia
+biosample:SAMEA2163379,S001QBB3,taxonomy:9713,Synthetic Construct,,Mende in Sierra Leoney,VACTERL Association,N00031318490130,Mixd,,Ceell,,Female Brain: medio superior caudate nucleus (body),,Polycythemia Vera
+biosample:SAMEA2168469,S001S712,taxonomy:5935,African Trypanosome,,Mexicabn Ancestry in Los Angeles CA USAq,Weill-Marchesani Syndrome,pz 290,Unknwn,,Organism Prt,,Female Brain: middle temporal gyrus,,Essential Thrombocythemia
+biosample:SAMEA2168474,S001S714,taxonomy:7974,Western Clawed Frog,,Peruviaan in Lima Peruu,X-linked Hypophosphatemia,C0066P,Fml,,Abnrmal Cel,,"Female Brain: myelencephalon nuclei (including hypoglossal nucleus, vagus nucleus, nucleus gracilis, nucleus cuneatus)",,Myelofibrosis
+biosample:SAMEA2168479,S001S745,taxonomy:9305,Cheetah,,Puertoo Rican in Puerto Ricol,Apert Syndrome,UMCG00009,Ml,,Celll,,Female Brain: nucleus accumbus,,Hairy Cell Leukemia
+biosample:SAMEA2168481,S001S751,taxonomy:30538,Yellow Fever Mosquito,,"Punjaabi in Lahore, Pakistans",Beckwith-Wiedemann Syndrome,UMCG00029,Mxd,,Orgnism Pat,,Female Brain: nucleus arcuatus,,Waldenström Macroglobulinemia
+biosample:SAMEA2168482,S001S753,taxonomy:9825,Red-eyed Tree Frog,,Sri Lankian Tamil in the UK,Crouzon Syndrome,UMCG00025,Unk,,Abnormal Ccell,,Female Brain: nucleus dendatus,,Myelodysplastic Syndromes
+biosample:SAMEA2168487,S001S7H1,taxonomy:32523,American Alligator,,Toscani in Italias,Ehlers-Danlos Syndrome Type 3,S00YAM,,,Cll,,"Female Brain: occipital pole, Internal calcarine sulcus,  (primary visual cortex V1)",,Systemic Mastocytosis
+biosample:SAMEA2168488,S001S7H2,taxonomy:9713,Axolotl,,"Yoruba in Ibadan, Nigerias",Familial Mediterranean Fever,S00XJ8,,,Orgnism Pqrt,,Female Brain: orbital gyrus,,Eosinophilic Leukemia
+biosample:SAMEA2168501,S001U352,taxonomy:9606,Clownfish,,,Gorlin Syndrome,UMCG00027,,,Abnormal Cl,,Female Brain: paraterminal gyrus/subcallosal area,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA2168517,S001U353,taxonomy:9669,Mallard Duck,,,Hemophagocytic Lymphohistiocytosis,UMCG00024,,,Ccell,,"Female Brain: paraventricular hypothalamic area, uncinate nucleus, sexual dimorphic nucleus, suprachiasmatic nucleus, diagonal band nucleus, medial preoptic nucleus",,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA2168521,S0022I12,taxonomy:8323,Snapdragon,,-,Immunodeficiency Syndromes,S00YUJ,,,Orgnism Part,,Female Brain: pineal gland,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2168529,S0022I14,taxonomy:7719,North Island Brown Kiwi,,Admixed American,Jervell and Lange-Nielsen Syndrome,UMCG00015,,,Abnrmal Celll,,Female Brain: piriform cortex,,Myeloproliferative Neoplasms
+biosample:SAMEA2168542,S0022I44,taxonomy:8364,California Sea Hare,,African,Klippel-Feil Syndrome,S00UJK,,,Cel,,Female Brain: pituatary gland,,Acute Promyelocytic Leukemia
+biosample:SAMEA2168549,S0022I48,taxonomy:9986,Golden Eagle,,ARAB,Lymphedema,UMCG00010,,,Orgnism Part,,Female Brain: postcentral gyrus (primary somatosensory cortex ),,Chronic Eosinophilic Leukemia
+biosample:SAMEA2168550,S0022I51,taxonomy:7739,Lyrate Rockcress,,Asian,MELAS Syndrome,S00YPT,,,Abnomal Cl,,Female Brain: post central gyrus (superior part)  (secondary sensorimotor cortex),,Myeloid Sarcoma
+biosample:SAMEA2168556,S0022I53,taxonomy:9315,Leafcutter Ant,,Caucasian,Niemann-Pick Disease,pz 295,,,Ceell,,Female Brain: posterior cingulate gyrus,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2189583,S0022IH1,taxonomy:59729,Buff-tailed Bumblebee,,Dutch,Oculocutaneous Albinism Type 1A,UMCG00004,,,Orgnism Prt,,Female Brain: posterior medial frontal gyrus,,Mast Cell Leukemia
+biosample:SAMEA2189584,S0022IH2,taxonomy:9733,Mexican Redknee Tarantula,,East Asian,Pelizaeus-Merzbacher Disease,UMCG00011,,,Abnormal Cll,,Female Brain: posterior precentral gyrus (primary motor cortex),,Plasma Cell Leukemia
+biosample:SAMEA2189585,S0025CB1,taxonomy:59729,Common Toad,0 - 18,European,Rett Syndrome,T14_14,F ,,Cell,,Female Brain: precuneus,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA2189586,S002EV11,taxonomy:9305,Red-tailed Hawk,0 - 5,Non-hispanic,Schwartz-Jampel Syndrome,T14_11,Female,,Orgnism Partt,,Female Brain: pulvinar,,Heavy Chain Disease
+biosample:SAMEA2189587,S002ND51,taxonomy:28384,Spectacled Caiman,10 - 15,Northern European,Thanatophoric Dysplasia,UMCG00013,M,,Abnorml Cel,,Female Brain: putamen,,Smoldering Multiple Myeloma
+biosample:SAMEA2189588,S002R512,taxonomy:3203,Blue Crab,1 - 5,Not applicable,Usher Syndrome,UMCG00016,Male,,Clll,,Female Brain: raphe nuclei,,Primary Myelofibrosis
+biosample:SAMEA2201070,S002R543,taxonomy:33029,Florida Carpenter Ant,15 - 20,South Asian,VACTERL Association,UMCG00014,Mixed,,Orgnsm Part,,Female Brain: red nucleus (nucleus rubens),,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA2201071,S002R551,,Coyote,1 - 7,YORUBA,Weill-Marchesani Syndrome,UMCG00023,Unknown,,Abnrmal Ccel,,"Female Brain: short insular gyri, anterior insular cortex (gustatory cortex)",,Secondary Myelofibrosis
+biosample:SAMEA2220407,S002R5H1,,Goldfish,20 - 25,American Indian,X-linked Hypophosphatemia,23977,,,Cll,,"Female Brain: subcentral area,",,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA2220411,S002S312,,North American Beaver,20 - 30,Alaska Native,Zellweger Syndrome,B15_50,Fem,,Orgnism Prat,,"Female Brain: subiculum, postsubicular area, parasubicular area",,Secondary Thrombocytosis
+biosample:SAMEA2220431,S002S343,,Guinea Pig,20 - 40,African American,,T14_6,Femal,,Abnrmal Cl,,Female Brain: substantia nigra,,Reactive Thrombocytosis
+biosample:SAMEA2220432,S002S351,,Cranwell's Horned Frog,25 - 30,Native Hawaiian,,UMCG00019,Masc,,Cll,,Female Brain: superior frontal gyrus,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA2220447,S002S3H1,,Threadfin Butterflyfish,30 - 35,Pacific Islander,,MS49,Mn,,Orgnism Pqrt,,Female Brain: superior occipital gyrus (secondary visual cortex V3/V7a),,Acute Eosinophilic Leukemia
+biosample:SAMEA2220448,S002T1H3,,Green Sea Turtle,3 - 10,Caribbean,,csMBC pool 2,Mix,,Abnormal Cl,,Female Brain: superior pariental lobule (secondary sensorimotor cortex),,Chronic Myelomonocytic Leukemia
+biosample:SAMEA2220456,S0033CH0,,Pacific Sea Nettle,35 - 40,Indian,,csMBC pool 8,Unkn,,Cel,,"Female Brain: superior temporal gyrus, planum polare",,Mast Cell Disease
+biosample:SAMEA2220460,S0039012,,White Stork,35 - 60,Melanesian,,UMCG00001,Femle,,Orgnism Part,,"Female Brain: superior temporal gyrus, planum temporale (Wernicke's area)",,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA2220469,S0039051,,Orange Sulphur,40 - 45,Australasian,Ataxia Telangiectasia,UMCG00006,Mal,,Abnrmal Celll,,Female Brain: supramarginal gyrus,,Primary Cutaneous Mastocytosis
+biosample:SAMEA2220475,S00390H1,,Common Raven,45 - 50,Aboriginal,Buerger's Disease,T14_11,Mal,,Ceell,,Female Brain: temporal pole,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2220478,S00390H2,,Japanese Quail,50 - 55,Chinese,Chronic Inflammatory Demyelinating Polyneuropathy,pz 300,Mixd,,Orgnism Pat,,Female Brain: uncal cleft (uncus),,Neutrophilic Leukemia
+biosample:SAMEA2220482,S0040EH1,,Nile Crocodile,50 - 70,Guamanian,Duchenne Muscular Dystrophy,T14_11,Unknwn,,Abnormal Clll,,Female Brain: ventral anterior thalamic nucleus (anteroprincipal thalamic nucleus),,Chronic Basophilic Leukemia
+biosample:SAMEA2220488,S0041C11,,West Indian Drywood Termite,5 - 10,Japanese,Epidermolysis Bullosa,pz 297,Femaale,,Cell,,Female Brain: white matter,,Basophilic Leukemia
+biosample:SAMEA2220495,S004AV11,,Dyeing Poison Frog,55 - 60,Korean,Familial Hypercholesterolemia,UMCG00028,Mael,,,,Fetal HSPCs (F0),,Hairy Cell Leukemia Variant
+biosample:SAMEA2220500,S004AV51,,Northern Walkingstick,55 - 65,Polynesian,Glioblastoma Multiforme,S004BT,Mixd,,Abnormal Cell,,fetal liver,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2220501,S004AVH1,,North American Opossum,55 - 70,European,Hemophagocytic Lymphohistiocytosis,S008H1,Unknwn,,Cell,,fetal livers,,Sezary Syndrome
+biosample:SAMEA2229316,S004BT12,,Giant Amazonian Ant,60 - 65,Anglo Saxon,Incontinentia Pigmenti,S008E7,Fml,,Organism Part,,Fetal ProEs (F5),,Adult T-Cell Leukemia
+biosample:SAMEA2237180,S004BT43,,Banner-tailed Kangaroo Rat,65 - 70,Latin American,Juvenile Idiopathic Arthritis,S00XQV,Ml,,,,Fibroblast,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA2237181,S004BT51,,Bald-faced Hornet,70 - 75,Arabic,Klinefelter Syndrome,T12-15,Mxd,,Abnorml Cell,,Forebrain tissue,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA2237182,S004BTH2,,Simulans Fruit Fly,75 - 80,Vietnamese,Lynch Syndrome,31730,Unk,,Cll,,forelimb and hindlimb,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA2237183,S004JDH2,,Lord Howe Island Stick Insect,80 - 85,Micronesian,Myasthenia Gravis,26707,,,Orgnism Part,,forelimb and hindlimb autopod,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA2237184,S004KBH1,,Planarian,85 - 90,US Indian,Neurofibromatosis Type 1,T12-18,,,Abnrmal Cell,,foreskin,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA2237185,S004M711,,Golden Barrel Cactus,90,Canadian Indian,Osteogenesis Imperfecta,T12-17,,,Cel,,Foreskin,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA2270030,S004P151,,Corn Snake,,Puerto Rican,Pemphigus Vulgaris,23376,,,Orgnism Partt,,Fresh frozen endoscopic biopsy,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA2270038,S004VQH1,,Asian Elephant,,Filipino,Rett Syndrome,32188,,,Abnrmal Cl,,fresh normal,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA2270070,S004XM11,,European Pond Turtle,,Mexican,Sickle Cell Anemia,30926,,,Ceel,,frontal cortex,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA2270086,S004XMA1,,Sea Otter,,Alaskan Native ,Turner Syndrome,32327,,,Orgnsm Part,,Frontal cortex (BA10) of the brain - post-mortem sample,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA2270087,S004XMH1,,Amoeba,,Cuban,Usher Syndrome,26452,,,Abnormal Cll,,Frontal cortex of the brain,,Follicular Lymphoma
+biosample:SAMEA2298799,S004YKH1,,Horse,,African Ancestry in SW USA,Von Willebrand Disease,19492,,,Cel,,Frontal cortex of the brain (BA10),,In Situ Follicular Neoplasia
+biosample:SAMEA2298800,S0050A11,,Hawksbill Sea Turtle,,African Caribbean in Barbados,Wilson's Disease,31721,,,Orgnism Part,,frontal lobe,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA2298806,S0050AA1,,Five-lined Skink,,Bengali in Bangladesh,Alport Syndrome,27747,,,Abnomal Cell,,frozen pancreatic tissue,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA2298807,S0050AH1,,Sand Cat,,British from England and Scotland,Barth Syndrome,T12-16,,,Ceell,,gastrointestinal stromal tumor,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2298812,S0051811,,Collared Flycatcher,,Chinese Dai in Xishuangbanna,Chronic Granulomatous Disease,27855,,,Organism Prt,,germinal center B cell,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA2300479,S00518H1,,Bladderwrack,,Colombian in Medellin,Duchenne Muscular Dystrophy,UMCG00016,,,Abnrmal Cel,,GIST cell line,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA2300480,S005CN11,,Tiger Shark,,Esan in Nigeria,Ehlers-Danlos Syndrome,UMCG00021,,,Celll,,glioblastoma,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA2300481,S005CNH1,,Eastern Narrow-mouthed Toad,,Finnish in Finland,Fragile X Syndrome,UMCG00028,,,Orgnism Pat,,glioblastoma patient-derived cell model,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA2300482,S005DL11,,Indian Star Tortoise,,Gambian in Western Division,Gaucher Disease,UMCG00027,,,Abnormal Ccell,,glioblastoma tumor,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA2300483,S005DLH1,,Giraffe,0 - 18,"Gujarati Indians in Houston, Texas",Hereditary Hemorrhagic Telangiectasia,pz 289,,,Cll,,glioma,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA2300484,S005EJ11,,Nurse Shark,0 - 5,Han Chinese in Beijing,Inflammatory Bowel Disease,S00H6O,,,Orgnism Pqrt,,GM12878 cell line,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA2300485,S005EJ41,,Bloodworm,10 - 15,Iberian Populations in Spain,Juvenile Rheumatoid Arthritis,S015EB,,,Abnormal Cl,,granulocyte monocyte progenitor cell,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA2300486,S005EJA1,,Northern Map Turtle,1 - 5,Indian Telugu in the U.K.,Kawasaki Disease,BM23052014,,,Ccell,,Gyrus rectus,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA2392985,S005EJH1,,Caecilian,15 - 20,"Japanese in Tokyo, Japan",Leber's Congenital Amaurosis,pz 284,,,Orgnism Part,,H1 human embryonic stem cells (WA01),,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA2392986,S005FH11,,Bald Eagle,1 - 7,Kinh in Ho Chi Minh City,Mucopolysaccharidosis,pz 284,,,Abnrmal Celll,,"H1 human embryonic stem cells (WA01), p75",,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2400320,S005FH41,,Grey Seal,20 - 25,"Luhya in Webuye, Kenya",Niemann-Pick Disease,C0011I,,,Cel,,HaCaT Keratinocyte cell line,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2400321,S005FHA1,,Gila Monster,20 - 30,Mende in Sierra Leone,Osteopetrosis,BM060814,,,Orgnism Part,,healthy human artery,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA2400322,S005FHH1,,Sea Raven,20 - 40,Mexican Ancestry in Los Angeles CA USA,Polycystic Kidney Disease,BM230614,,,Abnomal Cl,,Healthy Tonsil,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2400325,S005GF11,,Small Asian Mongoose,25 - 30,Peruvian in Lima Peru,Retinoblastoma,BM060814,,,Ceell,,heart,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2400326,S005GFH1,,Hydra,30 - 35,Puerto Rican in Puerto Rico,Severe Combined Immunodeficiency,BM060814,,,Orgnism Prt,,Heart,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA2400347,S005HDH1,,Channel Catfish,3 - 10,"Punjabi in Lahore, Pakistan",Tay-Sachs Disease,S00BHQ,,,Abnormal Cll,,HEK293 cells,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA2400416,S005J9H1,,Green Iguana,35 - 40,Sri Lankan Tamil in the UK,Ulcerative Colitis,S002EV,,,Cell,,HEK293T,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA2400453,S005YGH1,,Lesser Egyptian Jerboa,35 - 60,Toscani in Italia,Vogt-Koyanagi-Harada Syndrome,S00J8C,,,Orgnism Partt,,HeLa-S3 cell line,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2452141,S0062212,,Eastern Mud Turtle,40 - 45,"Yoruba in Ibadan, Nigeria",Wolf-Hirschhorn Syndrome,UMCG00029,,,Abnorml Cel,,hematopoietic multipotent progenitor cell,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA2452142,S0062252,,Llama,45 - 50,,Achondroplasia,UMCG00005,,,Clll,,hematopoietic stem cell,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA2452143,S00622H1,,Eastern Red Bat,50 - 55,Admiced Amrican,Bardet-Biedl Syndrome,UMCG00014,,,Orgnsm Part,,hepatocellular cancer cell line,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA2452144,S0067TH0,,European Hare,50 - 70,Afrikan,Chronic Myeloid Leukemia,pz 289,,,Abnrmal Ccel,,hepatocellular carcinoma (HCC) tissue,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA2452341,S006VI12,,Little Skate,5 - 10,ARAB,Dysautonomia,pz 290,,,Cll,,HepG2 cell line,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA2452342,S006VI53,,Horseshoe Crab,55 - 60,Asiab,Fragile X Syndrome,C0010K,,,Orgnism Prat,,HepG2 cells,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2452344,S006VIH1,,Common Flax,55 - 65,Caucaisan,Gastric Cancer,pz 289,,,Abnrmal Cl,,hESC,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA2452345,S006XE53,,White's Tree Frog,55 - 70,Duch,Hereditary Hemorrhagic Telangiectasia,S00QKY,,,Cll,,hESC-derived 3D retinal organoids,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA2452346,S006XEH2,,African Elephant,60 - 65,East Asan,Inflammatory Bowel Disease,S002R5,,,Orgnism Pqrt,,High-Grade Serous Carcinoma,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2452347,S006YC51,,Common Green Bottle Fly,65 - 70,Eurppean,Juvenile Rheumatoid Arthritis,S0022I,,,Abnormal Cl,,highly metastatic osteosarcoma cell line,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA2452348,S0074V41,,Common Earthworm,70 - 75,Non-huspanic,Kawasaki Disease,S001S7,,,Cel,,Hilar  lymph node,,
+biosample:SAMEA2452349,S0075T41,,Bobcat,75 - 80,Northern Europeen,Leber's Congenital Amaurosis,C001FR,,,Orgnism Part,,Hilar lymph node,,
+biosample:SAMEA2452350,S007DD11,,Giant River Prawn,80 - 85,Not applicable,Mucopolysaccharidosis,PB270313,,,Abnrmal Celll,,Hippocampus,,
+biosample:SAMEA2452351,S007DD51,,Eastern Tent Caterpillar,85 - 90,South Asan,Niemann-Pick Disease,TH91,,,Ceell,,hTERT immortalised human skin fibroblasts,,
+biosample:SAMEA2452352,S007DDH2,,Budgerigar,90,YORUBA,Osteopetrosis,Necker_TALL_001,,,Orgnism Pat,,HUES64 derived day 5 endoderm,,
+biosample:SAMEA2452354,S007G711,,Mongolian Gerbil,,Americsn Indiab,Polycystic Kidney Disease,C001FR,,,Abnormal Clll,,"human Acute Myelogenous Leukemia (AML), M4",,
+biosample:SAMEA2452356,S007G756,,Gray Mouse Lemur,,Alskan Native,Retinoblastoma,S00DVR,F ,,Cell,,Human airway smooth muscle 2 (HASM2),,
+biosample:SAMEA2452357,S007G7H4,,Northern Mockingbird,,Africn Amrican,Severe Combined Immunodeficiency,S00K3I,Female,,,,Human Brain,,
+biosample:SAMEA2452358,S007SK12,,Narwhal,,Nativ Hawaiian,Tay-Sachs Disease,UMCG00024,M,,Abnormal Cell,,Human breast adenocarcinoma,,Alzheimer's Disease
+biosample:SAMEA2452359,S007SK51,,Striped Bass,,Pcific Islandr,Ulcerative Colitis,UMCG00006,Male,,Cell,,Human breast tumor,,Parkinson's Disease
+biosample:SAMEA2452360,S007SKH1,,Reeves's Muntjac,,Carribean,Vogt-Koyanagi-Harada Syndrome,C004GD,Mixed,,Organism Part,,"Human breast tumor, pleural effusion",,Multiple Sclerosis
+biosample:SAMEA2452362,S008E743,,European Polecat,,Indin,Wolf-Hirschhorn Syndrome,C001R3,Unknown,,,,human embryonic kidney cells,,Crohn's Disease
+biosample:SAMEA2452363,S008H111,,Blue Mussel,,Melaneian,Achondroplasia,C005MY,,,Abnorml Cell,,human FETAL foreskin fibroblasts (HFFF)s,,Ulcerative Colitis
+biosample:SAMEA2452365,S008H143,,Indian Cobra,,Australasian,Bardet-Biedl Syndrome,C0067N,Fem,,Cll,,human glomeruli,,Rheumatoid Arthritis
+biosample:SAMEA2452366,S008H151,,African Palm Civet,,Aborignal,Chronic Myeloid Leukemia,C0011I,Femal,,Orgnism Part,,Human K562 cells,,Systemic Lupus Erythematosus
+biosample:SAMEA2452367,S008H1H1,,White-nosed Coati,,Chinse,Dysautonomia,UMCG00003,Masc,,Abnrmal Cell,,human mammary luminal epithelial cells,,Psoriasis
+biosample:SAMEA2452368,S008QK11,,Queensland Lungfish,,Gumanian,Ehlers-Danlos Syndrome,pz 294,Mn,,Cel,,Human Prefrontal Cortex,,Celiac Disease
+biosample:SAMEA2547769,S008QKA1,,Tadpole Madtom,,Japnese,Familial Adenomatous Polyposis,S00DCS,Mix,,Orgnism Partt,,Human prostate cancer cell line,,Asthma
+biosample:SAMEA2547770,S008QKH1,,,,Korian,Giant Axonal Neuropathy,S00BJM,Unkn,,Abnrmal Cl,,Human prostate tumour,,Hypertension
+biosample:SAMEA2547771,S008RI11,,Acipenser transmontanus,,Polynesin,Hemochromatosis,S007G7,Femle,,Ceel,,human pulmonary arterial smooth muscle cells,,Coronary Artery Disease
+biosample:SAMEA2547772,S008RIH1,,Agkistrodon piscivorus,,Euopean,Ichthyosis,S000RD,Mal,,Orgnsm Part,,Human small intestine,,Obesity
+biosample:SAMEA2547773,S008SGH1,,Ailuropoda melanoleuca,,Anglo Saxn,Juvenile Idiopathic Arthritis,pz 284,Mal,,Abnormal Cll,,Human umbilical cord blood,,Type 2 Diabetes Mellitus
+biosample:SAMEA2547774,S008TE11,,Alligator mississippiensis,,Latn American,Kabuki Syndrome,C000R7,Mixd,,Cel,,Human umbilical cord derived CD34+ human hematopoietic stem and progenitor cells (HSPCs),,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA2556036,S008TEH1,,Ameiurus natalis,,Arbic,Leukodystrophy,C000S5,Unknwn,,Orgnism Part,,Human umbilical vein endothelial cells (HUVECs),,Atrial Fibrillation
+biosample:SAMEA2556037,S008UC11,,Ambystoma maculatum,,Vietnamsse,Myotonic Dystrophy,C00184,Femaale,,Abnomal Cell,,Human White Matter,,Depression
+biosample:SAMEA2556038,S008UCH1,,Amphiprion percula,,Micronesian,Neurofibromatosis Type 2,C001KH,Mael,,Ceell,,Hypothalamic neurons (mHypoA-2/24 cell line),,Schizophrenia
+biosample:SAMEA2556039,S008X611,,Anas platyrhynchos,0 - 18,US Indin,Osteopetrosis,TH91,Mixd,,Organism Prt,,Ileum,,Bipolar Disorder
+biosample:SAMEA2614124,S008X6A1,,Anolis carolinensis,0 - 5,Canadian Indan,Pulmonary Fibrosis,BM060814,Unknwn,,Abnrmal Cel,,Ilium,,Anxiety Disorders
+biosample:SAMEA2614128,S008X6H1,,Antilocapra americana,10 - 15,Purto Rican,Rett Syndrome,BM160614,Fml,,Celll,,Illeum,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA2614129,S008Y411,,Aplysia californica,1 - 5,Filipino,Severe Combined Immunodeficiency,S0018A,Ml,,Orgnism Pat,,immature conventional dendritic cell,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA2614130,S008Y4H1,,Aptenodytes forsteri,15 - 20,Mexicn,Thalassemia,UMCG00009,Mxd,,Abnormal Ccell,,immature inflorescence,,Cerebral Palsy
+biosample:SAMEA2614134,S009W411,,Ardea alba,1 - 7,Alaskan Ntive,Usher Syndrome,UMCG00019,Unk,,Cll,,Immortalized Human Erythroid Progenitor,,Down Syndrome
+biosample:SAMEA2614135,S009W451,,Arvicola amphibius,20 - 25,Cuban,Von Hippel-Lindau Disease,UMCG00011,,,Orgnism Pqrt,,immortalized myotubes,,Sickle Cell Disease
+biosample:SAMEA2614136,S009W4H1,,Asterias rubens,20 - 30,Afriican Ancestry in SW USA,Williams Syndrome,UMCG00018,,,Abnormal Cl,,Immortalized normal esophageal epithelium,,Thalassemia
+biosample:SAMEA2627552,S00AXZ11,,Atherinops affinis,20 - 40,Afrcan Caribean in Barbdos,Alagille Syndrome,pz 289,,,Ccell,,induced pluripotent stem cell line,,Hemophilia
+biosample:SAMEA2627553,S00AXZH1,,Auchenipterichthys longimanus,25 - 30,Bengli in Bangladeh,Bloom Syndrome,C005PS,,,Orgnism Part,,induced Pluripotent Stem Cells,,Duchenne Muscular Dystrophy
+biosample:SAMEA2689794,S00AYX11,,Aulonocara stuartgranti,30 - 35,Brtish from England and Scothand,Chronic Fatigue Syndrome,C0010K,,,Abnrmal Celll,,inflammatory macrophage,,Cystic Fibrosis
+biosample:SAMEA2689795,S00AYXH1,,Badis badis,3 - 10,Chinse Dai in Xishuangbanna,Dystonia,S014QS,,,Cel,,Invasive ductal carcinoma,,Huntington's Disease
+biosample:SAMEA2689796,S00AYXU1,,Balaenoptera acutorostrata,35 - 40,Colobian in Medelin,Eisenmenger Syndrome,S006VI,,,Orgnism Part,,in vitro transformed human skin fibroblasts,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA2689798,S00B0N11,,Balaenoptera musculus,35 - 60,Esan in Nigria,Familial Mediterranean Fever,S007DD,,,Abnomal Cl,,iPSC were differentiated to forebrain neuron-like cells,,Epilepsy
+biosample:SAMEA2689800,S00B0N41,,Bison bison,40 - 45,Finnsh in Finlan,Glutaric Acidemia Type 1,S001S7,,,Ceell,,iPSC were differentiated to microglia-like cells,,Tourette Syndrome
+biosample:SAMEA2689801,S00B0NH1,,Bombina orientalis,45 - 50,Gmbian in Western Divisin,Hereditary Spherocytosis,S004BT,,,Orgnism Prt,,Ischium,,Non-Hodgkin Lymphoma
+biosample:SAMEA2689803,S00B0NU1,,Bos mutus,50 - 55,"Gujarti Indians in Houston, Texs",Juvenile Dermatomyositis,C001MD,,,Abnormal Cll,,juvenil foreskin,,Hodgkin Lymphoma
+biosample:SAMEA2689805,S00B1L11,,Bubo scandiacus,50 - 70,Han Chineese in Beijin,Kallmann Syndrome,C001FR,,,Cell,,K562 cell line,,Chronic Myeloid Leukemia
+biosample:SAMEA2689806,S00B1LH1,,Bucephala albeola,5 - 10,Iberan Populations in Spai,Leukodystrophy,TH91,,,Orgnism Partt,,kidney,,Polycythemia Vera
+biosample:SAMEA2689807,S00B1LU1,,Buteo lagopus,55 - 60,Indin Telugu in the U.K.,Myotonic Dystrophy,BM230614,,,Abnorml Cel,,Kidney,,Essential Thrombocythemia
+biosample:SAMEA2689810,S00B2J11,,Canis latrans,55 - 65,"Japanee in Toko, Japan",Neurofibromatosis Type 2,BM230614,,,Clll,,kidney cancer cell line,,Myelofibrosis
+biosample:SAMEA2690021,S00B2J41,,Canis lupus,55 - 70,Knh in Ho Chi Minh City,Osteopetrosis,BM160614,,,Orgnsm Part,,kidney cortex,,Hairy Cell Leukemia
+biosample:SAMEA2733233,S00B2JA1,,Carcharhinus amblyrhynchos,60 - 65,"Luhya in Webuye, Kneya",Pulmonary Fibrosis,C001HN,,,Abnrmal Ccel,,kidney proximal tubule cell line,,Waldenström Macroglobulinemia
+biosample:SAMEA2733234,S00B2JH1,,Carcharhinus leucas,65 - 70,Mnde in Sierre Leone,Rett Syndrome,S00C1H,,,Cll,,knee cartilage,,Myelodysplastic Syndromes
+biosample:SAMEA2733235,S00BHQ12,,Caretta caretta,70 - 75,Mexican Ancestry in Los Angeles CA USA,Severe Combined Immunodeficiency,pz 289,,,Orgnism Prat,,Lateral temporal lobe,,Systemic Mastocytosis
+biosample:SAMEA2733236,S00BHQ51,,Cervus canadensis,75 - 80,Peruviab in Lima Peru,Thalassemia,S000RD,,,Abnrmal Cl,,Lateral temporal lobe from Frozen postmortem brain tissue,,Eosinophilic Leukemia
+biosample:SAMEA2733237,S00BHQH1,,Chelonia mydas,80 - 85,Puerro Rican in Puerto Rco,Usher Syndrome,UMCG00012,,,Cll,,left ventricle,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA2733238,S00BJM12,,Chelonoidis nigra,85 - 90,"Punjabi in Lahre, Pakistn",Von Hippel-Lindau Disease,S004AV,,,Orgnism Pqrt,,Left ventricle,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA2733239,S00BJM14,,Chilabothrus strigilatus,90,Sri Lankan Tmil in the UK,Williams Syndrome,C001NB,,,Abnormal Cl,,Leiomyoma,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2733240,S00BJM51,,Chlamydosaurus kingii,,Toscani in Italia,Alagille Syndrome,BM160614,,,Cel,,liver,,Myeloproliferative Neoplasms
+biosample:SAMEA2733978,S00BJM52,,Chrysemys picta,,"Yoruba in Ibadn, Nigera",Bloom Syndrome,S00GRN,,,Orgnism Part,,Liver,,Acute Promyelocytic Leukemia
+biosample:SAMEA2733979,S00BJMH1,,Cistothorus palustris,,,Chronic Fatigue Syndrome,S004M7,,,Abnrmal Celll,,Localized GIST,,Chronic Eosinophilic Leukemia
+biosample:SAMEA2733980,S00BJMH2,,Coluber constrictor,,Admicxed American,Dystonia,UMCG00004,,,Ceell,,lung,,Myeloid Sarcoma
+biosample:SAMEA2733981,S00BKKH1,,Columba livia,,Africn,Eisenmenger,UMCG00023,,,Orgnism Pat,,Lung,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2733982,S00BS412,,Crocodylus acutus,,ARRAB,,C004SQ,,,Abnormal Clll,,lung adenocarcinoma,,Mast Cell Leukemia
+biosample:SAMEA2733983,S00BS451,,Crocodylus porosus,,Assiann,Activeted B-Cell-Like Diffuse Large B-Cell Lymphoma,C001NB,,,Cell,,Lung Adenocarcinorma Primary Tumor,,Plasma Cell Leukemia
+biosample:SAMEA2733984,S00BS4H1,,Cryptobranchus alleganiensis,,Caucasiab,Active Juvinile Idiopathic Arthritus on Treatment,C000S5,,,,,"lung, bronchus",,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA2733985,S00BWX11,,Cygnus buccinator,,Dutchh,Acut Lymphocytic Lukemia,UMCG00017,,,,,lung carcinoma,,Heavy Chain Disease
+biosample:SAMEA2733986,S00BWXH1,,Danaus plexippus,,East Asianb,acut myeloid lukemia,S014QS,,,Abnormal Cell,,lung metastasis,,Smoldering Multiple Myeloma
+biosample:SAMEA2733987,S00BXV11,,Dasypus novemcinctus,,Euoropean,Acute Myleoid Lukemia,UMCG00007,,,Cell,,lung metastasis from primary osteosarcoma tumor,,Primary Myelofibrosis
+biosample:SAMEA2733988,S00BXV41,,Didelphis virginiana,,Non-hispanicc,Acut Myeloid Leukemia,pz 298,,,Organism Part,,"lung - right middle lobe, left lower lobe",,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA2733989,S00BXVH1,,Doryrhamphus excisus,,Northern Europexan,Acute Promyelocytic Leukimia,S009W4,,,,,lymph node,,Secondary Myelofibrosis
+biosample:SAMEA2733990,S00BYT11,,Echidna aculeata,,Not aapplicable,acute promylocytic lukemia (APL),S008H1,,,Abnorml Cell,,lymph node metastasis,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA2733991,S00BYT41,,Elaphe obsoleta,0 - 18,Soutb Asian,AD,S00DCS,,,Cll,,lymphocyte of B lineage,,Secondary Thrombocytosis
+biosample:SAMEA2733992,S00BYTH1,,Equus caballus,0 - 5,YORUBVA,adjacant normal lung tisues,S00390,,,Orgnism Part,,Macaque Prefrontal Cortex,,Reactive Thrombocytosis
+biosample:SAMEA2733995,S00C0J11,,Eretmochelys imbricata,10 - 15,American Indianz,Alcholic Hepatitis patiant,S001MJ,,,Abnrmal Cell,,Macaque White Matter,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA2733996,S00C0J41,,Eudyptes chrysocome,1 - 5,Alasksan Nativee,AL,PB270313,,,Cel,,macrophage,,Acute Eosinophilic Leukemia
+biosample:SAMEA2733997,S00C0JH1,,Felis catus,15 - 20,African Amerifcan,ALL diagnosos,PB130513,,,Orgnism Partt,,Malignant rhabdoid tumor,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA2733998,S00C1H12,,Fregata magnificens,1 - 7,Native Hawaiibn,Alzheimer's Diseas,C001HN,,,Abnrmal Cl,,mammary gland,,Mast Cell Disease
+biosample:SAMEA2733999,S00C1H51,,Gadus morhua,20 - 25,Pacific Islannder,Alzheimer's diease (AD),S0041C,,,Ceel,,mammary gland; breast,,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA2734000,S00C1HH1,,Gallus gallus,20 - 30,Caribeean,Anaplastic Astrocytoma IDH-mutent,S00CP6,,,Orgnsm Part,,"mammary gland, breast; derived from metastatic site: pleural effusion",,Primary Cutaneous Mastocytosis
+biosample:SAMEA2734001,S00C2F11,,Gorilla beringei,20 - 40,Inndian,"AR negative, Neure Endocrine",S00BS4,,,Abnormal Cll,,mammary gland/breast; derived from metastatic site: pleural effusion,,Chronic Neutrophilic Leukemia
+biosample:SAMEA2734002,S00C2F51,,Gorilla gorilla,25 - 30,Melaenesian,"AR positive, Neuro Endocrine like",C12012,,,Cel,,Mantle Cell Lymphoma,,Neutrophilic Leukemia
+biosample:SAMEA2734003,S00C2FH1,,Haliaeetus leucocephalus,30 - 35,Australasbian,AS patiants,C001FR,,,Orgnism Part,,Marmoset Prefrontal Cortex,,Chronic Basophilic Leukemia
+biosample:SAMEA2734004,S00CP612,,Heloderma suspectum,3 - 10,Aboriiginal,Astrocytoma Anaplastic (WHO gr. 3),UMCG00008,,,Abnomal Cell,,Marmoset White Matter,,Basophilic Leukemia
+biosample:SAMEA2734005,S00CP651,,Hemachatus haemachatus,35 - 40,Chinse,Astrocytoma (WHO gr. 2),S00BJM,,,Ceell,,mature conventional dendritic cell,,Hairy Cell Leukemia Variant
+biosample:SAMEA2734006,S00CQ411,,Heterocephalus glaber,35 - 60,Guamanin,ATR-X syndrom,S002S3,,,Organism Prt,,mature eosinophil,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA2734007,S00CR211,,Hippocampus erectus,40 - 45,Japaneese,blader cancer,S00622,,,Abnrmal Cel,,mature neutrophil,,Sezary Syndrome
+biosample:SAMEA2734008,S00CR241,,Homo sapiens,45 - 50,Koreean,BPDCN (blastic plasmacytoid dendritic cell neoplasm),C005VG,,,Celll,,MCF-7,,Adult T-Cell Leukemia
+biosample:SAMEA2734009,S00CS011,,Hylobates lar,50 - 55,Polynesianr,Burkitt Limphoma,PB100713,,,Orgnism Pat,,MCF-7 breast cancer cell line,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA2734010,S00CS041,,Ictalurus punctatus,50 - 70,Europbean,cancr,PB100713,,,Abnormal Ccell,,MCF-7 cell line,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA2734011,S00CTZ11,,Iguana iguana,5 - 10,Anglo Saxon,Cancer,C00192,,,Cll,,mcf7/fibro 75/25,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA2734012,S00CTZ41,,Iguanodon bernissartensis,55 - 60,Latn Americanx,Castration resistan,S00E8W,,,Orgnism Pqrt,,mcf7/fibro 95/5,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA2734013,S00CWT11,,Jasus edwardsii,55 - 65,Araibic,chronic lumphocytic lukemia,UMCG00002,,,Abnormal Cl,,mcf7/hmec 75/25,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA2821382,S00CWT41,,Junonia coenia,55 - 70,Vietnamesee,Chronic Lymphocytic Leukemia,S00FTN,,,Ccell,,mcf7/hmec 95/5,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA2821383,S00CWTA1,,Lepus americanus,60 - 65,Micronnnesian,cirhosiss,pz 298,,,Orgnism Part,,mcf7/tcell 75/25,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA2821774,S00CWTH1,,Lepus europaeus,65 - 70,US Indinan,colorectal cancr,S007SK,,,Abnrmal Celll,,mcf7/tcell 95/5,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA2821775,S00CXR11,,Leptonychotes weddellii,70 - 75,Canaadian Indian,control,S00V65,,,Cel,,MEC,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA2821776,S00CXR41,,Loxodonta africana,75 - 80,Puewto Rican,Control,S00C2F,,,Orgnism Part,,medium spiny neuron-like,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA3171659,S00CXRA1,,Macaca fascicularis,80 - 85,Filipinno,CRPC,S0022I,,,Abnomal Cl,,megakaryocyte-erythroid progenitor cell,,Follicular Lymphoma
+biosample:SAMEA3171660,S00CXRH1,,Macaca mulatta,85 - 90,Mexicanz,cutaneus T cell leukemia (CTCL),C0066P,,,Ceell,,memory B cell,,In Situ Follicular Neoplasia
+biosample:SAMEA3171661,S00CYP11,,Macropus rufus,90,Alaskann Nnative,Diabetec,C001UY,,,Orgnism Prt,,meninges,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3171662,S00CYP41,,Marmota flaviventris,,Cubanb,Diffuse Astrocytoma IDH-mutent,C001UY,,,Abnormal Cll,,meningioma,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA3171663,S00CYPA1,,Megaptera novaeangliae,,African Ancestry in SW USAe,diffus large B cell lymphoma,C001NB,,,Cell,,Menschliche Und Tierische Zellkulture-5 B acute lymphoblastic leukemia,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3171664,S00CYPH1,,Meleagris gallopavo,,African Caribean in Barbadosn,diffuse large B cell limphoma (DLBCL),PB130513,,,Orgnism Partt,,mesenchymal stem cell of the bone marrow,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA3171665,S00D0F11,,Mergus serrator,,Bengalii in Bangladeshh,dilated cardiomyopathie (DCM),BM160614,,,Abnorml Cel,,Mesenchymal stem cells derived from an EwS patient,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA3171666,S00D0F41,,Microcebus murinus,,British from England and Scotlandv,,TH91,,,Clll,,mesenchyme,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA3171667,S00D0FA1,,Moloch horridus,,Chinese Dai in Xishuangbannaq,Juvnile Rheumatoid Arthritus,C0011I,,,Orgnsm Part,,Metastatic GIST,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA3171668,S00D0FH1,,Monodon monoceros,,Colombiaan in Medelline,Kawasaky Disease,S00390,,,Abnrmal Ccel,,MHH-CALL-4 Childhood B acute lymphoblastic leukemia,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA3171669,S00D1D11,,Moose,,Esan in Nigerias,Langerhans Cell Histiosytosis,S002S3,,,Cll,,MM1S myeloma cell line,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3171670,S00D1D41,,Mustela putorius,,Finnishh in Finlandd,Marffan Syndrom,C003VO,,,Orgnism Prat,,Model of Clear Cell Ovarian Cancer,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA3171671,S00D1DA1,,Myrmecobius fasciatus,,Gambiabn in Western Division,Neurifibromatosis Type 1,C00256,,,Abnrmal Cl,,Model of High Grade Serous Ovarian Cancer,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3171672,S00D1DH1,,Naja naja,0 - 18,"Gujaarti Indians in Houston, Texass",Osteogensis Imperfecta,22965,,,Cll,,Model of High Grade Serous Ovarian Cancer from metastatic (ascites) sample,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3171673,S00D2B11,,Nasalis larvatus,0 - 5,Han Chinese in Beijings,Parkinson's Diseas,BM060814,F ,,Orgnism Pqrt,,Model of Low Grade Serous Ovarian Cancer,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3171674,S00D2BA1,,Nasua nasua,10 - 15,Iberian Populatiojns in Spain,Pradar-Willi Syndrom,S00C2F,Female,,Abnormal Cl,,Model of mucinous Ovarian Cancer,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3171675,S00D2BH1,,Neotoma cinerea,1 - 5,Indian Telugu in the U.K.w,Restliss Legs Syndrom,PB100713,M,,Cel,,Model of Mucinous Ovarian Cancer,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3175109,S00D3911,,Neovison vison,15 - 20,"Japanse in Tokyo, Japanm",Sickel Cell Diseas,BM190913,Male,,Orgnism Part,,monocyte,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3175110,S00D3941,,Noturus gyrinus,1 - 7,Kinh in Ho Chi Minh Cityx,Tourret Syndrome,UMCG00017,Mixed,,Abnrmal Celll,,mononuclear cell,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3175111,S00D39A1,,Odobenus rosmarus,20 - 25,"Luhya in Webuye, Kenyar",Ulcerativ Colitis,S0018A,Unknown,,Ceell,,mouse embryonic stem cell,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3175112,S00D39H1,,Odocoileus virginianus,20 - 30,Mende in Sierra Leoney,Von Hippel-Linda Syndrome,S00H6O,,,Orgnism Pat,,Mouse G1E-ER4 cells,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3175113,S00D4711,,Orcinus orca,20 - 40,Mexicabn Ancestry in Los Angeles CA USAq,Williams Syndrom,S00FTN,Fem,,Abnormal Clll,,Muscle,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA3178597,S00D4741,,Oreamnos americanus,25 - 30,Peruviaan in Lima Peruu,Xeroderma Pigmentosom,S006XE,Femal,,Cell,,myelodysplastic syndrome (MDS) cell line MDS-L,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA3178598,S00D47H1,,Ovis aries,30 - 35,Puertoo Rican in Puerto Ricol,Zollinger-Ellison Syndrom,S004P1,Masc,,Abnormal Cell,,myeloid cell,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3178599,S00D5511,,Pan troglodytes,3 - 10,"Punjaabi in Lahore, Pakistans",Acromegally,S006YC,Mn,,Cell,,myeloid dendritic cells,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA3178600,S00D5541,,Papio anubis,35 - 40,Sri Lankian Tamil in the UK,Behçet's Syndrom,C0067N,Mix,,Organism Part,,myeloma cell line,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3178601,S00D55H1,,Papio hamadryas,35 - 60,Toscani in Italias,Charcot-Marie-Toth Diseas,S001JP,Unkn,,,,My-La CD8+ T lymphocyte cell line,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3178602,S00D6311,,Pelodiscus sinensis,40 - 45,"Yoruba in Ibadan, Nigerias",Dysautonmia,csMBC pool 1,Femle,,Abnorml Cell,,Myometrium,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA3178603,S00D6341,,White Sturgeon,45 - 50,,Fibrouss Dysplasia,25386,Mal,,Cll,,myxoid liposarcoma,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA3178604,S00D63H1,,Cottonmouth,50 - 55,,Glanzman Thrombosthenia,25145,Mal,,Orgnism Part,,n/a (ERCC control RNAs),,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3184087,S00D7151,,Giant Panda,50 - 70,,Hemochromatossis,F2012-2912,Mixd,,Abnrmal Cell,,naive B cell,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3184088,S00DCS12,,American Alligator,5 - 10,,Incluson Body Myosits,S000RD,Unknwn,,Cel,,Naive CD4 T cells,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3184089,S00DCS14,,Yellow Bullhead,55 - 60,,Juvnile Dermatomyostis,NC11_41,Femaale,,Orgnism Partt,,NALM-6 Adult B acute lymphoblastic leukemia,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3184090,S00DCS51,,Spotted Salamander,55 - 65,,Klinefelter Syndrom,S004BT,Mael,,Abnrmal Cl,,nasopharyngeal carcinoma,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3184091,S00DCS53,,Clownfish,55 - 70,,Myasthenia Graviss,S00E8W,Mixd,,Ceel,,Nasopharyngeal carcinoma,,
+biosample:SAMEA3184092,S00DCSH1,,Mallard Duck,60 - 65,,Neurifibromatosis Type 2,UMCG00003,Unknwn,,Orgnsm Part,,Native tissue,,
+biosample:SAMEA3184093,S00DCSH2,,Carolina Anole,65 - 70,,Osteopetrosiss,UMCG00002,Fml,,Abnormal Cll,,neonatal foreskin,,
+biosample:SAMEA3184094,S00DFM11,,Pronghorn,70 - 75,,Pernicius Anemia,N000314138902,Ml,,Cel,,Neuroblastoma cell line,,
+biosample:SAMEA3184095,S00DFM41,,California Sea Hare,75 - 80,,Rat Syndrome,S002ND,Mxd,,Orgnism Part,,Neuroblastoma primary samples,,
+biosample:SAMEA3184096,S00DFMH1,,Emperor Penguin,80 - 85,,Sjögren's Syndrom,S001U3,Unk,,Abnomal Cell,,neutrophilic metamyelocyte,,
+biosample:SAMEA3184097,S00DM851,,Great Egret,85 - 90,,Tuberous Sclerosiss,C005UI,,,Ceell,,neutrophilic myelocyte,,
+biosample:SAMEA3184098,S00DVR12,,European Water Vole,90,,Von Willbrand Diseas,C003N3,,,Organism Prt,,NIH/3T3 cells,,
+biosample:SAMEA3184099,S00DVR51,,Common Starfish,,,Alagile Syndrom,pz 284,,,Abnrmal Cel,,non-transformed human mammary epithelial cells,,
+biosample:SAMEA3184100,S00DVRH1,,Topsmelt,0 - 18,,Bloome Syndrom,C00184,,,Celll,,Normal,,
+biosample:SAMEA3184101,S00E8W12,,Zamora Cichlid,0 - 5,,Chromosme 22q11.2 Deletion Syndrom,C000S5,,,Orgnism Pat,,normal breast,,
+biosample:SAMEA3209427,S00E8W51,,African Tigerfish,10 - 15,,Dubowits Syndrome,329.2,,,Abnormal Ccell,,Normal breast,,
+biosample:SAMEA3209428,S00EFI43,,Zebra Mbuna,1 - 5,,Friederich's Ataxia,299.1,,,Cll,,Normal colon,,
+biosample:SAMEA3209429,S00EPZ41,,Blue Perch,15 - 20,,Hemolitic Anemia,145.2,,,Orgnism Pqrt,,Normal Colon Away from tumor (20cm),,
+biosample:SAMEA3209430,S00FGC11,,Fin Whale,1 - 7,,Intestinal Malrotaton,T14_10,,,Abnormal Cl,,Normal Colon Close to tumor,,
+biosample:SAMEA3215311,S00FGCH1,,Blue Whale,20 - 25,,Joubert Syndrom,BM060814,,,Ccell,,normal colon crypt,,
+biosample:SAMEA3215312,S00FJ6H1,,American Bison,20 - 30,,Kabukki Syndrome,S002R5,,,Orgnism Part,,normal foreskin,,
+biosample:SAMEA3215328,S00FTN11,,Oriental Fire-bellied Toad,20 - 40,,Leih Syndrome,T12_20,,,Abnrmal Celll,,normal liver tissue,,
+biosample:SAMEA3215357,S00FTN51,,Wild Yak,25 - 30,,Neurofibromatosis Type 3,BM190913,,,Cel,,normal murine prostate organoids,,
+biosample:SAMEA3215368,S00FTNH1,,Snowy Owl,30 - 35,,Osler-Weber-Rendu Syndrom,BM190913,,,Orgnism Part,,normal oral tissue,,
+biosample:SAMEA3215380,S00FWHA1,,Bufflehead,3 - 10,,Prun Belly Syndrom,N000314138902,,,Abnomal Cl,,normal prostate tissue,,
+biosample:SAMEA3215391,S00FWHB1,,Rock Ptarmigan,35 - 40,,Smith-Lemli-Opitz Syndrom,S001U3,,,Ceell,,Normal stomach muscle,,
+biosample:SAMEA3215403,S00FWHH1,,Coyote,35 - 60,-,Stickler Syndrom,C001UY,,,Orgnism Prt,,Normal tissue,,
+biosample:SAMEA3215415,S00FXFA1,,Gray Wolf,40 - 45,Admixed American,Waardenburg Syndrom,pz 284,,,Abnormal Cll,,Occipital pole,,
+biosample:SAMEA3215471,S00FXFB1,,Grey Reef Shark,45 - 50,African,X-linkd Agammaglobulnemia,5.2,,,Cell,,OCI-AML3 cells,,
+biosample:SAMEA3215472,S00FXFH1,,Bull Shark,50 - 55,ARAB,Alfa-1 Antitrypsin Deficieny,S0022I,,,Orgnism Partt,,OCI-LY7 cells,,
+biosample:SAMEA3215481,S00FYDH1,,Loggerhead Sea Turtle,50 - 70,Asian,Bartr Syndrome,S0022I,,,Abnorml Cel,,oocyte,,
+biosample:SAMEA3215493,S00G03H1,,Elk,5 - 10,Caucasian,Churg-Straus Syndrome,BM060814,,,Clll,,organoid tissue,,
+biosample:SAMEA3215520,S00G11H1,,Green Sea Turtle,55 - 60,Dutch,Diamond-Blackfan Anemia,S00DCS,,,Orgnsm Part,,osteoclast,,
+biosample:SAMEA3215546,S00G3YH1,,Galapagos Tortoise,55 - 65,East Asian,Ectodermall Dysplasia,S00C1H,,,Abnrmal Ccel,,ovarian,,
+biosample:SAMEA3215557,S00GNV41,,Northern Pine Snake,55 - 70,European,Gaucher Diseas Typp 2,S007DD,,,Cll,,ovarian carcinoma,,
+biosample:SAMEA3215684,S00GPR11,,Red-eared Slider,60 - 65,Non-hispanic,Hermanski-Pudlak Syndrom,T14_11,,,Orgnism Prat,,ovarian epithelial cells,,
+biosample:SAMEA3215701,S00GPRA1,,Marsh Wren,65 - 70,Northern European,Irn Deficiency Anemia,BM030613,,,Abnrmal Cl,,pancreas,,
+biosample:SAMEA3215715,S00GPRH1,,Eastern Ratsnake,70 - 75,Not applicable,Jansenn,BM190913,,,Cll,,Pancreas,,
+biosample:SAMEA3215780,S00GRNH5,,Rock Pigeon,75 - 80,South Asian,Kabukki Syndrome,PB270313,,,Orgnism Pqrt,,pancreatic ductal adenocarcinoma (PDAC),,
+biosample:SAMEA3215786,S00H6O12,,American Crocodile,80 - 85,YORUBA,,UMCG00008,F ,,Abnormal Cl,,Pancreatic Islet,,
+biosample:SAMEA3215795,S00H6O51,,Saltwater Crocodile,85 - 90,American Indian,,pz 289,Female,,Cel,,pancreatic islets,,
+biosample:SAMEA3215802,S00H6OH2,,Hellbender,90,Alaska Native,,C001UY,M,,Orgnism Part,,patient-derived xenografts,,
+biosample:SAMEA3215810,S00HQL11,,Trumpeter Swan,,African American,-,C000S5,Male,,Abnrmal Celll,,PBMC,,
+biosample:SAMEA3215817,S00HRJ11,,Monarch Butterfly,,Native Hawaiian,Activated B-Cell-Like Diffuse Large B-Cell Lymphoma,145.1,Mixed,,Ceell,,PBMC-derived primary CD8+ T-cells,,Alzheimer's Disease
+biosample:SAMEA3215826,S00HRJ41,,Nine-banded Armadillo,,Pacific Islander,Active Juvenile Idiopathic Arthritis on Treatment,5.1,Unknown,,Orgnism Pat,,PDX2 patient derived xenograft,,Parkinson's Disease
+biosample:SAMEA3215840,S00HSH11,,Virginia Opossum,,Caribbean,Acute Lymphocytic Leukemia,S001MJ,,,Abnormal Clll,,PDX model HCI-005,,Multiple Sclerosis
+biosample:SAMEA3215854,S00HSH41,,Signal Goby,,Indian,acute myeloid leukemia,C00256,Fem,,Cell,,Perigastric  lymph node,,Crohn's Disease
+biosample:SAMEA3215866,S00HTF11,,Short-tail Pipefish,,Melanesian,Acute Myeloid Leukemia,C003K9,Femal,,,,Perigastric lymph node,,Ulcerative Colitis
+biosample:SAMEA3215880,S00HTF41,,Short-beaked Echidna,,Australasian,acute myeloid leukemia (AML),S00DVR,Masc,,,,peripheral blood,,Rheumatoid Arthritis
+biosample:SAMEA3215941,S00J8C11,,Texas Rat Snake,,Aboriginal,Acute Promyelocytic Leukemia,S00BJM,Mn,,Abnormal Cell,,Peripheral blood,,Systemic Lupus Erythematosus
+biosample:SAMEA3215952,S00JE0A1,,Horse,,Chinese,acute promyelocytic leukemia (APL),S009W4,Mix,,Cell,,Peripheral Blood,,Psoriasis
+biosample:SAMEA3219421,S00JE0H1,,Hawksbill Sea Turtle,,Guamanian,AD,T13_1,Unkn,,Organism Part,,Peripheral blood Chronic Lymphocytic Leukemia (CLL) cells,,Celiac Disease
+biosample:SAMEA3219422,S00JFZA1,,Southern Rockhopper Penguin,,Japanese,adjacent normal lung tissues,PB270313,Femle,,,,"peripheral blood, Human Chronic Lymphocytic Leukemia",,Asthma
+biosample:SAMEA3219423,S00JFZH1,,Domestic Cat,,Korean,Alcoholic Hepatitis patient,UMCG00012,Mal,,Abnorml Cell,,"peripheral blood, Mantle Cell Lymphoma",,Hypertension
+biosample:SAMEA3233732,S00JGXA1,,Magnificent Frigatebird,,Polynesian,ALL,S007SK,Mal,,Cll,,peripheral blood monocyte cells,,Coronary Artery Disease
+biosample:SAMEA3233733,S00JGXH1,,Atlantic Cod,,European,ALL diagnosis,C006G5,Mixd,,Orgnism Part,,Peripheral nerve,,Obesity
+biosample:SAMEA3233734,S00JHVA1,,Chicken,,Anglo Saxon,Alzheimer's Disease,C003VO,Unknwn,,Abnrmal Cell,,Peripheral whole blood,,Type 2 Diabetes Mellitus
+biosample:SAMEA3233735,S00JHVH1,,Mountain Gorilla,,Latin American,Alzheimer's disease (AD),C004SQ,Femaale,,Cel,,peritoneal effusion,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA3233736,S00JJRA1,,Western Gorilla,,Arabic,Anaplastic Astrocytoma  IDH-mutant,NC11_41,Mael,,Orgnism Partt,,pharynx,,Atrial Fibrillation
+biosample:SAMEA3233737,S00JJRH1,,Bald Eagle,,Vietnamese,"AR negative, Neuro Endocrine",S001S7,Mixd,,Abnrmal Cl,,Pharynx,,Depression
+biosample:SAMEA3233738,S00JKPA1,,Gila Monster,,Micronesian,"AR positive, Neuro Endocrine like",S00BJM,Unknwn,,Ceel,,pHGG,,Schizophrenia
+biosample:SAMEA3233739,S00JKPH1,,Ringhals,,US Indian,AS patients,S006VI,Fml,,Orgnsm Part,,Pituitary,,Bipolar Disorder
+biosample:SAMEA3233740,S00JMLA1,,Naked Mole Rat,,Canadian Indian,Astrocytoma  Anaplastic (WHO gr. 3),BM030613,Ml,,Abnormal Cll,,plasma cell,,Anxiety Disorders
+biosample:SAMEA3233741,S00JMLH1,,Lined Seahorse,,Puerto Rican,Astrocytoma (WHO gr. 2),PB130513,Mxd,,Cel,,plasma of cirrhosis patient,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA3256068,S00JNJA1,,Atlantic Seahorse,,Filipino,ATR-X syndrome,UMCG00007,Unk,,Orgnism Part,,plasma of HCC patient,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA3256069,S00JNJH1,,Human,,Mexican,bladder cancer,pz 290,,,Abnomal Cell,,plasma of healthy individuals,,Cerebral Palsy
+biosample:SAMEA3256070,S00JPF11,,Lar Gibbon,,Alaskan Native ,BPDCN (blastic plasmacytoid dendritic cell neoplasm),S007G7,,,Ceell,,podocyte,,Down Syndrome
+biosample:SAMEA3256071,S00JPF41,,Channel Catfish,,Cuban,Burkitt Lymphoma,C0010K,,,Organism Prt,,Podocyte,,Sickle Cell Disease
+biosample:SAMEA3256072,S00JQD11,,Green Iguana,,African Ancestry in SW USA,cancer,T11_8,,,Abnrmal Cel,,polychromatophilic erythroblast,,Thalassemia
+biosample:SAMEA3256073,S00JQD41,,Bernissart Iguanodon,,African Caribbean in Barbados,Cancer,C004GD,,,Celll,,pons,,Hemophilia
+biosample:SAMEA3256074,S00JRB11,,Jasus edwardsii,,Bengali in Bangladesh,Castration resistant,F2012-2912,,,Orgnism Pat,,postnatal thymus,,Duchenne Muscular Dystrophy
+biosample:SAMEA3256075,S00JRB41,,Buckeye Butterfly,,British from England and Scotland,chronic lymphocytic leukemia,F2012-2912,,,Abnormal Ccell,,Postnatal Ventricular-Subventricular Zone,,Cystic Fibrosis
+biosample:SAMEA3256076,S00JS911,,Snowshoe Hare,,Chinese Dai in Xishuangbanna,Chronic Lymphocytic Leukemia,V156,,,Cll,,Precentral gyrus,,Huntington's Disease
+biosample:SAMEA3256077,S00JS941,,European Hare,,Colombian in Medellin,cirrhosis,S00622,,,Orgnism Pqrt,,precursor B cell,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA3256078,S00K3I11,,Weddell Seal,,Esan in Nigeria,colorectal cancer,C0066P,,,Abnormal Cl,,Prefrontal cortex,,Epilepsy
+biosample:SAMEA3256079,S00K5EA1,,African Elephant,,Finnish in Finland,control,S004AV,,,Ccell,,Prefrontal Cortex,,Tourette Syndrome
+biosample:SAMEA3256080,S00K5EB1,,Long-tailed Macaque,,Gambian in Western Division,Control,BM060814,,,Orgnism Part,,primary breast tumor,,Non-Hodgkin Lymphoma
+biosample:SAMEA3256081,S00K5EH1,,Rhesus Macaque,,"Gujarati Indians in Houston, Texas",CRPC,S008H1,,,Abnrmal Celll,,Primary colonic adenoma,,Hodgkin Lymphoma
+biosample:SAMEA3256082,S00K6CH1,,Red Kangaroo,,Han Chinese in Beijing,cutaneous T cell leukemia (CTCL),S00BS4,,,Cel,,primary colorectal cancer tumor,,Chronic Myeloid Leukemia
+biosample:SAMEA3256083,S00K7AA1,,Yellow-bellied Marmot,,Iberian Populations in Spain,Diabetic,BM030613,,,Orgnism Part,,Primary colorectal carcinoma,,Polycythemia Vera
+biosample:SAMEA3256084,S00K7AB1,,Humpback Whale,,Indian Telugu in the U.K.,Diffuse Astrocytoma  IDH-mutant,N000314138902,,,Abnomal Cl,,Primary Ependymoma Tumour,,Essential Thrombocythemia
+biosample:SAMEA3256085,S00K7AH1,,Wild Turkey,,"Japanese in Tokyo, Japan",diffuse large B cell lymphoma,S00DM8,,,Ceell,,primary glioblastoma,,Myelofibrosis
+biosample:SAMEA3267746,S00K88A1,,Common Merganser,,Kinh in Ho Chi Minh City,diffuse large B cell lymphoma (DLBCL),S00DCS,,,Orgnism Prt,,primary glioblastoma tissue,,Hairy Cell Leukemia
+biosample:SAMEA3267747,S00K88B1,,Gray Mouse Lemur,,"Luhya in Webuye, Kenya",dilated cardiomyopathy (DCM),S00CP6,,,Abnormal Cll,,Primary NKTL tumor,,Waldenström Macroglobulinemia
+biosample:SAMEA3267748,S00K88H1,,Thorny Devil,,Mende in Sierra Leone,,S00BHQ,,,Cell,,primary osteosarcoma tumor,,Myelodysplastic Syndromes
+biosample:SAMEA3267749,S00KPB11,,Narwhal,,Mexican Ancestry in Los Angeles CA USA,Duchenne,C003JB,,,Orgnism Partt,,primary prostate cancer,,Systemic Mastocytosis
+biosample:SAMEA3267750,S00KPBH1,,Proboscis Monkey,,Peruvian in Lima Peru,dysplastic chronic myelomonocytic leukemia,F2012-2912,,,Abnorml Cel,,Primary prostate epithelial cells,,Eosinophilic Leukemia
+biosample:SAMEA3267775,S00NJBH1,,White-nosed Coati,,Puerto Rican in Puerto Rico,endometrial adenocarcinoma,MO7071,,,Clll,,primary prostate tumor,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA3267776,S00NK9H1,,Desert Tortoise,,"Punjabi in Lahore, Pakistan",erythroleukaemia,C005PS,,,Orgnsm Part,,Primary tonsilar B cells,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA3267777,S00NM5H1,,American Elk,,Sri Lankan Tamil in the UK,ES patients,C0010K,,,Abnrmal Ccel,,primary tumor,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3267778,S00NN3H1,,Orca,,Toscani in Italia,facial tumor,329.1,F ,,Cll,,Primary Visual Cortex,,Myeloproliferative Neoplasms
+biosample:SAMEA3267779,S00Q7N11,,Mountain Goat,,"Yoruba in Ibadan, Nigeria",follicular lymphoma,299.2,Female,,Orgnism Prat,,primary Wilms tumor sample,,Acute Promyelocytic Leukemia
+biosample:SAMEA3267780,S00Q7NA1,,Sheep,,,Germinal Center B-Cell-Like Diffuse Large B-Cell Lymphoma,S001S7,M,,Abnrmal Cl,,prostate,,Chronic Eosinophilic Leukemia
+biosample:SAMEA3267781,S00Q7NH1,,Chimpanzee,,Admiced Amrican,GS_delta_44,C005VG,Male,,Cll,,Prostate,,Myeloid Sarcoma
+biosample:SAMEA3267782,S00Q8L11,,Olive Baboon,,Afrikan,HCC,C0068L,Mixed,,Orgnism Pqrt,,prostate cancer cell line,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3267783,S00Q8LH1,,Hamadryas Baboon,,ARAB,healthy,C002CT,Unknown,,Abnormal Cl,,prostate; derived from metastatic site: bone,,Mast Cell Leukemia
+biosample:SAMEA3267784,S00QKY11,,Chinese Softshell Turtle,,Asiab,Healthy,pz 298,,,Cel,,prostate normal tissue,,Plasma Cell Leukemia
+biosample:SAMEA3267785,S00S8D41,,Anolis carolinensis,,Caucaisan,healthy control,T14_10,Fem,,Orgnism Part,,prostate tumor,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA3267786,S00S9B41,,Anolis carolnensis,,Duch,Healthy control,BM030613,Femal,,Abnrmal Celll,,prostate tumor tissue,,Heavy Chain Disease
+biosample:SAMEA3267787,S00SB711,,Anolis carolinesis,0 - 18,East Asan,Healthy/ Control,S00D71,Masc,,Ceell,,Proximal femoral growth plates,,Smoldering Multiple Myeloma
+biosample:SAMEA3271070,S00SB7H1,,Anlois carolinensis,0 - 5,Eurppean,Healthy controls,S001QB,Mn,,Orgnism Pat,,Proximal humeral growth plates,,Primary Myelofibrosis
+biosample:SAMEA3271071,S00SQEH1,,Anolis carloinensis,10 - 15,Non-huspanic,Healthy Controls,C0070X,Mix,,Abnormal Clll,,Proximal radial growth plates,,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA3271072,S00T2LH1,,Anolis carolinensi,1 - 5,Northern Europeen,Healthy T cells,C006X8,Unkn,,Cell,,Proximal tibial growth plates,,Secondary Myelofibrosis
+biosample:SAMEA3271073,S00T4H43,,Anolis carolniensis,15 - 20,Not applicable,Idiopathic Pulmonary Fibrosis (IPF),C002UU,Femle,,,,Pubis,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA3271074,S00T5F43,,Anolis carolines,1 - 7,South Asan,Juvenile Idiopathic Arthritis,C002UU,Mal,,,,Putamen,,Secondary Thrombocytosis
+biosample:SAMEA3271075,S00T6D43,,Anolis carolinesa,20 - 25,YORUBA,leukemic,C12001,Mal,,,,RA Synovial Fluid,,Reactive Thrombocytosis
+biosample:SAMEA3292517,S00TA543,,Anolis carolinsensis,20 - 30,Americsn Indiab,lung cancer,C12001,Mixd,,,,rectosigmoid mucosa,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA3318360,S00TC1A1,,Arabidopsis thaliana,20 - 40,Alskan Native,Lymphoma_Follicular,C12001,Unknwn,,,,rectum,,Acute Eosinophilic Leukemia
+biosample:SAMEA3321577,S00TC1B1,,Arabidospsis thaliana,25 - 30,Africn Amrican,Mantle Cell Lymphoma,C07002,Femaale,,,,Rectum,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA3321615,S00TEYB1,,Arabidopsiss thaliana,30 - 35,Nativ Hawaiian,metastatic castration resistant prostate cancer,S000SB,Mael,,,,regulatory T cell,,Mast Cell Disease
+biosample:SAMEA3321629,S00TFWB1,,Arabidopsis thailana,3 - 10,Pcific Islandr,microcephalic dwarfism,S00198,Mixd,,,,renal cortex,,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA3321642,S00TGUB1,,Arabidopsis thalianaa,35 - 40,Carribean,Multiple myeloma,S001QB,Unknwn,,,,resistant prostate tumor (TURP),,Primary Cutaneous Mastocytosis
+biosample:SAMEA3321655,S00THSB1,,Arabidopsi thaliana,35 - 60,Indin,Multiple Myeloma,C07002,Fml,,,,Retina,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3321669,S00TJOB1,,Arabidopis thaliana,40 - 45,Melaneian,Natural control,C07002,Ml,,,,RPE,,Neutrophilic Leukemia
+biosample:SAMEA3321676,S00TMIB1,,Arabidopsis thalina,45 - 50,Australasian,Newly diagnosed Rheumatoid Arthritis,S001FX,Mxd,,,,RPMI8226 myeloma cell line,,Chronic Basophilic Leukemia
+biosample:SAMEA3321705,S00TNGB1,,Arabidopsiis thaliana,50 - 55,Aborignal,no known lung disease,C07015,Unk,,,,segmented neutrophil of bone marrow,,Basophilic Leukemia
+biosample:SAMEA3321706,S00TPCB1,,Arabidopsi thailana,50 - 70,Chinse,non-metastatic colorectal cancer (CRC),C002UU,,,,,skeletal muscle,,Hairy Cell Leukemia Variant
+biosample:SAMEA3321713,S00TQAB1,,Bos taurus,5 - 10,Gumanian,normal,C002UU,,,,,skin,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3321714,S00TR8B1,,Bos taurs,55 - 60,Japnese,Normal,C006MU,,,,,skin; foreskin normal,,Sezary Syndrome
+biosample:SAMEA3321715,S00TS6B1,,Bo taurus,55 - 65,Korian,normal CD19+ cells,S001FX,,,,,small intestine,,Adult T-Cell Leukemia
+biosample:SAMEA3321716,S00TT443,,Bo taurs,55 - 70,Polynesin,normal CD3+ cells,S0025C,,,,,sperm,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA3321720,S00TU211,,Bos tauru,60 - 65,Euopean,Normal human,C006NS,,,,,spleen,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA3321721,S00TU2A1,,Bos tarus,65 - 70,Anglo Saxn,Old,C006NS,,,,,Splenic B cells,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA3321722,S00TU2H1,,Bos taursu,70 - 75,Latn American,Oligodendroglioma  Anaplastic (WHO gr. 3),S0018A,,,,,stage 11-12 embryo,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3321726,S00TV011,,Bos tuarus,75 - 80,Arbic,Oligodendroglioma  IDH-mutant  1p19q codeleted,S001FX,,,,,stomach,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA3321729,S00TV0A1,,Bos tauruss,80 - 85,Vietnamsse,Oligodendroglioma (WHO gr. 2),C000WY,F ,,,,Striatum,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA3321730,S00TV0H1,,Bos taruus,85 - 90,Micronesian,Osteoarthritis,C07002,Female,,,,Stroma,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA3321736,S00TWZ11,,Caenorhabditis elegans,90,US Indin,pancreatic cancer,C07015,M,,,,subcutaneous adipose,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA3321741,S00TWZA1,,Caenorhabditis elegan,,Canadian Indan,Primary T-ALL,C006PO,Male,,,,subcutaneous adipose tissue,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA3321744,S00TWZH1,,Caenorhabdiitis elegans,,Purto Rican,prostate cancer,C07015,Mixed,,,,SUP-B15 Childhood B acute lymphoblastic leukemia ,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA3321748,S00TXX11,,Caenorhabdits elegans,,Filipino,psychosis,C07015,Unknown,,,,syngeneic lung tumors derived from LKR13 lung cancer cell line,,Follicular Lymphoma
+biosample:SAMEA3333479,S00TXXA1,,Caenorhabditis elegane,,Mexicn,Rheumatoid Arthritis,C12001,,,,,synovial fluid,,In Situ Follicular Neoplasia
+biosample:SAMEA3333480,S00TXXH1,,Caenorhabdits elegan,,Alaskan Ntive,severe Alzheimer’s disease,N00031318490130,Fem,,,,synthetic,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3333482,S00TYV11,,Caenorhabditis eleganss,,Cuban,shASCL1,N00031319896021,Femal,,Abnormal Cell,,t(8;21) AML cell line,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA3333483,S00TYVA1,,Caenorhabditis eleganis,,Afriican Ancestry in SW USA,SLE patients,N00031318490130,Masc,,Cell,,T cells,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3333484,S00TYVH1,,Caenorhabdits eleganis,,Afrcan Caribean in Barbdos,small cell lung cancer,N00031319896021,Mn,,Organism Part,,Temporal cortex,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA3333485,S00U0L11,,Caenorhabditis elegens,,Bengli in Bangladeh,superimposed preeclampsia,N00031407013121,Mix,,,,testis,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA3333486,S00U0LA1,,Callithrix jacchus,,Brtish from England and Scothand,Systemic Lupus Erythematosus (SLE) patient,N00031406634921,Unkn,,Abnorml Cell,,Testis,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA3333487,S00U0LH1,,Callithrix jacchuss,,Chinse Dai in Xishuangbanna,T1D,N00031406634921,Femle,,Cll,,Thalamic nuclei,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA3333488,S00UCY11,,Callitrix jacchus,,Colobian in Medelin,T-ALL,N00031406634921,Mal,,Orgnism Part,,thymocyte,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA3333489,S00UDW11,,Callithrixx jacchus,,Esan in Nigria,T-cell Acute Lymphocytic Leukemia,N00031406635321,Mal,,Abnrmal Cell,,thymus,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3333490,S00UEU11,,Callithrix jaccus,,Finnsh in Finlan,T-cell Prolymphocytic Leukemia,N00031406635321,Mixd,,Cel,,tongue,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA3333491,S00UFS11,,Callitrix jaccus,,Gmbian in Western Divisin,TNBC,N00031406635321,Unknwn,,Orgnism Partt,,Tongue,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3333492,S00UJK51,,Callithrix jacchuss,,"Gujarti Indians in Houston, Texs",Treated Rheumatoid Arthritis,N00031407013221,Femaale,,Abnrmal Cl,,tonsil,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3368157,S00UJKB1,,Callithrix jacchuss,,Han Chineese in Beijin,Triple-negative breast cancer (TNBC),N00031407013221,Mael,,Ceel,,Tonsil,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3368220,S00UJKH1,,Callithrix jacchuss,,Iberan Populations in Spai,tumor tissues,N00031406635321,Mixd,,Orgnsm Part,,Transformed B-lymphocytes (GM10851 cell line),,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3368221,S00UKI43,,Callithrix jacchusss,,Indin Telugu in the U.K.,Type 1 diabetes mellitus,N00031318490130,Unknwn,,Abnormal Cll,,transformed human embryonic kidney cells,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3368222,S00UME43,,Canis lupus familiaris,,"Japanee in Toko, Japan",Unknown,N00031406634921,Fml,,Cel,,tumor,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3368223,S00V2DN1,,Canis lupuss familiaris,,Knh in Ho Chi Minh City,Uremia patients,N00031318490130,Ml,,Orgnism Part,,Tumor,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3368224,S00V3BN1,,Canis lupus familiariis,,"Luhya in Webuye, Kneya",uterine leiomyoma,N00031319896021,Mxd,,Abnomal Cell,,Tumor tissue,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3368225,S00V49N1,,Canis lupuss familiariis,,Mnde in Sierre Leone,Uveal melanoma,N00031319896021,Unk,,Ceell,,U2OS cells,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3368290,S00V6511,,Canis lupuus familiaris,,Mexican Ancestry in Los Angeles CA USA,Young,N00031407013121,,,Organism Prt,,umbilical cord,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA3368291,S00V6553,,Canis lupus famillaris,,Peruviab in Lima Peru,Atopic Dermatitis,ALL_01,,,Abnrmal Cel,,umbilical cord blood,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA3368292,S00VCUA1,,Canis lupus familaris,,Puerro Rican in Puerto Rco,Behçet's Disease,8761MCL,,,Celll,,Umbilical cord blood,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3368293,S00VCUH1,,Canis lupus famliaris,,"Punjabi in Lahre, Pakistn",Celiac Disease,DLBCL_GCB_1,,,Orgnism Pat,,Umbilical Cord Blood mononuclear cells,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA3387521,S00VDSA1,,Canis lupus familairs,,Sri Lankan Tmil in the UK,Crohn's Disease,C003TS,,,Abnormal Ccell,,unswitched memory B cell,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3387522,S00VDSH1,,Canis lupus familaris,,Toscani in Italia,Diabetic Nephropathy,BL_2,,,Cll,,UoC-B1 Childhood B acute lymphoblastic leukemia,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3387523,S00VEQA1,,Cereibacter sphaeroides,,"Yoruba in Ibadn, Nigera",Ehlers-Danlos Syndrome,DLBCL_GCB_2,,,Orgnism Pqrt,,uterine cervix,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA3387524,S00VEQH1,,Cereibacter spheroides,,,Fibromyalgia,T13_16,,,Abnormal Cl,,venous blood,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA3387525,S00VFOA1,,Cereibacter sphaeroid,,Admicxed American,Gaucher Disease,Pool_9,,,Ccell,,Venous peripheral blood,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3387526,S00VFOH1,,Cereibacter sphaeroids,,Africn,Hashimoto's Thyroiditis,TA37,,,Orgnism Part,,visceral adipose tissue,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3392423,S00VHKH1,,Cereibacter sphaerides,,ARRAB,Huntington's Disease,723CLL,,,Abnrmal Celll,,White adipose tissue (WAT),,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3392424,S00VKEH1,,Cereibacter sphaeroidess,,Assiann,Inflammatory Bowel Disease,1228CLL,F ,,Cel,,white blood cells,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3392425,S00VMAH1,,Cereibacter sphaeroids,,Caucasiab,Juvenile Rheumatoid Arthritis,S01F8K,Female,,Orgnism Part,,White matter,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3392426,S00VN8H1,,Cereibacter sphaeroidess,,Dutchh,Kawasaki Disease,T15_1,M,,Abnomal Cl,,whole blood,,
+biosample:SAMEA3393058,S00VP4H1,,Cereibacter sphaeroidess,,East Asianb,Langerhans Cell Histiocytosis,"S01DWH,S01DWH,S01DWH,S01DWH,S01DWH",Male,,Ceell,,Whole brain,,
+biosample:SAMEA3393059,S00VQ2H1,,Cereibacter sphaeroidess,,Euoropean,Marfan Syndrome,S013GF,Mixed,,Orgnism Prt,,Whole brain 0 hr post mortem delay,,
+biosample:SAMEA3393063,S00VSZH1,,Chlorocebus aethiops,,Non-hispanicc,Neurofibromatosis Type 1,115CLL,Unknown,,Abnormal Cll,,Whole brain 16 hr post mortem delay,,
+biosample:SAMEA3401475,S00VYNH1,,Chlorocebus aethiop,,Northern Europexan,Osteogenesis Imperfecta,T15_P2,,,Cell,,Whole brain 24 hr post mortem delay,,
+biosample:SAMEA3444711,S00W0DH1,,Chlorocebus aethipos,,Not aapplicable,Parkinson's Disease,S00W8Y,Fem,,Orgnism Partt,,Whole brain 8 hr post mortem delay,,
+biosample:SAMEA3444712,S00W1BH1,,Chlorocebus aethiopss,,Soutb Asian,Prader-Willi Syndrome,NC14_29,Femal,,Abnorml Cel,,"Whole brain (including cerebellum and brain stem), minus the frontal cortex",,
+biosample:SAMEA3444713,S00W8Y11,,Chlorocebus aetihops,,YORUBVA,Restless Legs Syndrome,6902MCL,Masc,,Clll,,whole cell,,
+biosample:SAMEA3444714,S00W8Y51,,Chlorocebus aethioops,,American Indianz,Sickle Cell Disease,FL Grad 1_2_3,Mn,,Orgnsm Part,,whole embryo,,
+biosample:SAMEA3444715,S00W8YH2,,Chlorocebus aethiopss,,Alasksan Nativee,Tourette Syndrome,817-03MCL,Mix,,Abnrmal Ccel,,Whole Embryo,,
+biosample:SAMEA3444716,S00W9WH1,,Chlorocebus aethiopss,,African Amerifcan,Ulcerative Colitis,FL Grad 1_2_2,Unkn,,Cll,,Whole Fetal Heart,,
+biosample:SAMEA3444717,S00WAUH1,,Chlorocebus aethiopss,,Native Hawaiibn,Von Hippel-Lindau Syndrome,BL_3,Femle,,Orgnism Prat,,whole organism,,
+biosample:SAMEA3444718,S00WBSH1,,Chlorocebus aethiopss,,Pacific Islannder,Williams Syndrome,S014WG,Mal,,Abnrmal Cl,,Whole zebrafish embryos,,
+biosample:SAMEA3444719,S00WCQH1,,Cyprinus carpio,,Caribeean,Xeroderma Pigmentosum,S01F8K,Mal,,Cll,,Wilms tumor,,
+biosample:SAMEA3444720,S00WDOH1,,Cyprinus carpii,,Inndian,Zollinger-Ellison Syndrome,442CLL,Mixd,,Orgnism Pqrt,,xenograft,,
+biosample:SAMEA3459808,S00WEMH1,,Cyprinus carprio,,Melaenesian,Acromegaly,54168MM,Unknwn,,Abnormal Cl,,ZR-75-1 cell line xenograft tumour,,
+biosample:SAMEA3459809,S00WFKH1,,Cyprinu carpio,,Australasbian,Behçet's Syndrome,FL Grad 1_2_1,Femaale,,Cel,,,,
+biosample:SAMEA3459810,S00WGIH1,,Cyprinus carpior,,Aboriiginal,Charcot-Marie-Tooth Disease,435CLL,Mael,,Orgnism Part,,,,
+biosample:SAMEA3459811,S00WHGH1,,Cyprinus carpiso,,Chinse,Dysautonomia,13_15,Mixd,,Abnrmal Celll,,,,
+biosample:SAMEA3459812,S00X8UH1,,Cyprinus carpior,,Guamanin,Fibrous Dysplasia,BL_1,Unknwn,,Ceell,,,,
+biosample:SAMEA3459813,S00X9SH1,,Cyprinus carpiso,,Japaneese,Glanzmann Thrombasthenia,007MCL,Fml,,Orgnism Pat,,,,
+biosample:SAMEA3459815,S00XAQH1,,Cyprinus carpiso,,Koreean,Hemochromatosis,1292CLL,Ml,,Abnormal Clll,,,,
+biosample:SAMEA3459816,S00XCM11,,Cyprinus carpiso,,Polynesianr,Inclusion Body Myositis,DLBCL_GCB_3,Mxd,,Cell,,,,
+biosample:SAMEA3459817,S00XCMA1,,Danio rerio,,Europbean,Juvenile Dermatomyositis,DLBCL_ABC_3,Unk,,,,,,
+biosample:SAMEA3459818,S00XCMH1,,Danio reio,0 - 18,Anglo Saxon,Klinefelter Syndrome,DLBCL_ABC_2,,,,,,,
+biosample:SAMEA3459819,S00XDK11,,Dano rerio,0 - 5,Latn Americanx,Myasthenia Gravis,NC14_37,,,,,,,
+biosample:SAMEA3459820,S00XDKH1,,Danio reiro,10 - 15,Araibic,Neurofibromatosis Type 2,761CLL,,,,,,,Alzheimer's Disease
+biosample:SAMEA3459822,S00XDKU1,,Danio rerioo,1 - 5,Vietnamesee,Osteopetrosis,WR27,,,,,,,Parkinson's Disease
+biosample:SAMEA3459823,S00XEI11,,Danio rreio,15 - 20,Micronnnesian,Pernicious Anemia,T15_P2,,,,,,,Multiple Sclerosis
+biosample:SAMEA3459824,S00XEIH1,,Danio reio,1 - 7,US Indinan,Rett Syndrome,DLBCL_ABC_1,,,,,,,Crohn's Disease
+biosample:SAMEA3461028,S00XEIU1,,Danio reiro,20 - 25,Canaadian Indian,Sjögren's Syndrome,2392MCL,,,,,,,Ulcerative Colitis
+biosample:SAMEA3461029,S00XFGH1,,Danio rerii,20 - 30,Puewto Rican,Tuberous Sclerosis,T14_6,,,,,,,Rheumatoid Arthritis
+biosample:SAMEA3461030,S00XJ8H1,,Danio reio,20 - 40,Filipinno,Von Willebrand Disease,S014RQ,,,,,,,Systemic Lupus Erythematosus
+biosample:SAMEA3461031,S00XQV43,,Drosophila melanogaster,25 - 30,Mexicanz,Alagille Syndrome,S01BJE,,,,,,,Psoriasis
+biosample:SAMEA3461032,S00XTP51,,Drosophila melanogster,30 - 35,Alaskann Nnative,Bloom Syndrome,pz 300,,,,,,,Celiac Disease
+biosample:SAMEA3461034,S00XUN11,,Drosophila melanogasster,3 - 10,Cubanb,Chromosome 22q11.2 Deletion Syndrome,T15_3,,,Abnormal Cell,,,,Asthma
+biosample:SAMEA3461035,S00XUN41,,Drosophila melanogaser,35 - 40,African Ancestry in SW USAe,Dubowitz Syndrome,NC15_63,,,Cell,,,,Hypertension
+biosample:SAMEA3461068,S00XUNH1,,Drosophila melanogster,35 - 60,African Caribean in Barbadosn,Friedreich's Ataxia,T15_3,F ,,Organism Part,,,,Coronary Artery Disease
+biosample:SAMEA3461089,S00XVL11,,Drosophila melanogasterr,40 - 45,Bengalii in Bangladeshh,Hemolytic Anemia,WR27,Female,,,,,,Obesity
+biosample:SAMEA3461095,S00XVL41,,Drosophila melanogastter,45 - 50,British from England and Scotlandv,Intestinal Malrotation,1532CLL,M,,Abnorml Cell,,,,Type 2 Diabetes Mellitus
+biosample:SAMEA3476882,S00XVLH1,,Drosophila melanogasterer,50 - 55,Chinese Dai in Xishuangbannaq,Joubert Syndrome,S0168J,Male,,Cll,,,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA3476884,S00XWJ11,,Drosophila melanogasterr,50 - 70,Colombiaan in Medelline,Kabuki Syndrome,T14_11,Mixed,,Orgnism Part,,,,Atrial Fibrillation
+biosample:SAMEA3476889,S00XWJ41,,Drosophila melanogaster,5 - 10,Esan in Nigerias,Leigh Syndrome,S014TM,Unknown,,Abnrmal Cell,,,,Depression
+biosample:SAMEA3476909,S00XWJA1,,"Drosophila melanogaster, Sindbis virus",55 - 60,Finnishh in Finlandd,Neurofibromatosis Type 3,T14_10,,,Cel,,,,Schizophrenia
+biosample:SAMEA3476912,S00XWJH1,,"Drosophila melanogaster, Sindbis viru",55 - 65,Gambiabn in Western Division,Osler-Weber-Rendu Syndrome,T14_11,Fem,,Orgnism Partt,,,,Bipolar Disorder
+biosample:SAMEA3476914,S00XXH11,,"Drosophila melanogaster, Sindbis viruus",55 - 70,"Gujaarti Indians in Houston, Texass",Prune Belly Syndrome,UMCG00015,Femal,,Abnrmal Cl,,,,Anxiety Disorders
+biosample:SAMEA3476917,S00XXH41,,"Drosophila melanogaster, Sindbis viruss",60 - 65,Han Chinese in Beijings,Smith-Lemli-Opitz Syndrome,TA37,Masc,,Ceel,,,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA3492528,S00XXHH1,,"Drosophila melanogaster, Sindbis virrus",65 - 70,Iberian Populatiojns in Spain,Stickler Syndrome,NC11_35,Mn,,Orgnsm Part,,,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA3492529,S00XYF11,,"Drosophila melanogaster, Sindbis viru",70 - 75,Indian Telugu in the U.K.w,Waardenburg Syndrome,pz 286,Mix,,Abnormal Cll,,,,Cerebral Palsy
+biosample:SAMEA3492530,S00XYF41,,"Drosophila melanogaster, Sindbis viru",75 - 80,"Japanse in Tokyo, Japanm",X-linked Agammaglobulinemia,pz 297,Unkn,,Cel,,,,Down Syndrome
+biosample:SAMEA3492531,S00XYFH1,,"Drosophila melanogaster, Sindbis viru",80 - 85,Kinh in Ho Chi Minh Cityx,Alpha-1 Antitrypsin Deficiency,NC15_67,Femle,,Orgnism Part,,,,Sickle Cell Disease
+biosample:SAMEA3492532,S00Y0511,,"Drosophila melanogaster, Sindbis viru",85 - 90,"Luhya in Webuye, Kenyar",Bartter Syndrome,T15_6,Mal,,Abnomal Cell,,,,Thalassemia
+biosample:SAMEA3492533,S00Y0541,,"Drosophila melanogaster, Sindbis viru",90,Mende in Sierra Leoney,Churg-Strauss Syndrome,NC15_67,Mal,,Ceell,,,,Hemophilia
+biosample:SAMEA3492534,S00Y05A1,,Escherichia coli,,Mexicabn Ancestry in Los Angeles CA USAq,Diamond-Blackfan Anemia,T14_10,Mixd,,Organism Prt,,,,Duchenne Muscular Dystrophy
+biosample:SAMEA3492535,S00Y05H1,,Escherichia colli,,Peruviaan in Lima Peruu,Ectodermal Dysplasia,UMCG00025,Unknwn,,Abnrmal Cel,,,,Cystic Fibrosis
+biosample:SAMEA3492536,S00Y1311,,Escheriichia coli,,Puertoo Rican in Puerto Ricol,Gaucher Disease Type 2,pz 283,Femaale,,Celll,,,,Huntington's Disease
+biosample:SAMEA3492537,S00Y1341,,Escherichia colii,,"Punjaabi in Lahore, Pakistans",Hermansky-Pudlak Syndrome,S0169H,Mael,,Orgnism Pat,,,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA3492538,S00Y13A1,,Escherichia coliis,,Sri Lankian Tamil in the UK,Iron Deficiency Anemia,MS49,Mixd,,Abnormal Ccell,,,,Epilepsy
+biosample:SAMEA3492539,S00Y13H1,,Escherichia coi,,Toscani in Italias,Jansen,Pool_11,Unknwn,,Cll,,,,Tourette Syndrome
+biosample:SAMEA3492540,S00Y21H1,,Escherichia coii,,"Yoruba in Ibadan, Nigerias",Kabuki Syndrome,pz 283,Fml,,Orgnism Pqrt,,,,Non-Hodgkin Lymphoma
+biosample:SAMEA3492541,S00Y4Y11,,Escherichia coliis,,,Lowe Syndrome,S01BKC,Ml,,Abnormal Cl,,,,Hodgkin Lymphoma
+biosample:SAMEA3515731,S00Y4Y41,,Escherichia coliis,,,MELAS Syndrome,S00YAM,Mxd,,Ccell,,,,Chronic Myeloid Leukemia
+biosample:SAMEA3515732,S00Y4YA1,,Escherichia coliis,,,Neurofibromatosis Type 4,S00UJK,Unk,,Orgnism Part,,,,Polycythemia Vera
+biosample:SAMEA3515733,S00Y4YH1,,Felis catus,,,Oculocutaneous Albinism,UMCG00010,,,Abnrmal Celll,,,,Essential Thrombocythemia
+biosample:SAMEA3515736,S00Y5W41,,Felis catu,,,Pelizaeus-Merzbacher Disease,1525CLL,,,Cel,,,,Myelofibrosis
+biosample:SAMEA3516819,S00Y5WH1,,Feis catus,,,Rubinstein-Taybi Syndrome,NC11_83,,,Orgnism Part,,,,Hairy Cell Leukemia
+biosample:SAMEA3516820,S00Y6U11,,Fellis catus,,,Smith-Magenis Syndrome,UMCG00002,,,Abnomal Cl,,,,Waldenström Macroglobulinemia
+biosample:SAMEA3516821,S00Y6U41,,Felis catuus,,,Treacher Collins Syndrome,pz 294,,,Ceell,,,,Myelodysplastic Syndromes
+biosample:SAMEA3516822,S00Y6UA1,,Feliis catus,,,VACTERL Association,UMCG00021,,,Orgnism Prt,,,,Systemic Mastocytosis
+biosample:SAMEA3516823,S00Y6UH1,,Felis catuss,,,Weill-Marchesani Syndrome,UMCG00004,,,Abnormal Cll,,,,Eosinophilic Leukemia
+biosample:SAMEA3516824,S00Y7SH1,,Felis catuss,,,X-linked Hypophosphatemia,pz 287,,,Cell,,,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA3516825,S00Y8Q11,,Felis catuss,,,Apert Syndrome,UMCG00019,,,Orgnism Partt,,,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA3516826,S00Y8QH1,,Felis catuss,,,Beckwith-Wiedemann Syndrome,UMCG00029,,,Abnorml Cel,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3516827,S00Y9O11,,Gallus gallus,,,Crouzon Syndrome,UMCG00026,,,Clll,,,,Myeloproliferative Neoplasms
+biosample:SAMEA3516828,S00Y9OH1,,Galluss gallus,,,Ehlers-Danlos Syndrome Type 3,UMCG00025,,,Orgnsm Part,,,,Acute Promyelocytic Leukemia
+biosample:SAMEA3516829,S00YAM11,,Gallus galluss,,,Familial Mediterranean Fever,UMCG00041,,,Abnrmal Ccel,,,,Chronic Eosinophilic Leukemia
+biosample:SAMEA3516830,S00YAM51,,Gallus galluus,,,Gorlin Syndrome,UMCG00018,,,Cll,,,,Myeloid Sarcoma
+biosample:SAMEA3516831,S00YAMH1,,Gallus galluus,,,Hemophagocytic Lymphohistiocytosis,UMCG00040,,,Orgnism Prat,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3516832,S00YK243,,Gallus gallusss,,,Immunodeficiency Syndromes,UMCG00031,,,Abnrmal Cl,,,,Mast Cell Leukemia
+biosample:SAMEA3516833,S00YPTH1,,Gallus galluss,,,Jervell and Lange-Nielsen Syndrome,UMCG00023,,,Cll,,,,Plasma Cell Leukemia
+biosample:SAMEA3516834,S00YRP43,,Gallus gallus,,,Klippel-Feil Syndrome,UMCG00042,,,Orgnism Pqrt,,,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA3516835,S00YUJH3,,Gallus gallusss,,,Lymphedema,UMCG00039,,,Abnormal Cl,,,,Heavy Chain Disease
+biosample:SAMEA3516836,S00YVH43,,Gasterosteus aculeatus,,-,MELAS Syndrome,UMCG00027,,,Cel,,,,Smoldering Multiple Myeloma
+biosample:SAMEA3516837,S00YWF43,,Gasterosteus aculeatu,,Admixed American,Niemann-Pick Disease,UMCG00003,,,Orgnism Part,,,,Primary Myelofibrosis
+biosample:SAMEA3516838,S0100M43,,Gasterosteus aculeautus,,African,Oculocutaneous Albinism Type 1A,UMCG00012,F ,,Abnrmal Celll,,,,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA3516839,S010B043,,Gasterosteus aculeatuis,,ARAB,Pelizaeus-Merzbacher Disease,UMCG00043,Female,,Ceell,,,,Secondary Myelofibrosis
+biosample:SAMEA3516840,S010MF43,,Gasterosteus aculeautus,,Asian,Rett Syndrome,UMCG00001,M,,Orgnism Pat,,,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA3545526,S010NDA1,,Gasterosteus aculeatuss,,Caucasian,Schwartz-Jampel Syndrome,UMCG00008,Male,,Abnormal Clll,,,,Secondary Thrombocytosis
+biosample:SAMEA3545527,S010NDH1,,Gasterosteus aculeatuss,,Dutch,Thanatophoric Dysplasia,UMCG00007,Mixed,,Cell,,,,Reactive Thrombocytosis
+biosample:SAMEA3545528,S010P943,,Gasterosteus aculeatuu,,East Asian,Usher Syndrome,UMCG00011,Unknown,,,,,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA3545529,S010Q7A1,,Gasterosteus aculeatuu,,European,VACTERL Association,UMCG00006,,,,,,,Acute Eosinophilic Leukemia
+biosample:SAMEA3545530,S010Q7H1,,Gasterosteus aculeatuu,0 - 18,Non-hispanic,Weill-Marchesani Syndrome,UMCG00024,Fem,,Abnormal Cell,,,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA3545531,S010R5A1,,Homo sapiens,0 - 5,Northern European,X-linked Hypophosphatemia,UMCG00028,Femal,,Cell,,,,Mast Cell Disease
+biosample:SAMEA3545532,S010R5H1,,Homo sapien,10 - 15,Not applicable,Zellweger Syndrome,1293-02,Masc,,Organism Part,,,,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA3545533,S010S3A1,,Homo sapienns,1 - 5,South Asian,,1293-01,Mn,,,,,,Primary Cutaneous Mastocytosis
+biosample:SAMEA3545534,S010S3H1,,Homo sapieens,15 - 20,YORUBA,,PB130513,Mix,,Abnorml Cell,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3545535,S010VY43,,Homo saapiens,1 - 7,American Indian,,S00V65,Unkn,,Cll,,,,Neutrophilic Leukemia
+biosample:SAMEA3545536,S011CVH1,,Homo sapienss,20 - 25,Alaska Native,,PB100713,Femle,,Orgnism Part,,,,Chronic Basophilic Leukemia
+biosample:SAMEA3545537,S0123843,,Homo sapiens,20 - 30,African American,,S01E8O,Mal,,Abnrmal Cell,,,,Basophilic Leukemia
+biosample:SAMEA3545538,S0124643,,"Homo sapiens, Human betaherpesvirus 6A",20 - 40,Native Hawaiian,,15548,Mal,,Cel,,,,Hairy Cell Leukemia Variant
+biosample:SAMEA3545539,S0130A43,,"Homo sapiens, Human betaherpesvirus 6",25 - 30,Pacific Islander,Ataxia Telangiectasia,BC2_0,Mixd,,Orgnism Partt,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3545540,S0134243,,"Homo sapiens, Human betaherpesvirus 6AA",30 - 35,Caribbean,Buerger's Disease,B270,Unknwn,,Abnrmal Cl,,,,Sezary Syndrome
+biosample:SAMEA3545541,S0137X43,,"Homo sapiens, Human betaherpesvirus 6A",3 - 10,Indian,Chronic Inflammatory Demyelinating Polyneuropathy,23977,Femaale,,Ceel,,,,Adult T-Cell Leukemia
+biosample:SAMEA3545542,S0138VH1,,"Homo sapiens, Human betaherpesvirus 6A",35 - 40,Melanesian,Duchenne Muscular Dystrophy,12CLL,Mael,,Orgnsm Part,,,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA3545543,S0139T11,,"Homo sapiens, Human betaherpesvirus 6AA",35 - 60,Australasian,Epidermolysis Bullosa,3CLL,Mixd,,Abnormal Cll,,,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA3545544,S0139TH1,,"Homo sapiens, Human betaherpesvirus 6AA",40 - 45,Aboriginal,Familial Hypercholesterolemia,22965,Unknwn,,Cel,,,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA3545545,S013AR11,,"Homo sapiens, Human betaherpesvirus 6A",45 - 50,Chinese,Glioblastoma Multiforme,T15_15,Fml,,Orgnism Part,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3545546,S013ARH1,,"Homo sapiens, Human betaherpesvirus 6A",50 - 55,Guamanian,Hemophagocytic Lymphohistiocytosis,6902MCL,Ml,,Abnomal Cell,,,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA3545547,S013BPH1,,"Homo sapiens, Human gammaherpesvirus 8",50 - 70,Japanese,Incontinentia Pigmenti,007MCL,Mxd,,Ceell,,,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA3554051,S013CN43,,"Homo sapiens, Human gammaherpesvirus",5 - 10,Korean,Juvenile Idiopathic Arthritis,182CLL,Unk,,Organism Prt,,,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA3554052,S013DL43,,"Homo sapiens, Human gammaherpesvirus 8",55 - 60,Polynesian,Klinefelter Syndrome,110CLL,,,Abnrmal Cel,,,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA3554076,S013GFH1,,"Homo sapiens, Human gammaherpesvirus 8",55 - 65,European,Lynch Syndrome,2392MCL,,,Celll,,,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA3554077,S013M311,,"Homo sapiens, Human gammaherpesvirus 88",55 - 70,Anglo Saxon,Myasthenia Gravis,1228CLL,,,Orgnism Pat,,,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA3556817,S013M343,,"Homo sapiens, Human gammaherpesvirus 8",60 - 65,Latin American,Neurofibromatosis Type 1,817-03MCL,,,Abnormal Ccell,,,,Follicular Lymphoma
+biosample:SAMEA3556818,S013M3A1,,"Homo sapiens, Human gammaherpesvirus 8",65 - 70,Arabic,Osteogenesis Imperfecta,T15_13,,,Cll,,,,In Situ Follicular Neoplasia
+biosample:SAMEA3556819,S013M3H1,,"Homo sapiens, Human gammaherpesvirus 88",70 - 75,Vietnamese,Pemphigus Vulgaris,S01GU9,,,Orgnism Pqrt,,,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3556820,S013N111,,"Homo sapiens, Human gammaherpesvirus 8",75 - 80,Micronesian,Rett Syndrome,BC2_10,,,Abnormal Cl,,,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA3556821,S013N143,,"Homo sapiens, Human gammaherpesvirus 8",80 - 85,US Indian,Sickle Cell Anemia,S00W8Y,,,Ccell,,,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3556823,S013N1A1,,"Homo sapiens, Human immunodeficiency virus 1",85 - 90,Canadian Indian,Turner Syndrome,S01E8O,,,Orgnism Part,,,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA3556915,S013N1H1,,"Homo sapiens, Human immunodefficiency virus 1",90,Puerto Rican,Usher Syndrome,S01FY5,,,Abnrmal Celll,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA3556916,S013PY11,,"Homo sapiens, Human immunodeficiency viru 1",,Filipino,Von Willebrand Disease,S01H8C,,,Cel,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA3556917,S013PY43,,"Homo sapiens, Human immunodeficiency viruss 1",,Mexican,Wilson's Disease,B271,,,Orgnism Part,,,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA3556918,S013PYA1,,"Homo sapiens, Human immunodeficiency virus 1",,Alaskan Native ,Alport Syndrome,B270,,,Abnomal Cl,,,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA3556919,S013PYH1,,"Homo sapiens, Human immunodeficiency virus 11",,Cuban,Barth Syndrome,B271,,,Ceell,,,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3556920,S013QW11,,"Homo sapiens, Human immunodeficiency virus 1",,African Ancestry in SW USA,Chronic Granulomatous Disease,S0018A,,,Orgnism Prt,,,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA3578918,S013QW43,,"Homo sapiens, Human immunodeficiency virus 1",,African Caribbean in Barbados,Duchenne Muscular Dystrophy,UMCG00009,,,Abnormal Cll,,,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3578919,S013QWH1,,"Homo sapiens, Human poliovirus 1 strain Sabin",,Bengali in Bangladesh,Ehlers-Danlos Syndrome,S00UJK,,,Cell,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3578920,S013RU11,,"Homo sapiens, Human polioviru 1 strain Sabin",,British from England and Scotland,Fragile X Syndrome,S00XTP,,,Orgnism Partt,,,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3578921,S013RU43,,"Homo sapiens, Human poliovirus 1 strain Sabinn",,Chinese Dai in Xishuangbanna,Gaucher Disease,S00W8Y,,,Abnorml Cel,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3578922,S013RUA1,,"Homo sapiens, Human poliovirus 1 strain Sabin",,Colombian in Medellin,Hereditary Hemorrhagic Telangiectasia,TH110,,,Clll,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3578923,S013RUH1,,"Homo sapiens, Human poliovirus 1 strain Sabinn",,Esan in Nigeria,Inflammatory Bowel Disease,23977,,,Orgnsm Part,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3578924,S013SS11,,"Homo sapiens, Human poliovirus 1 strain Sabi",,Finnish in Finland,Juvenile Rheumatoid Arthritis,WR27,,,Abnrmal Ccel,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3578925,S013SS43,,"Homo sapiens, Human poliovirus 1 strain Sabin",,Gambian in Western Division,Kawasaki Disease,12CLL,,,Cll,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3578926,S013SSA1,,"Homo sapiens, Human poliovirus 1 strain Sabin",,"Gujarati Indians in Houston, Texas",Leber's Congenital Amaurosis,S00YAM,,,Orgnism Prat,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3578927,S013SSH1,,"Homo sapiens, Human poliovirus 1 strain Sabiin",,Han Chinese in Beijing,Mucopolysaccharidosis,TH91,,,Abnrmal Cl,,,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA3578928,S0144ZH1,,"Homo sapiens, Human poliovirus 1 strain Sabin",,Iberian Populations in Spain,Niemann-Pick Disease,UMCG00019,,,Cll,,,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA3578929,S0145X11,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N1))",,Indian Telugu in the U.K.,Osteopetrosis,UMCG00011,,,Orgnism Pqrt,,,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3578930,S0145XH1,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N))",,"Japanese in Tokyo, Japan",Polycystic Kidney Disease,TH101,,,Abnormal Cl,,,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA3578931,S0145XU1,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N11))",,Kinh in Ho Chi Minh City,Retinoblastoma,TH101,F ,,Cel,,,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3578932,S014QS11,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N1))",,"Luhya in Webuye, Kenya",Severe Combined Immunodeficiency,110CLL,Female,,Orgnism Part,,,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3579416,S014QS12,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N11))",,Mende in Sierra Leone,Tay-Sachs Disease,UMCG00028,M,,Abnrmal Celll,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA3579417,S014QS51,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N))",,Mexican Ancestry in Los Angeles CA USA,Ulcerative Colitis,UMCG00010,Male,,Ceell,,,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA3579418,S014QS55,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N1))",,Peruvian in Lima Peru,Vogt-Koyanagi-Harada Syndrome,UMCG00015,Mixed,,Orgnism Pat,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3595319,S014RQH1,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N11))",,Puerto Rican in Puerto Rico,Wolf-Hirschhorn Syndrome,UMCG00018,Unknown,,Abnormal Clll,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3595321,S014TM11,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N1))",,"Punjabi in Lahore, Pakistan",Achondroplasia,UMCG00014,,,Cell,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3595325,S014WG51,,"Homo sapiens, Influenza A virus (A/hvPR8/34(H1N11))",,Sri Lankan Tamil in the UK,Bardet-Biedl Syndrome,TA37,Fem,,,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3595326,S014WGH1,,"Homo sapiens, Mus musculus",0 - 18,Toscani in Italia,Chronic Myeloid Leukemia,S01GU9,Femal,,,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3595331,S014WGH2,,"Homo sapiens, Mu musculus",0 - 5,"Yoruba in Ibadan, Nigeria",Dysautonomia,UMCG00021,Masc,,,,,,
+biosample:SAMEA3595334,S0153XH1,,"Homo sapiens, Mus musculu",10 - 15,,Fragile X Syndrome,MS49,Mn,,,,,,
+biosample:SAMEA3595341,S0155TH1,,"Homo sapiens, Mus musculuss",1 - 5,Admiced Amrican,Gastric Cancer,TH101,Mix,,,,,,
+biosample:SAMEA3595343,S0158NH1,,"Homo sapiens, Mus muscuus",15 - 20,Afrikan,Hereditary Hemorrhagic Telangiectasia,TH91,Unkn,,,,,,
+biosample:SAMEA3595351,S0159LH1,,"Homo sapiens, Mus musculusss",1 - 7,ARAB,Inflammatory Bowel Disease,TH101,Femle,,,,,,
+biosample:SAMEA3598197,S015BHH1,,"Homo sapiens, Mus musculus",20 - 25,Asiab,Juvenile Rheumatoid Arthritis,TH91,Mal,,,,,,
+biosample:SAMEA3598198,S015CFH1,,"Homo sapiens, Mus musculus",20 - 30,Caucaisan,Kawasaki Disease,TH91,Mal,,,,,,
+biosample:SAMEA3598199,S015DDH1,,"Homo sapiens, Mus musculuss",20 - 40,Duch,Leber's Congenital Amaurosis,UMCG00005,Mixd,,,,,,
+biosample:SAMEA3598200,S015EB11,,"Homo sapiens, Mus musculuss",25 - 30,East Asan,Mucopolysaccharidosis,UMCG00023,Unknwn,,,,,,
+biosample:SAMEA3598201,S015NUH1,,"Homo sapiens, Rattus norvegicus",30 - 35,Eurppean,Niemann-Pick Disease,UMCG00016,Femaale,,,,,,
+biosample:SAMEA3598202,S015PQH0,,"Homo sapiens, Rattus norvegicuus",3 - 10,Non-huspanic,Osteopetrosis,S017RE,Mael,,,,,,
+biosample:SAMEA3598203,S015TIH1,,"Homo sapiens, Rattus norvegicuss",35 - 40,Northern Europeen,Polycystic Kidney Disease,S0164R,Mixd,,,,,,
+biosample:SAMEA3598204,S015UGH1,,"Homo sapiens, Rattus norvegicuuss",35 - 60,Not applicable,Retinoblastoma,S014WG,Unknwn,,,,,,
+biosample:SAMEA3638374,S015WCH2,,"Homo sapiens, Rattus norvegiicus",40 - 45,South Asan,Severe Combined Immunodeficiency,S014QS,Fml,,,,,,
+biosample:SAMEA3646777,S0161X11,,"Homo sapiens, Rattus norvegicus",45 - 50,YORUBA,Tay-Sachs Disease,15548,Ml,,,,,,
+biosample:SAMEA3646778,S0164R51,,"Homo sapiens, Rattus norvegicus",50 - 55,Americsn Indiab,Ulcerative Colitis,S014QS,Mxd,,,,,,
+biosample:SAMEA3646779,S0166N11,,"Homo sapiens, Rattus norvegicusss",50 - 70,Alskan Native,Vogt-Koyanagi-Harada Syndrome,182CLL,Unk,,,,,,
+biosample:SAMEA3646780,S0167L11,,"Homo sapiens, Rattus norvegicuss",5 - 10,Africn Amrican,Wolf-Hirschhorn Syndrome,UMCG00026,,,,,,,
+biosample:SAMEA3646781,S0168J11,,"Homo sapiens, Rattus norvegicuss",55 - 60,Nativ Hawaiian,Achondroplasia,UMCG00026,,,,,,,
+biosample:SAMEA3646782,S0169H11,,"Homo sapiens, Sindbis virus",55 - 65,Pcific Islandr,Bardet-Biedl Syndrome,UMCG00026,,,,,,,
+biosample:SAMEA3646783,S016BDH1,,"Homo sapiens, Sindbis viruss",55 - 70,Carribean,Chronic Myeloid Leukemia,1228CLL,,,,,,,Alzheimer's Disease
+biosample:SAMEA3646784,S016CBH1,,"Homo sapiens, Sindbis viru",60 - 65,Indin,Dysautonomia,82CLL,,,,,,,Parkinson's Disease
+biosample:SAMEA3646942,S016D9H1,,"Homo sapiens, Sindbis viruus",65 - 70,Melaneian,Ehlers-Danlos Syndrome,pz 302,,,,,,,Multiple Sclerosis
+biosample:SAMEA3646943,S016E7H1,,"Homo sapiens, Sindbis viru",70 - 75,Australasian,Familial Adenomatous Polyposis,pz 302,,,,,,,Crohn's Disease
+biosample:SAMEA3646944,S016F5H1,,"Homo sapiens, Sindbis viruss",75 - 80,Aborignal,Giant Axonal Neuropathy,007MCL,,,,,,,Ulcerative Colitis
+biosample:SAMEA3646945,S016G3H1,,"Homo sapiens, Sindbis viru",80 - 85,Chinse,Hemochromatosis,2392MCL,,,,,,,Rheumatoid Arthritis
+biosample:SAMEA3647779,S016JYH1,,"Homo sapiens, Sindbis viru",85 - 90,Gumanian,Ichthyosis,B270,,,,,,,Systemic Lupus Erythematosus
+biosample:SAMEA3647780,S016KW11,,"Homo sapiens, Sindbis viruus",90,Japnese,Juvenile Idiopathic Arthritis,B271,,,,,,,Psoriasis
+biosample:SAMEA3647781,S016KWH1,,"Homo sapiens, Sindbis viru",,Korian,Kabuki Syndrome,B271,,,,,,,Celiac Disease
+biosample:SAMEA3647782,S016KWU1,,Human gammaherpesvirus 4,,Polynesin,Leukodystrophy,B270,,,,,,,Asthma
+biosample:SAMEA3647783,S016MS11,,Human gammaherpesvirus 44,,Euopean,Myotonic Dystrophy,NC15_72,,,,,,,Hypertension
+biosample:SAMEA3647784,S016MSH1,,Human gammaherpesviru 4,,Anglo Saxn,Neurofibromatosis Type 2,1525CLL,,,,,,,Coronary Artery Disease
+biosample:SAMEA3650043,S016MSU1,,Human gammaherpesvirus 4,,Latn American,Osteopetrosis,1532CLL,,,,,,,Obesity
+biosample:SAMEA3662942,S016W8H1,,Human gammaherpesvirus 4,,Arbic,Pulmonary Fibrosis,TH101,,,Abnormal Cell,,,,Type 2 Diabetes Mellitus
+biosample:SAMEA3662943,S016X6H1,,Human gammaherpesvirus 4,,Vietnamsse,Rett Syndrome,TH118,F ,,Cell,,,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA3662944,S016Y4H1,,Human gammaherpesvirus 4,,Micronesian,Severe Combined Immunodeficiency,SANQUIN_mono_11,Female,,Organism Part,,,,Atrial Fibrillation
+biosample:SAMEA3662945,S0170VH1,,Human gammaherpesvirus 4,,US Indin,Thalassemia,SANQUIN_mono_11,M,,,,,,Depression
+biosample:SAMEA3662946,S0171TH1,,Human gammaherpesvirus 4,,Canadian Indan,Usher Syndrome,SANQUIN_mono_11,Male,,Abnorml Cell,,,,Schizophrenia
+biosample:SAMEA3662947,S0172RH1,,Human gammaherpesvirus 4,,Purto Rican,Von Hippel-Lindau Disease,SANQUIN_mono_11,Mixed,,Cll,,,,Bipolar Disorder
+biosample:SAMEA3662948,S0173PH1,,Human gammaherpesvirus 8,,Filipino,Williams Syndrome,SANQUIN_mono_11,Unknown,,Orgnism Part,,,,Anxiety Disorders
+biosample:SAMEA3662949,S0174NH1,,Human gammaherpesvirus 88,,Mexicn,Alagille Syndrome,SANQUIN_mono_11,,,Abnrmal Cell,,,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA3662951,S0175LH1,,Human gammaherpesviru 8,,Alaskan Ntive,Bloom Syndrome,SANQUIN_mono_11,Fem,,Cel,,,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA3662952,S0176JH1,,Human gammaherpesvirus 8,,Cuban,Chronic Fatigue Syndrome,SANQUIN_mono_11,Femal,,Orgnism Partt,,,,Cerebral Palsy
+biosample:SAMEA3662953,S0177HH1,,Human gammaherpesvirus 8,,Afriican Ancestry in SW USA,Dystonia,SANQUIN_mono_11,Masc,,Abnrmal Cl,,,,Down Syndrome
+biosample:SAMEA3662954,S0179DA1,,Human gammaherpesvirus 8,,Afrcan Caribean in Barbdos,Eisenmenger Syndrome,SANQUIN_mono_38,Mn,,Ceel,,,,Sickle Cell Disease
+biosample:SAMEA3678164,S0179DH1,,Human gammaherpesvirus 8,,Bengli in Bangladeh,Familial Mediterranean Fever,SANQUIN_mono_36,Mix,,Orgnsm Part,,,,Thalassemia
+biosample:SAMEA3678165,S017B9A1,,Human gammaherpesvirus 8,,Brtish from England and Scothand,Glutaric Acidemia Type 1,SANQUIN_mono_36,Unkn,,Abnormal Cll,,,,Hemophilia
+biosample:SAMEA3678166,S017B9H1,,Human gammaherpesvirus 8,,Chinse Dai in Xishuangbanna,Hereditary Spherocytosis,SANQUIN_mono_36,Femle,,Cel,,,,Duchenne Muscular Dystrophy
+biosample:SAMEA3678167,S017C7A1,,Human gammaherpesvirus 8,,Colobian in Medelin,Juvenile Dermatomyositis,SANQUIN_mono_36,Mal,,Orgnism Part,,,,Cystic Fibrosis
+biosample:SAMEA3678168,S017C7H1,,Human gammaherpesvirus 8,,Esan in Nigria,Kallmann Syndrome,SANQUIN_mono_36,Mal,,Abnomal Cell,,,,Huntington's Disease
+biosample:SAMEA3678169,S017D5H1,,Human immunodeficiency virus,,Finnsh in Finlan,Leukodystrophy,SANQUIN_mono_36,Mixd,,Ceell,,,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA3678170,S017E3A1,,Human immunodeficiency viru,,Gmbian in Western Divisin,Myotonic Dystrophy,SANQUIN_mono_36,Unknwn,,Organism Prt,,,,Epilepsy
+biosample:SAMEA3678171,S017E3H1,,Human immunodeficiency viruss,,"Gujarti Indians in Houston, Texs",Neurofibromatosis Type 2,SANQUIN_mono_36,Femaale,,Abnrmal Cel,,,,Tourette Syndrome
+biosample:SAMEA3678172,S017RE51,,Human immunodeficiency viru,,Han Chineese in Beijin,Osteopetrosis,SANQUIN_mono_36,Mael,,Celll,,,,Non-Hodgkin Lymphoma
+biosample:SAMEA3697980,S0187DH1,,Human immunodeficiency virus,,Iberan Populations in Spai,Pulmonary Fibrosis,SANQUIN_mono_38,Mixd,,Orgnism Pat,,,,Hodgkin Lymphoma
+biosample:SAMEA3697981,S0188BH1,,Human immunodeficiency virus,,Indin Telugu in the U.K.,Rett Syndrome,SANQUIN_mono_38,Unknwn,,Abnormal Ccell,,,,Chronic Myeloid Leukemia
+biosample:SAMEA3713688,S01899H1,,Human immunodeficiency virus,,"Japanee in Toko, Japan",Severe Combined Immunodeficiency,SANQUIN_mono_38,Fml,,Cll,,,,Polycythemia Vera
+biosample:SAMEA3713689,S018A7H1,,Human immunodeficiency virus,,Knh in Ho Chi Minh City,Thalassemia,SANQUIN_mono_38,Ml,,Orgnism Pqrt,,,,Essential Thrombocythemia
+biosample:SAMEA3713690,S018B5H1,,Human immunodeficiency virus,,"Luhya in Webuye, Kneya",Usher Syndrome,SANQUIN_mono_38,Mxd,,Abnormal Cl,,,,Myelofibrosis
+biosample:SAMEA3713697,S018C3H1,,Leishmania major,,Mnde in Sierre Leone,Von Hippel-Lindau Disease,SANQUIN_mono_38,Unk,,Ccell,,,,Hairy Cell Leukemia
+biosample:SAMEA3713698,S018D1H1,,Leishmania majo,,Mexican Ancestry in Los Angeles CA USA,Williams Syndrome,S0174N,,,Orgnism Part,,,,Waldenström Macroglobulinemia
+biosample:SAMEA3713699,S018FYH1,,Leishmania majr,0 - 18,Peruviab in Lima Peru,Alagille Syndrome,S0173P,,,Abnrmal Celll,,,,Myelodysplastic Syndromes
+biosample:SAMEA3713700,S018GWH1,,Leishmania majo,0 - 5,Puerro Rican in Puerto Rco,Bloom Syndrome,S017C7,,,Cel,,,,Systemic Mastocytosis
+biosample:SAMEA3715148,S018HUH1,,Leishmania majro,10 - 15,"Punjabi in Lahre, Pakistn",Chronic Fatigue Syndrome,B270,F ,,Orgnism Part,,,,Eosinophilic Leukemia
+biosample:SAMEA3715194,S018JQH1,,Leishmania majo,1 - 5,Sri Lankan Tmil in the UK,Dystonia,B271,Female,,Abnomal Cl,,,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA3716469,S018KOH1,,Leishmania majro,15 - 20,Toscani in Italia,Eisenmenger,B270,M,,Ceell,,,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA3716470,S018MKH1,,Leishmania majorr,1 - 7,"Yoruba in Ibadn, Nigera",,B271,Male,,Orgnism Prt,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3716471,S018NIH1,,Leishmania majo,20 - 25,,Activeted B-Cell-Like Diffuse Large B-Cell Lymphoma,BC2_0,Mixed,,Abnormal Cll,,,,Myeloproliferative Neoplasms
+biosample:SAMEA3720256,S018PEH1,,Leishmania major,20 - 30,Admicxed American,Active Juvinile Idiopathic Arthritus on Treatment,BC2_10,Unknown,,Cell,,,,Acute Promyelocytic Leukemia
+biosample:SAMEA3720257,S018QCH1,,Macaca mulatta,20 - 40,Africn,Acut Lymphocytic Lukemia,B272,,,Orgnism Partt,,,,Chronic Eosinophilic Leukemia
+biosample:SAMEA3720258,S018RA41,,Macaca mulattaa,25 - 30,ARRAB,acut myeloid lukemia,B272,Fem,,Abnorml Cel,,,,Myeloid Sarcoma
+biosample:SAMEA3720259,S019EW11,,Macaca mulatt,30 - 35,Assiann,Acute Myleoid Lukemia,pz 302,Femal,,Clll,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3720260,S019FU11,,Macaca mulata,3 - 10,Caucasiab,Acut Myeloid Leukemia,pz 302,Masc,,Orgnsm Part,,,,Mast Cell Leukemia
+biosample:SAMEA3720261,S019GS11,,Macaca mulatta,35 - 40,Dutchh,Acute Promyelocytic Leukimia,T5C,Mn,,Abnrmal Ccel,,,,Plasma Cell Leukemia
+biosample:SAMEA3720262,S019HQ11,,Macaca mulatta,35 - 60,East Asianb,acute promylocytic lukemia (APL),T6C,Mix,,Cll,,,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA3720857,S019JM11,,Macaca mulattaa,40 - 45,Euoropean,AD,T9C,Unkn,,Orgnism Prat,,,,Heavy Chain Disease
+biosample:SAMEA3720858,S019KK11,,Macaca mulattaa,45 - 50,Non-hispanicc,adjacant normal lung tisues,T10C,Femle,,Abnrmal Cl,,,,Smoldering Multiple Myeloma
+biosample:SAMEA3720859,S019MG11,,Macaca mulatta,50 - 55,Northern Europexan,Alcholic Hepatitis patiant,T12C,Mal,,Cll,,,,Primary Myelofibrosis
+biosample:SAMEA3720860,S019NE11,,Macaca mulattta,50 - 70,Not aapplicable,AL,100CLL,Mal,,Orgnism Pqrt,,,,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA3720861,S01B47A1,,Macaca mulatta,5 - 10,Soutb Asian,ALL diagnosos,1220CLL,Mixd,,Abnormal Cl,,,,Secondary Myelofibrosis
+biosample:SAMEA3720862,S01B55A1,,Macaca mulatta,55 - 60,YORUBVA,Alzheimer's Diseas,1339CLL,Unknwn,,Cel,,,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA3720863,S01B63A1,,"Macaca mulatta, Macacine gammaherpesvirus 4",55 - 65,American Indianz,Alzheimer's diease (AD),175CLL,Femaale,,Orgnism Part,,,,Secondary Thrombocytosis
+biosample:SAMEA3720865,S01B71A1,,"Macaca mulatta, Macacine gammaherpesvirus",55 - 70,Alasksan Nativee,Anaplastic Astrocytoma IDH-mutent,176CLL,Mael,,Abnrmal Celll,,,,Reactive Thrombocytosis
+biosample:SAMEA3720866,S01B9YA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",60 - 65,African Amerifcan,"AR negative, Neure Endocrine",180CLL,Mixd,,Ceell,,,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA3720867,S01BAWA1,,"Macaca mulatta, Macacine gammaherpesvirus 44",65 - 70,Native Hawaiibn,"AR positive, Neuro Endocrine like",188CLL,Unknwn,,Orgnism Pat,,,,Acute Eosinophilic Leukemia
+biosample:SAMEA3722820,S01BBUA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",70 - 75,Pacific Islannder,AS patiants,189CLL,Fml,,Abnormal Clll,,,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA3722836,S01BCSA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",75 - 80,Caribeean,Astrocytoma Anaplastic (WHO gr. 3),191CLL,Ml,,Cell,,,,Mast Cell Disease
+biosample:SAMEA3722837,S01BDQA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",80 - 85,Inndian,Astrocytoma (WHO gr. 2),270CLL,Mxd,,,,,,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA3722838,S01BEOA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",85 - 90,Melaenesian,ATR-X syndrom,273CLL,Unk,,,,,,Primary Cutaneous Mastocytosis
+biosample:SAMEA3722840,S01BFMA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",90,Australasbian,blader cancer,278CLL,,,,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3722843,S01BGKA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",,Aboriiginal,BPDCN (blastic plasmacytoid dendritic cell neoplasm),27CLL,,,,,,,Neutrophilic Leukemia
+biosample:SAMEA3722844,S01BHIA1,,"Macaca mulatta, Macacine gammaherpesvirus 4",,Chinse,Burkitt Limphoma,298CLL,,,,,,,Chronic Basophilic Leukemia
+biosample:SAMEA3722846,S01BJE11,,Mus musculus,,Guamanin,cancr,371CLL,,,,,,,Basophilic Leukemia
+biosample:SAMEA3722851,S01BKC11,,Muus musculus,,Japaneese,Cancer,372CLL,,,,,,,Hairy Cell Leukemia Variant
+biosample:SAMEA3722853,S01BM8H1,,Mus musculuss,,Koreean,Castration resistan,384CLL,,,,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3722854,S01BP241,,Mus muscuus,,Polynesianr,chronic lumphocytic lukemia,41CLL,,,,,,,Sezary Syndrome
+biosample:SAMEA3722856,S01BP2H1,,Muus musculu,,Europbean,Chronic Lymphocytic Leukemia,90CLL,,,,,,,Adult T-Cell Leukemia
+biosample:SAMEA3722860,S01BRZ41,,Mus musculusss,,Anglo Saxon,cirhosiss,91CLL,,,,,,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA3722861,S01BRZH1,,Mus musculusss,,Latn Americanx,colorectal cancr,SANQUIN_mono_61,,,,,,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA3722863,S01BSX41,,Mus musculusss,,Araibic,control,SANQUIN_mono_61,,,,,,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA3722864,S01BSXH1,,Mus musculusss,,Vietnamesee,Control,SANQUIN_mono_61,,,Abnormal Cell,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3722867,S01BTV41,,Mus musculusss,,Micronnnesian,CRPC,SANQUIN_mono_61,,,Cell,,,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA3722868,S01BTVH1,,Mus musculusss,,US Indinan,cutaneus T cell leukemia (CTCL),SANQUIN_mono_61,,,Organism Part,,,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA3722869,S01BUTH1,,Ornithorhynchus anatinus,,Canaadian Indian,Diabetec,S0179D,,,,,,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA3722871,S01BVR41,,Ornithorhynchus anatius,,Puewto Rican,Diffuse Astrocytoma IDH-mutent,S0176J,,,Abnorml Cell,,,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA3722873,S01BVRH1,,Ornithorhynchus anatnus,,Filipinno,diffus large B cell lymphoma,S01GSD,,,Cll,,,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA3722875,S01CQXH2,,Ornithorhynchus anatnus,,Mexicanz,diffuse large B cell limphoma (DLBCL),S017E3,,,Orgnism Part,,,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA3722876,S01E03A1,,Ornithorhynchus anatnus,,Alaskann Nnative,dilated cardiomyopathie (DCM),S01GRF,,,Abnrmal Cell,,,,Follicular Lymphoma
+biosample:SAMEA3722878,S01E11H1,,Ornithorhynchus anatinu,,Cubanb,,S017D5,,,Cel,,,,In Situ Follicular Neoplasia
+biosample:SAMEA3722880,S01E4WH0,,Ornithorhynchus anatnuus,,African Ancestry in SW USAe,Juvnile Rheumatoid Arthritus,S0175L,,,Orgnism Partt,,,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3722883,S01E8O11,,Ornithorhynchus anatinus,,African Caribean in Barbadosn,Kawasaky Disease,S017B9,,,Abnrmal Cl,,,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA3722888,S01E8O51,,Ornithorhynchus anatnuss,,Bengalii in Bangladeshh,Langerhans Cell Histiosytosis,S01GQH,,,Ceel,,,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3722891,S01EAKH1,,Ornithorhynchus anatinus,,British from England and Scotlandv,Marffan Syndrom,S01GTB,,,Orgnsm Part,,,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA3722892,S01EBIH1,,Ornithorhynchus anatinuss,,Chinese Dai in Xishuangbannaq,Neurifibromatosis Type 1,S01FW9,,,Abnormal Cll,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA3722895,S01ECGA1,,Oryctolagus cuniculus,,Colombiaan in Medelline,Osteogensis Imperfecta,S01H5I,F ,,Cel,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA3722896,S01F8KH1,,Oryctolagus cuniculu,,Esan in Nigerias,Parkinson's Diseas,11CLL,Female,,Orgnism Part,,,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA3722898,S01F8KH2,,Oryctolagus cunicuus,,Finnishh in Finlandd,Pradar-Willi Syndrom,1236CLL,M,,Abnomal Cell,,,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA3722902,S01FE811,,Oryctolagus cuniculus,,Gambiabn in Western Division,Restliss Legs Syndrom,1360CLL,Male,,Ceell,,,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3722903,S01FE8A1,,Oryctolagus cuniculu,,"Gujaarti Indians in Houston, Texass",Sickel Cell Diseas,16CLL,Mixed,,Organism Prt,,,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA3722905,S01FE8H1,,Oryctolagus cuniculus,,Han Chinese in Beijings,Tourret Syndrome,192CLL,Unknown,,Abnrmal Cel,,,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3722908,S01FF611,,Oryctolagus cuniculu,,Iberian Populatiojns in Spain,Ulcerativ Colitis,1CLL,,,Celll,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3722910,S01FF6A1,,Oryctolagus cuniculus,,Indian Telugu in the U.K.w,Von Hippel-Linda Syndrome,361CLL,Fem,,Orgnism Pat,,,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3722911,S01FF6H1,,Oryctolagus cuniculus,,"Japanse in Tokyo, Japanm",Williams Syndrom,510CLL,Femal,,Abnormal Ccell,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3722915,S01FG411,,Oryctolagus cuniculus,0 - 18,Kinh in Ho Chi Minh Cityx,Xeroderma Pigmentosom,564CLL,Masc,,Cll,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3722916,S01FG4A1,,Pan troglodytes,0 - 5,"Luhya in Webuye, Kenyar",Zollinger-Ellison Syndrom,64CLL,Mn,,Orgnism Pqrt,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3722917,S01FG4H1,,Pan troglodytess,10 - 15,Mende in Sierra Leoney,Acromegally,749CLL,Mix,,Abnormal Cl,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3722919,S01FH211,,Pan troglodites,1 - 5,Mexicabn Ancestry in Los Angeles CA USAq,Behçet's Syndrom,773CLL,Unkn,,Ccell,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3722920,S01FH2A1,,Pan troglodytus,15 - 20,Peruviaan in Lima Peruu,Charcot-Marie-Toth Diseas,859CLL,Femle,,Orgnism Part,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3856858,S01FH2H1,,Pan troglodites,1 - 7,Puertoo Rican in Puerto Ricol,Dysautonmia,131CLL,Mal,,Abnrmal Celll,,,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA3856859,S01FJZ11,,Pan troglodytess,20 - 25,"Punjaabi in Lahore, Pakistans",Fibrouss Dysplasia,24CLL,Mal,,Cel,,,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA3856860,S01FJZA1,,Pan trogloditess,20 - 30,Sri Lankian Tamil in the UK,Glanzman Thrombosthenia,SANQUIN_mono_65,Mixd,,Orgnism Part,,,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3856861,S01FJZH1,,Pan troglodytes,20 - 40,Toscani in Italias,Hemochromatossis,SANQUIN_mono_65,Unknwn,,Abnomal Cl,,,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA3856862,S01FKX11,,Pan trogloditess,25 - 30,"Yoruba in Ibadan, Nigerias",Incluson Body Myosits,SANQUIN_mono_65,Femaale,,Ceell,,,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3856865,S01FKXA1,,Pan troglodytess,30 - 35,,Juvnile Dermatomyostis,SANQUIN_mono_65,Mael,,Orgnism Prt,,,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3856866,S01FKXH1,,Plasmodium falciparum,3 - 10,,Klinefelter Syndrom,SANQUIN_mono_65,Mixd,,Abnormal Cll,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA3856867,S01FMTH1,,Plasmodium falciparm,35 - 40,,Myasthenia Graviss,SANQUIN_mono_65,Unknwn,,Cell,,,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA3856868,S01FNRH1,,Plasmodium falcipaum,35 - 60,,Neurifibromatosis Type 2,SANQUIN_mono_65,Fml,,Orgnism Partt,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3856869,S01FPNH1,,Plasmodium falciparumm,40 - 45,,Osteopetrosiss,SANQUIN_mono_66,Ml,,Abnorml Cel,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3856871,S01FW9H2,,Plasmodium falciparum,45 - 50,,Pernicius Anemia,SANQUIN_mono_66,Mxd,,Clll,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3856872,S01FY511,,Plasmodium falciparrum,50 - 55,,Rat Syndrome,SANQUIN_mono_66,Unk,,Orgnsm Part,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3856873,S01FY5H1,,Plasmodium falciparm,50 - 70,-,Sjögren's Syndrom,SANQUIN_mono_66,,,Abnrmal Ccel,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3856874,S01G2SA1,,Plasmodium falciparum,5 - 10,Admixed American,Tuberous Sclerosiss,SANQUIN_mono_66,,,Cll,,,,
+biosample:SAMEA3856875,S01G2SH1,,Plasmodium falcipaum,55 - 60,African,Von Willbrand Diseas,SANQUIN_mono_66,,,Orgnism Prat,,,,
+biosample:SAMEA3856876,S01G3QH1,,Plasmodium falciparrum,55 - 65,ARAB,Alagile Syndrom,S01RFW,,,Abnrmal Cl,,,,
+biosample:SAMEA3856877,S01G7IH1,,Rattus norvegicus,55 - 70,Asian,Bloome Syndrom,1326CLL,,,Cll,,,,
+biosample:SAMEA3856878,S01G8GH1,,Rattus norvegicuss,60 - 65,Caucasian,Chromosme 22q11.2 Deletion Syndrom,1491CLL,,,Orgnism Pqrt,,,,
+biosample:SAMEA3856879,S01G9EH1,,Rattus norvegiicus,65 - 70,Dutch,Dubowits Syndrome,1185CLL,,,Abnormal Cl,,,,
+biosample:SAMEA3856880,S01GJV11,,Rattus norvegiucuss,70 - 75,East Asian,Friederich's Ataxia,815CLL,,,Cel,,,,
+biosample:SAMEA3856881,S01GKT11,,Rattus norvegicusss,75 - 80,European,Hemolitic Anemia,pz 302,,,Orgnism Part,,,,
+biosample:SAMEA3856882,S01GKTA1,,Rattus norvegicuss,80 - 85,Non-hispanic,Intestinal Malrotaton,pz 302,,,Abnrmal Celll,,,,
+biosample:SAMEA3856883,S01GKTH1,,Rattus norvegicuus,85 - 90,Northern European,Joubert Syndrom,pz 302,,,Ceell,,,,
+biosample:SAMEA3856884,S01GMP11,,Rattus norvegicus,90,Not applicable,Kabukki Syndrome,csMBC pool 11,,,Orgnism Pat,,,,
+biosample:SAMEA3856885,S01GMPA1,,Rattus norvegicusss,,South Asian,Leih Syndrome,8761MCL,,,Abnormal Clll,,,,
+biosample:SAMEA3856886,S01GMPH1,,Rattus norvegicuuss,,YORUBA,Neurofibromatosis Type 3,UMCG00001,,,Cell,,,,
+biosample:SAMEA3856887,S01GQHH1,,Saccharomyces cerevisiae,,American Indian,Osler-Weber-Rendu Syndrom,UMCG00013,,,,,,,
+biosample:SAMEA3856888,S01GRFA1,,Saccharomyces cereviciae,,Alaska Native,Prun Belly Syndrom,pz 295,,,,,,,
+biosample:SAMEA3856889,S01GRFH1,,Saccharomyces cereviae,,African American,Smith-Lemli-Opitz Syndrom,B272,,,Abnormal Cell,,,,
+biosample:SAMEA3856890,S01GSDA1,,Saccharomyces cerevicae,,Native Hawaiian,Stickler Syndrom,B272,,,Cell,,,,
+biosample:SAMEA3856891,S01GSDH1,,Saccharomyces cereviciiae,,Pacific Islander,Waardenburg Syndrom,138CLL,,,Organism Part,,,,
+biosample:SAMEA3856892,S01GTBA1,,Saccharomyces cerevicieae,,Caribbean,X-linkd Agammaglobulnemia,T8C,,,,,,,
+biosample:SAMEA3856893,S01GTBH1,,Saccharomyces cerevicaei,,Indian,Alfa-1 Antitrypsin Deficieny,T13C,,,Abnorml Cell,,,,
+biosample:SAMEA3856894,S01GU911,,Saccharomyces cereviciaee,,Melanesian,Bartr Syndrome,T18C,F ,,Cll,,,,
+biosample:SAMEA3856895,S01GU951,,Saccharomyces cereviciae,,Australasian,Churg-Straus Syndrome,SANQUIN_mono_61,Female,,Orgnism Part,,,,
+biosample:SAMEA3856896,S01GW511,,Saccharomyces cereviciaee,,Aboriginal,Diamond-Blackfan Anemia,S0177H,M,,Abnrmal Cell,,,,
+biosample:SAMEA3856897,S01GW5H1,,Sarcophilus harrisii,,Chinese,Ectodermall Dysplasia,305CLL,Male,,Cel,,,,
+biosample:SAMEA3856898,S01GX311,,Sarcophilus harisii,,Guamanian,Gaucher Diseas Typp 2,312CLL,Mixed,,Orgnism Partt,,,,
+biosample:SAMEA3856899,S01GX3H1,,Sarcophilus harrisii,,Japanese,Hermanski-Pudlak Syndrom,447CLL,Unknown,,Abnrmal Cl,,,,
+biosample:SAMEA3856900,S01GY1H1,,Sarcophilus harrisii,,Korean,Irn Deficiency Anemia,466CLL,,,Ceel,,,,
+biosample:SAMEA3856901,S01H0S11,,Sarcophilus harisii,,Polynesian,Jansenn,504CLL,Fem,,Orgnsm Part,,,,
+biosample:SAMEA3856902,S01H0SH1,,Sarcophilus harissi,,European,Kabukki Syndrome,505CLL,Femal,,Abnormal Cll,,,,
+biosample:SAMEA3856903,S01H1QH1,,Sarcophilus harisii,,Anglo Saxon,,621CLL,Masc,,Cel,,,,
+biosample:SAMEA3856904,S01H2OH1,,Sarcophilus harisii,,Latin American,,725CLL,Mn,,Orgnism Part,,,,
+biosample:SAMEA3856905,S01H5IH1,,Sarcophilus harisii,,Arabic,,754CLL,Mix,,Abnomal Cell,,,,
+biosample:SAMEA3856906,S01H6GH2,,Sarcophilus harisii,,Vietnamese,,772CLL,Unkn,,Ceell,,,,
+biosample:SAMEA3856907,S01H8C11,,Sus scrofa,,Micronesian,,878CLL,Femle,,Organism Prt,,,,
+biosample:SAMEA3856908,S01HA8H1,,Sus scroffa,,US Indian,,1075CLL,Mal,,Abnrmal Cel,,,,
+biosample:SAMEA3856909,S01HB6H1,,Suss scrofa,,Canadian Indian,,1317CLL,Mal,,Celll,,,,
+biosample:SAMEA3856971,S01HC4H1,,Sus scrof,,Puerto Rican,,1448CLL,Mixd,,Orgnism Pat,,,,
+biosample:SAMEA3856972,S01HD2H1,,Sus scrofus,,Filipino,,1266CLL,Unknwn,,Abnormal Ccell,,,,
+biosample:SAMEA3856973,S01HE0H1,,Sus scrofas,,Mexican,,366CLL,Femaale,,Cll,,,,
+biosample:SAMEA3856974,S01HFZH1,,Sus scrofass,,Alaskan Native ,,53CLL,Mael,,Orgnism Pqrt,,,,
+biosample:SAMEA3856975,S01HGXH1,,Sus scrofas,,Cuban,,642CLL,Mixd,,Abnormal Cl,,,,Alzheimer's Disease
+biosample:SAMEA3856976,S01HHVH1,,Sus scrofass,,African Ancestry in SW USA,,669CLL,Unknwn,,Ccell,,,,Parkinson's Disease
+biosample:SAMEA3856977,S01HKPH1,,Sus scrofass,,African Caribbean in Barbados,,T11C,Fml,,Orgnism Part,,,,Multiple Sclerosis
+biosample:SAMEA3856978,S01HMLH1,,Trypanosoma brucei,,Bengali in Bangladesh,,pz 302,Ml,,Abnrmal Celll,,,,Crohn's Disease
+biosample:SAMEA3856979,S01HNJH1,,Trypanosoma bruceii,,British from England and Scotland,,pz 302,Mxd,,Cel,,,,Ulcerative Colitis
+biosample:SAMEA3856980,S01HPFH1,,Trypanosoma brucie,,Chinese Dai in Xishuangbanna,,pz 302,Unk,,Orgnism Part,,,,Rheumatoid Arthritis
+biosample:SAMEA3856981,S01HT7H1,,Trypanosoma bruciee,,Colombian in Medellin,,561CLL,,,Abnomal Cl,,,,Systemic Lupus Erythematosus
+biosample:SAMEA3856982,S01HU5H1,,Trypanosoma bruceei,0 - 18,Esan in Nigeria,,852CLL,,,Ceell,,,,Psoriasis
+biosample:SAMEA3856983,S01HV3H1,,Trypanosoma brucii,0 - 5,Finnish in Finland,,125CLL,,,Orgnism Prt,,,,Celiac Disease
+biosample:SAMEA3856984,S01HW1H1,,Trypanosoma bruceie,10 - 15,Gambian in Western Division,,166CLL,,,Abnormal Cll,,,,Asthma
+biosample:SAMEA3856985,S01HYYH1,,Trypanosoma bruceii,1 - 5,"Gujarati Indians in Houston, Texas",,172CLL,,,Cell,,,,Hypertension
+biosample:SAMEA3856986,S01J0KH1,,Trypanosoma brucie,15 - 20,Han Chinese in Beijing,,294CLL,,,Orgnism Partt,,,,Coronary Artery Disease
+biosample:SAMEA3856987,S01J1IH1,,Trypanosoma bruceii,1 - 7,Iberian Populations in Spain,,477CLL,,,Abnorml Cel,,,,Obesity
+biosample:SAMEA3857513,S01J2GH1,,Xenopus tropicalis,20 - 25,Indian Telugu in the U.K.,,598CLL,,,Clll,,,,Type 2 Diabetes Mellitus
+biosample:SAMEA3857514,S01J4CH1,,Xenopus tropicaliis,20 - 30,"Japanese in Tokyo, Japan",,732CLL,,,Orgnsm Part,,,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA3857515,S01J5AH1,,Xenopu tropicalis,20 - 40,Kinh in Ho Chi Minh City,,760CLL,,,Abnrmal Ccel,,,,Atrial Fibrillation
+biosample:SAMEA3857516,S01J68H1,,Xenopus tropicaalis,25 - 30,"Luhya in Webuye, Kenya",,875CLL,,,Cll,,,,Depression
+biosample:SAMEA3857517,S01J76H1,,Xenopus tropicaalis,30 - 35,Mende in Sierra Leone,,1267CLL,,,Orgnism Prat,,,,Schizophrenia
+biosample:SAMEA3857518,S01J84H1,,Xenopus tropicallis,3 - 10,Mexican Ancestry in Los Angeles CA USA,,1291CLL,,,Abnrmal Cl,,,,Bipolar Disorder
+biosample:SAMEA3857542,S01J92H1,,Xenopus tropicaliss,35 - 40,Peruvian in Lima Peru,,1534CLL,,,Cll,,,,Anxiety Disorders
+biosample:SAMEA3857543,S01JA0H1,,Xenopus tropicaliss,35 - 60,Puerto Rican in Puerto Rico,,114CLL,,,Orgnism Pqrt,,,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA3857556,S01JGPH1,,Xenopus tropicaliss,40 - 45,"Punjabi in Lahore, Pakistan",,128CLL,,,Abnormal Cl,,,,Autism Spectrum Disorder (ASD)
+biosample:SAMEA3857558,S01JMDH1,,,45 - 50,Sri Lankan Tamil in the UK,,142CLL,,,Cel,,,,Cerebral Palsy
+biosample:SAMEA3857560,S01JNBH1,,,50 - 55,Toscani in Italia,,1472CLL,,,Orgnism Part,,,,Down Syndrome
+biosample:SAMEA3857562,S01JP7H1,,,50 - 70,"Yoruba in Ibadan, Nigeria",,181CLL,F ,,Abnrmal Celll,,,,Sickle Cell Disease
+biosample:SAMEA3857564,S01JQ5H1,,Hmuan,5 - 10,,,282CLL,Female,,Ceell,,,,Thalassemia
+biosample:SAMEA3857566,S01JR3H1,,Humanm,55 - 60,Admiced Amrican,,306CLL,M,,Orgnism Pat,,,,Hemophilia
+biosample:SAMEA3857570,S01JS1H1,,Humaan,55 - 65,Afrikan,,316CLL,Male,,Abnormal Clll,,,,Duchenne Muscular Dystrophy
+biosample:SAMEA3857572,S01JUYH1,,Human Betaherpesvirus 6AA,55 - 70,ARAB,,350CLL,Mixed,,Cell,,,,Cystic Fibrosis
+biosample:SAMEA3857574,S01JVWH1,,Human Betaherpesvirus 6,60 - 65,Asiab,,523CLL,Unknown,,,,,,Huntington's Disease
+biosample:SAMEA3857576,S01JWUH1,,Human Betaherpesvirus 66,65 - 70,Caucaisan,,778CLL,,,,,,,Amyotrophic Lateral Sclerosis (ALS)
+biosample:SAMEA3857578,S01JXSH1,,Human Gammaherpesvirus 88,70 - 75,Duch,,blueprint_donor_1,Fem,,,,,,Epilepsy
+biosample:SAMEA3857580,S01JYQH1,,Human Gammaherpesviru 8,75 - 80,East Asan,,S01BUT,Femal,,,,,,Tourette Syndrome
+biosample:SAMEA3857582,S01K0GH1,,Human Gammaherpesvirus 88,80 - 85,Eurppean,,S01BVR,Masc,,Abnormal Cell,,,,Non-Hodgkin Lymphoma
+biosample:SAMEA3857584,S01K1EH1,,Human Gammaherpesvirus 8,85 - 90,Non-huspanic,,S01BP2,Mn,,Cell,,,,Hodgkin Lymphoma
+biosample:SAMEA3857587,S01K2CH1,,Human Immunodeficiency Vrus 1,90,Northern Europeen,,S01BSX,Mix,,Organism Part,,,,Chronic Myeloid Leukemia
+biosample:SAMEA3857589,S01K3AH1,,Human Immunodeficiency Virus 11,,Not applicable,,S01BRZ,Unkn,,,,,,Polycythemia Vera
+biosample:SAMEA3857591,S01K48H1,,Human Immunodeficiency Viruss 1,,South Asan,,S01BTV,Femle,,Abnorml Cell,,,,Essential Thrombocythemia
+biosample:SAMEA3857593,S01K56H1,,Human Immunodeficiency Viru 1,,YORUBA,,UMCG00044,Mal,,Cll,,,,Myelofibrosis
+biosample:SAMEA3857595,S01K64H1,,Human Immunodeficiency Viruus 1,,Americsn Indiab,,UMCG00031,Mal,,Orgnism Part,,,,Hairy Cell Leukemia
+biosample:SAMEA3857598,S01K72H1,,Human Poliovirus 1 Strain Sbin,,Alskan Native,,817-03MCL,Mixd,,Abnrmal Cell,,,,Waldenström Macroglobulinemia
+biosample:SAMEA3857600,S01K80H1,,Human Poliovirus 1 Strain Sabin,,Africn Amrican,,6902MCL,Unknwn,,Cel,,,,Myelodysplastic Syndromes
+biosample:SAMEA3857602,S01K9ZH1,,Human Poliovirus 1 Strain Sabi,,Nativ Hawaiian,,8761MCL,Femaale,,Orgnism Partt,,,,Systemic Mastocytosis
+biosample:SAMEA3857604,S01KAXH1,,Human Poliovirus 1 Strain Sabinn,,Pcific Islandr,,S0179D,Mael,,Abnrmal Cl,,,,Eosinophilic Leukemia
+biosample:SAMEA3857606,S01KBVH1,,Human Poliovirus 1 Strain Sabiin,,Carribean,,B272,Mixd,,Ceel,,,,Juvenile Myelomonocytic Leukemia
+biosample:SAMEA3857608,S01KCTH1,,Influenza A Virus (A/hvPR8/34(H1N)),,Indin,,S017E3,Unknwn,,Orgnsm Part,,,,Atypical Chronic Myeloid Leukemia
+biosample:SAMEA3857611,S01KDRH1,,Influenza A Virus (A/hvPR8/34(H1N1)),,Melaneian,,BC2_0,Fml,,Abnormal Cll,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3857613,S01KEPH1,,Influenza A Virus (A/hvPR8/34(H1N11)),,Australasian,,B272,Ml,,Cel,,,,Myeloproliferative Neoplasms
+biosample:SAMEA3857617,S01KFNH1,,Influenza A Virus (A/hvPR8/34(H1N)),,Aborignal,,BC2_10,Mxd,,Orgnism Part,,,,Acute Promyelocytic Leukemia
+biosample:SAMEA3857619,S01KGLH1,,Influenza A Virus (A/hvPR8/34(H1N11)),,Chinse,,Primary_monocytes_Donor_D,Unk,,Abnomal Cell,,,,Chronic Eosinophilic Leukemia
+biosample:SAMEA3857621,S01KHJH1,,Influenza A Virus (A/hvPR8/34(H1N)),,Gumanian,,Primary_monocytes_Donor_G,,,Ceell,,,,Myeloid Sarcoma
+biosample:SAMEA3857623,S01KJFH1,,"Humans, Mous",,Japnese,,10CLL,,,Organism Prt,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3857624,S01KKDH1,,"Humans, Mose",,Korian,,1344CLL,,,Abnrmal Cel,,,,Mast Cell Leukemia
+biosample:SAMEA3857629,S01KM9H1,,"Humans, Mousee",,Polynesin,,618CLL,,,Celll,,,,Plasma Cell Leukemia
+biosample:SAMEA3857630,S01KN7H1,,"Humans, Mous",,Euopean,,689CLL,,,Orgnism Pat,,,,Monoclonal Gammopathy of Undetermined Significance (MGUS)
+biosample:SAMEA3857632,S01KP3H1,,"Humans, Rat",,Anglo Saxn,,758CLL,,,Abnormal Ccell,,,,Heavy Chain Disease
+biosample:SAMEA3857633,S01KQ1H1,,"Humans, Ratt",,Latn American,,SANQUIN_mono_39,F ,,Cll,,,,Smoldering Multiple Myeloma
+biosample:SAMEA3857636,S01KSYH1,,"Humans, Rattt",,Arbic,,SANQUIN_mono_39,Female,,Orgnism Pqrt,,,,Primary Myelofibrosis
+biosample:SAMEA3857641,S01KTWH1,,Sindbis Viru,,Vietnamsse,,SANQUIN_mono_39,M,,Abnormal Cl,,,,Prefibrotic Primary Myelofibrosis
+biosample:SAMEA3857642,S01KUUH1,,Sindbis Viruss,,Micronesian,,SANQUIN_mono_39,Male,,Ccell,,,,Secondary Myelofibrosis
+biosample:SAMEA3857644,S01KVSH1,,Sindbis Viruss,,US Indin,,SANQUIN_mono_39,Mixed,,Orgnism Part,,,,Post-polycythemia Vera Myelofibrosis
+biosample:SAMEA3857645,S01KWQH1,,Sindbis Viruus,,Canadian Indan,,SANQUIN_mono_39,Unknown,,Abnrmal Celll,,,,Secondary Thrombocytosis
+biosample:SAMEA3857646,S01KXOH1,,Sindbis Viru,,Purto Rican,,SANQUIN_mono_39,,,Cel,,,,Reactive Thrombocytosis
+biosample:SAMEA3857647,S01KYMH1,,Human Gammaherpesvirus 44,,Filipino,,SANQUIN_mono_39,Fem,,Orgnism Part,,,,Myeloid Metaplasia with Myelofibrosis
+biosample:SAMEA3857651,S01M08H1,,Human Gammaherpesvirus 4,,Mexicn,,SANQUIN_mono_39,Femal,,Abnomal Cl,,,,Acute Eosinophilic Leukemia
+biosample:SAMEA3857652,S01M24H1,,Human Gammaherpesvirus 4,,Alaskan Ntive,,SANQUIN_mono_39,Masc,,Ceell,,,,Chronic Myelomonocytic Leukemia
+biosample:SAMEA3857654,S01MAPA1,,Human Gammaherpesvirus 4,,Cuban,,SANQUIN_mono_39,Mn,,Orgnism Prt,,,,Mast Cell Disease
+biosample:SAMEA3857655,S01NDF11,,Human Gammaherpesvirus 4,,Afriican Ancestry in SW USA,,SANQUIN_mono_39,Mix,,Abnormal Cll,,,,Systemic Mastocytosis with Associated Hematologic Non-Mast Cell Lineage Disease
+biosample:SAMEA3857658,S01NTKH1,,Human Gammaherpesvirus 4,,Afrcan Caribean in Barbdos,,SANQUIN_mono_39,Unkn,,Cell,,,,Primary Cutaneous Mastocytosis
+biosample:SAMEA3857659,S01PJWH1,,Human Gammaherpesvirus 8,,Bengli in Bangladeh,,283CLL,Femle,,Orgnism Partt,,,,Chronic Neutrophilic Leukemia
+biosample:SAMEA3862009,S01PSEH1,,Human Gammaherpesvirus 8,,Brtish from England and Scothand,,S015TI,Mal,,Abnorml Cel,,,,Neutrophilic Leukemia
+biosample:SAMEA3879047,S01PTCH1,,Human Gammaherpesvirus 8,,Chinse Dai in Xishuangbanna,,S015UG,Mal,,Clll,,,,Chronic Basophilic Leukemia
+biosample:SAMEA3890321,S01PV8H1,,Human Gammaherpesvirus 8,,Colobian in Medelin,,Primary_monocytes_Donor_C,Mixd,,Orgnsm Part,,,,Basophilic Leukemia
+biosample:SAMEA3890322,S01PW6H1,,Human Immunodeficiency Viru,,Esan in Nigria,,Primary_monocytes_Donor_E,Unknwn,,Abnrmal Ccel,,,,Hairy Cell Leukemia Variant
+biosample:SAMEA3890323,S01PX4H1,,Human Immunodeficiency Viru,,Finnsh in Finlan,,Primary_monocytes_Donor_F,Femaale,,Cll,,,,Large Granular Lymphocytic Leukemia
+biosample:SAMEA3890324,S01Q0TH1,,Human Immunodeficiency Viru,,Gmbian in Western Divisin,,UMCG00014,Mael,,Orgnism Prat,,,,Sezary Syndrome
+biosample:SAMEA3890325,S01Q1RH1,,Human Immunodeficiency Viru,,"Gujarti Indians in Houston, Texs",,UMCG00015,Mixd,,Abnrmal Cl,,,,Adult T-Cell Leukemia
+biosample:SAMEA3890326,S01Q2PH1,,Parasitic Protozaon,,Han Chineese in Beijin,,UMCG00010,Unknwn,,Cll,,,,Adult T-Cell Leukemia/Lymphoma
+biosample:SAMEA3890327,S01Q3NH1,,Parasitic Protozoon,,Iberan Populations in Spai,,UMCG00016,Fml,,Orgnism Pqrt,,,,T-Cell Large Granular Lymphocytic Leukemia
+biosample:SAMEA3890328,S01Q4LH1,,Parasitic Protozoo,0 - 18,Indin Telugu in the U.K.,,UMCG00013,Ml,,Abnormal Cl,,,,Chronic Lymphoproliferative Disorders of Natural Killer Cells
+biosample:SAMEA3920439,S01Q5JH1,,Parasitic Protoozn,0 - 5,"Japanee in Toko, Japan",,UMCG00009,Mxd,,Cel,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3920440,S01Q9BH1,,Rhesu Macaque,10 - 15,Knh in Ho Chi Minh City,,S01BTV,Unk,,Orgnism Part,,,,Systemic Anaplastic Large Cell Lymphoma
+biosample:SAMEA3923178,S01QA9H1,,Rhesus Macacue,1 - 5,"Luhya in Webuye, Kneya",,S01BVR,F ,,Abnrmal Celll,,,,Primary Cutaneous Follicle Center Lymphoma
+biosample:SAMEA3923179,S01QB7H1,,Rhesus Macacu,15 - 20,Mnde in Sierre Leone,,S01BP2,Female,,Ceell,,,,Primary Cutaneous Marginal Zone Lymphoma
+biosample:SAMEA3923180,S01QC5H1,,"Rhesus Macaque, Macacine Gammaherpesvirus 44",1 - 7,Mexican Ancestry in Los Angeles CA USA,,S01BSX,M,,Orgnism Pat,,,,Extranodal Marginal Zone Lymphoma of Mucosa-associated Lymphoid Tissue (MALT Lymphoma)
+biosample:SAMEA3925395,S01QD3H1,,"Rhesus Macaque, Macacine Gammaherpesvirus 4",20 - 25,Peruviab in Lima Peru,,S01BRZ,Male,,Abnormal Clll,,,,Nodal Marginal Zone Lymphoma
+biosample:SAMEA3925399,S01QE1H1,,"Rhesus Macaque, Macacine Gammaherpesvirus 4",20 - 30,Puerro Rican in Puerto Rco,,C006NS,Mixed,,Cell,,,,Splenic Marginal Zone Lymphoma
+biosample:SAMEA3925400,S01QGYH1,,"Rhesus Macaque, Macacine Gammaherpesvirus 4",20 - 40,"Punjabi in Lahre, Pakistn",,S002R5,Unknown,,,,,,Follicular Lymphoma
+biosample:SAMEA3925402,S01QHWH1,,"Rhesus Macaque, Macacine Gammaherpesvirus 4",25 - 30,Sri Lankan Tmil in the UK,,S002S3,,,,,,,In Situ Follicular Neoplasia
+biosample:SAMEA3925404,S01QJSH1,,Mousee,30 - 35,Toscani in Italia,,S00T4H,Fem,,,,,,Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3925406,S01QKQH1,,Mouseee,3 - 10,"Yoruba in Ibadn, Nigera",,S00T5F,Femal,,,,,,"Diffuse Large B-Cell Lymphoma, NOS"
+biosample:SAMEA3951328,S01QMMH1,,Mouseee,35 - 40,,,S00T6D,Masc,,,,,,"Diffuse Large B-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3951329,S01QNKH1,,Mousee,35 - 60,Admicxed American,,S00TA5,Mn,,,,,,"Diffuse Large B-Cell Lymphoma, Immunoblastic"
+biosample:SAMEA3951330,S01QPGH1,,"Mouse, Murid Herpesvirus 688",40 - 45,Africn,,S00TT4,Mix,,,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic"
+biosample:SAMEA3951331,S01QQEH1,,"Mouse, Murid Herpesvirus 68",45 - 50,ARRAB,,S00UKI,Unkn,,,,,,"Diffuse Large B-Cell Lymphoma, Centroblastic, Immunoblastic"
+biosample:SAMEA3951332,S01QRCH1,,"Mouse, Murid Herpesvirus 68",50 - 55,Assiann,,S00UME,Femle,,,,,,Intravascular Large B-Cell Lymphoma
+biosample:SAMEA3987167,S01QSAH1,,"Mouse, Murid Herpesvirus 68",50 - 70,Caucasiab,,S00YK2,Mal,,,,,,Primary Mediastinal (Thymic) Large B-Cell Lymphoma
+biosample:SAMEA3987168,S01QT8H1,,Platypuss,5 - 10,Dutchh,,S00YRP,Mal,,,,,,Primary Central Nervous System Diffuse Large B-Cell Lymphoma
+biosample:SAMEA3987169,S01QU6H1,,Platypu,55 - 60,East Asianb,,S00YVH,Mixd,,,,,,T-Cell/Histiocyte-Rich Large B-Cell Lymphoma
+biosample:SAMEA3987170,S01QV4H1,,Platypuss,55 - 65,Euoropean,,S00YWF,Unknwn,,,,,,Primary Cutaneous CD30-Positive T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3987171,S01QW2H1,,Platypuss,55 - 70,Non-hispanicc,,S0100M,Femaale,,,,,,Primary Cutaneous Anaplastic Large Cell Lymphoma
+biosample:SAMEA3987172,S01RFWH1,,Platypus,60 - 65,Northern Europexan,,S010B0,Mael,,,,,,Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3987173,S01RGUH1,,Eueorpean Rabbit,65 - 70,Not aapplicable,,S010MF,Mixd,,,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3987174,S01RHSH1,,European Rabbitt,70 - 75,Soutb Asian,,S010P9,Unknwn,,,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3987175,S01RJOH1,,European Rabbit,75 - 80,YORUBVA,,S010VY,Fml,,,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3987176,S01RKMH1,,European Rabbit,80 - 85,American Indianz,,S01238,Ml,,,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3987177,S01RMIH1,,Sheepp,85 - 90,Alasksan Nativee,,S01246,Mxd,,,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA3987178,S01S1JH1,,Sheep,90,African Amerifcan,,S0130A,Unk,,,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoproliferative Disorder
+biosample:SAMEA3987179,S01S2HH1,,Sheep,,Native Hawaiibn,,S01342,,,,,,,Primary Cutaneous Aggressive Epidermotropic CD8-Positive T-Cell Lymphoma
+biosample:SAMEA3993630,S01S3FH1,,Sheep,,Pacific Islannder,,S0137X,,,Abnormal Cell,,,,Subcutaneous Panniculitis-like T-Cell Lymphoma
+biosample:SAMEA3993631,S01S4DH1,,Shep,,Caribeean,,S013CN,,,Cell,,,,"Primary Cutaneous Peripheral T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3993632,S01SQ6H1,,Chimpanzee,,Inndian,,S013DL,,,Organism Part,,,,"Primary Cutaneous T-Cell Lymphoma, NOS"
+biosample:SAMEA3993633,S01SR4H1,,Chimpanze,,Melaenesian,,S014WG,,,,,,,"Primary Cutaneous T-Cell Lymphoma, Not Otherwise Specified"
+biosample:SAMEA3993634,S01SS2H1,,Chimpanee,,Australasbian,,S0153X,,,Abnorml Cell,,,,Primary Cutaneous Gamma-Delta T-Cell Lymphoma
+biosample:SAMEA3993635,S01ST0H1,,Chimpanze,,Aboriiginal,,"S0153X,S0153X",,,Cll,,,,Primary Cutaneous CD4-Positive Small/Medium T-Cell Lymphoma
+biosample:SAMEA3993636,S01SUZH1,,Chimpanze,,Chinse,,S0155T,F ,,Orgnism Part,,,,Primary Cutaneous CD4-Positive Pleomorphic T-Cell Lymphoma
+biosample:SAMEA3993637,S01SVXH1,,Malariia Parasite,,Guamanin,,S015NU,Female,,Abnrmal Cell,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3993638,S01SWVH1,,Malaria Parasit,,Japaneese,,S015WC,M,,Cel,,,,Primary Cutaneous CD8-Positive Aggressive Epidermotropic Cytotoxic T-Cell Lymphoma
+biosample:SAMEA3993639,S01SXTH1,,Malaria Parasitee,,Koreean,,S01CQX,Male,,Orgnism Partt,,,,Primary Cutaneous Angioimmunoblastic T-Cell Lymphoma
+biosample:SAMEA3993640,S01TDS11,,Malaria Parasitte,,Polynesianr,,S01FY5,Mixed,,Abnrmal Cl,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA4002739,SP4-TH91,,Malaria Parasite,,Europbean,,S01H6G,Unknown,,Ceel,,,,Primary Cutaneous Small/Medium CD4-Positive T-Cell Lymphoma
+biosample:SAMEA4059244,SP8-TH91,,Rat,,Anglo Saxon,,S017B9,,,Orgnsm Part,,,,
+biosample:SAMEA4059245,T12-15-PC,,Ra,,Latn Americanx,,S017C7,Fem,,Abnormal Cll,,,,
+biosample:SAMEA4059246,T12-16-PC,,Rat,,Araibic,,S01GRF,Femal,,Cel,,,,
+biosample:SAMEA4059247,T12-17-PC,,Raat,,Vietnamesee,,S01GSD,Masc,,Orgnism Part,,,,
+biosample:SAMEA4059248,T12-18-PC,,Rat,,Micronnnesian,,S01GTB,Mn,,Abnomal Cell,,,,
+biosample:SAMEA4060283,TALL-1,,Rat,,US Indinan,,1525CLL,Mix,,Ceell,,,,
+biosample:SAMEA4060284,W653,,Ra,,Canaadian Indian,,12CLL,Unkn,,Organism Prt,,,,
+,C0010KA2bs,,Rat,,Puewto Rican,,,Femle,,Abnrmal Cel,,,,
+,C0010KB1,,Rat,,Filipinno,,,Mal,,Celll,,,,
+,C0010KB4,,Ra,,Mexicanz,,,Mal,,Orgnism Pat,,,,
+,C0010KH1,,Yeas,,Alaskann Nnative,,,Mixd,,Abnormal Ccell,,,,
+,C0010KH2,,Yeat,,Cubanb,,,Unknwn,,Cll,,,,
+biosample:SAMEA3987174,C0011I43,,Yeasst,,African Ancestry in SW USAe,,,Femaale,,Orgnism Pqrt,,,,
+biosample:SAMEA3987175,C0011IA3bs,,Yeast,,African Caribean in Barbadosn,,,Mael,,Abnormal Cl,,,,
+biosample:SAMEA3987176,C0011IB1,,"Yeasst, Humans",,Bengalii in Bangladeshh,,,Mixd,,Ccell,,,,
+biosample:SAMEA3987177,C0011IB5,,"Yeast, Human",,British from England and Scotlandv,,,Unknwn,,Orgnism Part,,,,Alzheimer's Disease
+biosample:SAMEA3987178,C0011IH1,,"Yeast, Human",,Chinese Dai in Xishuangbannaq,,,Fml,,Abnrmal Celll,,,,Parkinson's Disease
+biosample:SAMEA3987179,C0011IH2,,"Yest, Humans",0 - 18,Colombiaan in Medelline,,,Ml,,Cel,,,,Multiple Sclerosis
+biosample:SAMEA3993630,C00184A3bs,,Tasmanian Devi,0 - 5,Esan in Nigerias,,,Mxd,,Orgnism Part,,,,Crohn's Disease
+biosample:SAMEA3993631,C00184B5,,Tasmaniann Devil,10 - 15,Finnishh in Finlandd,,,Unk,,Abnomal Cl,,,,Ulcerative Colitis
+biosample:SAMEA3993632,C00184H2,,Tasmanian Devil,1 - 5,Gambiabn in Western Division,,,F ,,Ceell,,,,Rheumatoid Arthritis
+biosample:SAMEA3993633,C00184I3,,Tasmanian Devil,15 - 20,"Gujaarti Indians in Houston, Texass",,,Female,,Orgnism Prt,,,,Systemic Lupus Erythematosus
+biosample:SAMEA3993634,C00184IA4bs,,Pigg,1 - 7,Han Chinese in Beijings,,,M,,Abnormal Cll,,,,Psoriasis
+biosample:SAMEA3993635,C00184IB2,,Pigg,20 - 25,Iberian Populatiojns in Spain,,,Male,,Cell,,,,Celiac Disease
+biosample:SAMEA3993636,C00184IB6,,Pig,20 - 30,Indian Telugu in the U.K.w,,,Mixed,,Orgnism Partt,,,,Asthma
+biosample:SAMEA3993637,C00184IH3,,Pig,20 - 40,"Japanse in Tokyo, Japanm",,,Unknown,,Abnorml Cel,,,,Hypertension
+biosample:SAMEA3993638,C00184IH4,,Synthetci Construct,25 - 30,Kinh in Ho Chi Minh Cityx,,,,,Clll,,,,Coronary Artery Disease
+biosample:SAMEA3993639,C00185A4,,Synthetic Construct,30 - 35,"Luhya in Webuye, Kenyar",,,Fem,,Orgnsm Part,,,,Obesity
+biosample:SAMEA3993640,C00185B6bs,,Synthetic Constructt,3 - 10,Mende in Sierra Leoney,,,Femal,,Abnrmal Ccel,,,,Type 2 Diabetes Mellitus
+biosample:SAMEA4002739,C00185H3,,Synthetic Construct,35 - 40,Mexicabn Ancestry in Los Angeles CA USAq,,,Masc,,Cll,,,,Chronic Obstructive Pulmonary Disease (COPD)
+biosample:SAMEA4059244,C00186A4,,African Trypanosoome,35 - 60,Peruviaan in Lima Peruu,,,Mn,,Orgnism Prat,,,,Atrial Fibrillation
+biosample:SAMEA4059245,C00186B6,,African Trypanosomee,40 - 45,Puertoo Rican in Puerto Ricol,,,Mix,,Abnrmal Cl,,,,Depression
+biosample:SAMEA4059246,C00186H3,,African Trypanosome,45 - 50,"Punjaabi in Lahore, Pakistans",,,Unkn,,Cll,,,,Schizophrenia
+biosample:SAMEA4059247,C00187I4,,African Trypanossome,50 - 55,Sri Lankian Tamil in the UK,,,Femle,,Orgnism Pqrt,,,,Bipolar Disorder
+biosample:SAMEA4059248,C00187IA5bs,,Western Clawed Froog,50 - 70,Toscani in Italias,,,Mal,,Abnormal Cl,,,,Anxiety Disorders
+biosample:SAMEA4060283,C00187IB3,,Western Clawed Frogg,5 - 10,"Yoruba in Ibadan, Nigerias",,,Mal,,Cel,,,,Attention-Deficit/Hyperactivity Disorder (ADHD)
+biosample:SAMEA4060284,C00187IB7,,Western Clawed Frog,55 - 60,,,,Mixd,,Orgnism Part,,,,Autism Spectrum Disorder (ASD)
+,C00187IH4,,Western Clawed Frog,55 - 65,,,,Unknwn,,Abnrmal Celll,,,,Cerebral Palsy
+biosample:SAMEA4060285,C00187IH5,,Western Clawed Fro,55 - 70,,,,Femaale,,Ceell,,,,
+biosample:SAMEA4060286,C00188A5,,Western Clawed Frog,60 - 65,,,,Mael,,Orgnism Pat,,,,
+biosample:SAMEA4060287,C00188B7bs,,Cheetahh,65 - 70,,,,Mixd,,Abnormal Clll,,,,
+biosample:SAMEA4060288,C00188H4,,Cheetah,70 - 75,,,,Unknwn,,Cell,,,,
+biosample:SAMEA4060289,C00189A5,,Cheettah,75 - 80,,,,Fml,,,,,,
+biosample:SAMEA4060290,C00189B7,,Cheetah,80 - 85,,,,Ml,,,,,,
+biosample:SAMEA4060291,C00189H4,,Yelow Fever Mosquito,85 - 90,,,,Mxd,,,,,,
+biosample:SAMEA4060292,C00190I5,,Yellow Fever Mosqito,90,,,,Unk,,,,,,
+biosample:SAMEA4060293,C00190IA6bs,,Yellow Fever Mosqitoo,,,,,,,,,,,
+biosample:SAMEA4060294,C00190IB4,,Yellow Fever Mosquito,,,,,,,,,,,
+,C00190IH6,,Yellow Fever Mosquitoo,,,,,,,,,,,
