@@ -7,6 +7,8 @@ You can provide your metadata as a tsv file. Additionally, you have to choose be
 Usage: Assuming you are in the bedmess directory:
    ```bash
       python3 attr_standardizer.py <your_metadata.tsv> --schema FAIRTRACKS/ENCODE
+   ```
+
 Presently, we are only providing standardization according to the FAIRTRACKS schema. 
 
 
