@@ -19,6 +19,7 @@ import argparse
 from collections import Counter 
 import os
 import subprocess
+from pephubclient import PEPHubClient
 
 #logging set up
 logging.basicConfig(level=logging.INFO)
@@ -66,6 +67,8 @@ class NN(nn.Module):
         return x_combined
 
 class AttrStandardizer():
+      # TODO def save_model for uploading model to HuggingFace
+      # TODO def upload_to_huggingface 
       """
       Class for Attribute Stndardisation - Training and Prediction.
       Attributes:
@@ -137,16 +140,13 @@ def standardize_attr_names_from_path(csv_file):
      Returns:
           csv_file_path (str): path to the CSV file on the local system.
      """
-     cmd=f"phc pull {csv_file}"
-     subprocess.run(cmd, shell=True, check=True)
-     directory_name = "bedbase_" + os.path.basename(csv_file).replace(':', '_')
-     csv_file_path = os.path.join(os.getcwd(), directory_name, "sample_table.csv")
-     if os.path.isfile(csv_file_path):
-        return csv_file_path
-     else:
-        raise FileNotFoundError(f"sample_table.csv not found in the pulled directory: {csv_file_path}")
-  
-def standardize_attr_names(csv_file:str, schema:str, values_file_path, headers_file_path):
+     phc=PEPHubClient()
+     project = phc.load_project(csv_file)
+     sample_table=project.sample_table
+     csv_file_df = pd.DataFrame(sample_table)
+     return csv_file_df
+     
+def standardize_attr_names(csv_file:str, schema:str, values_file_path, headers_file_path, flag):
       """
 
       Standardize attribute names.
@@ -162,7 +162,7 @@ def standardize_attr_names(csv_file:str, schema:str, values_file_path, headers_f
       """
      
       X_values_train_tensor, X_headers_train_tensor, y_train_tensor, label_encoder ,X_values_eval_tensor, X_headers_eval_tensor, X_headers_eval, X_values_eval= \
-          data_preprocessing(values_file_path, headers_file_path, csv_file)
+          data_preprocessing(values_file_path, headers_file_path, csv_file, flag)
       logger.info("Data Preprocessing completed.")
       input_size_values=X_values_train_tensor.shape[1]
       input_size_headers=X_headers_train_tensor.shape[1]
@@ -200,7 +200,7 @@ def standardize_attr_names(csv_file:str, schema:str, values_file_path, headers_f
           suggestions[header]=probabilities
       return suggestions
 
-def load_data(file_path):
+def load_data(file_path, flag):
      """
      Load data from a file.
 
@@ -210,7 +210,10 @@ def load_data(file_path):
      Returns:
           pandas.DataFrame: Loaded data.
      """
-     df=pd.read_csv(file_path, sep=",", dtype=str)
+     if flag=="path":
+          df=pd.read_csv(file_path, sep=",", dtype=str)
+     elif flag=="df":
+          df=file_path
      df.replace('NA', np.nan, inplace=True)
      for column in df.columns:
           if df[column].notna().any(): #skipping those columns that are all empty 
@@ -219,7 +222,7 @@ def load_data(file_path):
                df[column] = df[column].fillna(most_common_val)
      return df 
 
-def data_preprocessing(values_file_path, headers_file_path, csv_file):
+def data_preprocessing(values_file_path, headers_file_path, csv_file, flag):
      """
      Preprocess the data for training and evaluation.
 
@@ -232,9 +235,9 @@ def data_preprocessing(values_file_path, headers_file_path, csv_file):
         tuple: Processed data tensors
         pandas.DataFrame: User provided metadata .
      """
-     df_values=load_data(values_file_path)
-     df_headers=load_data(headers_file_path)
-     df_user =load_data(csv_file)
+     df_values=load_data(values_file_path, flag="path")
+     df_headers=load_data(headers_file_path, flag="path")
+     df_user =load_data(csv_file, flag)
 
      X_values_train=[df_values[column].astype(str).tolist() for column in df_values.columns]
      X_headers_train=[df_headers[column].astype(str).tolist() for column in df_headers.columns]
@@ -261,7 +264,6 @@ def data_preprocessing(values_file_path, headers_file_path, csv_file):
      label_encoder.fit(y_train)
      y_train_encoded = label_encoder.transform(y_train_expanded)
 
-
      #converting to tensors
      X_values_train_tensor=torch.tensor(X_values_train_embeddings, dtype=torch.float32)
      X_headers_train_tensor=torch.tensor(X_headers_train_embeddings, dtype=torch.float32)
@@ -271,9 +273,6 @@ def data_preprocessing(values_file_path, headers_file_path, csv_file):
 
      return X_values_train_tensor, X_headers_train_tensor, y_train_tensor, label_encoder, X_values_eval_tensor, X_headers_eval_tensor, X_headers_eval, X_values_eval
 
-
-
-
 if __name__=="__main__":
      parser=argparse.ArgumentParser(description="Attribute Standardization tool")
      parser.add_argument("csv_file", help="Path to the csv file that contains metadata to be standardized")
@@ -282,8 +281,10 @@ if __name__=="__main__":
      args=parser.parse_args()
      if args.path == "PEPhub_registry":
           csv_file=standardize_attr_names_from_path(args.csv_file)
+          flag="df"
      elif args.path == "LOCAL":
           csv_file=args.csv_file
+          flag="path"
      if args.schema == "ENCODE":
           values_file_path = "data/encode_metadata_05022024.csv"
           headers_file_path = "data/encode_headers_matched.csv" 
@@ -292,8 +293,7 @@ if __name__=="__main__":
           headers_file_path = "data/blueprint_metadata_headers_05012024.csv" 
      
 
-     suggestions=standardize_attr_names(csv_file, args.schema, values_file_path, headers_file_path)
-     print(suggestions)
-   
+     suggestions=standardize_attr_names(csv_file, args.schema, values_file_path, headers_file_path, flag)
+     print(suggestions)  
 
 
