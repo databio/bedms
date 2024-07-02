@@ -36,7 +36,7 @@ def load_from_huggingface(schema):
     """
     if schema == "ENCODE":
         # TODO : Change this 
-        model = hf_hub_download("databio/attribute-standardizer-model6/model_encode.pth")
+        model = hf_hub_download(repo_id= "databio/attribute-standardizer-model6", filename= "model_encode.pth")
     elif schema == "FAIRTRACKS":
         model = None
     return model

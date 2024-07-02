@@ -6,7 +6,7 @@ import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter 
-
+from huggingface_hub import hf_hub_download
 
 def data_preprocessing(df):
     X_values_st = [df[column].astype(str).tolist() for column in df.columns]
@@ -39,7 +39,8 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
     if schema == "ENCODE":
         #Bag of Words Vectorizer
         vectorizer=CountVectorizer()
-        with open("/home/saanika/curation/scripts/bedmess_archive/vectorizer_new.pkl", "rb") as f:
+        vc_path = hf_hub_download(repo_id="databio/attribute-standardizer-model6", filename="vectorizer_encode.pkl")
+        with open(vc_path, "rb") as f:
             vectorizer=pickle.load(f)
         transformed_columns = []
         for column in X_values_bow:
@@ -52,7 +53,8 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
         #Label Encoding
         # TODO change this to the new one 
         label_encoder = LabelEncoder()
-        with open('/home/saanika/curation/scripts/bedmess_archive/label_encoder_model6_new.pkl', 'rb') as f:
+        lb_path = hf_hub_download(repo_id="databio/attribute-standardizer-model6", filename = "label_encoder_encode.pkl")
+        with open(lb_path, 'rb') as f:
             label_encoder = pickle.load(f) 
 
     elif schema == "FAIRTRACKS":
