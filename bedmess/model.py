@@ -2,18 +2,29 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+
 ##NN model - Bag of Words + Sentence Transformer Model
 class BoWSTModel(nn.Module):
-    def __init__(self, input_size_values, input_size_values_embeddings, input_size_headers, hidden_size, output_size, dropout_prob):
+    def __init__(
+        self,
+        input_size_values,
+        input_size_values_embeddings,
+        input_size_headers,
+        hidden_size,
+        output_size,
+        dropout_prob,
+    ):
         super(BoWSTModel, self).__init__()
         self.fc_values1 = nn.Linear(input_size_values, hidden_size)
         self.dropout_values1 = nn.Dropout(dropout_prob)
         self.fc_values2 = nn.Linear(hidden_size, hidden_size)
         self.dropout_values2 = nn.Dropout(dropout_prob)
-        self.fc_values_embeddings1=nn.Linear(input_size_values_embeddings, hidden_size)
-        self.dropout_values_embeddings1=nn.Dropout(dropout_prob)
-        self.fc_values_embeddings2=nn.Linear(hidden_size,hidden_size)
-        self.dropout_values_embeddings2=nn.Dropout(dropout_prob)
+        self.fc_values_embeddings1 = nn.Linear(
+            input_size_values_embeddings, hidden_size
+        )
+        self.dropout_values_embeddings1 = nn.Dropout(dropout_prob)
+        self.fc_values_embeddings2 = nn.Linear(hidden_size, hidden_size)
+        self.dropout_values_embeddings2 = nn.Dropout(dropout_prob)
         self.fc_headers1 = nn.Linear(input_size_headers, hidden_size)
         self.dropout_headers1 = nn.Dropout(dropout_prob)
         self.fc_headers2 = nn.Linear(hidden_size, hidden_size)
