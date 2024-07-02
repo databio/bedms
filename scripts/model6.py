@@ -39,25 +39,18 @@ logger=logging.getLogger(__name__)
 class BoWSTModel(nn.Module):
     def __init__(self, input_size_values, input_size_values_embeddings, input_size_headers, hidden_size, output_size, dropout_prob):
         super(BoWSTModel, self).__init__()
-        # TODO values ST 
         self.fc_values1 = nn.Linear(input_size_values, hidden_size)
         self.dropout_values1 = nn.Dropout(dropout_prob)
         self.fc_values2 = nn.Linear(hidden_size, hidden_size)
         self.dropout_values2 = nn.Dropout(dropout_prob)
-        #self.fc_values3=nn.Linear(hidden_size,hidden_size)
-        #self.dropout_values3=nn.Dropout(dropout_prob)
         self.fc_values_embeddings1=nn.Linear(input_size_values_embeddings, hidden_size)
         self.dropout_values_embeddings1=nn.Dropout(dropout_prob)
         self.fc_values_embeddings2=nn.Linear(hidden_size,hidden_size)
         self.dropout_values_embeddings2=nn.Dropout(dropout_prob)
-        #self.fc_values_embeddings3=nn.Linear(hidden_size, hidden_size)
-        #self.dropout_values_embeddings3 =nn.Dropout(dropout_prob)
         self.fc_headers1 = nn.Linear(input_size_headers, hidden_size)
         self.dropout_headers1 = nn.Dropout(dropout_prob)
         self.fc_headers2 = nn.Linear(hidden_size, hidden_size)
         self.dropout_headers2 = nn.Dropout(dropout_prob)
-        #self.fc_headers3=nn.Linear(hidden_size, hidden_size)
-        #self.dropout_headers3=nn.Dropout(dropout_prob)
         self.fc_combined1 = nn.Linear(hidden_size * 3, hidden_size)
         self.dropout_combined1 = nn.Dropout(dropout_prob)
         self.fc_combined2 = nn.Linear(hidden_size, output_size)
@@ -188,8 +181,10 @@ def encoding(X_values_train_list, X_headers_train_list, y_train_list, \
     #Reducing the vocabulary size - limiting the number of tables that are considered
     X_values_train_list_top = X_values_train_list[:500]
     flattened_list = [item for sublist in X_values_train_list_top for col in sublist for item in col]
-    vectorizer=CountVectorizer(tokenizer=lambda x: [x])
+    vectorizer=CountVectorizer()
     vectorizer.fit(flattened_list)
+    with open('vectorizer_new.pkl', 'wb') as f:
+        pickle.dump(vectorizer, f)
 
     #Sentence Transformers
     model_name = 'all-MiniLM-L6-v2'
@@ -203,9 +198,9 @@ def encoding(X_values_train_list, X_headers_train_list, y_train_list, \
     unique_values_list = list(unique_values)
     label_encoder.fit(unique_values_list)
 
-    label_encoder_path="label_encoder_model6.pkl"
+    label_encoder_path="label_encoder_model6_new.pkl"
     with open(label_encoder_path, "wb") as f:
-        pickle.dump(label_encoder_path,f)
+        pickle.dump(label_encoder,f)
 
     def encode_data(X_values_list, X_headers_list, y_list, batch_size):
         X_values_bow_tensor_list, X_values_st_tensor_list, X_headers_st_tensor_list, y_tensor_list =[], [], [], []
@@ -330,7 +325,7 @@ def custom_train(model, criterion, optimizer, train_loader, val_loader, num_epoc
 
         # Print statistics
         print(f'Epoch [{epoch+1}/{num_epochs}], Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.2f}%, Val Loss: {val_loss:.4f}, Val Accuracy: {val_accuracy:.2f}%')
-    torch.save(model.state_dict(), "model6_red.pth")
+    torch.save(model.state_dict(), "model6_red_new.pth")
     return train_accuracies, val_accuracies, train_losses, val_losses
         
 
@@ -366,7 +361,7 @@ def plot_confusion_matrix(y_true, y_pred, unique_values_list):
     plt.title('Confusion Matrix')
     plt.xlabel('Predicted Label')
     plt.ylabel('True Label')
-    plt.savefig("confusion_matrix_model6_mt.jpg")
+    plt.savefig("confusion_matrix_model6_mt_new.jpg")
     plt.show()
     class_accuracy = conf_matrix.diagonal() / conf_matrix.sum(axis=1)
     for i, acc in enumerate(class_accuracy):
@@ -381,7 +376,7 @@ def plot_learning_curve(num_epochs, train_accuracies, val_accuracies, train_loss
     plt.title('Learning Curve')
     plt.legend()
     plt.grid(True)
-    plt.savefig("accuracy_model6_mt.jpg")
+    plt.savefig("accuracy_model6_mt_new.jpg")
     plt.show()
     #loss
     plt.plot(range(1, num_epochs + 1), train_losses, label='Training Loss')
@@ -391,7 +386,7 @@ def plot_learning_curve(num_epochs, train_accuracies, val_accuracies, train_loss
     plt.title('Learning Curve')
     plt.legend()
     plt.grid(True)
-    plt.savefig("loss_model6_mt.jpg")
+    plt.savefig("loss_model6_mt_new.jpg")
     plt.show()
 
 def hyperparameter_tuning(trial):
@@ -432,8 +427,8 @@ def count_parameters(model):
     return total_params
 
 if __name__=="__main__":
-    values_dir="/scratch/bam8pm/mini_files/"
-    headers_dir="/scratch/bam8pm/mini_headers/"
+    values_dir="/scratch/bam8pm/mini_files_new/"
+    headers_dir="/scratch/bam8pm/mini_headers_new/"
     #load the files from dir
     values_files=load_from_dir(values_dir)
     headers_files=load_from_dir(headers_dir)
@@ -505,7 +500,7 @@ if __name__=="__main__":
     l2_reg_lambda = 0.001
     optimizer = optim.Adam(model.parameters(), lr=learning_rate, weight_decay=l2_reg_lambda)
     #Training the model
-    checkpoint_path = "checkpoint.pt"
+    checkpoint_path = "checkpoint_new.pt"
     num_epochs = 20
     total_params = count_parameters(model)
     print(f"Total number of parameters in the model: {total_params}")
