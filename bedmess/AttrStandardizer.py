@@ -14,12 +14,12 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def fetch_from_pephub(pep):
+def fetch_from_pephub(pep: str) -> pd.DataFrame:
     """
     Fetches metadata from PEPhub registry.
-    csv_file (str): Path to the PEPhub registry containing the metadata csv file
-    Returns:
-        csv_file_path (str): path to the CSV file on the local system.
+
+    :param str pep: Path to the PEPhub registry containing the metadata csv file
+    :return pd.DataFrame: path to the CSV file on the local system.
     """
     phc = PEPHubClient()
     project = phc.load_project(pep)
