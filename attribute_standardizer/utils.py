@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import torch
+from pephubclient import PEPHubClient
 from sentence_transformers import SentenceTransformer
 import pickle
 from sklearn.preprocessing import LabelEncoder
@@ -9,12 +10,42 @@ from collections import Counter
 from huggingface_hub import hf_hub_download
 
 
+def fetch_from_pephub(pep: str) -> pd.DataFrame:
+    """
+    Fetches metadata from PEPhub registry.
+
+    :param str pep: Path to the PEPhub registry containing the metadata csv file
+    :return pd.DataFrame: path to the CSV file on the local system.
+    """
+    phc = PEPHubClient()
+    project = phc.load_project(pep)
+    sample_table = project.sample_table
+    csv_file_df = pd.DataFrame(sample_table)
+    return csv_file_df
+
+
+def load_from_huggingface(schema):
+    """
+    Load a model from HuggingFace based on the schema of choice.
+
+    :param str schema: Schema Type
+    :return: Loaded model object
+    """
+    if schema == "ENCODE":
+        model = hf_hub_download(
+            repo_id="databio/attribute-standardizer-model6", filename="model_encode.pth"
+        )
+    elif schema == "FAIRTRACKS":
+        model = None
+    return model
+
+
 def data_preprocessing(df):
     """
     Preprocessing the DataFrame by extracting the column values and headers.
 
     :param pd.DataFrame df: The input DataFrame (user chosen PEP) to preprocess.
-    :return list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings. 
+    :return list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings.
     :return list X_headers_st: List containing the headers of the DataFrame.
     :return list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
     """
@@ -28,10 +59,10 @@ def data_preprocessing(df):
 
 def get_top_k_average(val_embedding, k):
     """
-    Calculates the average of the top k most common embeddings. 
+    Calculates the average of the top k most common embeddings.
 
     :param list val_embedding: List of embeddings, each embedding is a vector of values.
-    :param int k: The number of top common embeddings to consider. 
+    :param int k: The number of top common embeddings to consider.
     :return np.ndarray: The mean of the top k most common embeddings as a NumPy array.
     """
 
@@ -50,7 +81,7 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
     """
     Encode input data in accordance with the user-specified schemas.
 
-    :param list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings. 
+    :param list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings.
     :param list X_headers_st: List containing the headers of the DataFrame.
     :param list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
     :param str schema: Schema type chosen by the user for standardization.
@@ -87,7 +118,6 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
         # print(transformed_columns)
         X_values_bow = transformed_columns
         # Label Encoding
-        # TODO change this to the new one
         label_encoder = LabelEncoder()
         lb_path = hf_hub_download(
             repo_id="databio/attribute-standardizer-model6",

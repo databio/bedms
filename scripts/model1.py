@@ -1,3 +1,5 @@
+""" Training & Model for Model Architecture 1 ( One Hot Encoding of Values Only)"""
+
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -22,19 +24,32 @@ import seaborn as sns
 import logging
 import time
 
-# logging set up
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
 class NN1(nn.Module):
+    """ Simple Neural Network with a single Hidden Layer."""
     def __init__(self, input_size, hidden_size, output_size):
+        """
+        Initializes the NN1 model.
+
+        :param int input_size: The number of input features.
+        :param int hidden_size: The size of the hidden layer.
+        :param int output_size: The size of the output.
+        """
         super(NN1, self).__init__()
         self.fc1 = nn.Linear(input_size, hidden_size)
         self.relu = nn.ReLU()
         self.fc2 = nn.Linear(hidden_size, output_size)
 
     def forward(self, x):
+        """
+        Defines the forward pass of the neural network. 
+
+        :param torch.Tensor x: Input tensor.
+        :return torch.Tensor: Output tensor after passing through the network.
+        """
         x = self.fc1(x)
         x = self.relu(x)
         x = self.fc2(x)
@@ -42,6 +57,12 @@ class NN1(nn.Module):
 
 
 def load(file_path):
+    """
+    Loads a CSV file into a DataFrame. Imputes missing values with most common value in that column.
+
+    :param str file_path: The path to the CSV file to be loaded.
+    :return pd.DataFrame: Imputed DataFrame.
+    """
     df = pd.read_csv(file_path, sep=",")
     df.replace("NA", np.nan, inplace=True)
 
@@ -52,6 +73,12 @@ def load(file_path):
 
 
 def data_split(df_values):
+    """
+    Splits the DataFrame into training, test and validation.
+
+    :param pd.DataFrame df_values: Input DataFrame with values to be split.
+    :return list: Features and labels split as train, test, and val (validation).
+    """
     df_values_train, df_values_temp = train_test_split(
         df_values, test_size=0.2, random_state=42
     )
@@ -59,12 +86,14 @@ def data_split(df_values):
         df_values_temp, test_size=0.5, random_state=42
     )
 
-    # BELOW PART ONLY FOR TESTING ON UNSEEN DATASET - add test dataset paths here
+    #Snippet for testing on unseen data 
+    """
     df_values_test = pd.read_csv(
         "/home/saanika/curation/scripts/bedmess_archive/data/encode_metadata_values_moderate.csv",
         sep=",",
     )
-    # COMMENT OUT ABOVE STATEMENT TODO
+    """
+    #Comment out the above for training on seen data. 
 
     X_values_train = [
         df_values_train[column].astype(str).tolist()
@@ -105,6 +134,17 @@ def data_split(df_values):
 
 
 def encoding(X_values_train, X_values_test, X_values_val, y_train, y_test, y_val):
+    """
+    Encodes the values for the model. 
+
+    :param list X_values_train: Training features. 
+    :param list X_values_test: Testing features.
+    :param list X_values_val: Validation features.
+    :param list y_train: Training labels.
+    :param list y_test: Test labels.
+    :param list y_val: Valiation labels.
+    :param return tuple
+    """
     enc_values = OneHotEncoder(handle_unknown="ignore")
     X_values_train_encoded = enc_values.fit_transform(X_values_train)
     X_values_test_encoded = enc_values.transform(X_values_test)
@@ -137,6 +177,17 @@ def to_tensor(
     y_test_encoded,
     y_val_encoded,
 ):
+    """
+    Converts the encoded features and labels to tensor.
+
+    :param array X_values_train_encoded: Training features as array.
+    :param array X_values_test_encoded: Test features as array.
+    :param array X_values_val_encoded: Validation features as array.
+    :param array y_train_encoded:  Training labels as an array.
+    :param array y_test_encoded: Testing labels as an array.
+    :param array y_val_encoded: Validation labels as an array.
+    :return tuple: Tensors for training, testing, validation for features and labels.
+    """
 
     X_values_train_tensor = torch.tensor(
         X_values_train_encoded.toarray(), dtype=torch.float32
