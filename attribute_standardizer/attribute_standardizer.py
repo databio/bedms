@@ -9,7 +9,7 @@ from .utils import data_preprocessing, data_encoding
 from .model import BoWSTModel
 from huggingface_hub import hf_hub_download
 
-# logging set up
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
@@ -31,10 +31,10 @@ def fetch_from_pephub(pep: str) -> pd.DataFrame:
 def load_from_huggingface(schema):
     """
     Load a model from HuggingFace based on the schema of choice.
-    Args:
-        schema (str): Schema Type
-    Returns:
-        model : Loaded model
+
+    
+    :param str schema: Schema Type
+    :return: Loaded model object
     """
     if schema == "ENCODE":
         # TODO : Change this
@@ -49,11 +49,10 @@ def load_from_huggingface(schema):
 def standardize_attr_names(csv_file, schema):
     """
     Standardize attribute names.
-    Args:
-        csv_file (str): Path to the CSV file containing metadata to be standardized.
-        schema (str): Schema type.
-    Returns:
-        dict: Suggestions for standardized attribute names.
+
+    :param str csv_file: Path to the CSV file containing metadata to be standardized.
+    :param str schema: Schema type.
+    :return dict: Suggestions for standardized attribute names.
     """
     # X_values_st_tensor, X_values_bow_tensor, X_headers_st_tensor = data_preprocessing(csv_file)
     X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
@@ -92,8 +91,6 @@ def standardize_attr_names(csv_file, schema):
         X_values_embeddings_tensor
     )
 
-    # TODO Should the initialization be mentioned elsewhere?
-
     input_size_values = padded_data_values_tensor.shape[1]
     input_size_headers = padded_data_headers_tensor.shape[1]
     input_size_values_embeddings = padded_data_values_embeddings_tensor.shape[1]
@@ -111,8 +108,6 @@ def standardize_attr_names(csv_file, schema):
 
     model.load_state_dict(state_dict)
 
-    # Prediction
-    # TODO should this be another function?
     model.eval()
 
     all_preds = []
@@ -145,7 +140,12 @@ def standardize_attr_names(csv_file, schema):
     return suggestions
 
 
-def AttrStandardizer(pep, schema):
+def attr_standardizer(pep, schema):
+    """
+    :param str pep: Path to the PEPhub registry containing the metadata csv file.
+    :param str schema: Schema Type chosen by the user. 
+    """
     csv_file = fetch_from_pephub(pep)
     suggestions = standardize_attr_names(csv_file, schema)
+    
     print(suggestions)

@@ -1,3 +1,4 @@
 # bedmess
 
-bedmess is a tool that can be used to standardize metadata according to the bedbase metadata output schema.
+bedmess is a tool used to standardize genomics/epigenomics metadata based on a schema chosen by the user ( eg. ENCODE, FAIRTRACKS). 
+

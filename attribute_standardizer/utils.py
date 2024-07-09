@@ -10,6 +10,15 @@ from huggingface_hub import hf_hub_download
 
 
 def data_preprocessing(df):
+    """
+    Preprocessing the DataFrame by extracting the column values and headers.
+
+    :param pd.DataFrame df: The input DataFrame (user chosen PEP) to preprocess.
+    :return list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings. 
+    :return list X_headers_st: List containing the headers of the DataFrame.
+    :return list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
+    """
+
     X_values_st = [df[column].astype(str).tolist() for column in df.columns]
     X_headers_st = df.columns.tolist()
     X_values_bow = [df[column].astype(str).tolist() for column in df.columns]
@@ -18,6 +27,14 @@ def data_preprocessing(df):
 
 
 def get_top_k_average(val_embedding, k):
+    """
+    Calculates the average of the top k most common embeddings. 
+
+    :param list val_embedding: List of embeddings, each embedding is a vector of values.
+    :param int k: The number of top common embeddings to consider. 
+    :return np.ndarray: The mean of the top k most common embeddings as a NumPy array.
+    """
+
     embeddings_list = [tuple(embedding) for embedding in val_embedding]
     counts = Counter(embeddings_list)
     top_3_embeddings = [
@@ -30,6 +47,15 @@ def get_top_k_average(val_embedding, k):
 
 
 def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
+    """
+    Encode input data in accordance with the user-specified schemas.
+
+    :param list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings. 
+    :param list X_headers_st: List containing the headers of the DataFrame.
+    :param list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
+    :param str schema: Schema type chosen by the user for standardization.
+    :return tuple: Tuple containing torch tensors for encoded embeddings and Bag of Words representations, and label encoder object.
+    """
     # Sentence Transformer Model
     model_name = "all-MiniLM-L6-v2"
     sentence_encoder = SentenceTransformer(model_name)

@@ -1,3 +1,3 @@
-from BEDMess.AttrStandardizer import AttrStandardizer
+from attribute_standardizer.attribute_standardizer import attr_standardizer
 
-AttrStandardizer(pep="geo/gse178283:default", schema="ENCODE")
+attr_standardizer(pep="geo/gse178283:default", schema="ENCODE")
