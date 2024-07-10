@@ -8,6 +8,14 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
 from collections import Counter
 from huggingface_hub import hf_hub_download
+from typing import Optional, Any, List, Tuple, Union
+from .const import (
+    REPO_ID,
+    FILENAME_ENCODE,
+    HF_LABEL_ENCODER_FILENAME,
+    HF_VECTORIZER_FILENAME,
+    SENTENCE_TRANSFORMER_MODEL,
+)
 
 
 def fetch_from_pephub(pep: str) -> pd.DataFrame:
@@ -24,30 +32,31 @@ def fetch_from_pephub(pep: str) -> pd.DataFrame:
     return csv_file_df
 
 
-def load_from_huggingface(schema):
+def load_from_huggingface(schema: str) -> Optional[Any]:
     """
     Load a model from HuggingFace based on the schema of choice.
 
     :param str schema: Schema Type
-    :return: Loaded model object
+    :return Optional[Any]: Loaded model object
     """
     if schema == "ENCODE":
-        model = hf_hub_download(
-            repo_id="databio/attribute-standardizer-model6", filename="model_encode.pth"
-        )
+        model = hf_hub_download(repo_id=REPO_ID, filename=FILENAME_ENCODE)
     elif schema == "FAIRTRACKS":
         model = None
     return model
 
 
-def data_preprocessing(df):
+def data_preprocessing(
+    df: pd.DataFrame,
+) -> Tuple[List[List[str]], List[str], List[List[str]]]:
     """
     Preprocessing the DataFrame by extracting the column values and headers.
 
     :param pd.DataFrame df: The input DataFrame (user chosen PEP) to preprocess.
-    :return list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings.
-    :return list X_headers_st: List containing the headers of the DataFrame.
-    :return list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
+    :return Tuple[List[List[str]], List[str], List[List[str]]]:
+        - Nested list containing the comma separated values in each column for sentence transformer embeddings.
+        - List containing the headers of the DataFrame.
+        - Nested list containing the comma separated values in each column for Bag of Words encoding.
     """
 
     X_values_st = [df[column].astype(str).tolist() for column in df.columns]
@@ -57,7 +66,7 @@ def data_preprocessing(df):
     return X_values_st, X_headers_st, X_values_bow
 
 
-def get_top_k_average(val_embedding, k):
+def get_top_k_average(val_embedding: List[np.ndarray], k: int) -> np.ndarray:
     """
     Calculates the average of the top k most common embeddings.
 
@@ -77,7 +86,12 @@ def get_top_k_average(val_embedding, k):
     return column_embedding_mean.numpy()
 
 
-def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
+def data_encoding(
+    X_values_st: List[List[str]],
+    X_headers_st: List[str],
+    X_values_bow: List[List[str]],
+    schema: str,
+) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Union[LabelEncoder, None]]:
     """
     Encode input data in accordance with the user-specified schemas.
 
@@ -85,10 +99,10 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
     :param list X_headers_st: List containing the headers of the DataFrame.
     :param list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
     :param str schema: Schema type chosen by the user for standardization.
-    :return tuple: Tuple containing torch tensors for encoded embeddings and Bag of Words representations, and label encoder object.
+    :return Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Union[LabelEncoder, None]]: Tuple containing torch tensors for encoded embeddings and Bag of Words representations, and label encoder object.
     """
     # Sentence Transformer Model
-    model_name = "all-MiniLM-L6-v2"
+    model_name = SENTENCE_TRANSFORMER_MODEL
     sentence_encoder = SentenceTransformer(model_name)
     X_headers_embeddings = sentence_encoder.encode(
         X_headers_st, show_progress_bar=False
@@ -104,8 +118,8 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
         # Bag of Words Vectorizer
         vectorizer = CountVectorizer()
         vc_path = hf_hub_download(
-            repo_id="databio/attribute-standardizer-model6",
-            filename="vectorizer_encode.pkl",
+            repo_id=REPO_ID,
+            filename=HF_VECTORIZER_FILENAME,
         )
         with open(vc_path, "rb") as f:
             vectorizer = pickle.load(f)
@@ -120,8 +134,8 @@ def data_encoding(X_values_st, X_headers_st, X_values_bow, schema):
         # Label Encoding
         label_encoder = LabelEncoder()
         lb_path = hf_hub_download(
-            repo_id="databio/attribute-standardizer-model6",
-            filename="label_encoder_encode.pkl",
+            repo_id=REPO_ID,
+            filename=HF_LABEL_ENCODER_FILENAME,
         )
         with open(lb_path, "rb") as f:
             label_encoder = pickle.load(f)

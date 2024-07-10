@@ -4,6 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import logging
+from .const import HIDDEN_SIZE, DROPOUT_PROB, CONFIDENCE_THRESHOLD
 
 from .utils import (
     fetch_from_pephub,
@@ -13,19 +14,20 @@ from .utils import (
 )
 from .model import BoWSTModel
 from huggingface_hub import hf_hub_download
+from typing import Dict, List, Tuple, Any, Union
 
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def standardize_attr_names(csv_file, schema):
+def standardize_attr_names(csv_file: str, schema: str) -> Dict[str, Dict[str, float]]:
     """
     Standardize attribute names.
 
     :param str csv_file: Path to the CSV file containing metadata to be standardized.
     :param str schema: Schema type.
-    :return dict: Suggestions for standardized attribute names.
+    :return Dict[str, Dict[str, float]]: Suggestions for standardized attribute names.
     """
 
     X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
@@ -65,9 +67,9 @@ def standardize_attr_names(csv_file, schema):
     input_size_values = padded_data_values_tensor.shape[1]
     input_size_headers = padded_data_headers_tensor.shape[1]
     input_size_values_embeddings = padded_data_values_embeddings_tensor.shape[1]
-    hidden_size = 64
+    hidden_size = HIDDEN_SIZE
     output_size = len(label_encoder.classes_)
-    dropout_prob = 0.13
+    dropout_prob = DROPOUT_PROB
     model = BoWSTModel(
         input_size_values,
         input_size_values_embeddings,
@@ -98,7 +100,7 @@ def standardize_attr_names(csv_file, schema):
 
     suggestions = {}
     for i, category in enumerate(X_headers_st):
-        if all_confidences[i] >= 0.51:
+        if all_confidences[i] >= CONFIDENCE_THRESHOLD:
             prediction = decoded_predictions[i]
             probability = all_confidences[i]
         else:
@@ -109,7 +111,7 @@ def standardize_attr_names(csv_file, schema):
     return suggestions
 
 
-def attr_standardizer(pep, schema):
+def attr_standardizer(pep: str, schema: str) -> None:
     """
     :param str pep: Path to the PEPhub registry containing the metadata csv file.
     :param str schema: Schema Type chosen by the user.

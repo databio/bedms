@@ -3,7 +3,7 @@ import sys
 
 from setuptools import find_packages, setup
 
-PACKAGE_NAME = "bedmess"
+PACKAGE_NAME = "attribute_standardizer"
 
 # Ordinary dependencies
 DEPENDENCIES = []
@@ -42,7 +42,7 @@ setup(
     name=PACKAGE_NAME,
     packages=find_packages(),
     version=version,
-    description="BEDMess for metadata attribute standardization",
+    description="BEDMess attribute standardizer for metadata attribute standardization",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
@@ -57,7 +57,7 @@ setup(
     ],
     keywords="project, metadata, bioinformatics",
     url="https://github.com/databio/bedmess/",
-    author="",
+    author="Saanika Tambe",
     license="BSD2",
     include_package_data=True,
     # tests_require=(["pytest"]),

@@ -9,13 +9,13 @@ class BoWSTModel(nn.Module):
 
     def __init__(
         self,
-        input_size_values,
-        input_size_values_embeddings,
-        input_size_headers,
-        hidden_size,
-        output_size,
-        dropout_prob,
-    ):
+        input_size_values: int,
+        input_size_values_embeddings: int,
+        input_size_headers: int,
+        hidden_size: int,
+        output_size: int,
+        dropout_prob: float,
+    ) -> None:
         """
         Initializes the BoWSTModel.
 
@@ -45,7 +45,12 @@ class BoWSTModel(nn.Module):
         self.dropout_combined1 = nn.Dropout(dropout_prob)
         self.fc_combined2 = nn.Linear(hidden_size, output_size)
 
-    def forward(self, x_values, x_values_embeddings, x_headers):
+    def forward(
+        self,
+        x_values: torch.Tensor,
+        x_values_embeddings: torch.Tensor,
+        x_headers: torch.Tensor,
+    ) -> torch.Tensor:
         """
         Forward pass for the model.
 
