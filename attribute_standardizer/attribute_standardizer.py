@@ -4,57 +4,32 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import logging
-from pephubclient import PEPHubClient
-from .utils import data_preprocessing, data_encoding
+from .const import HIDDEN_SIZE, DROPOUT_PROB, CONFIDENCE_THRESHOLD
+
+from .utils import (
+    fetch_from_pephub,
+    load_from_huggingface,
+    data_preprocessing,
+    data_encoding,
+)
 from .model import BoWSTModel
 from huggingface_hub import hf_hub_download
+from typing import Dict, List, Tuple, Any, Union
 
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def fetch_from_pephub(pep: str) -> pd.DataFrame:
-    """
-    Fetches metadata from PEPhub registry.
-
-    :param str pep: Path to the PEPhub registry containing the metadata csv file
-    :return pd.DataFrame: path to the CSV file on the local system.
-    """
-    phc = PEPHubClient()
-    project = phc.load_project(pep)
-    sample_table = project.sample_table
-    csv_file_df = pd.DataFrame(sample_table)
-    return csv_file_df
-
-
-def load_from_huggingface(schema):
-    """
-    Load a model from HuggingFace based on the schema of choice.
-
-    
-    :param str schema: Schema Type
-    :return: Loaded model object
-    """
-    if schema == "ENCODE":
-        # TODO : Change this
-        model = hf_hub_download(
-            repo_id="databio/attribute-standardizer-model6", filename="model_encode.pth"
-        )
-    elif schema == "FAIRTRACKS":
-        model = None
-    return model
-
-
-def standardize_attr_names(csv_file, schema):
+def standardize_attr_names(csv_file: str, schema: str) -> Dict[str, Dict[str, float]]:
     """
     Standardize attribute names.
 
     :param str csv_file: Path to the CSV file containing metadata to be standardized.
     :param str schema: Schema type.
-    :return dict: Suggestions for standardized attribute names.
+    :return Dict[str, Dict[str, float]]: Suggestions for standardized attribute names.
     """
-    # X_values_st_tensor, X_values_bow_tensor, X_headers_st_tensor = data_preprocessing(csv_file)
+
     X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
     (
         X_headers_embeddings_tensor,
@@ -67,20 +42,18 @@ def standardize_attr_names(csv_file, schema):
     model = load_from_huggingface(schema)
     print(model)
     state_dict = torch.load(model)
-    # Padding the input tensors
-    # TODO remove the intermediary target_size_* variables, directly declare the padded variables.
-    target_size_values = state_dict["fc_values1.weight"].shape[1]
-    target_size_headers = state_dict["fc_headers1.weight"].shape[1]
-    target_size_values_embeddings = state_dict["fc_values_embeddings1.weight"].shape[1]
+
+    """Padding the input tensors."""
 
     padded_data_values_tensor = torch.zeros(
-        X_values_bow_tensor.shape[0], target_size_values
+        X_values_bow_tensor.shape[0], state_dict["fc_values1.weight"].shape[1]
     )
     padded_data_headers_tensor = torch.zeros(
-        X_headers_embeddings_tensor.shape[0], target_size_headers
+        X_headers_embeddings_tensor.shape[0], state_dict["fc_headers1.weight"].shape[1]
     )
     padded_data_values_embeddings_tensor = torch.zeros(
-        X_values_embeddings_tensor.shape[0], target_size_values_embeddings
+        X_values_embeddings_tensor.shape[0],
+        state_dict["fc_values_embeddings1.weight"].shape[1],
     )
 
     padded_data_values_tensor[:, : X_values_bow_tensor.shape[1]] = X_values_bow_tensor
@@ -94,9 +67,9 @@ def standardize_attr_names(csv_file, schema):
     input_size_values = padded_data_values_tensor.shape[1]
     input_size_headers = padded_data_headers_tensor.shape[1]
     input_size_values_embeddings = padded_data_values_embeddings_tensor.shape[1]
-    hidden_size = 64
+    hidden_size = HIDDEN_SIZE
     output_size = len(label_encoder.classes_)
-    dropout_prob = 0.13
+    dropout_prob = DROPOUT_PROB
     model = BoWSTModel(
         input_size_values,
         input_size_values_embeddings,
@@ -124,12 +97,10 @@ def standardize_attr_names(csv_file, schema):
         all_confidences.extend(confidence.tolist())
 
     decoded_predictions = label_encoder.inverse_transform(all_preds)
-    num_categories = len(X_headers_st)
-    num_predictions = len(decoded_predictions)
 
     suggestions = {}
     for i, category in enumerate(X_headers_st):
-        if all_confidences[i] >= 0.51:
+        if all_confidences[i] >= CONFIDENCE_THRESHOLD:
             prediction = decoded_predictions[i]
             probability = all_confidences[i]
         else:
@@ -140,12 +111,12 @@ def standardize_attr_names(csv_file, schema):
     return suggestions
 
 
-def attr_standardizer(pep, schema):
+def attr_standardizer(pep: str, schema: str) -> None:
     """
     :param str pep: Path to the PEPhub registry containing the metadata csv file.
-    :param str schema: Schema Type chosen by the user. 
+    :param str schema: Schema Type chosen by the user.
     """
     csv_file = fetch_from_pephub(pep)
     suggestions = standardize_attr_names(csv_file, schema)
-    
+
     print(suggestions)
