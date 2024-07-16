@@ -6,13 +6,22 @@ bedmess is a tool used to standardize genomics/epigenomics metadata based on a s
 Presently, bedmess only provides standardization according to the ENCODE schema.
 
 
-To standardize a PEP, add the PEPhub registry path to the `trial.py` file. 
+You can install the `attribute_standardizer` by:
 
+```
+pip install attribute-standardizer
 
-Assuming you are in the bedmess directory, you can modift `trial.py` as:
+```
+
+## Usage
+
+Using Python, this is how you can run `attribute_standardizer` :
+
 
 ```
 from attribute_standardizer.attribute_standardizer import attr_standardizer
 
 attr_standardizer(pep=/path/to/pep, schema="ENCODE")
 ```
+
+You can use the format provided in the `trial.py` script in this repository as a reference. 
