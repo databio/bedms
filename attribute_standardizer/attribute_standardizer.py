@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import logging
-from .const import HIDDEN_SIZE, DROPOUT_PROB, CONFIDENCE_THRESHOLD
+from .const import HIDDEN_SIZE, DROPOUT_PROB, CONFIDENCE_THRESHOLD, SENTENCE_TRANSFORMER_MODEL
 
 from .utils import (
     fetch_from_pephub,
@@ -36,11 +36,11 @@ def standardize_attr_names(csv_file: str, schema: str) -> Dict[str, Dict[str, fl
         X_values_embeddings_tensor,
         X_values_bow_tensor,
         label_encoder,
-    ) = data_encoding(X_values_st, X_headers_st, X_values_bow, schema)
+    ) = data_encoding(X_values_st, X_headers_st, X_values_bow, schema, model_name = SENTENCE_TRANSFORMER_MODEL)
     logger.info("Data Preprocessing completed.")
 
     model = load_from_huggingface(schema)
-    print(model)
+    #print(model)
     state_dict = torch.load(model)
 
     """Padding the input tensors."""
@@ -119,4 +119,4 @@ def attr_standardizer(pep: str, schema: str) -> None:
     csv_file = fetch_from_pephub(pep)
     suggestions = standardize_attr_names(csv_file, schema)
 
-    print(suggestions)
+    logger.info(suggestions)

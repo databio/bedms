@@ -91,6 +91,7 @@ def data_encoding(
     X_headers_st: List[str],
     X_values_bow: List[List[str]],
     schema: str,
+    model_name: str
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Union[LabelEncoder, None]]:
     """
     Encode input data in accordance with the user-specified schemas.
@@ -102,7 +103,6 @@ def data_encoding(
     :return Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Union[LabelEncoder, None]]: Tuple containing torch tensors for encoded embeddings and Bag of Words representations, and label encoder object.
     """
     # Sentence Transformer Model
-    model_name = SENTENCE_TRANSFORMER_MODEL
     sentence_encoder = SentenceTransformer(model_name)
     X_headers_embeddings = sentence_encoder.encode(
         X_headers_st, show_progress_bar=False
