@@ -12,8 +12,11 @@ from typing import Optional, Any, List, Tuple, Union
 from .const import (
     REPO_ID,
     FILENAME_ENCODE,
-    HF_LABEL_ENCODER_FILENAME,
-    HF_VECTORIZER_FILENAME,
+    FILENAME_FAIRTRACKS,
+    ENCODE_LABEL_ENCODER_FILENAME,
+    FAIRTRACKS_LABEL_ENCODER_FILENAME,
+    ENCODE_VECTORIZER_FILENAME,
+    FAIRTRACKS_VECTORIZER_FILENAME,
     SENTENCE_TRANSFORMER_MODEL,
 )
 
@@ -42,7 +45,7 @@ def load_from_huggingface(schema: str) -> Optional[Any]:
     if schema == "ENCODE":
         model = hf_hub_download(repo_id=REPO_ID, filename=FILENAME_ENCODE)
     elif schema == "FAIRTRACKS":
-        model = None
+        model = hf_hub_download(repo_id=REPO_ID, filename=FILENAME_FAIRTRACKS)
     return model
 
 
@@ -91,7 +94,7 @@ def data_encoding(
     X_headers_st: List[str],
     X_values_bow: List[List[str]],
     schema: str,
-    model_name: str
+    model_name: str,
 ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, Union[LabelEncoder, None]]:
     """
     Encode input data in accordance with the user-specified schemas.
@@ -119,7 +122,7 @@ def data_encoding(
         vectorizer = CountVectorizer()
         vc_path = hf_hub_download(
             repo_id=REPO_ID,
-            filename=HF_VECTORIZER_FILENAME,
+            filename=ENCODE_VECTORIZER_FILENAME,
         )
         with open(vc_path, "rb") as f:
             vectorizer = pickle.load(f)
@@ -135,13 +138,34 @@ def data_encoding(
         label_encoder = LabelEncoder()
         lb_path = hf_hub_download(
             repo_id=REPO_ID,
-            filename=HF_LABEL_ENCODER_FILENAME,
+            filename=ENCODE_LABEL_ENCODER_FILENAME,
         )
         with open(lb_path, "rb") as f:
             label_encoder = pickle.load(f)
 
     elif schema == "FAIRTRACKS":
-        raise NotImplementedError
+        vectorizer = CountVectorizer()
+        vc_path = hf_hub_download(
+            repo_id=REPO_ID, filename=FAIRTRACKS_VECTORIZER_FILENAME
+        )
+        with open(vc_path, "rb") as f:
+            vectorizer = pickle.load(f)
+        transformed_columns = []
+        for column in X_values_bow:
+            column_text = " ".join(column)
+            transformed_column = vectorizer.transform([column_text])
+            transformed_columns.append(transformed_column.toarray()[0])
+        transformed_columns = np.array(transformed_columns)
+        # print(transformed_columns)
+        X_values_bow = transformed_columns
+        # Label Encoding
+        label_encoder = LabelEncoder()
+        lb_path = hf_hub_download(
+            repo_id=REPO_ID,
+            filename=FAIRTRACKS_LABEL_ENCODER_FILENAME,
+        )
+        with open(lb_path, "rb") as f:
+            label_encoder = pickle.load(f)
 
     X_headers_embeddings_tensor = torch.tensor(
         X_headers_embeddings, dtype=torch.float32
