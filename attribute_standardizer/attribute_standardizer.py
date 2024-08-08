@@ -8,6 +8,7 @@ from .const import (
     HIDDEN_SIZE,
     DROPOUT_PROB,
     CONFIDENCE_THRESHOLD,
+    EMBEDDING_SIZE,
     SENTENCE_TRANSFORMER_MODEL,
 )
 
@@ -79,8 +80,8 @@ def standardize_attr_names(csv_file: str, schema: str) -> Dict[str, Dict[str, fl
         ] = X_values_embeddings_tensor
 
         input_size_values = padded_data_values_tensor.shape[1]
-        input_size_headers = padded_data_headers_tensor.shape[1]
-        input_size_values_embeddings = padded_data_values_embeddings_tensor.shape[1]
+        input_size_headers = EMBEDDING_SIZE
+        input_size_values_embeddings = EMBEDDING_SIZE
         hidden_size = HIDDEN_SIZE
         output_size = len(label_encoder.classes_)
         dropout_prob = DROPOUT_PROB
