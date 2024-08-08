@@ -1,5 +1,6 @@
 pandas
 numpy
 torch
-transformers
+sentence-transformers
 pephubclient
+
