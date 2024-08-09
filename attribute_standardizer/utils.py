@@ -11,13 +11,22 @@ from huggingface_hub import hf_hub_download
 from typing import Optional, Any, List, Tuple, Union
 from .const import (
     REPO_ID,
-    FILENAME_ENCODE,
-    FILENAME_FAIRTRACKS,
+    MODEL_ENCODE,
+    MODEL_FAIRTRACKS,
     ENCODE_LABEL_ENCODER_FILENAME,
     FAIRTRACKS_LABEL_ENCODER_FILENAME,
     ENCODE_VECTORIZER_FILENAME,
     FAIRTRACKS_VECTORIZER_FILENAME,
     SENTENCE_TRANSFORMER_MODEL,
+)
+import warnings
+
+
+# TODO : convert to single np array before converting to tensor
+warnings.filterwarnings(
+    "ignore",
+    category=UserWarning,
+    message="Creating a tensor from a list of numpy.ndarrays is extremely slow.",
 )
 
 
@@ -43,9 +52,9 @@ def load_from_huggingface(schema: str) -> Optional[Any]:
     :return Optional[Any]: Loaded model object
     """
     if schema == "ENCODE":
-        model = hf_hub_download(repo_id=REPO_ID, filename=FILENAME_ENCODE)
+        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_ENCODE)
     elif schema == "FAIRTRACKS":
-        model = hf_hub_download(repo_id=REPO_ID, filename=FILENAME_FAIRTRACKS)
+        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_FAIRTRACKS)
     return model
 
 

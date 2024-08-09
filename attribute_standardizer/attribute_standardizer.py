@@ -1,3 +1,5 @@
+# This script is not used anymore
+
 import pandas as pd
 import numpy as np
 import torch
@@ -145,4 +147,4 @@ def attr_standardizer(pep: str, schema: str) -> None:
     csv_file = fetch_from_pephub(pep)
     suggestions = standardize_attr_names(csv_file, schema)
 
-    logger.info(suggestions)
+    return suggestions

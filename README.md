@@ -16,13 +16,18 @@ pip install .
 
 ## Usage
 
-Using Python, this is how you can run `attribute_standardizer` :
+Using Python, this is how you can run `attribute_standardizer` and print the results :
 
 
 ```
-from attribute_standardizer.attribute_standardizer import attr_standardizer
+from attribute_standardizer.attr_standardizer_class import AttrStandardizer
 
-attr_standardizer(pep=/path/to/pep, schema="ENCODE")
+model = AttrStandardizer("ENCODE")
+
+results = model.standardize(pep ="geo/gse178283:default")
+
+print(results)
+
 ```
 
 You can use the format provided in the `trial.py` script in this repository as a reference. 
