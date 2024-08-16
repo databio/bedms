@@ -65,7 +65,7 @@ class AttrStandardizer:
                 DROPOUT_PROB,
             )
         else:
-            raise ValueError(f"Schema not available: {self.schema}")
+            raise ValueError(f"Schema not available: {self.schema}. Presently, two schemas are available: ENCODE , FAIRTRACKS")
 
     def _load_model(self) -> nn.Module:
         """
