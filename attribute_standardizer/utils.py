@@ -9,8 +9,10 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.cluster import KMeans
 from collections import Counter
 from huggingface_hub import hf_hub_download
-from sklearn.metrics import silhouette_score
 from typing import Optional, Any, List, Tuple, Union
+import warnings
+import peppy
+
 from .const import (
     REPO_ID,
     MODEL_ENCODE,
@@ -22,10 +24,8 @@ from .const import (
     FAIRTRACKS_VECTORIZER_FILENAME,
     BEDBASE_VECTORIZER_FILENAME,
     BEDBASE_LABEL_ENCODER_FILENAME,
-    SENTENCE_TRANSFORMER_MODEL,
     NUM_CLUSTERS,
 )
-import warnings
 
 
 # TODO : convert to single np array before converting to tensor
@@ -255,3 +255,21 @@ def data_encoding(
         X_values_bow_tensor,
         label_encoder,
     )
+
+
+def get_any_pep(pep: str) -> peppy.Project:
+    """
+    Get the PEP file from the local system or from PEPhub.
+
+    :param pep: Path to the PEP file or PEPhub registry path.
+
+    :return: peppy.Project object.
+    """
+
+    PEP_FILE_TYPES = ["yaml", "csv"]
+
+    res = list(filter(pep.endswith, PEP_FILE_TYPES)) != []
+    if res:
+        return peppy.Project(pep)
+    else:
+        return peppy.Project.from_pephub(pep)

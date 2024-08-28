@@ -1,12 +1,19 @@
-# TODO take the pep object as input, add a function for that and then add the present fetch_from_pep as the wrapper
-# TODO use the peppy constructor to take the Peppy.Project object -   prj = peppy.Project(pep)
-
-import pandas as pd
-import numpy as np
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
+import torch.nn.functional as torch_functional
 import logging
+import peppy
+
+from typing import Dict, Tuple, Union
+
+from .model import BoWSTModel
+from .utils import (
+    fetch_from_pephub,
+    load_from_huggingface,
+    data_preprocessing,
+    data_encoding,
+    get_any_pep,
+)
 from .const import (
     HIDDEN_SIZE,
     DROPOUT_PROB,
@@ -21,33 +28,25 @@ from .const import (
     OUTPUT_SIZE_BEDBASE,
 )
 
-from .utils import (
-    fetch_from_pephub,
-    load_from_huggingface,
-    data_preprocessing,
-    data_encoding,
-)
-from .model import BoWSTModel
-from huggingface_hub import hf_hub_download
-from typing import Dict, List, Tuple, Any, Union
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
 class AttrStandardizer:
-    def __init__(self, schema: str) -> None:
+    def __init__(self, schema: str, confidence: int = CONFIDENCE_THRESHOLD) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
 
         :param str schema: User provided schema, can be "ENCODE" or "FAIRTRACKS"
+        :param int confidence: Confidence threshold for the predictions.
         """
         self.schema = schema
         self.model = self._load_model()
+        self.conf_threshold = confidence
 
     def _get_parameters(self) -> Tuple[int, int, int, int, int, float]:
         """
-        Gets the model parameters as per the chosen schema.
+        Get the model parameters as per the chosen schema.
 
         :return Tuple[int, int, int, int, int, int, float]: Tuple containing the model parameters.
         """
@@ -118,16 +117,22 @@ class AttrStandardizer:
             logger.error(f"Error loading the model: {str(e)}")
             raise
 
-    def standardize(self, pep: str) -> Dict[str, Dict[str, float]]:
+    def standardize(
+        self, pep: Union[str, peppy.Project]
+    ) -> Dict[str, Dict[str, float]]:
         """
         Fetches the user provided PEP from the PEPHub registry path, returns the predictions.
 
-        :param str pep: User provided path to the PEP.
+        :param str pep: peppy.Project object or PEPHub registry path to PEP.
         :return Dict[str, Dict[str, float]]: Suggestions to the user.
         """
-        if not pep:
+        if isinstance(pep, str):
+            pep = get_any_pep(pep)
+        elif isinstance(pep, peppy.Project):
+            pass
+        else:
             raise ValueError(
-                "PEP path is missing or empty. Please provide the PEPHub registry path to PEP"
+                f"PEP should be either a path to PEPHub registry or peppy.Project object."
             )
         try:
             csv_file = fetch_from_pephub(pep)
@@ -153,7 +158,7 @@ class AttrStandardizer:
                     X_values_embeddings_tensor,
                     X_headers_embeddings_tensor,
                 )
-                probabilities = F.softmax(outputs, dim=1)
+                probabilities = torch_functional.softmax(outputs, dim=1)
                 # confidence, predicted = torch.max(probabilities, 1)
 
                 values, indices = torch.topk(probabilities, k=3, dim=1)
@@ -167,11 +172,11 @@ class AttrStandardizer:
                 suggestions = {}
             for i, category in enumerate(X_headers_st):
                 category_suggestions = {}
-                if top_confidences[i][0] >= CONFIDENCE_THRESHOLD:
+                if top_confidences[i][0] >= self.conf_threshold:
                     for j in range(3):
                         prediction = decoded_predictions[i][j]
                         probability = top_confidences[i][j]
-                        if probability >= CONFIDENCE_THRESHOLD:
+                        if probability >= self.conf_threshold:
                             category_suggestions[prediction] = probability
                         else:
                             break

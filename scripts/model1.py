@@ -29,7 +29,8 @@ logger = logging.getLogger(__name__)
 
 
 class NN1(nn.Module):
-    """ Simple Neural Network with a single Hidden Layer."""
+    """Simple Neural Network with a single Hidden Layer."""
+
     def __init__(self, input_size, hidden_size, output_size):
         """
         Initializes the NN1 model.
@@ -45,7 +46,7 @@ class NN1(nn.Module):
 
     def forward(self, x):
         """
-        Defines the forward pass of the neural network. 
+        Defines the forward pass of the neural network.
 
         :param torch.Tensor x: Input tensor.
         :return torch.Tensor: Output tensor after passing through the network.
@@ -86,14 +87,14 @@ def data_split(df_values):
         df_values_temp, test_size=0.5, random_state=42
     )
 
-    #Snippet for testing on unseen data 
+    # Snippet for testing on unseen data
     """
     df_values_test = pd.read_csv(
         "/home/saanika/curation/scripts/bedmess_archive/data/encode_metadata_values_moderate.csv",
         sep=",",
     )
     """
-    #Comment out the above for training on seen data. 
+    # Comment out the above for training on seen data.
 
     X_values_train = [
         df_values_train[column].astype(str).tolist()
@@ -135,9 +136,9 @@ def data_split(df_values):
 
 def encoding(X_values_train, X_values_test, X_values_val, y_train, y_test, y_val):
     """
-    Encodes the values for the model. 
+    Encodes the values for the model.
 
-    :param list X_values_train: Training features. 
+    :param list X_values_train: Training features.
     :param list X_values_test: Testing features.
     :param list X_values_val: Validation features.
     :param list y_train: Training labels.
