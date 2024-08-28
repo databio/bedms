@@ -1,3 +1,6 @@
+# TODO take the pep object as input, add a function for that and then add the present fetch_from_pep as the wrapper
+# TODO use the peppy constructor to take the Peppy.Project object -   prj = peppy.Project(pep)
+
 import pandas as pd
 import numpy as np
 import torch
@@ -14,6 +17,8 @@ from .const import (
     INPUT_SIZE_BOW_ENCODE,
     OUTPUT_SIZE_ENCODE,
     OUTPUT_SIZE_FAIRTRACKS,
+    INPUT_SIZE_BOW_BEDBASE,
+    OUTPUT_SIZE_BEDBASE,
 )
 
 from .utils import (
@@ -64,8 +69,19 @@ class AttrStandardizer:
                 OUTPUT_SIZE_FAIRTRACKS,
                 DROPOUT_PROB,
             )
+        elif self.schema == "BEDBASE":
+            return (
+                INPUT_SIZE_BOW_BEDBASE,
+                EMBEDDING_SIZE,
+                EMBEDDING_SIZE,
+                HIDDEN_SIZE,
+                OUTPUT_SIZE_BEDBASE,
+                DROPOUT_PROB,
+            )
         else:
-            raise ValueError(f"Schema not available: {self.schema}. Presently, two schemas are available: ENCODE , FAIRTRACKS")
+            raise ValueError(
+                f"Schema not available: {self.schema}. Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
+            )
 
     def _load_model(self) -> nn.Module:
         """

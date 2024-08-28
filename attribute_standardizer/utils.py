@@ -6,18 +6,24 @@ from sentence_transformers import SentenceTransformer
 import pickle
 from sklearn.preprocessing import LabelEncoder
 from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.cluster import KMeans
 from collections import Counter
 from huggingface_hub import hf_hub_download
+from sklearn.metrics import silhouette_score
 from typing import Optional, Any, List, Tuple, Union
 from .const import (
     REPO_ID,
     MODEL_ENCODE,
     MODEL_FAIRTRACKS,
+    MODEL_BEDBASE,
     ENCODE_LABEL_ENCODER_FILENAME,
     FAIRTRACKS_LABEL_ENCODER_FILENAME,
     ENCODE_VECTORIZER_FILENAME,
     FAIRTRACKS_VECTORIZER_FILENAME,
+    BEDBASE_VECTORIZER_FILENAME,
+    BEDBASE_LABEL_ENCODER_FILENAME,
     SENTENCE_TRANSFORMER_MODEL,
+    NUM_CLUSTERS,
 )
 import warnings
 
@@ -28,6 +34,11 @@ warnings.filterwarnings(
     category=UserWarning,
     message="Creating a tensor from a list of numpy.ndarrays is extremely slow.",
 )
+
+
+def fetch_pep(pep):
+    # input of python object of peppy.Project and output of csv_fle_df
+    raise NotImplementedError
 
 
 def fetch_from_pephub(pep: str) -> pd.DataFrame:
@@ -55,6 +66,8 @@ def load_from_huggingface(schema: str) -> Optional[Any]:
         model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_ENCODE)
     elif schema == "FAIRTRACKS":
         model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_FAIRTRACKS)
+    elif schema == "BEDBASE":
+        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_BEDBASE)
     return model
 
 
@@ -98,6 +111,35 @@ def get_top_k_average(val_embedding: List[np.ndarray], k: int) -> np.ndarray:
     return column_embedding_mean.numpy()
 
 
+def get_top_cluster_averaged(embeddings: List[np.ndarray]) -> np.ndarray:
+    """
+    Calculates the average of the largest embedding cluster.
+
+    :param list embeddings: List of embeddings, each embedding is a vector of values.
+    :return np.ndarray: The mean of the largest cluster as a NumPy array.
+    """
+    flattened_embeddings = [embedding.tolist() for embedding in embeddings]
+    kmeans = KMeans(n_clusters=NUM_CLUSTERS, random_state=0).fit(flattened_embeddings)
+    labels_kmeans = kmeans.labels_
+    cluster_counts = Counter(labels_kmeans)
+    most_common_cluster = max(cluster_counts, key=cluster_counts.get)
+    most_common_indices = [
+        idx for idx, label in enumerate(labels_kmeans) if label == most_common_cluster
+    ]
+    most_common_embeddings = [
+        torch.tensor(embeddings[idx]) for idx in most_common_indices
+    ]
+
+    if most_common_embeddings:
+        top_k_average = torch.mean(
+            torch.stack(most_common_embeddings), dim=0
+        ).unsqueeze(0)
+    else:
+        top_k_average = torch.zeros_like(most_common_embeddings[0]).unsqueeze(0)
+
+    return top_k_average.numpy()
+
+
 def data_encoding(
     X_values_st: List[List[str]],
     X_headers_st: List[str],
@@ -123,7 +165,7 @@ def data_encoding(
     embeddings = []
     for column in X_values_st:
         val_embedding = sentence_encoder.encode(column, show_progress_bar=False)
-        embedding = get_top_k_average(val_embedding, k=3)
+        embedding = get_top_cluster_averaged(val_embedding)
         embeddings.append(embedding)
     X_values_embeddings = embeddings
     if schema == "ENCODE":
@@ -176,11 +218,36 @@ def data_encoding(
         with open(lb_path, "rb") as f:
             label_encoder = pickle.load(f)
 
+    elif schema == "BEDBASE":
+        vectorizer = CountVectorizer()
+        vc_path = hf_hub_download(repo_id=REPO_ID, filename=BEDBASE_VECTORIZER_FILENAME)
+        with open(vc_path, "rb") as f:
+            vectorizer = pickle.load(f)
+        transformed_columns = []
+        for column in X_values_bow:
+            column_text = " ".join(column)
+            transformed_column = vectorizer.transform([column_text])
+            transformed_columns.append(transformed_column.toarray()[0])
+        transformed_columns = np.array(transformed_columns)
+        # print(transformed_columns)
+        X_values_bow = transformed_columns
+        # Label Encoding
+        label_encoder = LabelEncoder()
+        lb_path = hf_hub_download(
+            repo_id=REPO_ID,
+            filename=BEDBASE_LABEL_ENCODER_FILENAME,
+        )
+        with open(lb_path, "rb") as f:
+            label_encoder = pickle.load(f)
+
     X_headers_embeddings_tensor = torch.tensor(
         X_headers_embeddings, dtype=torch.float32
     )
     X_values_embeddings_tensor = torch.tensor(X_values_embeddings, dtype=torch.float32)
     X_values_bow_tensor = torch.tensor(X_values_bow, dtype=torch.float32)
+    X_values_embeddings_tensor = X_values_embeddings_tensor.squeeze(
+        1
+    )  # brings the shape to [num_cols, vocab]
 
     return (
         X_headers_embeddings_tensor,
