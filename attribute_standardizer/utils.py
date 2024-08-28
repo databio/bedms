@@ -1,32 +1,32 @@
-import pandas as pd
+import pickle
+import warnings
+from collections import Counter
+from typing import Any, List, Optional, Tuple, Union
+
 import numpy as np
+import pandas as pd
+import peppy
 import torch
+from huggingface_hub import hf_hub_download
 from pephubclient import PEPHubClient
 from sentence_transformers import SentenceTransformer
-import pickle
-from sklearn.preprocessing import LabelEncoder
-from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.cluster import KMeans
-from collections import Counter
-from huggingface_hub import hf_hub_download
-from typing import Optional, Any, List, Tuple, Union
-import warnings
-import peppy
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.preprocessing import LabelEncoder
 
 from .const import (
-    REPO_ID,
+    BEDBASE_LABEL_ENCODER_FILENAME,
+    BEDBASE_VECTORIZER_FILENAME,
+    ENCODE_LABEL_ENCODER_FILENAME,
+    ENCODE_VECTORIZER_FILENAME,
+    FAIRTRACKS_LABEL_ENCODER_FILENAME,
+    FAIRTRACKS_VECTORIZER_FILENAME,
+    MODEL_BEDBASE,
     MODEL_ENCODE,
     MODEL_FAIRTRACKS,
-    MODEL_BEDBASE,
-    ENCODE_LABEL_ENCODER_FILENAME,
-    FAIRTRACKS_LABEL_ENCODER_FILENAME,
-    ENCODE_VECTORIZER_FILENAME,
-    FAIRTRACKS_VECTORIZER_FILENAME,
-    BEDBASE_VECTORIZER_FILENAME,
-    BEDBASE_LABEL_ENCODER_FILENAME,
     NUM_CLUSTERS,
+    REPO_ID,
 )
-
 
 # TODO : convert to single np array before converting to tensor
 warnings.filterwarnings(
@@ -36,20 +36,14 @@ warnings.filterwarnings(
 )
 
 
-def fetch_pep(pep):
-    # input of python object of peppy.Project and output of csv_fle_df
-    raise NotImplementedError
-
-
-def fetch_from_pephub(pep: str) -> pd.DataFrame:
+def fetch_from_pephub(project: peppy.Project) -> pd.DataFrame:
     """
     Fetches metadata from PEPhub registry.
 
     :param str pep: Path to the PEPhub registry containing the metadata csv file
     :return pd.DataFrame: path to the CSV file on the local system.
     """
-    phc = PEPHubClient()
-    project = phc.load_project(pep)
+
     sample_table = project.sample_table
     csv_file_df = pd.DataFrame(sample_table)
     return csv_file_df

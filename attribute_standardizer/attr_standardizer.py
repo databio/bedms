@@ -1,35 +1,36 @@
+import logging
+from typing import Dict, Tuple, Union
+
+import peppy
 import torch
 import torch.nn as nn
 import torch.nn.functional as torch_functional
-import logging
-import peppy
 
-from typing import Dict, Tuple, Union
-
-from .model import BoWSTModel
-from .utils import (
-    fetch_from_pephub,
-    load_from_huggingface,
-    data_preprocessing,
-    data_encoding,
-    get_any_pep,
-)
 from .const import (
-    HIDDEN_SIZE,
-    DROPOUT_PROB,
     CONFIDENCE_THRESHOLD,
+    DROPOUT_PROB,
     EMBEDDING_SIZE,
-    SENTENCE_TRANSFORMER_MODEL,
-    INPUT_SIZE_BOW_FAIRTRACKS,
+    HIDDEN_SIZE,
+    INPUT_SIZE_BOW_BEDBASE,
     INPUT_SIZE_BOW_ENCODE,
+    INPUT_SIZE_BOW_FAIRTRACKS,
+    OUTPUT_SIZE_BEDBASE,
     OUTPUT_SIZE_ENCODE,
     OUTPUT_SIZE_FAIRTRACKS,
-    INPUT_SIZE_BOW_BEDBASE,
-    OUTPUT_SIZE_BEDBASE,
+    SENTENCE_TRANSFORMER_MODEL,
+    PROJECT_NAME,
+)
+from .model import BoWSTModel
+from .utils import (
+    data_encoding,
+    data_preprocessing,
+    fetch_from_pephub,
+    get_any_pep,
+    load_from_huggingface,
 )
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(PROJECT_NAME)
 
 
 class AttrStandardizer:
@@ -132,11 +133,11 @@ class AttrStandardizer:
             pass
         else:
             raise ValueError(
-                f"PEP should be either a path to PEPHub registry or peppy.Project object."
+                "PEP should be either a path to PEPHub registry or peppy.Project object."
             )
         try:
             csv_file = fetch_from_pephub(pep)
-            schema = self.schema
+
             X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
             (
                 X_headers_embeddings_tensor,
@@ -147,9 +148,10 @@ class AttrStandardizer:
                 X_values_st,
                 X_headers_st,
                 X_values_bow,
-                schema,
+                self.schema,
                 model_name=SENTENCE_TRANSFORMER_MODEL,
             )
+
             logger.info("Data Preprocessing completed.")
 
             with torch.no_grad():
@@ -159,7 +161,6 @@ class AttrStandardizer:
                     X_headers_embeddings_tensor,
                 )
                 probabilities = torch_functional.softmax(outputs, dim=1)
-                # confidence, predicted = torch.max(probabilities, 1)
 
                 values, indices = torch.topk(probabilities, k=3, dim=1)
                 top_preds = indices.tolist()
