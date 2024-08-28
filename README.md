@@ -1,6 +1,6 @@
 # bedmess
 
-bedmess is a tool used to standardize genomics/epigenomics metadata based on a schema chosen by the user ( eg. ENCODE, FAIRTRACKS).
+bedmess is a tool used to standardize genomics/epigenomics metadata based on a schema chosen by the user ( eg. ENCODE, FAIRTRACKS, BEDBASE).
 
 
 To install `attribute-standardizer` , you need to clone this repository first. Follow the steps given below to install:
