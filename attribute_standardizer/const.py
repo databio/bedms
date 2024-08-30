@@ -1,3 +1,5 @@
+PROJECT_NAME = "bedmess"
+
 REPO_ID = "databio/attribute-standardizer-model6"
 MODEL_ENCODE = "model_encode.pth"
 MODEL_FAIRTRACKS = "model_fairtracks.pth"

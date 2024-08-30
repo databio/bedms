@@ -1,3 +1,1 @@
-# from .attribute_standardizer import attr_standardizer
-
-from .attr_standardizer_class import AttrStandardizer
+from .attr_standardizer import AttrStandardizer

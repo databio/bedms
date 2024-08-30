@@ -2,5 +2,5 @@ pandas
 numpy
 torch
 sentence-transformers
-pephubclient
-
+pephubclient>=0.4.2
+peppy>=0.40.5
