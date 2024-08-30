@@ -20,9 +20,10 @@ Using Python, this is how you can run `attribute_standardizer` and print the res
 
 
 ```
-from attribute_standardizer.attr_standardizer_class import AttrStandardizer
+from attribute_standardizer import AttrStandardizer
 
 model = AttrStandardizer("ENCODE")
+model = AttrStandardizer("FAIRTRACKS")
 
 results = model.standardize(pep ="geo/gse178283:default")
 

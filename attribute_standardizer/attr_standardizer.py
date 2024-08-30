@@ -1,53 +1,53 @@
-# TODO take the pep object as input, add a function for that and then add the present fetch_from_pep as the wrapper
-# TODO use the peppy constructor to take the Peppy.Project object -   prj = peppy.Project(pep)
+import logging
+from typing import Dict, Tuple, Union
 
-import pandas as pd
-import numpy as np
+import peppy
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
-import logging
+import torch.nn.functional as torch_functional
+
 from .const import (
-    HIDDEN_SIZE,
-    DROPOUT_PROB,
     CONFIDENCE_THRESHOLD,
+    DROPOUT_PROB,
     EMBEDDING_SIZE,
-    SENTENCE_TRANSFORMER_MODEL,
-    INPUT_SIZE_BOW_FAIRTRACKS,
+    HIDDEN_SIZE,
+    INPUT_SIZE_BOW_BEDBASE,
     INPUT_SIZE_BOW_ENCODE,
+    INPUT_SIZE_BOW_FAIRTRACKS,
+    OUTPUT_SIZE_BEDBASE,
     OUTPUT_SIZE_ENCODE,
     OUTPUT_SIZE_FAIRTRACKS,
-    INPUT_SIZE_BOW_BEDBASE,
-    OUTPUT_SIZE_BEDBASE,
-)
-
-from .utils import (
-    fetch_from_pephub,
-    load_from_huggingface,
-    data_preprocessing,
-    data_encoding,
+    SENTENCE_TRANSFORMER_MODEL,
+    PROJECT_NAME,
 )
 from .model import BoWSTModel
-from huggingface_hub import hf_hub_download
-from typing import Dict, List, Tuple, Any, Union
+from .utils import (
+    data_encoding,
+    data_preprocessing,
+    fetch_from_pephub,
+    get_any_pep,
+    load_from_huggingface,
+)
 
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(PROJECT_NAME)
 
 
 class AttrStandardizer:
-    def __init__(self, schema: str) -> None:
+    def __init__(self, schema: str, confidence: int = CONFIDENCE_THRESHOLD) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
 
         :param str schema: User provided schema, can be "ENCODE" or "FAIRTRACKS"
+        :param int confidence: Confidence threshold for the predictions.
         """
         self.schema = schema
         self.model = self._load_model()
+        self.conf_threshold = confidence
 
     def _get_parameters(self) -> Tuple[int, int, int, int, int, float]:
         """
-        Gets the model parameters as per the chosen schema.
+        Get the model parameters as per the chosen schema.
 
         :return Tuple[int, int, int, int, int, int, float]: Tuple containing the model parameters.
         """
@@ -118,20 +118,26 @@ class AttrStandardizer:
             logger.error(f"Error loading the model: {str(e)}")
             raise
 
-    def standardize(self, pep: str) -> Dict[str, Dict[str, float]]:
+    def standardize(
+        self, pep: Union[str, peppy.Project]
+    ) -> Dict[str, Dict[str, float]]:
         """
         Fetches the user provided PEP from the PEPHub registry path, returns the predictions.
 
-        :param str pep: User provided path to the PEP.
+        :param str pep: peppy.Project object or PEPHub registry path to PEP.
         :return Dict[str, Dict[str, float]]: Suggestions to the user.
         """
-        if not pep:
+        if isinstance(pep, str):
+            pep = get_any_pep(pep)
+        elif isinstance(pep, peppy.Project):
+            pass
+        else:
             raise ValueError(
-                "PEP path is missing or empty. Please provide the PEPHub registry path to PEP"
+                "PEP should be either a path to PEPHub registry or peppy.Project object."
             )
         try:
             csv_file = fetch_from_pephub(pep)
-            schema = self.schema
+
             X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
             (
                 X_headers_embeddings_tensor,
@@ -142,9 +148,10 @@ class AttrStandardizer:
                 X_values_st,
                 X_headers_st,
                 X_values_bow,
-                schema,
+                self.schema,
                 model_name=SENTENCE_TRANSFORMER_MODEL,
             )
+
             logger.info("Data Preprocessing completed.")
 
             with torch.no_grad():
@@ -153,8 +160,7 @@ class AttrStandardizer:
                     X_values_embeddings_tensor,
                     X_headers_embeddings_tensor,
                 )
-                probabilities = F.softmax(outputs, dim=1)
-                # confidence, predicted = torch.max(probabilities, 1)
+                probabilities = torch_functional.softmax(outputs, dim=1)
 
                 values, indices = torch.topk(probabilities, k=3, dim=1)
                 top_preds = indices.tolist()
@@ -167,11 +173,11 @@ class AttrStandardizer:
                 suggestions = {}
             for i, category in enumerate(X_headers_st):
                 category_suggestions = {}
-                if top_confidences[i][0] >= CONFIDENCE_THRESHOLD:
+                if top_confidences[i][0] >= self.conf_threshold:
                     for j in range(3):
                         prediction = decoded_predictions[i][j]
                         probability = top_confidences[i][j]
-                        if probability >= CONFIDENCE_THRESHOLD:
+                        if probability >= self.conf_threshold:
                             category_suggestions[prediction] = probability
                         else:
                             break
