@@ -1,7 +1,7 @@
 from attribute_standardizer.attr_standardizer_class import AttrStandardizer
 
-model = AttrStandardizer("ENCODE")
+model = AttrStandardizer("BEDBASE")
 
-results = model.standardize(pep ="geo/gse178283:default")
+results = model.standardize(pep ="geo/gse228815:default")
 
 print(results)
