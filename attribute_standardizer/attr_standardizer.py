@@ -195,12 +195,12 @@ class AttrStandardizer:
             logger.error(
                 f"Error occured during standardization in standardize function: {str(e)}"
             )
-    @staticmethod
-    def show_available_schemas()-> list[str]:
-        """
-        Stores a list of available schemas. 
-        :return list: List of available schemas. 
-        """
-        schemas = ['ENCODE', 'FAIRTRACKS', 'BEDBASE']
-        return schemas
 
+    @staticmethod
+    def show_available_schemas() -> list[str]:
+        """
+        Stores a list of available schemas.
+        :return list: List of available schemas.
+        """
+        schemas = ["ENCODE", "FAIRTRACKS", "BEDBASE"]
+        return schemas

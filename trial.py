@@ -6,7 +6,7 @@ schemas = model.show_available_schemas()
 
 print(schemas)
 
-#results = model.standardize(pep="geo/gse178283:default")
-results = model.standardize(pep="geo/gse228634:default") 
+# results = model.standardize(pep="geo/gse178283:default")
+results = model.standardize(pep="geo/gse228634:default")
 
 print(results)
