@@ -67,7 +67,7 @@ def load_from_huggingface(schema: str) -> Optional[Any]:
 
 def data_preprocessing(
     df: pd.DataFrame,
-) -> Tuple[List[List[str]], List[str], List[List[str]]]:
+) -> Tuple[List[List[str]], List[str], List[List[str]], int]:
     """
     Preprocessing the DataFrame by extracting the column values and headers.
 
@@ -76,13 +76,16 @@ def data_preprocessing(
         - Nested list containing the comma separated values in each column for sentence transformer embeddings.
         - List containing the headers of the DataFrame.
         - Nested list containing the comma separated values in each column for Bag of Words encoding.
+        - Number of rows in the metadata csv
     """
 
     X_values_st = [df[column].astype(str).tolist() for column in df.columns]
     X_headers_st = df.columns.tolist()
     X_values_bow = [df[column].astype(str).tolist() for column in df.columns]
 
-    return X_values_st, X_headers_st, X_values_bow
+    num_rows = df.shape[0]
+
+    return X_values_st, X_headers_st, X_values_bow, num_rows
 
 
 def get_top_k_average(val_embedding: List[np.ndarray], k: int) -> np.ndarray:
@@ -134,7 +137,21 @@ def get_top_cluster_averaged(embeddings: List[np.ndarray]) -> np.ndarray:
     return top_k_average.numpy()
 
 
+def get_averaged(embeddings: List[np.ndarray]) -> np.ndarray:
+    """
+    Averages the embeddings.
+    :param list embeddings: List of embeddings, each embedding is a vector of values.
+    :return np.ndarray: The mean of all the embeddings as a NumPy array.
+    """
+    flattened_embeddings = [embedding.tolist() for embedding in embeddings]
+    flattened_embeddings_array = np.array(flattened_embeddings)
+    averaged_embedding = np.mean(flattened_embeddings_array, axis=0)
+
+    return averaged_embedding
+
+
 def data_encoding(
+    num_rows: int,
     X_values_st: List[List[str]],
     X_headers_st: List[str],
     X_values_bow: List[List[str]],
@@ -144,6 +161,7 @@ def data_encoding(
     """
     Encode input data in accordance with the user-specified schemas.
 
+    :param int num_rows: Number of rows in the sample metadata
     :param list X_values_st: Nested list containing the comma separated values in each column for sentence transformer embeddings.
     :param list X_headers_st: List containing the headers of the DataFrame.
     :param list X_values_bow: Nested list containing the comma separated values in each column for Bag of Words encoding.
@@ -159,7 +177,11 @@ def data_encoding(
     embeddings = []
     for column in X_values_st:
         val_embedding = sentence_encoder.encode(column, show_progress_bar=False)
-        embedding = get_top_cluster_averaged(val_embedding)
+        if num_rows >= 10:
+            embedding = get_top_cluster_averaged(val_embedding)
+        else:
+            embedding = get_averaged(val_embedding)
+
         embeddings.append(embedding)
     X_values_embeddings = embeddings
     if schema == "ENCODE":

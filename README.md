@@ -31,4 +31,13 @@ print(results)
 
 ```
 
+To see the available schemas, you can run:
+```
+schemas = model.show_available_schemas()
+
+print(schemas)
+```
+
+This will print the available schemas as a list. 
+
 You can use the format provided in the `trial.py` script in this repository as a reference. 

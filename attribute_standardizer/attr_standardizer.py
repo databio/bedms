@@ -138,13 +138,16 @@ class AttrStandardizer:
         try:
             csv_file = fetch_from_pephub(pep)
 
-            X_values_st, X_headers_st, X_values_bow = data_preprocessing(csv_file)
+            X_values_st, X_headers_st, X_values_bow, num_rows = data_preprocessing(
+                csv_file
+            )
             (
                 X_headers_embeddings_tensor,
                 X_values_embeddings_tensor,
                 X_values_bow_tensor,
                 label_encoder,
             ) = data_encoding(
+                num_rows,
                 X_values_st,
                 X_headers_st,
                 X_values_bow,
@@ -192,3 +195,12 @@ class AttrStandardizer:
             logger.error(
                 f"Error occured during standardization in standardize function: {str(e)}"
             )
+    @staticmethod
+    def show_available_schemas()-> list[str]:
+        """
+        Stores a list of available schemas. 
+        :return list: List of available schemas. 
+        """
+        schemas = ['ENCODE', 'FAIRTRACKS', 'BEDBASE']
+        return schemas
+
