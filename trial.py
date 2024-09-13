@@ -1,3 +1,12 @@
-from attribute_standardizer.attribute_standardizer import attr_standardizer
+from attribute_standardizer.attr_standardizer import AttrStandardizer
 
-attr_standardizer(pep="geo/gse178283:default", schema="ENCODE")
+model = AttrStandardizer("ENCODE")
+
+schemas = model.get_available_schemas()
+
+print(schemas)
+
+# results = model.standardize(pep="geo/gse178283:default")
+results = model.standardize(pep="geo/gse228634:default")
+
+print(results)
