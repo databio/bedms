@@ -186,7 +186,7 @@ def data_encoding(
     X_values_embeddings = embeddings
     if schema == "ENCODE":
         # Bag of Words Vectorizer
-        vectorizer = CountVectorizer()
+        vectorizer = None
         vc_path = hf_hub_download(
             repo_id=REPO_ID,
             filename=ENCODE_VECTORIZER_FILENAME,
@@ -202,7 +202,7 @@ def data_encoding(
         # print(transformed_columns)
         X_values_bow = transformed_columns
         # Label Encoding
-        label_encoder = LabelEncoder()
+        label_encoder =None
         lb_path = hf_hub_download(
             repo_id=REPO_ID,
             filename=ENCODE_LABEL_ENCODER_FILENAME,
@@ -211,7 +211,7 @@ def data_encoding(
             label_encoder = pickle.load(f)
 
     elif schema == "FAIRTRACKS":
-        vectorizer = CountVectorizer()
+        vectorizer = None
         vc_path = hf_hub_download(
             repo_id=REPO_ID, filename=FAIRTRACKS_VECTORIZER_FILENAME
         )
@@ -226,7 +226,7 @@ def data_encoding(
         # print(transformed_columns)
         X_values_bow = transformed_columns
         # Label Encoding
-        label_encoder = LabelEncoder()
+        label_encoder = None
         lb_path = hf_hub_download(
             repo_id=REPO_ID,
             filename=FAIRTRACKS_LABEL_ENCODER_FILENAME,
@@ -235,7 +235,7 @@ def data_encoding(
             label_encoder = pickle.load(f)
 
     elif schema == "BEDBASE":
-        vectorizer = CountVectorizer()
+        vectorizer = None
         vc_path = hf_hub_download(repo_id=REPO_ID, filename=BEDBASE_VECTORIZER_FILENAME)
         with open(vc_path, "rb") as f:
             vectorizer = pickle.load(f)
@@ -248,7 +248,7 @@ def data_encoding(
         # print(transformed_columns)
         X_values_bow = transformed_columns
         # Label Encoding
-        label_encoder = LabelEncoder()
+        label_encoder = None
         lb_path = hf_hub_download(
             repo_id=REPO_ID,
             filename=BEDBASE_LABEL_ENCODER_FILENAME,
