@@ -1,4 +1,4 @@
-from attribute_standardizer.attr_standardizer import AttrStandardizer
+from bedms import AttrStandardizer
 
 model = AttrStandardizer("ENCODE")
 
