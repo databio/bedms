@@ -1,5 +1,7 @@
 PROJECT_NAME = "bedmess"
 
+AVAILABLE_SCHEMAS = ["ENCODE", "FAIRTRACKS", "BEDBASE"]
+
 REPO_ID = "databio/attribute-standardizer-model6"
 MODEL_ENCODE = "model_encode.pth"
 MODEL_FAIRTRACKS = "model_fairtracks.pth"

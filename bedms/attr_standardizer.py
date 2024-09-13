@@ -7,6 +7,7 @@ import torch.nn as nn
 import torch.nn.functional as torch_functional
 
 from .const import (
+    AVAILABLE_SCHEMAS,
     CONFIDENCE_THRESHOLD,
     DROPOUT_PROB,
     EMBEDDING_SIZE,
@@ -17,8 +18,8 @@ from .const import (
     OUTPUT_SIZE_BEDBASE,
     OUTPUT_SIZE_ENCODE,
     OUTPUT_SIZE_FAIRTRACKS,
-    SENTENCE_TRANSFORMER_MODEL,
     PROJECT_NAME,
+    SENTENCE_TRANSFORMER_MODEL,
 )
 from .model import BoWSTModel
 from .utils import (
@@ -200,7 +201,8 @@ class AttrStandardizer:
     def get_available_schemas() -> list[str]:
         """
         Stores a list of available schemas.
+
         :return list: List of available schemas.
         """
-        schemas = ["ENCODE", "FAIRTRACKS", "BEDBASE"]
-        return schemas
+
+        return AVAILABLE_SCHEMAS

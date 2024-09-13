@@ -8,7 +8,7 @@ import pandas as pd
 import peppy
 import torch
 from huggingface_hub import hf_hub_download
-from pephubclient import PEPHubClient
+
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from sklearn.feature_extraction.text import CountVectorizer

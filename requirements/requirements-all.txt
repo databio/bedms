@@ -3,4 +3,4 @@ numpy
 torch
 sentence-transformers
 pephubclient>=0.4.2
-peppy>=0.40.5
+peppy>=0.40.6
