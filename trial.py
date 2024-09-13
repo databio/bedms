@@ -2,7 +2,7 @@ from attribute_standardizer.attr_standardizer import AttrStandardizer
 
 model = AttrStandardizer("ENCODE")
 
-schemas = model.show_available_schemas()
+schemas = model.get_available_schemas()
 
 print(schemas)
 

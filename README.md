@@ -33,7 +33,7 @@ print(results)
 
 To see the available schemas, you can run:
 ```
-schemas = model.show_available_schemas()
+schemas = model.get_available_schemas()
 
 print(schemas)
 ```
