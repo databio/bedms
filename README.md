@@ -5,7 +5,7 @@ BEDMS (BED Metadata Standardizer) is a tool used to standardize genomics/epigeno
 
 ## Installation
 
-To install `bbclient` use this command: 
+To install `bedms` use this command: 
 ```
 pip install bedms
 ```
