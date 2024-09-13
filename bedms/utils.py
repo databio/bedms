@@ -202,7 +202,11 @@ def data_encoding(
         # print(transformed_columns)
         X_values_bow = transformed_columns
         # Label Encoding
+<<<<<<< HEAD:bedms/utils.py
         label_encoder =None
+=======
+        label_encoder = None
+>>>>>>> b13f0a3 (minor changes):attribute_standardizer/utils.py
         lb_path = hf_hub_download(
             repo_id=REPO_ID,
             filename=ENCODE_LABEL_ENCODER_FILENAME,

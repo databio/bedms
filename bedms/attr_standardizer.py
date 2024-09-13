@@ -87,7 +87,6 @@ class AttrStandardizer:
     def _load_model(self) -> nn.Module:
         """
         Calls function to load the model from HuggingFace repository and sets to eval().
-
         :return nn.Module: Loaded Neural Network Model.
         """
         try:
