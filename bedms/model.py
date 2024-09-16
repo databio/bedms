@@ -20,8 +20,10 @@ class BoWSTModel(nn.Module):
         Initializes the BoWSTModel.
 
         :param int input_size_values: Size of the input for the values (BoW).
-        :param int inout_size_values_embeddings: Size of the input for the values sentence transformer embeddings.
-        :param int input_size_headers: Size of the input for the headers with sentence transformer embeddings.
+        :param int inout_size_values_embeddings: Size of the input
+        for the values sentence transformer embeddings.
+        :param int input_size_headers: Size of the input
+        for the headers with sentence transformer embeddings.
         :param int hidden_size: Size of the hidden layer.
         :param int output_size: Size of the output layer.
         :param float dropout_prob: Dropout probability for regularization.
@@ -29,18 +31,12 @@ class BoWSTModel(nn.Module):
         super(BoWSTModel, self).__init__()
         self.fc_values1 = nn.Linear(input_size_values, hidden_size)
         self.dropout_values1 = nn.Dropout(dropout_prob)
-        self.fc_values2 = nn.Linear(hidden_size, hidden_size)
-        self.dropout_values2 = nn.Dropout(dropout_prob)
         self.fc_values_embeddings1 = nn.Linear(
             input_size_values_embeddings, hidden_size
         )
         self.dropout_values_embeddings1 = nn.Dropout(dropout_prob)
-        self.fc_values_embeddings2 = nn.Linear(hidden_size, hidden_size)
-        self.dropout_values_embeddings2 = nn.Dropout(dropout_prob)
         self.fc_headers1 = nn.Linear(input_size_headers, hidden_size)
         self.dropout_headers1 = nn.Dropout(dropout_prob)
-        self.fc_headers2 = nn.Linear(hidden_size, hidden_size)
-        self.dropout_headers2 = nn.Dropout(dropout_prob)
         self.fc_combined1 = nn.Linear(hidden_size * 3, hidden_size)
         self.dropout_combined1 = nn.Dropout(dropout_prob)
         self.fc_combined2 = nn.Linear(hidden_size, output_size)
@@ -61,16 +57,10 @@ class BoWSTModel(nn.Module):
         """
         x_values = F.relu(self.fc_values1(x_values))
         x_values = self.dropout_values1(x_values)
-        x_values = F.relu(self.fc_values2(x_values))
-        x_values = self.dropout_values2(x_values)
         x_values_embeddings = F.relu(self.fc_values_embeddings1(x_values_embeddings))
         x_values_embeddings = self.dropout_values_embeddings1(x_values_embeddings)
-        x_values_embeddings = F.relu(self.fc_values_embeddings2(x_values_embeddings))
-        x_values_embeddings = self.dropout_values_embeddings2(x_values_embeddings)
         x_headers = F.relu(self.fc_headers1(x_headers))
         x_headers = self.dropout_headers1(x_headers)
-        x_headers = F.relu(self.fc_headers2(x_headers))
-        x_headers = self.dropout_headers2(x_headers)
 
         x_combined = torch.cat((x_values, x_values_embeddings, x_headers), dim=1)
         x_combined = F.relu(self.fc_combined1(x_combined))

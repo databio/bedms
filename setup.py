@@ -3,7 +3,7 @@ import sys
 
 from setuptools import find_packages, setup
 
-PACKAGE_NAME = "attribute_standardizer"
+PACKAGE_NAME = "bedms"
 
 # Ordinary dependencies
 DEPENDENCIES = []

@@ -1,28 +1,37 @@
-# bedmess
+# BEDMS
 
-bedmess is a tool used to standardize genomics/epigenomics metadata based on a schema chosen by the user ( eg. ENCODE, FAIRTRACKS).
+BEDMS (BED Metadata Standardizer) is a tool used to standardize genomics/epigenomics metadata based on a schema chosen by the user ( eg. ENCODE, FAIRTRACKS, BEDBASE).
 
 
-To install `attribute-standardizer` , you need to clone this repository first. Follow the steps given below to install:
+## Installation
 
+To install `bedms` use this command: 
 ```
-git clone https://github.com/databio/bedmess.git
-
-cd bedmess
-
-pip install .
-
+pip install bedms
+```
+or install the latest version from the GitHub repository:
+```
+pip install git+https://github.com/databio/bedms.git
 ```
 
 ## Usage
 
-Using Python, this is how you can run `attribute_standardizer` :
+```python
+from bedms import AttrStandardizer
 
+model = AttrStandardizer("ENCODE")
+results = model.standardize(pep="geo/gse228634:default")
+
+assert results
+```
+
+
+To see the available schemas, you can run:
+```
+from bedms.constants import AVAILABLE_SCHEMAS
+print(AVAILABLE_SCHEMAS)
+
+# >> ['ENCODE', 'FAIRTRACKS', 'BEDBASE'] 
 
 ```
-from attribute_standardizer.attribute_standardizer import attr_standardizer
-
-attr_standardizer(pep=/path/to/pep, schema="ENCODE")
-```
-
-You can use the format provided in the `trial.py` script in this repository as a reference. 
+AVAILABLE_SCHEMAS is a list of available schemas that you can use to standardize your metadata.
