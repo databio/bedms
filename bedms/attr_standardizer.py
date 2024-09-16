@@ -101,8 +101,12 @@ class AttrStandardizer:
 
     def _load_model(self) -> tuple[nn.Module, object, object]:
         """
+<<<<<<< HEAD:bedms/attr_standardizer.py
         Calls function to load the model from HuggingFace repository
           load vectorizer and label encoder and sets to eval().
+=======
+        Calls function to load the model from HuggingFace repository and sets to eval().
+>>>>>>> b13f0a3f927e52b5ccb9ec6f36064f19a1f5af9e:attribute_standardizer/attr_standardizer.py
         :return nn.Module: Loaded Neural Network Model.
         :return object: The scikit learn vectorizer for bag of words encoding.
         :return object: Label encoder object for the labels (y).
