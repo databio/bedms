@@ -1,6 +1,7 @@
 """
 This module has all util functions for 'bedms'
 """
+
 import warnings
 from collections import Counter
 from typing import Any, List, Optional, Tuple, Union
@@ -21,7 +22,7 @@ from .const import (
     MODEL_FAIRTRACKS,
     NUM_CLUSTERS,
     REPO_ID,
-    PEP_FILE_TYPES
+    PEP_FILE_TYPES,
 )
 
 # TODO : convert to single np array before converting to tensor
@@ -69,10 +70,10 @@ def data_preprocessing(
 
     :param pd.DataFrame df: The input DataFrame (user chosen PEP) to preprocess.
     :return Tuple[List[List[str]], List[str], List[List[str]]]:
-        - Nested list containing the comma separated values 
+        - Nested list containing the comma separated values
         in each column for sentence transformer embeddings.
         - List containing the headers of the DataFrame.
-        - Nested list containing the comma separated values 
+        - Nested list containing the comma separated values
         in each column for Bag of Words encoding.
         - Number of rows in the metadata csv
     """
@@ -163,15 +164,15 @@ def data_encoding(
     :param object vectorizer: scikit-learn vectorizer for bag of words encoding.
     :param object label_encoder" Label encoder object storing labels (y)
     :param int num_rows: Number of rows in the sample metadata
-    :param list X_values_st: Nested list containing the comma separated values 
+    :param list X_values_st: Nested list containing the comma separated values
     in each column for sentence transformer embeddings.
     :param list X_headers_st: List containing the headers of the DataFrame.
-    :param list X_values_bow: Nested list containing the comma separated values 
+    :param list X_values_bow: Nested list containing the comma separated values
     in each column for Bag of Words encoding.
     :param str schema: Schema type chosen by the user for standardization.
-    :return Tuple[torch.Tensor, torch.Tensor, torch.Tensor, 
-    Union[LabelEncoder, None]]: Tuple containing 
-    torch tensors for encoded embeddings and Bag of Words representations, 
+    :return Tuple[torch.Tensor, torch.Tensor, torch.Tensor,
+    Union[LabelEncoder, None]]: Tuple containing
+    torch tensors for encoded embeddings and Bag of Words representations,
     and label encoder object.
     """
     # Sentence Transformer Model

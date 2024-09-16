@@ -100,7 +100,7 @@ class AttrStandardizer:
             "Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
         )
 
-    def _load_model(self) -> tuple[nn.Module, object, object]:
+    def _load_model(self) -> Tuple[nn.Module, object, object]:
         """
         Calls function to load the model from HuggingFace repository
           load vectorizer and label encoder and sets to eval().

@@ -20,9 +20,9 @@ class BoWSTModel(nn.Module):
         Initializes the BoWSTModel.
 
         :param int input_size_values: Size of the input for the values (BoW).
-        :param int inout_size_values_embeddings: Size of the input 
+        :param int inout_size_values_embeddings: Size of the input
         for the values sentence transformer embeddings.
-        :param int input_size_headers: Size of the input 
+        :param int input_size_headers: Size of the input
         for the headers with sentence transformer embeddings.
         :param int hidden_size: Size of the hidden layer.
         :param int output_size: Size of the output layer.
