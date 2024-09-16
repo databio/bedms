@@ -1,9 +1,12 @@
+"""
+This module has the class AttrStandardizer for 'bedms'.
+"""
 import logging
 from typing import Dict, Tuple, Union
-
+import pickle
 import peppy
 import torch
-import torch.nn as nn
+from torch import nn
 import torch.nn.functional as torch_functional
 
 from .const import (
@@ -20,6 +23,13 @@ from .const import (
     OUTPUT_SIZE_FAIRTRACKS,
     PROJECT_NAME,
     SENTENCE_TRANSFORMER_MODEL,
+    REPO_ID,
+    ENCODE_VECTORIZER_FILENAME,
+    ENCODE_LABEL_ENCODER_FILENAME,
+    FAIRTRACKS_VECTORIZER_FILENAME,
+    FAIRTRACKS_LABEL_ENCODER_FILENAME,
+    BEDBASE_VECTORIZER_FILENAME,
+    BEDBASE_LABEL_ENCODER_FILENAME,
 )
 from .model import BoWSTModel
 from .utils import (
@@ -28,6 +38,7 @@ from .utils import (
     fetch_from_pephub,
     get_any_pep,
     load_from_huggingface,
+    hf_hub_download,
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -35,6 +46,9 @@ logger = logging.getLogger(PROJECT_NAME)
 
 
 class AttrStandardizer:
+    """
+    This is the AttrStandardizer class which holds the models for Attribute Standardization.
+    """
     def __init__(self, schema: str, confidence: int = CONFIDENCE_THRESHOLD) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
@@ -43,7 +57,7 @@ class AttrStandardizer:
         :param int confidence: Confidence threshold for the predictions.
         """
         self.schema = schema
-        self.model = self._load_model()
+        self.model, self.vectorizer, self.label_encoder = self._load_model()
         self.conf_threshold = confidence
 
     def _get_parameters(self) -> Tuple[int, int, int, int, int, float]:
@@ -61,7 +75,7 @@ class AttrStandardizer:
                 OUTPUT_SIZE_ENCODE,
                 DROPOUT_PROB,
             )
-        elif self.schema == "FAIRTRACKS":
+        if self.schema == "FAIRTRACKS":
             return (
                 INPUT_SIZE_BOW_FAIRTRACKS,
                 EMBEDDING_SIZE,
@@ -70,7 +84,7 @@ class AttrStandardizer:
                 OUTPUT_SIZE_FAIRTRACKS,
                 DROPOUT_PROB,
             )
-        elif self.schema == "BEDBASE":
+        if self.schema == "BEDBASE":
             return (
                 INPUT_SIZE_BOW_BEDBASE,
                 EMBEDDING_SIZE,
@@ -79,17 +93,50 @@ class AttrStandardizer:
                 OUTPUT_SIZE_BEDBASE,
                 DROPOUT_PROB,
             )
-        else:
-            raise ValueError(
-                f"Schema not available: {self.schema}. Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
+    
+        raise ValueError(
+                f"Schema not available: {self.schema}."
+                "Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
             )
 
-    def _load_model(self) -> nn.Module:
+    def _load_model(self) -> tuple[nn.Module, object, object]:
         """
-        Calls function to load the model from HuggingFace repository and sets to eval().
+        Calls function to load the model from HuggingFace repository
+          load vectorizer and label encoder and sets to eval().
         :return nn.Module: Loaded Neural Network Model.
+        :return object: The scikit learn vectorizer for bag of words encoding.
+        :return object: Label encoder object for the labels (y).
         """
         try:
+            if self.schema == "ENCODE":
+                filename_vc = ENCODE_VECTORIZER_FILENAME
+                filename_lb = ENCODE_LABEL_ENCODER_FILENAME
+            elif self.schema == "FAIRTRACKS":
+                filename_vc = FAIRTRACKS_VECTORIZER_FILENAME
+                filename_lb = FAIRTRACKS_LABEL_ENCODER_FILENAME
+            elif self.schema == "BEDBASE":
+                filename_vc = BEDBASE_VECTORIZER_FILENAME
+                filename_lb = BEDBASE_LABEL_ENCODER_FILENAME
+
+            vectorizer = None
+            label_encoder = None
+
+            vc_path = hf_hub_download(
+                repo_id=REPO_ID,
+                filename=filename_vc,
+            )
+
+            with open(vc_path, "rb") as f:
+                vectorizer = pickle.load(f)
+
+            lb_path = hf_hub_download(
+                repo_id=REPO_ID,
+                filename=filename_lb,
+            )
+
+            with open(lb_path, "rb") as f:
+                label_encoder = pickle.load(f)
+
             model = load_from_huggingface(self.schema)
             state_dict = torch.load(model)
 
@@ -112,7 +159,7 @@ class AttrStandardizer:
             )
             model.load_state_dict(state_dict)
             model.eval()
-            return model
+            return model, vectorizer, label_encoder
 
         except Exception as e:
             logger.error(f"Error loading the model: {str(e)}")
@@ -122,7 +169,9 @@ class AttrStandardizer:
         self, pep: Union[str, peppy.Project]
     ) -> Dict[str, Dict[str, float]]:
         """
-        Fetches the user provided PEP from the PEPHub registry path, returns the predictions.
+        Fetches the user provided PEP 
+        from the PEPHub registry path, 
+        returns the predictions.
 
         :param str pep: peppy.Project object or PEPHub registry path to PEP.
         :return Dict[str, Dict[str, float]]: Suggestions to the user.
@@ -138,20 +187,21 @@ class AttrStandardizer:
         try:
             csv_file = fetch_from_pephub(pep)
 
-            X_values_st, X_headers_st, X_values_bow, num_rows = data_preprocessing(
+            x_values_st, x_headers_st, x_values_bow, num_rows = data_preprocessing(
                 csv_file
             )
             (
-                X_headers_embeddings_tensor,
-                X_values_embeddings_tensor,
-                X_values_bow_tensor,
+                x_headers_embeddings_tensor,
+                x_values_embeddings_tensor,
+                x_values_bow_tensor,
                 label_encoder,
             ) = data_encoding(
+                self.vectorizer,
+                self.label_encoder,
                 num_rows,
-                X_values_st,
-                X_headers_st,
-                X_values_bow,
-                self.schema,
+                x_values_st,
+                x_headers_st,
+                x_values_bow,
                 model_name=SENTENCE_TRANSFORMER_MODEL,
             )
 
@@ -159,9 +209,9 @@ class AttrStandardizer:
 
             with torch.no_grad():
                 outputs = self.model(
-                    X_values_bow_tensor,
-                    X_values_embeddings_tensor,
-                    X_headers_embeddings_tensor,
+                    x_values_bow_tensor,
+                    x_values_embeddings_tensor,
+                    x_headers_embeddings_tensor,
                 )
                 probabilities = torch_functional.softmax(outputs, dim=1)
 
@@ -174,7 +224,7 @@ class AttrStandardizer:
                 ]
 
                 suggestions = {}
-            for i, category in enumerate(X_headers_st):
+            for i, category in enumerate(x_headers_st):
                 category_suggestions = {}
                 if top_confidences[i][0] >= self.conf_threshold:
                     for j in range(3):
