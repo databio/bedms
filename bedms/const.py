@@ -1,7 +1,11 @@
+"""
+This module contains constant values used in the 'bedms' package.
+"""
+
 PROJECT_NAME = "bedmess"
 
 AVAILABLE_SCHEMAS = ["ENCODE", "FAIRTRACKS", "BEDBASE"]
-
+PEP_FILE_TYPES = ["yaml", "csv"]
 REPO_ID = "databio/attribute-standardizer-model6"
 MODEL_ENCODE = "model_encode.pth"
 MODEL_FAIRTRACKS = "model_fairtracks.pth"
