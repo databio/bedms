@@ -28,7 +28,7 @@ assert results
 
 To see the available schemas, you can run:
 ```
-from bedms.constants import AVAILABLE_SCHEMAS
+from bedms.const import AVAILABLE_SCHEMAS
 print(AVAILABLE_SCHEMAS)
 
 # >> ['ENCODE', 'FAIRTRACKS', 'BEDBASE'] 
