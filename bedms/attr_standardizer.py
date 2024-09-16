@@ -1,6 +1,7 @@
 """
 This module has the class AttrStandardizer for 'bedms'.
 """
+
 import logging
 from typing import Dict, Tuple, Union
 import pickle
@@ -38,8 +39,8 @@ from .utils import (
     fetch_from_pephub,
     get_any_pep,
     load_from_huggingface,
-    hf_hub_download,
 )
+from huggingface_hub import hf_hub_download
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(PROJECT_NAME)
@@ -49,6 +50,7 @@ class AttrStandardizer:
     """
     This is the AttrStandardizer class which holds the models for Attribute Standardization.
     """
+
     def __init__(self, schema: str, confidence: int = CONFIDENCE_THRESHOLD) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
@@ -93,20 +95,15 @@ class AttrStandardizer:
                 OUTPUT_SIZE_BEDBASE,
                 DROPOUT_PROB,
             )
-    
         raise ValueError(
-                f"Schema not available: {self.schema}."
-                "Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
-            )
+            f"Schema not available: {self.schema}."
+            "Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
+        )
 
     def _load_model(self) -> tuple[nn.Module, object, object]:
         """
-<<<<<<< HEAD:bedms/attr_standardizer.py
         Calls function to load the model from HuggingFace repository
           load vectorizer and label encoder and sets to eval().
-=======
-        Calls function to load the model from HuggingFace repository and sets to eval().
->>>>>>> b13f0a3f927e52b5ccb9ec6f36064f19a1f5af9e:attribute_standardizer/attr_standardizer.py
         :return nn.Module: Loaded Neural Network Model.
         :return object: The scikit learn vectorizer for bag of words encoding.
         :return object: Label encoder object for the labels (y).
@@ -173,8 +170,8 @@ class AttrStandardizer:
         self, pep: Union[str, peppy.Project]
     ) -> Dict[str, Dict[str, float]]:
         """
-        Fetches the user provided PEP 
-        from the PEPHub registry path, 
+        Fetches the user provided PEP
+        from the PEPHub registry path,
         returns the predictions.
 
         :param str pep: peppy.Project object or PEPHub registry path to PEP.
