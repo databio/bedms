@@ -248,7 +248,7 @@ class AttrStandardizer:
             )
 
     @staticmethod
-    def get_available_schemas() -> list[str]:
+    def show_available_schemas() -> list[str]:
         """
         Stores a list of available schemas.
 
