@@ -34,12 +34,5 @@ print(AVAILABLE_SCHEMAS)
 # >> ['ENCODE', 'FAIRTRACKS', 'BEDBASE'] 
 
 ```
-Or you can run:
 
-```
-schemas = model.show_available_schemas()
-
-print(schemas)
-
-```
 AVAILABLE_SCHEMAS is a list of available schemas that you can use to standardize your metadata.
