@@ -3,13 +3,14 @@ This module has the class AttrStandardizer for 'bedms'.
 """
 
 import logging
-from typing import Dict, Tuple, Union
+from typing import Dict, Tuple, Union, Optional
 import pickle
 import peppy
 import torch
 from torch import nn
 import torch.nn.functional as torch_functional
-
+import yaml
+from huggingface_hub import hf_hub_download
 from .const import (
     AVAILABLE_SCHEMAS,
     CONFIDENCE_THRESHOLD,
@@ -40,7 +41,7 @@ from .utils import (
     get_any_pep,
     load_from_huggingface,
 )
-from huggingface_hub import hf_hub_download
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(PROJECT_NAME)
@@ -51,16 +52,37 @@ class AttrStandardizer:
     This is the AttrStandardizer class which holds the models for Attribute Standardization.
     """
 
-    def __init__(self, schema: str, confidence: int = CONFIDENCE_THRESHOLD) -> None:
+    def __init__(
+        self,
+        schema: str,
+        custom_param: Optional[str] = None,
+        confidence: int = CONFIDENCE_THRESHOLD,
+    ) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
 
         :param str schema: User provided schema, can be "ENCODE" or "FAIRTRACKS"
+        :param str custom_param: User provided config file for 
+            custom parameters, if they choose "CUSTOM" schema.
         :param int confidence: Confidence threshold for the predictions.
         """
         self.schema = schema
-        self.model, self.vectorizer, self.label_encoder = self._load_model()
         self.conf_threshold = confidence
+        self.custom_param = custom_param
+
+        if self.schema == "CUSTOM" and self.custom_param:
+            self.custom_param = self._load_custom_param(self.custom_param)
+        self.model, self.vectorizer, self.label_encoder = self._load_model()
+
+    def _load_custom_param(self, config_pth: str) -> Dict[str, Tuple]:
+        """
+        Loads the custom parameters from the config file provided by the user.
+
+        :param str config_pth: Path to the config file which has the custom parameters.
+        :return Dict[str, Tuple]: Custom Parameters dictionary.
+        """
+        with open(config_pth, "r", encoding="utf-8") as file:
+            return yaml.safe_load(file)
 
     def _get_parameters(self) -> Tuple[int, int, int, int, int, float]:
         """
@@ -95,9 +117,19 @@ class AttrStandardizer:
                 OUTPUT_SIZE_BEDBASE,
                 DROPOUT_PROB,
             )
+        if self.schema == "CUSTOM":
+            return (
+                self.custom_param["model"]["input_size_bow"],
+                self.custom_param["model"]["input_size_embeddings"],
+                self.custom_param["model"]["input_size_embeddings"],
+                self.custom_param["model"]["hidden_size"],
+                self.custom_param["model"]["output_size"],
+                self.custom_param["model"]["dropout_prob"],
+            )
+
         raise ValueError(
             f"Schema not available: {self.schema}."
-            "Presently, three schemas are available: ENCODE , FAIRTRACKS, BEDBASE"
+            "Presently, four schemas are available: ENCODE , FAIRTRACKS, BEDBASE, CUSTOM"
         )
 
     def _load_model(self) -> Tuple[nn.Module, object, object]:
@@ -118,28 +150,30 @@ class AttrStandardizer:
             elif self.schema == "BEDBASE":
                 filename_vc = BEDBASE_VECTORIZER_FILENAME
                 filename_lb = BEDBASE_LABEL_ENCODER_FILENAME
+            elif self.schema == "CUSTOM":
+                vc_path = self.custom_param["paths"]["vectorizer_pth"]
+                lb_path = self.custom_param["paths"]["label_encoder_pth"]
+                state_dict = torch.load(self.custom_param["paths"]["model_pth"])
+            else:
+                raise ValueError(f"Schema not available: {self.schema}")
 
-            vectorizer = None
-            label_encoder = None
-
-            vc_path = hf_hub_download(
-                repo_id=REPO_ID,
-                filename=filename_vc,
-            )
+            if self.schema != "CUSTOM":
+                vc_path = hf_hub_download(
+                    repo_id=REPO_ID,
+                    filename=filename_vc,
+                )
+                lb_path = hf_hub_download(
+                    repo_id=REPO_ID,
+                    filename=filename_lb,
+                )
+                model = load_from_huggingface(self.schema)
+                state_dict = torch.load(model)
 
             with open(vc_path, "rb") as f:
                 vectorizer = pickle.load(f)
 
-            lb_path = hf_hub_download(
-                repo_id=REPO_ID,
-                filename=filename_lb,
-            )
-
             with open(lb_path, "rb") as f:
                 label_encoder = pickle.load(f)
-
-            model = load_from_huggingface(self.schema)
-            state_dict = torch.load(model)
 
             (
                 input_size_values,
