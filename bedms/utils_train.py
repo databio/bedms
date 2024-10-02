@@ -522,7 +522,6 @@ def train_model(
         print(f"Early stop at {best_epoch + 1} epoch.")
     y_true = label_binarize(y_true, classes=list(range(output_size)))
 
-    # Convert to numpy arrays
     y_true = np.array(y_true)
     y_scores = np.array(y_scores)
 
@@ -531,9 +530,7 @@ def train_model(
     tpr = {}
     roc_auc = {}
 
-    for i in range(
-        output_size
-    ):  # Replace output_size with your actual number of classes
+    for i in range(output_size):
         fpr[i], tpr[i], _ = roc_curve(y_true[:, i], y_scores[:, i])
         roc_auc[i] = auc(fpr[i], tpr[i])
 
