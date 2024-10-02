@@ -38,6 +38,7 @@ warnings.filterwarnings(
     message="Creating a tensor from a list of numpy.ndarrays is extremely slow.",
 )
 
+
 def load_from_dir(dir: str) -> List[str]:
     """
     Loads each file from the directory path.
@@ -69,12 +70,12 @@ def accumulate_data(
     """
     Accumulates data from multiple files into lists.
 
-    :param List[Tuple[str, str]] files: List containing 
+    :param List[Tuple[str, str]] files: List containing
         sublists of values or header files.
-    :return Tuple[List[List[List[str]]], List[List[List[str]]],[List[str]]: 
+    :return Tuple[List[List[List[str]]], List[List[List[str]]],[List[str]]:
         Lists of values, headers, labels.
     A tuple containing three lists:
-        - A nested list of values (list of tables where 
+        - A nested list of values (list of tables where
             each table is a list of lists for columns),
         - A nested list of headers (similar structure to values),
         - A list of Pandas Index objects containing column labels.
@@ -125,7 +126,7 @@ def get_top_training_cluster_averaged(
 
     :param List[torch.tensor] embeddings: List of embedding tensors to cluster.
     :param int num: Number of clusters to be created using k-means.
-    :return torch.Tensor: A tensor representing the 
+    :return torch.Tensor: A tensor representing the
         average of embeddings in the most common cluster.
     """
     flattened_embeddings = [embedding.tolist() for embedding in embeddings]
@@ -174,23 +175,23 @@ def training_encoding(
     """
     Generates encoded headers and values.
 
-    :param List[List[List[str]]] x_values_train_list: 
+    :param List[List[List[str]]] x_values_train_list:
         Nested list containing the training set for values.
-    :param List[List[List[str]]] x_headers_train_list: 
+    :param List[List[List[str]]] x_headers_train_list:
         Nested list containing the training set for headers.
-    :param List[pd.Index] y_train_list: 
+    :param List[pd.Index] y_train_list:
         List of the column labels ( attributes) for training.
-    :param List[List[List[str]]] x_values_test_list: 
+    :param List[List[List[str]]] x_values_test_list:
         Nested list containing the testing set for values.
-    :param List[List[List[str]]] x_headers_test_list: 
+    :param List[List[List[str]]] x_headers_test_list:
         Nested list containing the testing set for headers.
-    :param List[pd.Index] y_test_list: 
+    :param List[pd.Index] y_test_list:
         List of the column labels ( attributes) for testing.
-    :param List[List[List[str]]] x_values_val_list: 
+    :param List[List[List[str]]] x_values_val_list:
         Nested list containing the validation set for values.
-    :param List[List[List[str]]] x_headers_val_list: 
+    :param List[List[List[str]]] x_headers_val_list:
         Nested list containing the validation set for headers.
-    :param List[pd.Index] y_val_list: 
+    :param List[pd.Index] y_val_list:
         List of the column labels ( attributes) for validation.
     :return Tuple[
     Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
@@ -240,7 +241,7 @@ def training_encoding(
         num_cluster: int,
     ) -> Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
         """
-        This nested function encodes the values, headers and labels data. 
+        This nested function encodes the values, headers and labels data.
         It is called for thrice - training, testing, validation.
 
         :param List[List[List[str]]] x_values_list: Nested list containing values.
@@ -339,11 +340,11 @@ def data_loader(
     """
     Creates a DataLoader from encoded tensor data.
 
-    :param [torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor] encoded_data: 
+    :param [torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor] encoded_data:
         Tuple containing tensors for
     values bag of words, values embeddings, headers embeddings, and labels.
     :param int batch_size: The number of samples per batch for the DataLoader.
-    :return DataLoader: A PyTorch DataLoader which yields 
+    :return DataLoader: A PyTorch DataLoader which yields
         batches of data from the given tensors.
     """
     (
@@ -365,11 +366,11 @@ def data_loader(
 
 def drop_bow(bow_tensor: torch.Tensor, num_drops: int) -> torch.Tensor:
     """
-    Randomly drops a specified number of columns in the 
+    Randomly drops a specified number of columns in the
     Bag of Words tensor for regularization.
 
     :param torch.Tensor bow_tensor: Bag of Words tensor.
-    :param int num_drops: Number of columns to be randomly 
+    :param int num_drops: Number of columns to be randomly
         dropped from the Bag of Words tensor.
     :return torch.Tensor: Bag of Words tensor with dropped columns.
     """

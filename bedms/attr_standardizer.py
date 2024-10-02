@@ -62,7 +62,7 @@ class AttrStandardizer:
         Initializes the attribute standardizer with user provided schema, loads the model.
 
         :param str schema: User provided schema, can be "ENCODE" or "FAIRTRACKS"
-        :param str custom_param: User provided config file for 
+        :param str custom_param: User provided config file for
             custom parameters, if they choose "CUSTOM" schema.
         :param int confidence: Confidence threshold for the predictions.
         """
