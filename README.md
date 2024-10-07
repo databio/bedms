@@ -16,10 +16,15 @@ pip install git+https://github.com/databio/bedms.git
 ## Usage
 
 ### Standardizing based on available schemas
+
+To choose the schema you want to standardize according to, please refer to the [HuggingFace repository](https://huggingface.co/databio/attribute-standardizer-model6). Based on the schema design `.yaml` files, you can select which schema best represents your attributes. In the example below, we have chosen `encode` schema. 
+
 ```python
 from bedms import AttrStandardizer
 
-model = AttrStandardizer("ENCODE")
+model = AttrStandardizer(
+    repo_id="databio/attribute-standardizer-model6", model_name="encode"
+)
 results = model.standardize(pep="geo/gse228634:default")
 
 assert results
@@ -33,9 +38,9 @@ Training your custom schema is very easy with `BEDMS`. You would need two things
 To instantiate `TrainStandardizer` class:
 
 ```python
-from bedms.train import TrainStandardizer
+from bedms.train import AttrStandardizerTrainer
 
-trainer = TrainStandardizer("training_config.yaml")
+trainer = AttrStandardizerTrainer("training_config.yaml")
 
 ```
 To load the datasets and encode them:
@@ -63,26 +68,16 @@ trainer.plot_visualizations()
 ```
 
 ### Standardizing based on custom schema
-For standardizing based on custom schema, you would require a `custom_config.yaml`.
+
+For standardizing based on custom schema, your model should be on HuggingFace. The directory structure should follow the instructions mentioned on [HuggingFace](https://huggingface.co/databio/attribute-standardizer-model6). 
 
 ```python
 from bedms import AttrStandardizer
 
-model = AttrStandardizer("CUSTOM", "custom_config.yaml")
-
+model = AttrStandardizer(
+    repo_id="name/of/your/hf/repo", model_name="model/name"
+)
 results = model.standardize(pep="geo/gse228634:default")
 
 assert results
 ```
-
-### Available schemas
-To see the available schemas, you can run:
-```
-from bedms.const import AVAILABLE_SCHEMAS
-print(AVAILABLE_SCHEMAS)
-
-# >> ['ENCODE', 'FAIRTRACKS', 'BEDBASE'] 
-
-```
-
-AVAILABLE_SCHEMAS is a list of available schemas that you can use to standardize your metadata.
