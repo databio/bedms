@@ -1,0 +1,10 @@
+paths:
+  model_pth: "path/to/custom/trained/model.pth" #Path to where you saved the custom model
+  label_encoder_pth: "/path/to/label_encoder.pkl" #Path to where you saved the Label Encoder
+  vectorizer_pth: "path/to/vectorizer.pkl" #Path to where you saved the Bag of Words vectorizer
+model:
+  input_size_bow: 1857 #Size of the vocabulary for Bag of Words encoding
+  input_size_embeddings: 384 #Size of the input embeddings for values and attributes
+  hidden_size: 32 #Hidden size the model was trained on
+  output_size: 18 #Number of classes the model predicts into
+  dropout_prob: 0.113 #Dropout probability you had set for the model
