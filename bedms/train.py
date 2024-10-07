@@ -21,7 +21,7 @@ from .utils_train import (
     plot_confusion_matrix,
     auc_roc_curve,
 )
-from .const import PROJECT_NAME, EMBEDDING_SIZE
+from .const import PROJECT_NAME
 from .model import BoWSTModel
 
 
