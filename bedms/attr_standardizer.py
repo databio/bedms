@@ -3,6 +3,9 @@ This module has the class AttrStandardizer for 'bedms'.
 """
 
 import logging
+import glob
+import os
+import yaml
 from typing import Dict, Tuple, Union, Optional
 import pickle
 import peppy
@@ -14,33 +17,11 @@ from huggingface_hub import hf_hub_download
 from .const import (
     AVAILABLE_SCHEMAS,
     CONFIDENCE_THRESHOLD,
-    DROPOUT_PROB,
-    EMBEDDING_SIZE,
-    HIDDEN_SIZE,
-    INPUT_SIZE_BOW_BEDBASE,
-    INPUT_SIZE_BOW_ENCODE,
-    INPUT_SIZE_BOW_FAIRTRACKS,
-    OUTPUT_SIZE_BEDBASE,
-    OUTPUT_SIZE_ENCODE,
-    OUTPUT_SIZE_FAIRTRACKS,
     PROJECT_NAME,
     SENTENCE_TRANSFORMER_MODEL,
-    REPO_ID,
-    ENCODE_VECTORIZER_FILENAME,
-    ENCODE_LABEL_ENCODER_FILENAME,
-    FAIRTRACKS_VECTORIZER_FILENAME,
-    FAIRTRACKS_LABEL_ENCODER_FILENAME,
-    BEDBASE_VECTORIZER_FILENAME,
-    BEDBASE_LABEL_ENCODER_FILENAME,
 )
 from .model import BoWSTModel
-from .utils import (
-    data_encoding,
-    data_preprocessing,
-    fetch_from_pephub,
-    get_any_pep,
-    load_from_huggingface,
-)
+from .utils import data_encoding, data_preprocessing, fetch_from_pephub, get_any_pep
 
 
 logging.basicConfig(level=logging.INFO)
@@ -54,35 +35,25 @@ class AttrStandardizer:
 
     def __init__(
         self,
-        schema: str,
+        repo_id: str,
+        model_name: str,
         custom_param: Optional[str] = None,
         confidence: int = CONFIDENCE_THRESHOLD,
     ) -> None:
         """
         Initializes the attribute standardizer with user provided schema, loads the model.
 
-        :param str schema: User provided schema, can be "ENCODE" or "FAIRTRACKS"
+        :param str repo_id: HuggingFace repository ID
+        :param str model_name: Name of the schema model
         :param str custom_param: User provided config file for
             custom parameters, if they choose "CUSTOM" schema.
         :param int confidence: Confidence threshold for the predictions.
         """
-        self.schema = schema
+        self.repo_id = repo_id
+        self.model_name = model_name
         self.conf_threshold = confidence
         self.custom_param = custom_param
-
-        if self.schema == "CUSTOM" and self.custom_param:
-            self.custom_param = self._load_custom_param(self.custom_param)
         self.model, self.vectorizer, self.label_encoder = self._load_model()
-
-    def _load_custom_param(self, config_pth: str) -> Dict[str, Tuple]:
-        """
-        Loads the custom parameters from the config file provided by the user.
-
-        :param str config_pth: Path to the config file which has the custom parameters.
-        :return Dict[str, Tuple]: Custom Parameters dictionary.
-        """
-        with open(config_pth, "r", encoding="utf-8") as file:
-            return yaml.safe_load(file)
 
     def _get_parameters(self) -> Tuple[int, int, int, int, int, float]:
         """
@@ -90,46 +61,27 @@ class AttrStandardizer:
 
         :return Tuple[int, int, int, int, int, int, float]: Tuple containing the model parameters.
         """
-        if self.schema == "ENCODE":
-            return (
-                INPUT_SIZE_BOW_ENCODE,
-                EMBEDDING_SIZE,
-                EMBEDDING_SIZE,
-                HIDDEN_SIZE,
-                OUTPUT_SIZE_ENCODE,
-                DROPOUT_PROB,
-            )
-        if self.schema == "FAIRTRACKS":
-            return (
-                INPUT_SIZE_BOW_FAIRTRACKS,
-                EMBEDDING_SIZE,
-                EMBEDDING_SIZE,
-                HIDDEN_SIZE,
-                OUTPUT_SIZE_FAIRTRACKS,
-                DROPOUT_PROB,
-            )
-        if self.schema == "BEDBASE":
-            return (
-                INPUT_SIZE_BOW_BEDBASE,
-                EMBEDDING_SIZE,
-                EMBEDDING_SIZE,
-                HIDDEN_SIZE,
-                OUTPUT_SIZE_BEDBASE,
-                DROPOUT_PROB,
-            )
-        if self.schema == "CUSTOM":
-            return (
-                self.custom_param["model"]["input_size_bow"],
-                self.custom_param["model"]["input_size_embeddings"],
-                self.custom_param["model"]["input_size_embeddings"],
-                self.custom_param["model"]["hidden_size"],
-                self.custom_param["model"]["output_size"],
-                self.custom_param["model"]["dropout_prob"],
-            )
+        config_filename = f"config_{self.model_name}.yaml"
+        config_pth = hf_hub_download(
+            repo_id=self.repo_id,
+            filename=os.path.join(self.model_name, config_filename),
+        )
+        with open(config_pth, "r") as file:
+            config = yaml.safe_load(file)
 
-        raise ValueError(
-            f"Schema not available: {self.schema}."
-            "Presently, four schemas are available: ENCODE , FAIRTRACKS, BEDBASE, CUSTOM"
+        input_size_bow = config["params"]["input_size_bow"]
+        embedding_size = config["params"]["embedding_size"]
+        hidden_size = config["params"]["hidden_size"]
+        output_size = config["params"]["output_size"]
+        dropout_prob = config["params"]["dropout_prob"]
+
+        return (
+            input_size_bow,
+            embedding_size,
+            embedding_size,
+            hidden_size,
+            output_size,
+            dropout_prob,
         )
 
     def _load_model(self) -> Tuple[nn.Module, object, object]:
@@ -140,65 +92,54 @@ class AttrStandardizer:
         :return object: The scikit learn vectorizer for bag of words encoding.
         :return object: Label encoder object for the labels (y).
         """
-        try:
-            if self.schema == "ENCODE":
-                filename_vc = ENCODE_VECTORIZER_FILENAME
-                filename_lb = ENCODE_LABEL_ENCODER_FILENAME
-            elif self.schema == "FAIRTRACKS":
-                filename_vc = FAIRTRACKS_VECTORIZER_FILENAME
-                filename_lb = FAIRTRACKS_LABEL_ENCODER_FILENAME
-            elif self.schema == "BEDBASE":
-                filename_vc = BEDBASE_VECTORIZER_FILENAME
-                filename_lb = BEDBASE_LABEL_ENCODER_FILENAME
-            elif self.schema == "CUSTOM":
-                vc_path = self.custom_param["paths"]["vectorizer_pth"]
-                lb_path = self.custom_param["paths"]["label_encoder_pth"]
-                state_dict = torch.load(self.custom_param["paths"]["model_pth"])
-            else:
-                raise ValueError(f"Schema not available: {self.schema}")
+        model_filename = f"model_{self.model_name}.pth"
+        label_encoder_filename = f"label_encoder_{self.model_name}.pkl"
+        vectorizer_filename = f"vectorizer_{self.model_name}.pkl"
 
-            if self.schema != "CUSTOM":
-                vc_path = hf_hub_download(
-                    repo_id=REPO_ID,
-                    filename=filename_vc,
-                )
-                lb_path = hf_hub_download(
-                    repo_id=REPO_ID,
-                    filename=filename_lb,
-                )
-                model = load_from_huggingface(self.schema)
-                state_dict = torch.load(model)
+        model_pth = hf_hub_download(
+            repo_id=self.repo_id, filename=os.path.join(self.model_name, model_filename)
+        )
 
-            with open(vc_path, "rb") as f:
-                vectorizer = pickle.load(f)
+        vc_path = hf_hub_download(
+            repo_id=self.repo_id,
+            filename=os.path.join(self.model_name, vectorizer_filename),
+        )
 
-            with open(lb_path, "rb") as f:
-                label_encoder = pickle.load(f)
+        lb_path = hf_hub_download(
+            repo_id=self.repo_id,
+            filename=os.path.join(self.model_name, label_encoder_filename),
+        )
 
-            (
-                input_size_values,
-                input_size_values_embeddings,
-                input_size_headers,
-                hidden_size,
-                output_size,
-                dropout_prob,
-            ) = self._get_parameters()
+        with open(vc_path, "rb") as f:
+            vectorizer = pickle.load(f)
 
-            model = BoWSTModel(
-                input_size_values,
-                input_size_values_embeddings,
-                input_size_headers,
-                hidden_size,
-                output_size,
-                dropout_prob,
-            )
-            model.load_state_dict(state_dict)
-            model.eval()
-            return model, vectorizer, label_encoder
+        with open(lb_path, "rb") as f:
+            label_encoder = pickle.load(f)
 
-        except Exception as e:
-            logger.error(f"Error loading the model: {str(e)}")
-            raise
+        state_dict = torch.load(model_pth)
+
+        (
+            input_size_values,
+            input_size_values_embeddings,
+            input_size_headers,
+            hidden_size,
+            output_size,
+            dropout_prob,
+        ) = self._get_parameters()
+
+        model = BoWSTModel(
+            input_size_values,
+            input_size_values_embeddings,
+            input_size_headers,
+            hidden_size,
+            output_size,
+            dropout_prob,
+        )
+
+        model.load_state_dict(state_dict)
+        model.eval()
+
+        return model, vectorizer, label_encoder
 
     def standardize(
         self, pep: Union[str, peppy.Project]

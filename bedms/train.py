@@ -29,7 +29,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(PROJECT_NAME)
 
 
-class TrainStandardizer:
+class AttrStandardizerTrainer:
     """
     This is the training class responsible for
     managing the training process for the standardizer model.
