@@ -2,6 +2,7 @@
 This module has all util functions for 'bedms'
 """
 
+import logging
 import warnings
 from collections import Counter
 from typing import Any, List, Optional, Tuple, Union
@@ -15,15 +16,14 @@ from huggingface_hub import hf_hub_download
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import LabelEncoder
-
 from .const import (
-    MODEL_BEDBASE,
-    MODEL_ENCODE,
-    MODEL_FAIRTRACKS,
     NUM_CLUSTERS,
-    REPO_ID,
     PEP_FILE_TYPES,
+    PROJECT_NAME,
 )
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(PROJECT_NAME)
 
 # TODO : convert to single np array before converting to tensor
 warnings.filterwarnings(
@@ -44,22 +44,6 @@ def fetch_from_pephub(project: peppy.Project) -> pd.DataFrame:
     sample_table = project.sample_table
     csv_file_df = pd.DataFrame(sample_table)
     return csv_file_df
-
-
-def load_from_huggingface(schema: str) -> Optional[Any]:
-    """
-    Load a model from HuggingFace based on the schema of choice.
-
-    :param str schema: Schema Type
-    :return Optional[Any]: Loaded model object
-    """
-    if schema == "ENCODE":
-        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_ENCODE)
-    elif schema == "FAIRTRACKS":
-        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_FAIRTRACKS)
-    elif schema == "BEDBASE":
-        model = hf_hub_download(repo_id=REPO_ID, filename=MODEL_BEDBASE)
-    return model
 
 
 def data_preprocessing(

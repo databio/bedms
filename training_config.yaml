@@ -1,0 +1,31 @@
+dataset:
+  values_dir_pth: "/path/to/training/values/directory" #Path to the values directory
+  headers_dir_pth: "path/to/training/headers/directory" #Path to the attributes directory
+
+data_split:
+  train_set: 8000 #Number of csv value-attribute file pairs for training set
+  test_set: 100 #Number of csv value-attribute file pairs for testing set
+  val_set: 100 #Number of csv value-attribute file pairs for validation set
+
+model:
+  hidden_size: 32 #Hidden size for training the model
+  dropout_prob: 0.113 #Dropout probability for training the model
+
+training:
+  batch_size: 32 #Batch size for training
+  num_epochs: 20 #Number of training epochs
+  learning_rate: 0.001 #Learning rate of the model
+  l2_regularization: 0.001 #L2 regularization strength applied to the optimizer (Avoids overfitting, can be set to 0)
+  model_pth: "path/to/custom/trained/model.pth" #Path to where you want to save the custom model
+  num_cluster: 3 #Number of clusters for KMeans 
+  vectorizer_pth: "path/to/vectorizer.pkl" #Path to where you want to save the Bag of Words vectorizer
+  label_encoder_pth: "/path/to/label_encoder.pkl" #Path to where you want to save the Label Encoder
+  sentence_transformer_model:  "all-MiniLM-L6-v2" #Name of the sentence transformer model you wish to use fro HuggingFace
+  embedding_size: 384 #Dimensionality of the embedding produced by the chosen sentence transformer
+  bow_drops: 2 #Number of Bag of Words columns you wish to drop out during the training process (Avoids overfitting, can be set to 0)
+
+visualization:
+  accuracy_fig_pth: "/path/to/accuracy_fig.svg" #Path to where you wish to save the Accuracy Curve image
+  loss_fig_pth: "/path/to/loss_fig.svg" #Path to where you wish to save the Loss Curve image
+  confusion_matrix_fig_pth: "/path/to/confusion_matrix.svg" #Path to where you wish to save the confusion matrix image
+  roc_fig_pth: "/path/to/roc_fig.svg" #Path to where you wish to save the ROC curve image 
