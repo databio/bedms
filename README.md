@@ -46,26 +46,29 @@ trainer = AttrStandardizerTrainer("training_config.yaml")
 To load the datasets and encode them:
 
 ```python
-trainer.load_encode_data()
+train_data, val_data, test_data, label_encoder, vectorizer = trainer.load_data()
 ```
 
 To train the custom model:
 
 ```python
-trainer.training()
+trainer.train()
 ```
 
 To test the custom model:
 
 ```python
-trainer.testing()
+test_results_dict = trainer.test()
 ```
 
 To generate visualizations such as Learning Curves, Confusion Matrices, and ROC Curve:
 
 ```python
-trainer.plot_visualizations()
+acc_fig, loss_fig, conf_fig, roc_fig = trainer.plot_visualizations() 
 ```
+
+Where `acc_fig` is Accuracy Curve figure object, `loss_fig` is Loss Curve figure object, `conf_fig` is the Confusion Matrix figure object, and `roc_fig` is the ROC Curve figure object. 
+
 
 ### Standardizing based on custom schema
 
@@ -79,5 +82,5 @@ model = AttrStandardizer(
 )
 results = model.standardize(pep="geo/gse228634:default")
 
-assert results
+print(results) #Dictionary of suggested predictions with their confidence: {'attr_1':{'prediction_1': 0.70, 'prediction_2':0.30}}
 ```

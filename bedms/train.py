@@ -4,14 +4,19 @@ import logging
 import torch
 from torch import nn
 from torch import optim
+from torch.utils.data import DataLoader
 from sklearn.metrics import (
     precision_score,
     recall_score,
     f1_score,
 )
+from sklearn.preprocessing import LabelEncoder
+from sklearn.feature_extraction.text import CountVectorizer
+import matplotlib.pyplot as plt
+from typing import List, Dict, Tuple
 import yaml
 from .utils_train import (
-    load_from_dir,
+    load_training_files_from_dir,
     accumulate_data,
     training_encoding,
     data_loader,
@@ -41,33 +46,56 @@ class AttrStandardizerTrainer:
 
         :param str config: Path to the config file which has the training parameters provided by the user.
         """
-        self.label_encoder = None
-        self.vectorizer = None
-        self.train_loader = None
-        self.val_loader = None
-        self.test_loader = None
-        self.output_size = None
-        self.criterion = None
-        self.train_accuracies = None
-        self.val_accuracies = None
-        self.train_losses = None
-        self.val_losses = None
-        self.model = None
-        self.fpr = None
-        self.tpr = None
-        self.roc_auc = None
-        self.all_labels = None
-        self.all_preds = None
+        self.label_encoder: LabelEncoder = None
+        self.vectorizer: CountVectorizer = None
+        self.train_loader: DataLoader = None
+        self.val_loader: DataLoader = None
+        self.test_loader: DataLoader = None
+        self.output_size: int = 0
+        self.criterion: nn.Module = None
+        self.train_accuracies: List[float] = []
+        self.val_accuracies: List[float] = []
+        self.train_losses: List[float] = []
+        self.val_losses: List[float] = []
+        self.model: BoWSTModel = None
+        self.fpr: Dict[int, float] = {}
+        self.tpr: Dict[int, float] = {}
+        self.roc_auc: Dict[int, float] = {}
+        self.all_labels: List[int] = []
+        self.all_preds: List[int] = []
 
         with open(config, "r") as file:
             self.config = yaml.safe_load(file)
 
-    def load_encode_data(self) -> None:
+    def load_data(
+        self,
+    ) -> Tuple[
+        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+        Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+        LabelEncoder,
+        CountVectorizer,
+    ]:
         """
         Loads and prepares the encoded training, testing and validation datasets.
+        :return Tuple[
+            Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+            Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+            Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
+            LabelEncoder,
+            CountVectorizer]: A tuple containing:
+                - training dataset tensor
+                - validation dataset tensor
+                - testing dataset tensor
+                - label encoder
+                - bag of words vectorizer
         """
-        values_files_list = load_from_dir(self.config["dataset"]["values_dir_pth"])
-        headers_files_list = load_from_dir(self.config["dataset"]["headers_dir_pth"])
+        values_files_list = load_training_files_from_dir(
+            self.config["dataset"]["values_dir_pth"]
+        )
+        headers_files_list = load_training_files_from_dir(
+            self.config["dataset"]["headers_dir_pth"]
+        )
 
         if len(values_files_list) != len(headers_files_list):
             logger.error(
@@ -149,13 +177,21 @@ class AttrStandardizerTrainer:
 
         logger.info("Loading Done.")
 
-    def training(self):
+        return (
+            train_encoded_data,
+            val_encoded_data,
+            test_encoded_data,
+            self.label_encoder,
+            self.vectorizer,
+        )
+
+    def train(self) -> None:
         """
         Trains the model.
         """
         input_size_values = len(self.vectorizer.vocabulary_)
-        input_size_values_embeddings = EMBEDDING_SIZE
-        input_size_headers = EMBEDDING_SIZE
+        input_size_values_embeddings = self.config["training"]["embedding_size"]
+        input_size_headers = self.config["training"]["embedding_size"]
         hidden_size = self.config["model"]["hidden_size"]
         self.output_size = len(self.label_encoder.classes_)  # Number of classes
         dropout_prob = self.config["model"]["dropout_prob"]
@@ -175,7 +211,9 @@ class AttrStandardizerTrainer:
         optimizer = optim.Adam(
             self.model.parameters(), lr=learning_rate, weight_decay=l2_reg_lambda
         )
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.model.to(self.device)
+
         # Training the model
         num_epochs = self.config["training"]["num_epochs"]
 
@@ -196,7 +234,7 @@ class AttrStandardizerTrainer:
             self.val_loader,
             self.criterion,
             optimizer,
-            device,
+            self.device,
             num_epochs,
             self.output_size,
             model_pth,
@@ -205,29 +243,41 @@ class AttrStandardizerTrainer:
 
         logger.info("Training Done.")
 
-    def testing(self):
+    def test(self) -> Dict[str, float]:
         """
         Model testing.
+
+        :return Dict[str, float]: Precision, Recall, and F1 values
         """
         self.all_preds, self.all_labels = model_testing(
-            self.model, self.test_loader, self.criterion
+            self.model, self.device, self.test_loader, self.criterion
         )
         precision = precision_score(self.all_labels, self.all_preds, average="macro")
         recall = recall_score(self.all_labels, self.all_preds, average="macro")
         f1 = f1_score(self.all_labels, self.all_preds, average="macro")
         logger.info(f"Precision:{precision}, Recall: {recall}, F1 Score: {f1}")
+        return {"precision": precision, "recall": recall, "f1": f1}
 
-    def plot_visualizations(self):
+    def plot_visualizations(
+        self,
+    ) -> Tuple[plt.Figure, plt.Figure, plt.Figure, plt.Figure]:
         """
         Generates visualizations for training ( accuracy and loss curves)
         and testing( confusion matrix, roc curve)
+
+        :return Tuple[plt.Figure, plt.Figure, plt.Figure, plt.Figure]:
+            A Tuple containing:
+                - accuracy figure
+                - loss figure
+                - confusion matrix figure
+                - ROC curve figure
         """
         num_epochs = self.config["training"]["num_epochs"]
         accuracy_fig_pth = self.config["visualization"]["accuracy_fig_pth"]
         loss_fig_pth = self.config["visualization"]["loss_fig_pth"]
         cm_pth = self.config["visualization"]["confusion_matrix_fig_pth"]
         roc_pth = self.config["visualization"]["roc_fig_pth"]
-        plot_learning_curve(
+        acc_fig, loss_fig = plot_learning_curve(
             num_epochs,
             self.train_accuracies,
             self.val_accuracies,
@@ -236,7 +286,11 @@ class AttrStandardizerTrainer:
             accuracy_fig_pth,
             loss_fig_pth,
         )
-        plot_confusion_matrix(
+        conf_fig = plot_confusion_matrix(
             self.all_labels, self.all_preds, self.label_encoder.classes_, cm_pth
         )
-        auc_roc_curve(self.fpr, self.tpr, self.roc_auc, self.output_size, roc_pth)
+        roc_fig = auc_roc_curve(
+            self.fpr, self.tpr, self.roc_auc, self.output_size, roc_pth
+        )
+
+        return acc_fig, loss_fig, conf_fig, roc_fig

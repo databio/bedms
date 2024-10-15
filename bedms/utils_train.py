@@ -39,7 +39,7 @@ warnings.filterwarnings(
 )
 
 
-def load_from_dir(dir: str) -> List[str]:
+def load_training_files_from_dir(dir: str) -> List[str]:
     """
     Loads each file from the directory path.
 
@@ -49,7 +49,7 @@ def load_from_dir(dir: str) -> List[str]:
     return glob(os.path.join(dir, "*.csv"))
 
 
-def load_and_preprocess(file_path: str) -> pd.DataFrame:
+def load_and_preprocess_files(file_path: str) -> pd.DataFrame:
     """
     Loads and Preprocesses each csv file as a Pandas DataFrame.
 
@@ -84,8 +84,8 @@ def accumulate_data(
     x_headers_list = []
     y_list = []
     for values_file, headers_file in files:
-        df_values = load_and_preprocess(values_file)
-        df_headers = load_and_preprocess(headers_file)
+        df_values = load_and_preprocess_files(values_file)
+        df_headers = load_and_preprocess_files(headers_file)
         df_values = df_values.fillna("")
         df_headers = df_headers.fillna("")
         y = df_values.columns
@@ -129,8 +129,8 @@ def get_top_training_cluster_averaged(
     :return torch.Tensor: A tensor representing the
         average of embeddings in the most common cluster.
     """
-    flattened_embeddings = [embedding.tolist() for embedding in embeddings]
-    kmeans = KMeans(n_clusters=num, random_state=0).fit(flattened_embeddings)
+    embeddings_list = [embedding.tolist() for embedding in embeddings]
+    kmeans = KMeans(n_clusters=num, random_state=0).fit(embeddings_list)
     labels_kmeans = kmeans.labels_
     cluster_counts = Counter(labels_kmeans)
     most_common_cluster = max(cluster_counts, key=cluster_counts.get)
@@ -198,13 +198,11 @@ def training_encoding(
     Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
     Tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor],
     LabelEncoder,
-    List[str],
     CountVectorizer]: Returns a tuple of
      - training dataset tensor
      - testing dataset tensor
      - validation dataset tensor
      - trained label encoder
-     - list of unique values encountered during training
      - Trained vectorizer for Bag of Words representation
 
     """
@@ -538,7 +536,10 @@ def train_model(
 
 
 def model_testing(
-    model: torch.nn.Module, test_loader: DataLoader, loss_fn: torch.nn.Module
+    model: torch.nn.Module,
+    device: torch.device,
+    test_loader: DataLoader,
+    loss_fn: torch.nn.Module,
 ) -> Tuple[List[int], List[int], torch.Tensor]:
     """
     This functions tests the model.
@@ -559,6 +560,10 @@ def model_testing(
     total_samples_test = 0
     with torch.no_grad():
         for values_batch, bow_batch, headers_batch, labels in test_loader:
+            values_batch = values_batch.to(device)
+            bow_batch = bow_batch.to(device)
+            headers_batch = headers_batch.to(device)
+            labels = labels.to(device)
             outputs = model(values_batch, bow_batch, headers_batch)
             loss = loss_fn(outputs, labels)
             total_loss_test += loss.item()
@@ -583,7 +588,7 @@ def plot_learning_curve(
     val_losses: List[float],
     accuracy_fig_pth: str,
     loss_fig_pth: str,
-) -> None:
+) -> Tuple[plt.Figure, plt.Figure]:
     """
     Plots the learning curves - accuracy and loss for Training and Validation of the model.
 
@@ -594,10 +599,14 @@ def plot_learning_curve(
     :param List[float] val_losses: List of validation losses for each epoch.
     :param str accuracy_fig_pth: Path where the accuracy curve figure will be saved.
     :param str loss_fig_pth: Path where the loss curve figure will be saved.
+
+    :return Tuple[plt.Figure, plt.Figure]: Accuracy and Loss curves
     """
 
     # accuracy
-    plt.plot(range(1, num_epochs + 1), train_accuracies, label="Training Accuracy")
+    acc = plt.plot(
+        range(1, num_epochs + 1), train_accuracies, label="Training Accuracy"
+    )
     plt.plot(range(1, num_epochs + 1), val_accuracies, label="Validation Accuracy")
     plt.xlabel("Epoch")
     plt.ylabel("Accuracy")
@@ -607,8 +616,9 @@ def plot_learning_curve(
     plt.savefig(accuracy_fig_pth, format="svg")
     plt.show()
     plt.close()
+
     # loss
-    plt.plot(range(1, num_epochs + 1), train_losses, label="Training Loss")
+    loss = plt.plot(range(1, num_epochs + 1), train_losses, label="Training Loss")
     plt.plot(range(1, num_epochs + 1), val_losses, label="Validation Loss")
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
@@ -618,6 +628,7 @@ def plot_learning_curve(
     plt.savefig(loss_fig_pth, format="svg")
     plt.show()
     plt.close()
+    return acc, loss
 
 
 def plot_confusion_matrix(
@@ -625,7 +636,7 @@ def plot_confusion_matrix(
     y_pred: List[int],
     unique_values_list: List[str],
     confusion_matrix_fig_pth: str,
-) -> None:
+) -> plt.Figure:
     """
     Plots confusion matrix for the test data.
 
@@ -633,6 +644,8 @@ def plot_confusion_matrix(
     :param List[int] y_pred: List of predictions made by the model.
     :param List[str] unique_values_list: List of all the classes that the model predicted.
     :param str confusion_matrix_fig_pth: Path where the confusion matrix figure will be saved.
+
+    :return plt.Figure: Confusion matrix figure
     """
     conf_matrix = confusion_matrix(y_true, y_pred)
     plt.figure(figsize=(12, 12))
@@ -653,6 +666,7 @@ def plot_confusion_matrix(
     class_accuracy = conf_matrix.diagonal() / conf_matrix.sum(axis=1)
     for i, acc in enumerate(class_accuracy):
         print(f"Accuracy for class {i}: {acc:.4f}")
+    return conf_matrix
 
 
 def auc_roc_curve(
@@ -661,7 +675,7 @@ def auc_roc_curve(
     roc_auc: Dict[int, float],
     output_size: int,
     roc_fig_pth: str,
-) -> None:
+) -> plt.Figure:
     """
     Plots the ROC Curve.
 
@@ -670,8 +684,10 @@ def auc_roc_curve(
     :param Dict[int, float] roc_auc: Dictionary of Area Under Curve for ROC for different classes.
     :param int output_size: The number of classes the model predicted into.
     :param str roc_fig_pth: Path to where the ROC figure will be saved.
+
+    :return plt.Figure: Figure for the ROC Curve.
     """
-    plt.figure(figsize=(12, 12))
+    fig = plt.figure(figsize=(12, 12))
     for i in range(output_size):
         plt.plot(
             fpr[i],
@@ -688,5 +704,4 @@ def auc_roc_curve(
     plt.title("Receiver Operating Characteristic (ROC) Curve")
     plt.legend(loc="lower right")
     plt.savefig(roc_fig_pth, format="svg")
-    plt.show()
-    plt.close()
+    return fig

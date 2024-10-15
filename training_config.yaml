@@ -21,6 +21,7 @@ training:
   vectorizer_pth: "path/to/vectorizer.pkl" #Path to where you want to save the Bag of Words vectorizer
   label_encoder_pth: "/path/to/label_encoder.pkl" #Path to where you want to save the Label Encoder
   sentence_transformer_model:  "all-MiniLM-L6-v2" #Name of the sentence transformer model you wish to use fro HuggingFace
+  embedding_size: 384 #Dimensionality of the embedding produced by the chosen sentence transformer
   bow_drops: 2 #Number of Bag of Words columns you wish to drop out during the training process (Avoids overfitting, can be set to 0)
 
 visualization:
