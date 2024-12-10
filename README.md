@@ -27,7 +27,7 @@ model = AttrStandardizer(
 )
 results = model.standardize(pep="geo/gse228634:default")
 
-assert results
+print(results) #Dictionary of suggested predictions with their confidence: {'attr_1':{'prediction_1': 0.70, 'prediction_2':0.30}}
 ```
 
 ### Training custom schemas

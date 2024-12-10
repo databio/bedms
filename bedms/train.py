@@ -1,6 +1,7 @@
 """ This is the training script with which the user can train their own models."""
 
 import logging
+import random
 import torch
 from torch import nn
 from torch import optim
@@ -25,6 +26,7 @@ from .utils_train import (
     model_testing,
     plot_confusion_matrix,
     auc_roc_curve,
+    validate_config,
 )
 from .const import PROJECT_NAME
 from .model import BoWSTModel
@@ -64,8 +66,13 @@ class AttrStandardizerTrainer:
         self.all_labels: List[int] = []
         self.all_preds: List[int] = []
 
-        with open(config, "r") as file:
-            self.config = yaml.safe_load(file)
+        try:
+            with open(config, "r") as file:
+                self.config = yaml.safe_load(file)
+                validate_config(self.config)
+                print("Config file provided is valid!")
+        except (ValueError, TypeError) as e:
+            print(f"Config validation error: {e}")
 
     def load_data(
         self,
@@ -104,26 +111,25 @@ class AttrStandardizerTrainer:
             )
             return
 
-        total_files = len(values_files_list)
-
         paired_files = list(zip(values_files_list, headers_files_list))
+
+        random.shuffle(paired_files)
 
         train_size = self.config["data_split"]["train_set"]
         test_size = self.config["data_split"]["test_set"]
         val_size = self.config["data_split"]["val_set"]
 
-        if train_size + val_size + test_size > total_files:
-            logger.error(
-                f"Data split sizes exceed total number of files: "
-                f"train({train_size}) + val({val_size}) + \
-                test({test_size}) > total_files({total_files})"
-            )
-            return
+        num_train_files = int(train_size * len(paired_files))
+        num_test_files = int(test_size * len(paired_files))
+        num_val_files = int(val_size * len(paired_files))
 
-        train_files = paired_files[:train_size]
-        val_files = paired_files[train_size : train_size + val_size]
+        train_files = paired_files[:num_train_files]
+        val_files = paired_files[num_train_files : num_train_files + num_val_files]
         test_files = paired_files[
-            train_size + val_size : train_size + val_size + test_size
+            num_train_files
+            + num_val_files : num_train_files
+            + num_val_files
+            + num_test_files
         ]
 
         logger.info(f"Training on {len(train_files)} file sets")

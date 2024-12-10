@@ -3,9 +3,9 @@ dataset:
   headers_dir_pth: "path/to/training/headers/directory" #Path to the attributes directory
 
 data_split:
-  train_set: 8000 #Number of csv value-attribute file pairs for training set
-  test_set: 100 #Number of csv value-attribute file pairs for testing set
-  val_set: 100 #Number of csv value-attribute file pairs for validation set
+  train_set: 0.80 #Percentage of csv value-attribute file pairs for training set
+  test_set: 0.10 #Percentage of csv value-attribute file pairs for testing set
+  val_set: 0.10 #Percentage of csv value-attribute file pairs for validation set
 
 model:
   hidden_size: 32 #Hidden size for training the model
