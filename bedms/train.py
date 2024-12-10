@@ -1,6 +1,7 @@
 """ This is the training script with which the user can train their own models."""
 
 import logging
+import random
 import torch
 from torch import nn
 from torch import optim
@@ -67,6 +68,17 @@ class AttrStandardizerTrainer:
         with open(config, "r") as file:
             self.config = yaml.safe_load(file)
 
+        # self.validate_config(self.config)
+
+    def validate_config(config):
+        """
+        Validates the given config file dictionary
+
+        :param dict config: The config that needs to be validated.
+        :raises
+
+        """
+
     def load_data(
         self,
     ) -> Tuple[
@@ -104,26 +116,25 @@ class AttrStandardizerTrainer:
             )
             return
 
-        total_files = len(values_files_list)
-
         paired_files = list(zip(values_files_list, headers_files_list))
+
+        random.shuffle(paired_files)
 
         train_size = self.config["data_split"]["train_set"]
         test_size = self.config["data_split"]["test_set"]
         val_size = self.config["data_split"]["val_set"]
 
-        if train_size + val_size + test_size > total_files:
-            logger.error(
-                f"Data split sizes exceed total number of files: "
-                f"train({train_size}) + val({val_size}) + \
-                test({test_size}) > total_files({total_files})"
-            )
-            return
+        num_train_files = int(train_size * len(paired_files))
+        num_test_files = int(test_size * len(paired_files))
+        num_val_files = int(val_size * len(paired_files))
 
-        train_files = paired_files[:train_size]
-        val_files = paired_files[train_size : train_size + val_size]
+        train_files = paired_files[:num_train_files]
+        val_files = paired_files[num_train_files : num_train_files + num_val_files]
         test_files = paired_files[
-            train_size + val_size : train_size + val_size + test_size
+            num_train_files
+            + num_val_files : num_train_files
+            + num_val_files
+            + num_test_files
         ]
 
         logger.info(f"Training on {len(train_files)} file sets")
