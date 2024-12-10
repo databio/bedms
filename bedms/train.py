@@ -26,6 +26,7 @@ from .utils_train import (
     model_testing,
     plot_confusion_matrix,
     auc_roc_curve,
+    validate_config,
 )
 from .const import PROJECT_NAME
 from .model import BoWSTModel
@@ -65,19 +66,13 @@ class AttrStandardizerTrainer:
         self.all_labels: List[int] = []
         self.all_preds: List[int] = []
 
-        with open(config, "r") as file:
-            self.config = yaml.safe_load(file)
-
-        # self.validate_config(self.config)
-
-    def validate_config(config):
-        """
-        Validates the given config file dictionary
-
-        :param dict config: The config that needs to be validated.
-        :raises
-
-        """
+        try:
+            with open(config, "r") as file:
+                self.config = yaml.safe_load(file)
+                validate_config(self.config)
+                print("Config file provided is valid!")
+        except (ValueError, TypeError) as e:
+            print(f"Config validation error: {e}")
 
     def load_data(
         self,
